@@ -1,0 +1,106 @@
+\hypertarget{classxstar_1_1_win_a_p_i_exception}{}\doxysection{xstar\+::Win\+APIException Class Reference}
+\label{classxstar_1_1_win_a_p_i_exception}\index{xstar::WinAPIException@{xstar::WinAPIException}}
+
+
+{\ttfamily \#include $<$winapi\+\_\+exception.\+hpp$>$}
+
+Inheritance diagram for xstar\+::Win\+APIException\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classxstar_1_1_win_a_p_i_exception}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a016573cc926e7811640b44d9f7611797}{Win\+APIException}} ()
+\item 
+\mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_add0ac4bd551625dfc7c48038837d3b27}{Win\+APIException}} (const char $\ast$msg, uint32\+\_\+t last\+Error)
+\item 
+const char $\ast$ \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a48d30b4209175699080ca9bb41b4e529}{what}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_aa400308cdac83269c0956d94722b92bd}{msg\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 33 of file winapi\+\_\+exception.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxstar_1_1_win_a_p_i_exception_a016573cc926e7811640b44d9f7611797}\label{classxstar_1_1_win_a_p_i_exception_a016573cc926e7811640b44d9f7611797}} 
+\index{xstar::WinAPIException@{xstar::WinAPIException}!WinAPIException@{WinAPIException}}
+\index{WinAPIException@{WinAPIException}!xstar::WinAPIException@{xstar::WinAPIException}}
+\doxysubsubsection{\texorpdfstring{WinAPIException()}{WinAPIException()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xstar\+::\+Win\+APIException\+::\+Win\+APIException (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file winapi\+\_\+excepion.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29         : \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_aa400308cdac83269c0956d94722b92bd}{msg\_}}(\mbox{\hyperlink{namespacexstar_a2f2f11cd766129e29f47dc9713f5c192}{getLastErrorStr}}()) \{ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_win_a_p_i_exception_add0ac4bd551625dfc7c48038837d3b27}\label{classxstar_1_1_win_a_p_i_exception_add0ac4bd551625dfc7c48038837d3b27}} 
+\index{xstar::WinAPIException@{xstar::WinAPIException}!WinAPIException@{WinAPIException}}
+\index{WinAPIException@{WinAPIException}!xstar::WinAPIException@{xstar::WinAPIException}}
+\doxysubsubsection{\texorpdfstring{WinAPIException()}{WinAPIException()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xstar\+::\+Win\+APIException\+::\+Win\+APIException (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{last\+Error }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file winapi\+\_\+excepion.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36         : \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_aa400308cdac83269c0956d94722b92bd}{msg\_}}(msg + std::string(msg) + std::to\_string(lastError))}
+\DoxyCodeLine{37     \{ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxstar_1_1_win_a_p_i_exception_a48d30b4209175699080ca9bb41b4e529}\label{classxstar_1_1_win_a_p_i_exception_a48d30b4209175699080ca9bb41b4e529}} 
+\index{xstar::WinAPIException@{xstar::WinAPIException}!what@{what}}
+\index{what@{what}!xstar::WinAPIException@{xstar::WinAPIException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char $\ast$ xstar\+::\+Win\+APIException\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 44 of file winapi\+\_\+excepion.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_aa400308cdac83269c0956d94722b92bd}{msg\_}}.c\_str();}
+\DoxyCodeLine{47     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxstar_1_1_win_a_p_i_exception_aa400308cdac83269c0956d94722b92bd}\label{classxstar_1_1_win_a_p_i_exception_aa400308cdac83269c0956d94722b92bd}} 
+\index{xstar::WinAPIException@{xstar::WinAPIException}!msg\_@{msg\_}}
+\index{msg\_@{msg\_}!xstar::WinAPIException@{xstar::WinAPIException}}
+\doxysubsubsection{\texorpdfstring{msg\_}{msg\_}}
+{\footnotesize\ttfamily std\+::string xstar\+::\+Win\+APIException\+::msg\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 41 of file winapi\+\_\+exception.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+user\+\_\+space/include/\mbox{\hyperlink{winapi__exception_8hpp}{winapi\+\_\+exception.\+hpp}}\item 
+user\+\_\+space/src/\mbox{\hyperlink{winapi__excepion_8cpp}{winapi\+\_\+excepion.\+cpp}}\end{DoxyCompactItemize}

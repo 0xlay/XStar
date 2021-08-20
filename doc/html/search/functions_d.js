@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['what_224',['what',['../classxstar_1_1_win_a_p_i_exception.html#a48d30b4209175699080ca9bb41b4e529',1,'xstar::WinAPIException']]],
+  ['winapiexception_225',['WinAPIException',['../classxstar_1_1_win_a_p_i_exception.html#a016573cc926e7811640b44d9f7611797',1,'xstar::WinAPIException::WinAPIException()'],['../classxstar_1_1_win_a_p_i_exception.html#add0ac4bd551625dfc7c48038837d3b27',1,'xstar::WinAPIException::WinAPIException(const char *msg, uint32_t lastError)']]],
+  ['write_226',['write',['../classxstar_1_1_named_pipe_server.html#ae9cd9c4fb8b94824e17489001a13563a',1,'xstar::NamedPipeServer::write(const std::string &amp;buf)'],['../classxstar_1_1_named_pipe_server.html#ac2163a26c572da9c2f22a01f435192ae',1,'xstar::NamedPipeServer::write(const std::wstring &amp;buf)'],['../classxstar_1_1_named_pipe_server.html#a8cdc170181d6155c2db1b124f01471d1',1,'xstar::NamedPipeServer::write(const char *buf, uint32_t size)'],['../classxstar_1_1_named_pipe_server.html#a4670087e27872616df5a74e180cf4f22',1,'xstar::NamedPipeServer::write(const wchar_t *buf, uint32_t size)'],['../classxstar_1_1_named_pipe_server.html#a48b916a1487ba6efd47b8ee6eb3e998f',1,'xstar::NamedPipeServer::write(int value)'],['../classxstar_1_1_named_pipe_client.html#a8c477b67cf18843da2c1874517f83c48',1,'xstar::NamedPipeClient::write()']]]
+];

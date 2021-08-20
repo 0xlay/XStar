@@ -1,0 +1,491 @@
+\hypertarget{classxstar_1_1_named_pipe_server}{}\doxysection{xstar\+::Named\+Pipe\+Server Class Reference}
+\label{classxstar_1_1_named_pipe_server}\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+
+
+{\ttfamily \#include $<$named\+\_\+pipe.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxstar_1_1_named_pipe_server_a1fa4819918887518455abf6837adc33d}{Named\+Pipe\+Server}} (LPCTSTR name, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} direct)
+\item 
+\mbox{\hyperlink{classxstar_1_1_named_pipe_server_a2957d62ccd3a936d6e1c9165295862c3}{Named\+Pipe\+Server}} (LPCTSTR name, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} direct, DWORD out\+Buf\+Size, DWORD inp\+Buf\+Size)
+\item 
+\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ae4c9df1c17c18b3725680c3da945d282}{Named\+Pipe\+Server}} (LPCTSTR name, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} direct, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} mode, DWORD out\+Buf\+Size=\mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{Small\+Page\+\_\+4\+KB}}, DWORD inp\+Buf\+Size=\mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{Small\+Page\+\_\+4\+KB}}, DWORD max\+Instances=PIPE\+\_\+\+UNLIMITED\+\_\+\+INSTANCES, DWORD time\+Out=0, LPSECURITY\+\_\+\+ATTRIBUTES security=nullptr)
+\item 
+\mbox{\hyperlink{classxstar_1_1_named_pipe_server_a4931ef95c5da309e5df626900c4f728e}{$\sim$\+Named\+Pipe\+Server}} ()
+\item 
+void \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a56a556e229e5ff64526281f190f91686}{connect}} ()
+\item 
+void \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a675ca629fcbde45177254097a930eab5}{disconnect}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ae9cd9c4fb8b94824e17489001a13563a}{write}} (const std\+::string \&buf)
+\item 
+size\+\_\+t \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac2163a26c572da9c2f22a01f435192ae}{write}} (const std\+::wstring \&buf)
+\item 
+size\+\_\+t \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a8cdc170181d6155c2db1b124f01471d1}{write}} (const char $\ast$buf, uint32\+\_\+t size)
+\item 
+size\+\_\+t \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a4670087e27872616df5a74e180cf4f22}{write}} (const wchar\+\_\+t $\ast$buf, uint32\+\_\+t size)
+\item 
+size\+\_\+t \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a48b916a1487ba6efd47b8ee6eb3e998f}{write}} (int value)
+\item 
+size\+\_\+t \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a35cff1c767f273cd42c503b0ac41e0f8}{read}} (const std\+::unique\+\_\+ptr$<$ char\mbox{[}$\,$\mbox{]}$>$ \&buf, uint32\+\_\+t size)
+\item 
+size\+\_\+t \mbox{\hyperlink{classxstar_1_1_named_pipe_server_aa14eeee708e333dd14a115d1cd742a60}{read}} (const std\+::unique\+\_\+ptr$<$ wchar\+\_\+t\mbox{[}$\,$\mbox{]}$>$ \&buf, uint32\+\_\+t size)
+\item 
+size\+\_\+t \mbox{\hyperlink{classxstar_1_1_named_pipe_server_aa647335324154a96af8c983f627efe68}{read}} (int \&value)
+\item 
+\mbox{\hyperlink{namespacexstar_a0db2e686069ae1530f3bf3e776f37118}{Pipe\+Info\+\_\+t}} \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a81772469e5b36b21bbe298d8b592a251}{get\+Info}} ()
+\item 
+void \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ad28af8c1388c2e8f3e625137055f0e62}{set\+State}} (\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} mode, DWORD max\+Bytes=0, DWORD max\+Timeout=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a78b1e4fda884fa24a36b7c3dd85c4a37}{name\+\_\+}}
+\item 
+HANDLE \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 154 of file named\+\_\+pipe.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a1fa4819918887518455abf6837adc33d}\label{classxstar_1_1_named_pipe_server_a1fa4819918887518455abf6837adc33d}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!NamedPipeServer@{NamedPipeServer}}
+\index{NamedPipeServer@{NamedPipeServer}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{NamedPipeServer()}{NamedPipeServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Named\+Pipe\+Server\+::\+Named\+Pipe\+Server (\begin{DoxyParamCaption}\item[{LPCTSTR}]{name,  }\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{direct }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35     : \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a78b1e4fda884fa24a36b7c3dd85c4a37}{name\_}}(name)}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}} = CreateNamedPipe(}
+\DoxyCodeLine{38         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a78b1e4fda884fa24a36b7c3dd85c4a37}{name\_}}.c\_str(),}
+\DoxyCodeLine{39         \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(direct),}
+\DoxyCodeLine{40         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}{PipeMode::ReadMsg}} | \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6209e6108d559885b1df4a3ebe3deb8b}{PipeMode::WriteMsg}} | \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa0f68101772bd5397ef8eb1b632798652}{PipeMode::Wait}},}
+\DoxyCodeLine{41         PIPE\_UNLIMITED\_INSTANCES,}
+\DoxyCodeLine{42         \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{SmallPage\_4KB}}, \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{SmallPage\_4KB}},}
+\DoxyCodeLine{43         0\textcolor{comment}{/*time-\/out 50ms*/}, }
+\DoxyCodeLine{44         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{45     );}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a2957d62ccd3a936d6e1c9165295862c3}\label{classxstar_1_1_named_pipe_server_a2957d62ccd3a936d6e1c9165295862c3}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!NamedPipeServer@{NamedPipeServer}}
+\index{NamedPipeServer@{NamedPipeServer}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{NamedPipeServer()}{NamedPipeServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Named\+Pipe\+Server\+::\+Named\+Pipe\+Server (\begin{DoxyParamCaption}\item[{LPCTSTR}]{name,  }\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{direct,  }\item[{DWORD}]{out\+Buf\+Size,  }\item[{DWORD}]{inp\+Buf\+Size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57     \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}} = CreateNamedPipe(}
+\DoxyCodeLine{58         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a78b1e4fda884fa24a36b7c3dd85c4a37}{name\_}}.c\_str(),}
+\DoxyCodeLine{59         \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(direct),}
+\DoxyCodeLine{60         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}{PipeMode::ReadMsg}} | \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6209e6108d559885b1df4a3ebe3deb8b}{PipeMode::WriteMsg}} | \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa0f68101772bd5397ef8eb1b632798652}{PipeMode::Wait}},}
+\DoxyCodeLine{61         PIPE\_UNLIMITED\_INSTANCES,}
+\DoxyCodeLine{62         outBufSize, inpBufSize,}
+\DoxyCodeLine{63         0\textcolor{comment}{/*time-\/out 50ms*/}, }
+\DoxyCodeLine{64         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{65     );}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_ae4c9df1c17c18b3725680c3da945d282}\label{classxstar_1_1_named_pipe_server_ae4c9df1c17c18b3725680c3da945d282}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!NamedPipeServer@{NamedPipeServer}}
+\index{NamedPipeServer@{NamedPipeServer}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{NamedPipeServer()}{NamedPipeServer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Named\+Pipe\+Server\+::\+Named\+Pipe\+Server (\begin{DoxyParamCaption}\item[{LPCTSTR}]{name,  }\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{direct,  }\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{mode,  }\item[{DWORD}]{out\+Buf\+Size = {\ttfamily \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{Small\+Page\+\_\+4\+KB}}},  }\item[{DWORD}]{inp\+Buf\+Size = {\ttfamily \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{Small\+Page\+\_\+4\+KB}}},  }\item[{DWORD}]{max\+Instances = {\ttfamily PIPE\+\_\+UNLIMITED\+\_\+INSTANCES},  }\item[{DWORD}]{time\+Out = {\ttfamily 0},  }\item[{LPSECURITY\+\_\+\+ATTRIBUTES}]{security = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81     \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}} = CreateNamedPipe(}
+\DoxyCodeLine{82         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_a78b1e4fda884fa24a36b7c3dd85c4a37}{name\_}}.c\_str(),}
+\DoxyCodeLine{83         \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(direct),}
+\DoxyCodeLine{84         \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(mode),}
+\DoxyCodeLine{85         maxInstances,}
+\DoxyCodeLine{86         outBufSize, inpBufSize,}
+\DoxyCodeLine{87         timeOut, }
+\DoxyCodeLine{88         security}
+\DoxyCodeLine{89     );}
+\DoxyCodeLine{90 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a4931ef95c5da309e5df626900c4f728e}\label{classxstar_1_1_named_pipe_server_a4931ef95c5da309e5df626900c4f728e}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!````~NamedPipeServer@{$\sim$NamedPipeServer}}
+\index{````~NamedPipeServer@{$\sim$NamedPipeServer}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{$\sim$NamedPipeServer()}{~NamedPipeServer()}}
+{\footnotesize\ttfamily Named\+Pipe\+Server\+::$\sim$\+Named\+Pipe\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 94 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95 \{}
+\DoxyCodeLine{96     DisconnectNamedPipe(\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}});}
+\DoxyCodeLine{97     CloseHandle(\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}});}
+\DoxyCodeLine{98 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a56a556e229e5ff64526281f190f91686}\label{classxstar_1_1_named_pipe_server_a56a556e229e5ff64526281f190f91686}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!connect@{connect}}
+\index{connect@{connect}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void Named\+Pipe\+Server\+::connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 102 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103 \{}
+\DoxyCodeLine{104     \textcolor{keywordflow}{if} (!ConnectNamedPipe(\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}}, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{105         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{106 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a675ca629fcbde45177254097a930eab5}\label{classxstar_1_1_named_pipe_server_a675ca629fcbde45177254097a930eab5}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily void Named\+Pipe\+Server\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111 \{}
+\DoxyCodeLine{112     \textcolor{keywordflow}{if} (!DisconnectNamedPipe(\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}}))}
+\DoxyCodeLine{113         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{114 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a81772469e5b36b21bbe298d8b592a251}\label{classxstar_1_1_named_pipe_server_a81772469e5b36b21bbe298d8b592a251}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexstar_a0db2e686069ae1530f3bf3e776f37118}{Pipe\+Info\+\_\+t}} Named\+Pipe\+Server\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 253 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{254 \{}
+\DoxyCodeLine{255     \mbox{\hyperlink{structxstar_1_1_pipe_info}{PipeInfo\_t}} info\{ 0 \};}
+\DoxyCodeLine{256     \textcolor{keywordflow}{if} (!GetNamedPipeInfo(}
+\DoxyCodeLine{257         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}},}
+\DoxyCodeLine{258         \&info.flags,}
+\DoxyCodeLine{259         \&info.outBufSize, }
+\DoxyCodeLine{260         \&info.inBufSize,}
+\DoxyCodeLine{261         \&info.maxInstances}
+\DoxyCodeLine{262     ))}
+\DoxyCodeLine{263     \{}
+\DoxyCodeLine{264         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{265     \}}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267     \textcolor{keywordflow}{return} info;}
+\DoxyCodeLine{268 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a35cff1c767f273cd42c503b0ac41e0f8}\label{classxstar_1_1_named_pipe_server_a35cff1c767f273cd42c503b0ac41e0f8}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!read@{read}}
+\index{read@{read}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily size\+\_\+t Named\+Pipe\+Server\+::read (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ char\mbox{[}$\,$\mbox{]}$>$ \&}]{buf,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 218 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{219 \{}
+\DoxyCodeLine{220     DWORD bytes = 0;}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222     \textcolor{keywordflow}{if} (!ReadFile(\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}}, buf.get(), size, \&bytes, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{223         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225     \textcolor{keywordflow}{return} bytes;}
+\DoxyCodeLine{226 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_aa14eeee708e333dd14a115d1cd742a60}\label{classxstar_1_1_named_pipe_server_aa14eeee708e333dd14a115d1cd742a60}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!read@{read}}
+\index{read@{read}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily size\+\_\+t Named\+Pipe\+Server\+::read (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ wchar\+\_\+t\mbox{[}$\,$\mbox{]}$>$ \&}]{buf,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 230 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{231 \{}
+\DoxyCodeLine{232     DWORD bytes = 0;}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234     \textcolor{keywordflow}{if} (!ReadFile(\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}}, buf.get(), size * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}), \&bytes, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{235         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237     \textcolor{keywordflow}{return} bytes;}
+\DoxyCodeLine{238 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_aa647335324154a96af8c983f627efe68}\label{classxstar_1_1_named_pipe_server_aa647335324154a96af8c983f627efe68}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!read@{read}}
+\index{read@{read}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily size\+\_\+t Named\+Pipe\+Server\+::read (\begin{DoxyParamCaption}\item[{int \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 242 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{243 \{}
+\DoxyCodeLine{244     DWORD bytes = 0;}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246     \textcolor{keywordflow}{if} (!ReadFile(\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}}, \&value, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), \&bytes, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{247         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249     \textcolor{keywordflow}{return} bytes;}
+\DoxyCodeLine{250 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_ad28af8c1388c2e8f3e625137055f0e62}\label{classxstar_1_1_named_pipe_server_ad28af8c1388c2e8f3e625137055f0e62}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!setState@{setState}}
+\index{setState@{setState}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Named\+Pipe\+Server\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{mode,  }\item[{DWORD}]{max\+Bytes = {\ttfamily 0},  }\item[{DWORD}]{max\+Timeout = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 272 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{273 \{}
+\DoxyCodeLine{274     DWORD mode\_ = \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(mode);}
+\DoxyCodeLine{275     LPDWORD maxBytes\_ = \textcolor{keyword}{nullptr}, maxTimeout\_= \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{277     \textcolor{keywordflow}{if} (maxBytes != 0)}
+\DoxyCodeLine{278         maxBytes\_ = \&maxBytes;}
+\DoxyCodeLine{279     \textcolor{keywordflow}{if} (maxTimeout != 0)}
+\DoxyCodeLine{280         maxTimeout\_ = \&maxTimeout;}
+\DoxyCodeLine{281  }
+\DoxyCodeLine{282     \textcolor{keywordflow}{if} (!SetNamedPipeHandleState(\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}}, \&mode\_, maxBytes\_, maxTimeout\_))}
+\DoxyCodeLine{283         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{284 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a8cdc170181d6155c2db1b124f01471d1}\label{classxstar_1_1_named_pipe_server_a8cdc170181d6155c2db1b124f01471d1}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!write@{write}}
+\index{write@{write}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily size\+\_\+t Named\+Pipe\+Server\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 158 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{159 \{}
+\DoxyCodeLine{160     DWORD bytes = 0;}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162     \textcolor{keywordflow}{if} (!WriteFile(}
+\DoxyCodeLine{163         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}},}
+\DoxyCodeLine{164         buf,}
+\DoxyCodeLine{165         size,}
+\DoxyCodeLine{166         \&bytes,}
+\DoxyCodeLine{167         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{168     ))}
+\DoxyCodeLine{169     \{}
+\DoxyCodeLine{170         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{171     \}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173     \textcolor{keywordflow}{return} bytes;}
+\DoxyCodeLine{174 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_ae9cd9c4fb8b94824e17489001a13563a}\label{classxstar_1_1_named_pipe_server_ae9cd9c4fb8b94824e17489001a13563a}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!write@{write}}
+\index{write@{write}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily size\+\_\+t Named\+Pipe\+Server\+::write (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{buf }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120     DWORD bytes = 0;}
+\DoxyCodeLine{121     }
+\DoxyCodeLine{122     \textcolor{keywordflow}{if} (!WriteFile(}
+\DoxyCodeLine{123         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}},}
+\DoxyCodeLine{124         buf.c\_str(),}
+\DoxyCodeLine{125         \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(buf.length() * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})),}
+\DoxyCodeLine{126         \&bytes,}
+\DoxyCodeLine{127         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{128     ))}
+\DoxyCodeLine{129     \{}
+\DoxyCodeLine{130         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{131     \}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133     \textcolor{keywordflow}{return} bytes;}
+\DoxyCodeLine{134 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_ac2163a26c572da9c2f22a01f435192ae}\label{classxstar_1_1_named_pipe_server_ac2163a26c572da9c2f22a01f435192ae}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!write@{write}}
+\index{write@{write}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily size\+\_\+t Named\+Pipe\+Server\+::write (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{buf }\end{DoxyParamCaption})}
+
+
+
+Definition at line 138 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{139 \{}
+\DoxyCodeLine{140     DWORD bytes = 0;}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     \textcolor{keywordflow}{if} (!WriteFile(}
+\DoxyCodeLine{143         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}},}
+\DoxyCodeLine{144         buf.c\_str(),}
+\DoxyCodeLine{145         \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(buf.length() * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t})),}
+\DoxyCodeLine{146         \&bytes,}
+\DoxyCodeLine{147         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{148     ))}
+\DoxyCodeLine{149     \{}
+\DoxyCodeLine{150         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{151     \}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     \textcolor{keywordflow}{return} bytes;}
+\DoxyCodeLine{154 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a4670087e27872616df5a74e180cf4f22}\label{classxstar_1_1_named_pipe_server_a4670087e27872616df5a74e180cf4f22}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!write@{write}}
+\index{write@{write}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily size\+\_\+t Named\+Pipe\+Server\+::write (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{buf,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 178 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{179 \{}
+\DoxyCodeLine{180     DWORD bytes = 0;}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182     \textcolor{keywordflow}{if} (!WriteFile(}
+\DoxyCodeLine{183         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}},}
+\DoxyCodeLine{184         buf,}
+\DoxyCodeLine{185         size * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}),}
+\DoxyCodeLine{186         \&bytes,}
+\DoxyCodeLine{187         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{188     ))}
+\DoxyCodeLine{189     \{}
+\DoxyCodeLine{190         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{191     \}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193     \textcolor{keywordflow}{return} bytes;}
+\DoxyCodeLine{194 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a48b916a1487ba6efd47b8ee6eb3e998f}\label{classxstar_1_1_named_pipe_server_a48b916a1487ba6efd47b8ee6eb3e998f}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!write@{write}}
+\index{write@{write}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily size\+\_\+t Named\+Pipe\+Server\+::write (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file named\+\_\+pipe.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{199 \{}
+\DoxyCodeLine{200     DWORD bytes = 0;}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202     \textcolor{keywordflow}{if} (!WriteFile(}
+\DoxyCodeLine{203         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}},}
+\DoxyCodeLine{204         \&value,}
+\DoxyCodeLine{205         \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),}
+\DoxyCodeLine{206         \&bytes,}
+\DoxyCodeLine{207         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{208     ))}
+\DoxyCodeLine{209     \{}
+\DoxyCodeLine{210         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{211     \}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213     \textcolor{keywordflow}{return} bytes;}
+\DoxyCodeLine{214 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_a78b1e4fda884fa24a36b7c3dd85c4a37}\label{classxstar_1_1_named_pipe_server_a78b1e4fda884fa24a36b7c3dd85c4a37}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!name\_@{name\_}}
+\index{name\_@{name\_}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string xstar\+::\+Named\+Pipe\+Server\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 203 of file named\+\_\+pipe.\+hpp.
+
+\mbox{\Hypertarget{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}\label{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}} 
+\index{xstar::NamedPipeServer@{xstar::NamedPipeServer}!pipe\_@{pipe\_}}
+\index{pipe\_@{pipe\_}!xstar::NamedPipeServer@{xstar::NamedPipeServer}}
+\doxysubsubsection{\texorpdfstring{pipe\_}{pipe\_}}
+{\footnotesize\ttfamily HANDLE xstar\+::\+Named\+Pipe\+Server\+::pipe\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 206 of file named\+\_\+pipe.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+user\+\_\+space/include/\mbox{\hyperlink{named__pipe_8hpp}{named\+\_\+pipe.\+hpp}}\item 
+user\+\_\+space/src/\mbox{\hyperlink{named__pipe_8cpp}{named\+\_\+pipe.\+cpp}}\end{DoxyCompactItemize}

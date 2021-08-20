@@ -1,0 +1,113 @@
+\hypertarget{classxstar_1_1_fast_mutex}{}\doxysection{xstar\+::Fast\+Mutex Class Reference}
+\label{classxstar_1_1_fast_mutex}\index{xstar::FastMutex@{xstar::FastMutex}}
+
+
+This wrapper over FAST\+\_\+\+MUTEX.  
+
+
+
+
+{\ttfamily \#include $<$fast\+\_\+mutex.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classxstar_1_1_fast_mutex_a5a3be916acc8d011cc789fb4d0601122}{Init}} ()
+\item 
+void \mbox{\hyperlink{classxstar_1_1_fast_mutex_a5858311c7b56ff76870b7f1c7464147a}{Lock}} ()
+\item 
+void \mbox{\hyperlink{classxstar_1_1_fast_mutex_a828a843707a6098998783eb0641e445f}{Unlock}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FAST\+\_\+\+MUTEX \mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This wrapper over FAST\+\_\+\+MUTEX. 
+
+Definition at line 33 of file fast\+\_\+mutex.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxstar_1_1_fast_mutex_a5a3be916acc8d011cc789fb4d0601122}\label{classxstar_1_1_fast_mutex_a5a3be916acc8d011cc789fb4d0601122}} 
+\index{xstar::FastMutex@{xstar::FastMutex}!Init@{Init}}
+\index{Init@{Init}!xstar::FastMutex@{xstar::FastMutex}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void xstar\+::\+Fast\+Mutex\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyWarning}{Warning}
+IRQL $<$= DISPATCH\+\_\+\+LEVEL 
+\end{DoxyWarning}
+
+
+Definition at line 56 of file fast\+\_\+mutex.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         ExInitializeFastMutex(\&\mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\_}});}
+\DoxyCodeLine{59     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_fast_mutex_a5858311c7b56ff76870b7f1c7464147a}\label{classxstar_1_1_fast_mutex_a5858311c7b56ff76870b7f1c7464147a}} 
+\index{xstar::FastMutex@{xstar::FastMutex}!Lock@{Lock}}
+\index{Lock@{Lock}!xstar::FastMutex@{xstar::FastMutex}}
+\doxysubsubsection{\texorpdfstring{Lock()}{Lock()}}
+{\footnotesize\ttfamily void xstar\+::\+Fast\+Mutex\+::\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyWarning}{Warning}
+IRQL $<$= APC\+\_\+\+LEVEL 
+\end{DoxyWarning}
+
+
+Definition at line 65 of file fast\+\_\+mutex.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66     \{}
+\DoxyCodeLine{67         ExAcquireFastMutex(\&\mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\_}});}
+\DoxyCodeLine{68     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_fast_mutex_a828a843707a6098998783eb0641e445f}\label{classxstar_1_1_fast_mutex_a828a843707a6098998783eb0641e445f}} 
+\index{xstar::FastMutex@{xstar::FastMutex}!Unlock@{Unlock}}
+\index{Unlock@{Unlock}!xstar::FastMutex@{xstar::FastMutex}}
+\doxysubsubsection{\texorpdfstring{Unlock()}{Unlock()}}
+{\footnotesize\ttfamily void xstar\+::\+Fast\+Mutex\+::\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyWarning}{Warning}
+IRQL == APC\+\_\+\+LEVEL 
+\end{DoxyWarning}
+
+
+Definition at line 74 of file fast\+\_\+mutex.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75     \{}
+\DoxyCodeLine{76         ExReleaseFastMutex(\&\mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\_}});}
+\DoxyCodeLine{77     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}\label{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}} 
+\index{xstar::FastMutex@{xstar::FastMutex}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!xstar::FastMutex@{xstar::FastMutex}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily FAST\+\_\+\+MUTEX xstar\+::\+Fast\+Mutex\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 49 of file fast\+\_\+mutex.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel\+\_\+space/include/\mbox{\hyperlink{fast__mutex_8hpp}{fast\+\_\+mutex.\+hpp}}\end{DoxyCompactItemize}

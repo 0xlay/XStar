@@ -1,0 +1,74 @@
+\hypertarget{group___paged_memory__group}{}\doxysection{Paged\+Memory}
+\label{group___paged_memory__group}\index{PagedMemory@{PagedMemory}}
+
+
+This class implements new and delete operators to allocate paged memory.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_paged_memory}{Paged\+Memory}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+Use\+\_\+decl\+\_\+annotations\+\_\+ void $\ast$\+\_\+\+\_\+cdecl \mbox{\hyperlink{group___paged_memory__group_gaee9a9f30ff7400299bf990bd244e3881}{operator new}} (size\+\_\+t size)
+\item 
+\+\_\+\+Use\+\_\+decl\+\_\+annotations\+\_\+ void $\ast$\+\_\+\+\_\+cdecl \mbox{\hyperlink{group___paged_memory__group_gaa48af1ab8cc313c1cfab9e03ac7071d7}{operator new\mbox{[}$\,$\mbox{]}}} (size\+\_\+t size)
+\item 
+\+\_\+\+Use\+\_\+decl\+\_\+annotations\+\_\+ void \+\_\+\+\_\+cdecl \mbox{\hyperlink{group___paged_memory__group_ga1a502808ff08c1b9fd8d8fd74cb5cc83}{operator delete}} (void $\ast$\mbox{\hyperlink{cpplibrary_8hpp_a9c83371b38db58a2e0c3b53bb6b303f0}{ptr}}) \mbox{\hyperlink{cpplibrary_8hpp_abfccd4ebb3ad8184e12d1381c2eec6c9}{noexcept}}
+\item 
+\+\_\+\+Use\+\_\+decl\+\_\+annotations\+\_\+ void \+\_\+\+\_\+cdecl \mbox{\hyperlink{group___paged_memory__group_gad4b24e839905b52fb0846b074048e6d4}{operator delete\mbox{[}$\,$\mbox{]}}} (void $\ast$\mbox{\hyperlink{cpplibrary_8hpp_a9c83371b38db58a2e0c3b53bb6b303f0}{ptr}}) \mbox{\hyperlink{cpplibrary_8hpp_abfccd4ebb3ad8184e12d1381c2eec6c9}{noexcept}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class implements new and delete operators to allocate paged memory. 
+
+\begin{DoxyWarning}{Warning}
+IRQL $<$= APC\+\_\+\+LEVEL 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___paged_memory__group_ga1a502808ff08c1b9fd8d8fd74cb5cc83}\label{group___paged_memory__group_ga1a502808ff08c1b9fd8d8fd74cb5cc83}} 
+\index{PagedMemory@{PagedMemory}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}}
+{\footnotesize\ttfamily \+\_\+\+Use\+\_\+decl\+\_\+annotations\+\_\+ void Paged\+Memory\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 47 of file cpplibrary.\+cpp.
+
+\mbox{\Hypertarget{group___paged_memory__group_gad4b24e839905b52fb0846b074048e6d4}\label{group___paged_memory__group_gad4b24e839905b52fb0846b074048e6d4}} 
+\index{PagedMemory@{PagedMemory}!operator delete\mbox{[}\mbox{]}@{operator delete[]}}
+\index{operator delete\mbox{[}\mbox{]}@{operator delete[]}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete[]()}{operator delete[]()}}
+{\footnotesize\ttfamily \+\_\+\+Use\+\_\+decl\+\_\+annotations\+\_\+ void Paged\+Memory\+::operator delete\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 55 of file cpplibrary.\+cpp.
+
+\mbox{\Hypertarget{group___paged_memory__group_gaee9a9f30ff7400299bf990bd244e3881}\label{group___paged_memory__group_gaee9a9f30ff7400299bf990bd244e3881}} 
+\index{PagedMemory@{PagedMemory}!operator new@{operator new}}
+\index{operator new@{operator new}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator new()}{operator new()}}
+{\footnotesize\ttfamily \+\_\+\+Use\+\_\+decl\+\_\+annotations\+\_\+ void $\ast$ Paged\+Memory\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file cpplibrary.\+cpp.
+
+\mbox{\Hypertarget{group___paged_memory__group_gaa48af1ab8cc313c1cfab9e03ac7071d7}\label{group___paged_memory__group_gaa48af1ab8cc313c1cfab9e03ac7071d7}} 
+\index{PagedMemory@{PagedMemory}!operator new\mbox{[}\mbox{]}@{operator new[]}}
+\index{operator new\mbox{[}\mbox{]}@{operator new[]}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator new[]()}{operator new[]()}}
+{\footnotesize\ttfamily \+\_\+\+Use\+\_\+decl\+\_\+annotations\+\_\+ void $\ast$ Paged\+Memory\+::operator new\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file cpplibrary.\+cpp.
+

@@ -1,0 +1,150 @@
+\hypertarget{clibrary_8hpp}{}\doxysection{kernel\+\_\+space/runtime/clibrary.hpp File Reference}
+\label{clibrary_8hpp}\index{kernel\_space/runtime/clibrary.hpp@{kernel\_space/runtime/clibrary.hpp}}
+{\ttfamily \#include $<$ntddk.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___m_e_m_b_l_o_c_k}{\+\_\+\+MEMBLOCK}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{clibrary_8hpp_a69b2d8c66523796f6168beea839fa3f2}{\+\_\+\+C\+\_\+\+LIBRARY\+\_\+\+TAG\+\_\+}}~\textquotesingle{}RATS\textquotesingle{}
+\item 
+\#define \mbox{\hyperlink{clibrary_8hpp_a0a4b1dd0c173e8647383f0f1424a456a}{get\+Base\+Pointer}}(data\+\_\+ptr)~ (static\+\_\+cast$<$char$\ast$$>$(data\+\_\+ptr) -\/ sizeof(size\+\_\+t))
+\begin{DoxyCompactList}\small\item\em This macro gets a pointer to base in the MEMBLOCK structure. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{clibrary_8hpp_abea415c8f6dfb8cbc2478170de165a8f}{get\+Data\+Pointer}}(base\+\_\+ptr)~ (reinterpret\+\_\+cast$<$char$\ast$$>$(base\+\_\+ptr) + sizeof(size\+\_\+t))
+\begin{DoxyCompactList}\small\item\em This macro gets a pointer to data in the MEMBLOCK structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct___m_e_m_b_l_o_c_k}{\+\_\+\+MEMBLOCK}} \mbox{\hyperlink{clibrary_8hpp_af8a8e02aa496a3b2d6a886d3a04c84ff}{MEMBLOCK}}
+\item 
+typedef struct \mbox{\hyperlink{struct___m_e_m_b_l_o_c_k}{\+\_\+\+MEMBLOCK}} $\ast$ \mbox{\hyperlink{clibrary_8hpp_ab06710215122364ce3614546136fcb7a}{PMEMBLOCK}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$\+\_\+\+\_\+cdecl \mbox{\hyperlink{clibrary_8hpp_a1853b9bfb7f95bcb00e101a09f81f68e}{malloc}} (\+\_\+\+In\+\_\+ size\+\_\+t size) noexcept
+\item 
+void \+\_\+\+\_\+cdecl \mbox{\hyperlink{clibrary_8hpp_ae45158f213b4fc1801da391ef8e9535b}{free}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr) noexcept
+\item 
+void $\ast$\+\_\+\+\_\+cdecl \mbox{\hyperlink{clibrary_8hpp_a9df3a13c47a10240ba5c5dc639b1887d}{calloc}} (\+\_\+\+In\+\_\+ size\+\_\+t num, \+\_\+\+In\+\_\+ size\+\_\+t size) noexcept
+\item 
+void $\ast$\+\_\+\+\_\+cdecl \mbox{\hyperlink{clibrary_8hpp_a1e83b1a481cad6549a6bfde79aff5f4c}{realloc}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr, \+\_\+\+In\+\_\+ size\+\_\+t new\+\_\+size) noexcept
+\item 
+void $\ast$ \mbox{\hyperlink{clibrary_8hpp_a4075d2367e607dc3503399baca08c59c}{vmalloc}} (\+\_\+\+In\+\_\+ size\+\_\+t size) noexcept
+\item 
+void \+\_\+\+\_\+cdecl \mbox{\hyperlink{clibrary_8hpp_a72f3bec3bf153f4cb45e2e3d9e4bf8ec}{vfree}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr) noexcept
+\item 
+void $\ast$\+\_\+\+\_\+cdecl \mbox{\hyperlink{clibrary_8hpp_ad72696a41580e95207685a960b0921a8}{vcalloc}} (\+\_\+\+In\+\_\+ size\+\_\+t num, \+\_\+\+In\+\_\+ size\+\_\+t size) noexcept
+\item 
+void $\ast$\+\_\+\+\_\+cdecl \mbox{\hyperlink{clibrary_8hpp_a0aa98f0d4fcf32ed0e562308e12226d0}{vrealloc}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr, \+\_\+\+In\+\_\+ size\+\_\+t new\+\_\+size) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{clibrary_8hpp_a69b2d8c66523796f6168beea839fa3f2}\label{clibrary_8hpp_a69b2d8c66523796f6168beea839fa3f2}} 
+\index{clibrary.hpp@{clibrary.hpp}!\_C\_LIBRARY\_TAG\_@{\_C\_LIBRARY\_TAG\_}}
+\index{\_C\_LIBRARY\_TAG\_@{\_C\_LIBRARY\_TAG\_}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{\_C\_LIBRARY\_TAG\_}{\_C\_LIBRARY\_TAG\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+\_\+\+LIBRARY\+\_\+\+TAG\+\_\+~\textquotesingle{}RATS\textquotesingle{}}
+
+
+
+Definition at line 27 of file clibrary.\+hpp.
+
+\mbox{\Hypertarget{clibrary_8hpp_a0a4b1dd0c173e8647383f0f1424a456a}\label{clibrary_8hpp_a0a4b1dd0c173e8647383f0f1424a456a}} 
+\index{clibrary.hpp@{clibrary.hpp}!getBasePointer@{getBasePointer}}
+\index{getBasePointer@{getBasePointer}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{getBasePointer}{getBasePointer}}
+{\footnotesize\ttfamily \#define get\+Base\+Pointer(\begin{DoxyParamCaption}\item[{}]{data\+\_\+ptr }\end{DoxyParamCaption})~ (static\+\_\+cast$<$char$\ast$$>$(data\+\_\+ptr) -\/ sizeof(size\+\_\+t))}
+
+
+
+This macro gets a pointer to base in the MEMBLOCK structure. 
+
+
+
+Definition at line 32 of file clibrary.\+hpp.
+
+\mbox{\Hypertarget{clibrary_8hpp_abea415c8f6dfb8cbc2478170de165a8f}\label{clibrary_8hpp_abea415c8f6dfb8cbc2478170de165a8f}} 
+\index{clibrary.hpp@{clibrary.hpp}!getDataPointer@{getDataPointer}}
+\index{getDataPointer@{getDataPointer}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{getDataPointer}{getDataPointer}}
+{\footnotesize\ttfamily \#define get\+Data\+Pointer(\begin{DoxyParamCaption}\item[{}]{base\+\_\+ptr }\end{DoxyParamCaption})~ (reinterpret\+\_\+cast$<$char$\ast$$>$(base\+\_\+ptr) + sizeof(size\+\_\+t))}
+
+
+
+This macro gets a pointer to data in the MEMBLOCK structure. 
+
+
+
+Definition at line 38 of file clibrary.\+hpp.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{clibrary_8hpp_af8a8e02aa496a3b2d6a886d3a04c84ff}\label{clibrary_8hpp_af8a8e02aa496a3b2d6a886d3a04c84ff}} 
+\index{clibrary.hpp@{clibrary.hpp}!MEMBLOCK@{MEMBLOCK}}
+\index{MEMBLOCK@{MEMBLOCK}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{MEMBLOCK}{MEMBLOCK}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___m_e_m_b_l_o_c_k}{\+\_\+\+MEMBLOCK}} \mbox{\hyperlink{clibrary_8hpp_af8a8e02aa496a3b2d6a886d3a04c84ff}{MEMBLOCK}}}
+
+\mbox{\Hypertarget{clibrary_8hpp_ab06710215122364ce3614546136fcb7a}\label{clibrary_8hpp_ab06710215122364ce3614546136fcb7a}} 
+\index{clibrary.hpp@{clibrary.hpp}!PMEMBLOCK@{PMEMBLOCK}}
+\index{PMEMBLOCK@{PMEMBLOCK}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{PMEMBLOCK}{PMEMBLOCK}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___m_e_m_b_l_o_c_k}{\+\_\+\+MEMBLOCK}} $\ast$ \mbox{\hyperlink{clibrary_8hpp_ab06710215122364ce3614546136fcb7a}{PMEMBLOCK}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{clibrary_8hpp_a9df3a13c47a10240ba5c5dc639b1887d}\label{clibrary_8hpp_a9df3a13c47a10240ba5c5dc639b1887d}} 
+\index{clibrary.hpp@{clibrary.hpp}!calloc@{calloc}}
+\index{calloc@{calloc}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{calloc()}{calloc()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+\+\_\+cdecl calloc (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{num,  }\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{clibrary_8hpp_ae45158f213b4fc1801da391ef8e9535b}\label{clibrary_8hpp_ae45158f213b4fc1801da391ef8e9535b}} 
+\index{clibrary.hpp@{clibrary.hpp}!free@{free}}
+\index{free@{free}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cdecl free (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{clibrary_8hpp_a1853b9bfb7f95bcb00e101a09f81f68e}\label{clibrary_8hpp_a1853b9bfb7f95bcb00e101a09f81f68e}} 
+\index{clibrary.hpp@{clibrary.hpp}!malloc@{malloc}}
+\index{malloc@{malloc}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{malloc()}{malloc()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+\+\_\+cdecl malloc (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{clibrary_8hpp_a1e83b1a481cad6549a6bfde79aff5f4c}\label{clibrary_8hpp_a1e83b1a481cad6549a6bfde79aff5f4c}} 
+\index{clibrary.hpp@{clibrary.hpp}!realloc@{realloc}}
+\index{realloc@{realloc}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{realloc()}{realloc()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+\+\_\+cdecl realloc (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr,  }\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{new\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{clibrary_8hpp_ad72696a41580e95207685a960b0921a8}\label{clibrary_8hpp_ad72696a41580e95207685a960b0921a8}} 
+\index{clibrary.hpp@{clibrary.hpp}!vcalloc@{vcalloc}}
+\index{vcalloc@{vcalloc}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{vcalloc()}{vcalloc()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+\+\_\+cdecl vcalloc (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{num,  }\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{clibrary_8hpp_a72f3bec3bf153f4cb45e2e3d9e4bf8ec}\label{clibrary_8hpp_a72f3bec3bf153f4cb45e2e3d9e4bf8ec}} 
+\index{clibrary.hpp@{clibrary.hpp}!vfree@{vfree}}
+\index{vfree@{vfree}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{vfree()}{vfree()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cdecl vfree (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{clibrary_8hpp_a4075d2367e607dc3503399baca08c59c}\label{clibrary_8hpp_a4075d2367e607dc3503399baca08c59c}} 
+\index{clibrary.hpp@{clibrary.hpp}!vmalloc@{vmalloc}}
+\index{vmalloc@{vmalloc}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{vmalloc()}{vmalloc()}}
+{\footnotesize\ttfamily void$\ast$ vmalloc (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{clibrary_8hpp_a0aa98f0d4fcf32ed0e562308e12226d0}\label{clibrary_8hpp_a0aa98f0d4fcf32ed0e562308e12226d0}} 
+\index{clibrary.hpp@{clibrary.hpp}!vrealloc@{vrealloc}}
+\index{vrealloc@{vrealloc}!clibrary.hpp@{clibrary.hpp}}
+\doxysubsubsection{\texorpdfstring{vrealloc()}{vrealloc()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+\+\_\+cdecl vrealloc (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr,  }\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{new\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+

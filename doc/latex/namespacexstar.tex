@@ -1,0 +1,576 @@
+\hypertarget{namespacexstar}{}\doxysection{xstar Namespace Reference}
+\label{namespacexstar}\index{xstar@{xstar}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_fast_mutex}{Fast\+Mutex}}
+\begin{DoxyCompactList}\small\item\em This wrapper over FAST\+\_\+\+MUTEX. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxstar_1_1_smart_lock}{Smart\+Lock}}
+\begin{DoxyCompactList}\small\item\em This class is equivalent to lock\+\_\+guard from STL. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} is using windows exception.\+You will need using operator \+\_\+\+\_\+try, \+\_\+\+\_\+except. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxstar_1_1_pipe_info}{Pipe\+Info}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_named_pipe_server}{Named\+Pipe\+Server}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_named_pipe_client}{Named\+Pipe\+Client}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_close_s_h}{Close\+SH}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_close_s_h_3_01_h_a_n_d_l_e_01_4}{Close\+SH$<$ HANDLE $>$}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_close_s_h_3_01_s_c___h_a_n_d_l_e_01_4}{Close\+SH$<$ SC\+\_\+\+HANDLE $>$}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_close_s_h_3_01_h_w_n_d_01_4}{Close\+SH$<$ HWND $>$}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{Win\+APIException}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structxstar_1_1_pipe_info}{xstar\+::\+Pipe\+Info}} \mbox{\hyperlink{namespacexstar_a0db2e686069ae1530f3bf3e776f37118}{Pipe\+Info\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870}{Virtual\+Memory}} \{ \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{Small\+Page\+\_\+4\+KB}} = 4\textquotesingle{}096u
+, \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870ac5a38635a44b603551bedd3acc002f6f}{Large\+Page\+\_\+2\+MB}} = 2\textquotesingle{}097\textquotesingle{}152u
+, \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a623aed70915efed9b2b9155088ef9f11}{Huge\+Page\+\_\+1\+GB}} = 1\textquotesingle{}073\textquotesingle{}741\textquotesingle{}824
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} \+: DWORD \{ \newline
+\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aefeb369cccbd560588a756610865664c}{In}} = PIPE\+\_\+\+ACCESS\+\_\+\+INBOUND
+, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a7c147cda9e49590f6abe83d118b7353b}{Out}} = PIPE\+\_\+\+ACCESS\+\_\+\+OUTBOUND
+, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a47a54d9da8952a3980d27488b00a21c1}{In\+Out}} = PIPE\+\_\+\+ACCESS\+\_\+\+DUPLEX
+, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a2ef50b4c466304dc6ac77bac8a779971}{Exclusive}} = FILE\+\_\+\+FLAG\+\_\+\+FIRST\+\_\+\+PIPE\+\_\+\+INSTANCE
+, \newline
+\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aacb7820573f20d69befb56e41f440549}{Write\+Through}} = FILE\+\_\+\+FLAG\+\_\+\+WRITE\+\_\+\+THROUGH
+, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a5f1b91d5ebf354ef9c15b0671c0e8b18}{Overlapped}} = FILE\+\_\+\+FLAG\+\_\+\+OVERLAPPED
+, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aeefa9ccbf2071c722eefe2ce44c70b02}{Write\+Owner}} = WRITE\+\_\+\+OWNER
+, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a9a5219b3b103391c634ee2dea9cfe5a5}{Write\+ACL}} = WRITE\+\_\+\+DAC
+, \newline
+\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66adf6e3c00e1bc5920b819a81f1b21de5c}{Write\+SACL}} = ACCESS\+\_\+\+SYSTEM\+\_\+\+SECURITY
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} \+: DWORD \{ \newline
+\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa20550804a6328e3541a4414854d01017}{Write\+Byte}} = PIPE\+\_\+\+TYPE\+\_\+\+BYTE
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaac436c659ad8f88223c0342dd623bf952}{Read\+Byte}} = PIPE\+\_\+\+READMODE\+\_\+\+BYTE
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6209e6108d559885b1df4a3ebe3deb8b}{Write\+Msg}} = PIPE\+\_\+\+TYPE\+\_\+\+MESSAGE
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}{Read\+Msg}} = PIPE\+\_\+\+READMODE\+\_\+\+MESSAGE
+, \newline
+\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa0f68101772bd5397ef8eb1b632798652}{Wait}} = PIPE\+\_\+\+WAIT
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaaa79651554c2676976f6848a999d84aac}{No\+Wait}} = PIPE\+\_\+\+NOWAIT
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6ff49946bdfb33d8e4d0d306b21c58f1}{Accept\+Clients}} = PIPE\+\_\+\+ACCEPT\+\_\+\+REMOTE\+\_\+\+CLIENTS
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaab8085b1e63526caadc31695f6d39d316}{Reject\+Clients}} = PIPE\+\_\+\+REJECT\+\_\+\+REMOTE\+\_\+\+CLIENTS
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4b}{Pipe\+Access}} \+: DWORD \{ \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba1129c0e4d43f2d121652a7302712cff6}{Write}} = GENERIC\+\_\+\+WRITE
+, \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba7a1a5f3e79fdc91edf2f5ead9d66abb4}{Read}} = GENERIC\+\_\+\+READ
+, \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba47a54d9da8952a3980d27488b00a21c1}{In\+Out}} = GENERIC\+\_\+\+READ $\vert$ GENERIC\+\_\+\+WRITE
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacexstar_a6522f3f6b32b83ca8d14f1dadfa9bd73}{swap}} (T \&first\+Value, T \&second\+Value)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_ae671653a905056cc61158ffc06e3bb38}{operator$\vert$}} (\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} rvalue, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_af39262d035856486c86298ea3d5a04dd}{operator$\vert$}} (DWORD rvalue, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_a85ab2a5390e7cda4a835c1025d1aea06}{operator$\vert$}} (\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} rvalue, DWORD lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_a7261853d48d217b8ffc372d0d65bf0a5}{operator+}} (\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} rvalue, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_afe308ebb8ce4c91a6e5886f350846bff}{operator+}} (DWORD rvalue, \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_a0e6a6a4f02cd3c31b7d0270f3e513a83}{operator+}} (\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}} rvalue, DWORD lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_ae424bdb6e7efd8d95491e646912be3d7}{operator$\vert$}} (\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} rvalue, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_af38d11adaf30bfe5846da9c0d08f23e9}{operator$\vert$}} (DWORD rvalue, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_af6a34baf8e3036ad8884566685295e24}{operator$\vert$}} (\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} rvalue, DWORD lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_aac8d95133a6f49325ed233f59e383df4}{operator+}} (\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} rvalue, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_af0c8001b24451ad40bd99346579f9141}{operator+}} (DWORD rvalue, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} lvalue)
+\item 
+DWORD \mbox{\hyperlink{namespacexstar_ab3916a5e06717bd9705b17bca4939052}{operator+}} (\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} rvalue, DWORD lvalue)
+\item 
+std\+::string \mbox{\hyperlink{namespacexstar_a2f2f11cd766129e29f47dc9713f5c192}{get\+Last\+Error\+Str}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacexstar_a0db2e686069ae1530f3bf3e776f37118}\label{namespacexstar_a0db2e686069ae1530f3bf3e776f37118}} 
+\index{xstar@{xstar}!PipeInfo\_t@{PipeInfo\_t}}
+\index{PipeInfo\_t@{PipeInfo\_t}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{PipeInfo\_t}{PipeInfo\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structxstar_1_1_pipe_info}{xstar\+::\+Pipe\+Info}} \mbox{\hyperlink{namespacexstar_a0db2e686069ae1530f3bf3e776f37118}{xstar\+::\+Pipe\+Info\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacexstar_a938a6d971870cc592a53875175302e4b}\label{namespacexstar_a938a6d971870cc592a53875175302e4b}} 
+\index{xstar@{xstar}!PipeAccess@{PipeAccess}}
+\index{PipeAccess@{PipeAccess}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{PipeAccess}{PipeAccess}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4b}{xstar\+::\+Pipe\+Access}} \+: DWORD\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Write@{Write}!xstar@{xstar}}\index{xstar@{xstar}!Write@{Write}}}\mbox{\Hypertarget{namespacexstar_a938a6d971870cc592a53875175302e4ba1129c0e4d43f2d121652a7302712cff6}\label{namespacexstar_a938a6d971870cc592a53875175302e4ba1129c0e4d43f2d121652a7302712cff6}} 
+Write&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Read@{Read}!xstar@{xstar}}\index{xstar@{xstar}!Read@{Read}}}\mbox{\Hypertarget{namespacexstar_a938a6d971870cc592a53875175302e4ba7a1a5f3e79fdc91edf2f5ead9d66abb4}\label{namespacexstar_a938a6d971870cc592a53875175302e4ba7a1a5f3e79fdc91edf2f5ead9d66abb4}} 
+Read&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InOut@{InOut}!xstar@{xstar}}\index{xstar@{xstar}!InOut@{InOut}}}\mbox{\Hypertarget{namespacexstar_a938a6d971870cc592a53875175302e4ba47a54d9da8952a3980d27488b00a21c1}\label{namespacexstar_a938a6d971870cc592a53875175302e4ba47a54d9da8952a3980d27488b00a21c1}} 
+In\+Out&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 137 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138     \{}
+\DoxyCodeLine{139         \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba1129c0e4d43f2d121652a7302712cff6}{Write}} = GENERIC\_WRITE,}
+\DoxyCodeLine{140         \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba7a1a5f3e79fdc91edf2f5ead9d66abb4}{Read}}  = GENERIC\_READ,}
+\DoxyCodeLine{141         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a47a54d9da8952a3980d27488b00a21c1}{InOut}} = GENERIC\_READ | GENERIC\_WRITE}
+\DoxyCodeLine{142     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}} 
+\index{xstar@{xstar}!PipeDircetion@{PipeDircetion}}
+\index{PipeDircetion@{PipeDircetion}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{PipeDircetion}{PipeDircetion}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{xstar\+::\+Pipe\+Dircetion}} \+: DWORD\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{In@{In}!xstar@{xstar}}\index{xstar@{xstar}!In@{In}}}\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aefeb369cccbd560588a756610865664c}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aefeb369cccbd560588a756610865664c}} 
+In&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Out@{Out}!xstar@{xstar}}\index{xstar@{xstar}!Out@{Out}}}\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a7c147cda9e49590f6abe83d118b7353b}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a7c147cda9e49590f6abe83d118b7353b}} 
+Out&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InOut@{InOut}!xstar@{xstar}}\index{xstar@{xstar}!InOut@{InOut}}}\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a47a54d9da8952a3980d27488b00a21c1}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a47a54d9da8952a3980d27488b00a21c1}} 
+In\+Out&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Exclusive@{Exclusive}!xstar@{xstar}}\index{xstar@{xstar}!Exclusive@{Exclusive}}}\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a2ef50b4c466304dc6ac77bac8a779971}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a2ef50b4c466304dc6ac77bac8a779971}} 
+Exclusive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WriteThrough@{WriteThrough}!xstar@{xstar}}\index{xstar@{xstar}!WriteThrough@{WriteThrough}}}\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aacb7820573f20d69befb56e41f440549}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aacb7820573f20d69befb56e41f440549}} 
+Write\+Through&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Overlapped@{Overlapped}!xstar@{xstar}}\index{xstar@{xstar}!Overlapped@{Overlapped}}}\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a5f1b91d5ebf354ef9c15b0671c0e8b18}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a5f1b91d5ebf354ef9c15b0671c0e8b18}} 
+Overlapped&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WriteOwner@{WriteOwner}!xstar@{xstar}}\index{xstar@{xstar}!WriteOwner@{WriteOwner}}}\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aeefa9ccbf2071c722eefe2ce44c70b02}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aeefa9ccbf2071c722eefe2ce44c70b02}} 
+Write\+Owner&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WriteACL@{WriteACL}!xstar@{xstar}}\index{xstar@{xstar}!WriteACL@{WriteACL}}}\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a9a5219b3b103391c634ee2dea9cfe5a5}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a9a5219b3b103391c634ee2dea9cfe5a5}} 
+Write\+ACL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WriteSACL@{WriteSACL}!xstar@{xstar}}\index{xstar@{xstar}!WriteSACL@{WriteSACL}}}\mbox{\Hypertarget{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66adf6e3c00e1bc5920b819a81f1b21de5c}\label{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66adf6e3c00e1bc5920b819a81f1b21de5c}} 
+Write\+SACL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 39 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aefeb369cccbd560588a756610865664c}{In}}           = PIPE\_ACCESS\_INBOUND,}
+\DoxyCodeLine{42         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a7c147cda9e49590f6abe83d118b7353b}{Out}}          = PIPE\_ACCESS\_OUTBOUND,}
+\DoxyCodeLine{43         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a47a54d9da8952a3980d27488b00a21c1}{InOut}}        = PIPE\_ACCESS\_DUPLEX,}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a2ef50b4c466304dc6ac77bac8a779971}{Exclusive}}    = FILE\_FLAG\_FIRST\_PIPE\_INSTANCE,}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aacb7820573f20d69befb56e41f440549}{WriteThrough}} = FILE\_FLAG\_WRITE\_THROUGH,}
+\DoxyCodeLine{48         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a5f1b91d5ebf354ef9c15b0671c0e8b18}{Overlapped}}   = FILE\_FLAG\_OVERLAPPED,}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66aeefa9ccbf2071c722eefe2ce44c70b02}{WriteOwner}}   = WRITE\_OWNER,}
+\DoxyCodeLine{51         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66a9a5219b3b103391c634ee2dea9cfe5a5}{WriteACL}}     = WRITE\_DAC,}
+\DoxyCodeLine{52         \mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66adf6e3c00e1bc5920b819a81f1b21de5c}{WriteSACL}}    = ACCESS\_SYSTEM\_SECURITY}
+\DoxyCodeLine{53     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}\label{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}} 
+\index{xstar@{xstar}!PipeMode@{PipeMode}}
+\index{PipeMode@{PipeMode}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{PipeMode}{PipeMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{xstar\+::\+Pipe\+Mode}} \+: DWORD\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WriteByte@{WriteByte}!xstar@{xstar}}\index{xstar@{xstar}!WriteByte@{WriteByte}}}\mbox{\Hypertarget{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa20550804a6328e3541a4414854d01017}\label{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa20550804a6328e3541a4414854d01017}} 
+Write\+Byte&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReadByte@{ReadByte}!xstar@{xstar}}\index{xstar@{xstar}!ReadByte@{ReadByte}}}\mbox{\Hypertarget{namespacexstar_acf054f95f0f9f00660e32b968126b3eaac436c659ad8f88223c0342dd623bf952}\label{namespacexstar_acf054f95f0f9f00660e32b968126b3eaac436c659ad8f88223c0342dd623bf952}} 
+Read\+Byte&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WriteMsg@{WriteMsg}!xstar@{xstar}}\index{xstar@{xstar}!WriteMsg@{WriteMsg}}}\mbox{\Hypertarget{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6209e6108d559885b1df4a3ebe3deb8b}\label{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6209e6108d559885b1df4a3ebe3deb8b}} 
+Write\+Msg&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReadMsg@{ReadMsg}!xstar@{xstar}}\index{xstar@{xstar}!ReadMsg@{ReadMsg}}}\mbox{\Hypertarget{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}\label{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}} 
+Read\+Msg&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Wait@{Wait}!xstar@{xstar}}\index{xstar@{xstar}!Wait@{Wait}}}\mbox{\Hypertarget{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa0f68101772bd5397ef8eb1b632798652}\label{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa0f68101772bd5397ef8eb1b632798652}} 
+Wait&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoWait@{NoWait}!xstar@{xstar}}\index{xstar@{xstar}!NoWait@{NoWait}}}\mbox{\Hypertarget{namespacexstar_acf054f95f0f9f00660e32b968126b3eaaa79651554c2676976f6848a999d84aac}\label{namespacexstar_acf054f95f0f9f00660e32b968126b3eaaa79651554c2676976f6848a999d84aac}} 
+No\+Wait&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AcceptClients@{AcceptClients}!xstar@{xstar}}\index{xstar@{xstar}!AcceptClients@{AcceptClients}}}\mbox{\Hypertarget{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6ff49946bdfb33d8e4d0d306b21c58f1}\label{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6ff49946bdfb33d8e4d0d306b21c58f1}} 
+Accept\+Clients&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RejectClients@{RejectClients}!xstar@{xstar}}\index{xstar@{xstar}!RejectClients@{RejectClients}}}\mbox{\Hypertarget{namespacexstar_acf054f95f0f9f00660e32b968126b3eaab8085b1e63526caadc31695f6d39d316}\label{namespacexstar_acf054f95f0f9f00660e32b968126b3eaab8085b1e63526caadc31695f6d39d316}} 
+Reject\+Clients&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 90 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91     \{}
+\DoxyCodeLine{92         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa20550804a6328e3541a4414854d01017}{WriteByte}}     = PIPE\_TYPE\_BYTE,}
+\DoxyCodeLine{93         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaac436c659ad8f88223c0342dd623bf952}{ReadByte}}      = PIPE\_READMODE\_BYTE,}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6209e6108d559885b1df4a3ebe3deb8b}{WriteMsg}}      = PIPE\_TYPE\_MESSAGE,}
+\DoxyCodeLine{96         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}{ReadMsg}}       = PIPE\_READMODE\_MESSAGE,}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa0f68101772bd5397ef8eb1b632798652}{Wait}}          = PIPE\_WAIT,}
+\DoxyCodeLine{99         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaaa79651554c2676976f6848a999d84aac}{NoWait}}        = PIPE\_NOWAIT,}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6ff49946bdfb33d8e4d0d306b21c58f1}{AcceptClients}} = PIPE\_ACCEPT\_REMOTE\_CLIENTS,}
+\DoxyCodeLine{102         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaab8085b1e63526caadc31695f6d39d316}{RejectClients}} = PIPE\_REJECT\_REMOTE\_CLIENTS}
+\DoxyCodeLine{103     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_ad79459a330b8d151f6bdd6425c34c870}\label{namespacexstar_ad79459a330b8d151f6bdd6425c34c870}} 
+\index{xstar@{xstar}!VirtualMemory@{VirtualMemory}}
+\index{VirtualMemory@{VirtualMemory}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{VirtualMemory}{VirtualMemory}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870}{xstar\+::\+Virtual\+Memory}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SmallPage\_4KB@{SmallPage\_4KB}!xstar@{xstar}}\index{xstar@{xstar}!SmallPage\_4KB@{SmallPage\_4KB}}}\mbox{\Hypertarget{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}\label{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}} 
+Small\+Page\+\_\+4\+KB&Small page = 4KB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LargePage\_2MB@{LargePage\_2MB}!xstar@{xstar}}\index{xstar@{xstar}!LargePage\_2MB@{LargePage\_2MB}}}\mbox{\Hypertarget{namespacexstar_ad79459a330b8d151f6bdd6425c34c870ac5a38635a44b603551bedd3acc002f6f}\label{namespacexstar_ad79459a330b8d151f6bdd6425c34c870ac5a38635a44b603551bedd3acc002f6f}} 
+Large\+Page\+\_\+2\+MB&Large page = 2MB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HugePage\_1GB@{HugePage\_1GB}!xstar@{xstar}}\index{xstar@{xstar}!HugePage\_1GB@{HugePage\_1GB}}}\mbox{\Hypertarget{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a623aed70915efed9b2b9155088ef9f11}\label{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a623aed70915efed9b2b9155088ef9f11}} 
+Huge\+Page\+\_\+1\+GB&Huge page = 1GB (since Windows 10 and high) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 30 of file meminfo.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{SmallPage\_4KB}}   = 4'096u,           }
+\DoxyCodeLine{33         \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870ac5a38635a44b603551bedd3acc002f6f}{LargePage\_2MB}}   = 2'097'152u,       }
+\DoxyCodeLine{34 \textcolor{preprocessor}{        \#if WINVER >= \_WIN32\_WINNT\_WIN10}}
+\DoxyCodeLine{35         \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a623aed70915efed9b2b9155088ef9f11}{HugePage\_1GB}}    = 1'073'741'824     }
+\DoxyCodeLine{36 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{37     \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacexstar_a2f2f11cd766129e29f47dc9713f5c192}\label{namespacexstar_a2f2f11cd766129e29f47dc9713f5c192}} 
+\index{xstar@{xstar}!getLastErrorStr@{getLastErrorStr}}
+\index{getLastErrorStr@{getLastErrorStr}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{getLastErrorStr()}{getLastErrorStr()}}
+{\footnotesize\ttfamily std\+::string xstar\+::get\+Last\+Error\+Str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file winapi\+\_\+excepion.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56     \{}
+\DoxyCodeLine{57         \textcolor{keywordtype}{char} msg\_buf[256]\{ 0 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59         uint32\_t lastError = GetLastError();}
+\DoxyCodeLine{60         \textcolor{keywordflow}{if} (!lastError)}
+\DoxyCodeLine{61             \textcolor{keywordflow}{return} msg\_buf;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         \textcolor{keywordtype}{size\_t} size = FormatMessageA(}
+\DoxyCodeLine{64             FORMAT\_MESSAGE\_FROM\_SYSTEM |}
+\DoxyCodeLine{65             FORMAT\_MESSAGE\_IGNORE\_INSERTS,}
+\DoxyCodeLine{66             \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{67             lastError,}
+\DoxyCodeLine{68             MAKELANGID(LANG\_ENGLISH, SUBLANG\_ENGLISH\_US),}
+\DoxyCodeLine{69             msg\_buf,}
+\DoxyCodeLine{70             256,}
+\DoxyCodeLine{71             \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{72         );}
+\DoxyCodeLine{73         \textcolor{keywordflow}{if} (!size)}
+\DoxyCodeLine{74             \textcolor{keywordflow}{throw} std::exception();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{keywordflow}{return} std::string(msg\_buf, 256);}
+\DoxyCodeLine{77     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_afe308ebb8ce4c91a6e5886f350846bff}\label{namespacexstar_afe308ebb8ce4c91a6e5886f350846bff}} 
+\index{xstar@{xstar}!operator+@{operator+}}
+\index{operator+@{operator+}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator+ (\begin{DoxyParamCaption}\item[{DWORD}]{rvalue,  }\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 75 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77         \textcolor{keywordflow}{return} rvalue + \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(lvalue);}
+\DoxyCodeLine{78     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_af0c8001b24451ad40bd99346579f9141}\label{namespacexstar_af0c8001b24451ad40bd99346579f9141}} 
+\index{xstar@{xstar}!operator+@{operator+}}
+\index{operator+@{operator+}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator+ (\begin{DoxyParamCaption}\item[{DWORD}]{rvalue,  }\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 125 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126     \{}
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} rvalue + \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(lvalue);}
+\DoxyCodeLine{128     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_a0e6a6a4f02cd3c31b7d0270f3e513a83}\label{namespacexstar_a0e6a6a4f02cd3c31b7d0270f3e513a83}} 
+\index{xstar@{xstar}!operator+@{operator+}}
+\index{operator+@{operator+}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{rvalue,  }\item[{DWORD}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 80 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81     \{}
+\DoxyCodeLine{82         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(rvalue) + lvalue;}
+\DoxyCodeLine{83     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_a7261853d48d217b8ffc372d0d65bf0a5}\label{namespacexstar_a7261853d48d217b8ffc372d0d65bf0a5}} 
+\index{xstar@{xstar}!operator+@{operator+}}
+\index{operator+@{operator+}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{rvalue,  }\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 70 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71     \{}
+\DoxyCodeLine{72         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(rvalue) + \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(lvalue);}
+\DoxyCodeLine{73     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_ab3916a5e06717bd9705b17bca4939052}\label{namespacexstar_ab3916a5e06717bd9705b17bca4939052}} 
+\index{xstar@{xstar}!operator+@{operator+}}
+\index{operator+@{operator+}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{rvalue,  }\item[{DWORD}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 130 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131     \{}
+\DoxyCodeLine{132         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(rvalue) + lvalue;}
+\DoxyCodeLine{133     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_aac8d95133a6f49325ed233f59e383df4}\label{namespacexstar_aac8d95133a6f49325ed233f59e383df4}} 
+\index{xstar@{xstar}!operator+@{operator+}}
+\index{operator+@{operator+}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{rvalue,  }\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 120 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121     \{}
+\DoxyCodeLine{122         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(rvalue) + \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(lvalue);}
+\DoxyCodeLine{123     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_af39262d035856486c86298ea3d5a04dd}\label{namespacexstar_af39262d035856486c86298ea3d5a04dd}} 
+\index{xstar@{xstar}!operator\texttt{"|}@{operator\texttt{"|}}}
+\index{operator\texttt{"|}@{operator\texttt{"|}}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator\texttt{"|}()}{operator|()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator$\vert$ (\begin{DoxyParamCaption}\item[{DWORD}]{rvalue,  }\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 60 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         \textcolor{keywordflow}{return} rvalue | \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(lvalue);}
+\DoxyCodeLine{63     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_af38d11adaf30bfe5846da9c0d08f23e9}\label{namespacexstar_af38d11adaf30bfe5846da9c0d08f23e9}} 
+\index{xstar@{xstar}!operator\texttt{"|}@{operator\texttt{"|}}}
+\index{operator\texttt{"|}@{operator\texttt{"|}}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator\texttt{"|}()}{operator|()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator$\vert$ (\begin{DoxyParamCaption}\item[{DWORD}]{rvalue,  }\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 110 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111     \{}
+\DoxyCodeLine{112         \textcolor{keywordflow}{return} rvalue | \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(lvalue);}
+\DoxyCodeLine{113     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_a85ab2a5390e7cda4a835c1025d1aea06}\label{namespacexstar_a85ab2a5390e7cda4a835c1025d1aea06}} 
+\index{xstar@{xstar}!operator\texttt{"|}@{operator\texttt{"|}}}
+\index{operator\texttt{"|}@{operator\texttt{"|}}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator\texttt{"|}()}{operator|()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator$\vert$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{rvalue,  }\item[{DWORD}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 65 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66     \{}
+\DoxyCodeLine{67         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(rvalue) | lvalue;}
+\DoxyCodeLine{68     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_ae671653a905056cc61158ffc06e3bb38}\label{namespacexstar_ae671653a905056cc61158ffc06e3bb38}} 
+\index{xstar@{xstar}!operator\texttt{"|}@{operator\texttt{"|}}}
+\index{operator\texttt{"|}@{operator\texttt{"|}}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator\texttt{"|}()}{operator|()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator$\vert$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{rvalue,  }\item[{\mbox{\hyperlink{namespacexstar_a9d6eaf935ec420ae02cc43524ed63c66}{Pipe\+Dircetion}}}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 55 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56     \{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(rvalue) | \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(lvalue);}
+\DoxyCodeLine{58     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_af6a34baf8e3036ad8884566685295e24}\label{namespacexstar_af6a34baf8e3036ad8884566685295e24}} 
+\index{xstar@{xstar}!operator\texttt{"|}@{operator\texttt{"|}}}
+\index{operator\texttt{"|}@{operator\texttt{"|}}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator\texttt{"|}()}{operator|()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator$\vert$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{rvalue,  }\item[{DWORD}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 115 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116     \{}
+\DoxyCodeLine{117         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(rvalue) | lvalue;}
+\DoxyCodeLine{118     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_ae424bdb6e7efd8d95491e646912be3d7}\label{namespacexstar_ae424bdb6e7efd8d95491e646912be3d7}} 
+\index{xstar@{xstar}!operator\texttt{"|}@{operator\texttt{"|}}}
+\index{operator\texttt{"|}@{operator\texttt{"|}}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{operator\texttt{"|}()}{operator|()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily DWORD xstar\+::operator$\vert$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{rvalue,  }\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{lvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 105 of file named\+\_\+pipe.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106     \{}
+\DoxyCodeLine{107         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(rvalue) | \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(lvalue);}
+\DoxyCodeLine{108     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_a6522f3f6b32b83ca8d14f1dadfa9bd73}\label{namespacexstar_a6522f3f6b32b83ca8d14f1dadfa9bd73}} 
+\index{xstar@{xstar}!swap@{swap}}
+\index{swap@{swap}!xstar@{xstar}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void xstar\+::swap (\begin{DoxyParamCaption}\item[{T \&}]{first\+Value,  }\item[{T \&}]{second\+Value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file algorithms.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         T tempValue = \mbox{\hyperlink{cpplibrary_8hpp_afac33093456c383fa2770366f1e20c41}{move}}(firstValue);}
+\DoxyCodeLine{30         firstValue = \mbox{\hyperlink{cpplibrary_8hpp_afac33093456c383fa2770366f1e20c41}{move}}(secondValue);}
+\DoxyCodeLine{31         secondValue = \mbox{\hyperlink{cpplibrary_8hpp_afac33093456c383fa2770366f1e20c41}{move}}(tempValue);}
+\DoxyCodeLine{32     \}}
+
+\end{DoxyCode}
