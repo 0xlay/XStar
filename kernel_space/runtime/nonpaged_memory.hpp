@@ -25,10 +25,10 @@
 
 /**
 *
-* \brief This class implements new and delete operators to allocate non 
+* @brief This class implements new and delete operators to allocate non 
 * paged memory.
 *
-* \warning IRQL <= DISPATCH_LEVEL
+* @warning IRQL <= DISPATCH_LEVEL
 *
 */
 class NonPagedMemory
@@ -51,6 +51,8 @@ public:
 
     _IRQL_requires_max_(DISPATCH_LEVEL)
     void operator delete[](_Inout_ void* ptr, _In_ size_t size) noexcept;
+
+    virtual ~NonPagedMemory() = default;
 };
 
 

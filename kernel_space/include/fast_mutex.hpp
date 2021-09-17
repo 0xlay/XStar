@@ -28,9 +28,9 @@
 namespace xstar
 {
     /**
-    * \brief This wrapper over FAST_MUTEX.
+    * @brief This wrapper over FAST_MUTEX.
     */
-    class FastMutex
+    class FastMutex final
     {
     public:
         _IRQL_requires_max_(DISPATCH_LEVEL)
@@ -50,7 +50,7 @@ namespace xstar
     };
 
     /**
-    * \warning IRQL <= DISPATCH_LEVEL
+    * @warning IRQL <= DISPATCH_LEVEL
     */
     _Use_decl_annotations_
     void FastMutex::Init()
@@ -59,7 +59,7 @@ namespace xstar
     }
 
     /**
-    * \warning IRQL <= APC_LEVEL
+    * @warning IRQL <= APC_LEVEL
     */
     _Use_decl_annotations_
     void FastMutex::Lock()
@@ -68,7 +68,7 @@ namespace xstar
     }
 
     /**
-    * \warning IRQL == APC_LEVEL
+    * @warning IRQL == APC_LEVEL
     */
     _Use_decl_annotations_
     void FastMutex::Unlock()

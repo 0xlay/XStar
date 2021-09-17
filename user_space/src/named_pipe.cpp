@@ -30,7 +30,7 @@ using namespace xstar;
 
 NamedPipeServer::NamedPipeServer(
     LPCTSTR name,
-    PipeDircetion direct
+    PipeDirection direct
 )
     : name_(name)
 {
@@ -49,7 +49,7 @@ NamedPipeServer::NamedPipeServer(
 
 NamedPipeServer::NamedPipeServer(
     LPCTSTR name,
-    PipeDircetion direct,
+    PipeDirection direct,
     DWORD outBufSize,
     DWORD inpBufSize
 )
@@ -69,7 +69,7 @@ NamedPipeServer::NamedPipeServer(
 
 NamedPipeServer::NamedPipeServer(
     LPCTSTR name,
-    PipeDircetion direct,
+    PipeDirection direct,
     PipeMode mode,
     DWORD outBufSize,
     DWORD inpBufSize,

@@ -25,10 +25,10 @@
 
 /**
 * 
-* \brief This class implements new and delete operators to allocate paged 
+* @brief This class implements new and delete operators to allocate paged 
 * memory.
 * 
-* \warning IRQL <= APC_LEVEL
+* @warning IRQL <= APC_LEVEL
 * 
 */
 class PagedMemory
@@ -51,6 +51,8 @@ public:
 
     _IRQL_requires_max_(APC_LEVEL)
     void operator delete[](_Inout_ void* ptr, _In_ size_t size) noexcept;
+
+    virtual ~PagedMemory() = default;
 };
 
 
@@ -90,7 +92,7 @@ inline void PagedMemory::operator delete(void* ptr, size_t size) noexcept
 _Use_decl_annotations_
 inline void PagedMemory::operator delete[](void* ptr, size_t size) noexcept
 {
-    ASSERTMSG(L"Paged", ptr != nullptr);
+    ASSERT(ptr != nullptr);
     ASSERT(size > 0);
     UNREFERENCED_PARAMETER(size);
     vfree(ptr);

@@ -25,10 +25,10 @@
 namespace xstar
 {
     /**
-    * \brief This class is equivalent to lock_guard from STL
+    * @brief This class is equivalent to lock_guard from STL
     */
     template <class T>
-    class SmartLock
+    class SmartLock final
     {
     public:
         SmartLock(T& object) : object_(object)

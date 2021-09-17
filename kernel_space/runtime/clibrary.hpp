@@ -27,13 +27,13 @@
 #define _C_LIBRARY_TAG_ 'RATS' // STAR
 
 /**
-* \brief This macro gets a pointer to base in the MEMBLOCK structure
+* @brief This macro gets a pointer to base in the MEMBLOCK structure
 */
 #define getBasePointer(data_ptr)\
  (static_cast<char*>(data_ptr) - sizeof(size_t))
 
 /**
-* \brief This macro gets a pointer to data in the MEMBLOCK structure
+* @brief This macro gets a pointer to data in the MEMBLOCK structure
 */
 #define getDataPointer(base_ptr)\
  (reinterpret_cast<char*>(base_ptr) + sizeof(size_t))

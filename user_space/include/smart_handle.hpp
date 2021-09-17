@@ -83,7 +83,7 @@ namespace xstar
     // SmartHandle supported: HWND, HANDLE, SC_HANDLE
     //=========================================================
     template <class T>
-    class SmartHandle
+    class SmartHandle final
     {
     public:
         SmartHandle() noexcept;

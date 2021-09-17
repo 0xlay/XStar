@@ -29,12 +29,12 @@ namespace xstar
 {
     /**
     *
-    * \brief UniquePointer is using windows exception.You will need using 
+    * @brief UniquePointer is using windows exception.You will need using 
     * operator __try, __except
     * 
     */
     template <class T>
-    class UniquePointer
+    class UniquePointer final
     {
     public:
         UniquePointer();
@@ -58,7 +58,7 @@ namespace xstar
         T* pointer_;
     };
 
-    /// \todo Add SharedPointer, and WeakPointer
+    /// @todo Add SharedPointer, and WeakPointer
 }
 
 #include "smart_pointers.inl"

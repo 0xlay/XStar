@@ -95,22 +95,22 @@ enum class PrimitiveType
 };
 
 /**
-* \brief Example: auto ptr = operator new(100, PrimitiveType::PagedMemory)
+* @brief Example: auto ptr = operator new(100, PrimitiveType::PagedMemory)
 */
 void* __cdecl operator new(_In_ size_t size, _In_ PrimitiveType type);
 
 /**
-* \brief Example: auto ptr = operator new[](100, PrimitiveType::PagedMemory)
+* @brief Example: auto ptr = operator new[](100, PrimitiveType::PagedMemory)
 */
 void* __cdecl operator new[](_In_ size_t size, _In_ PrimitiveType type);
 
 /**
-* \brief Example: operator delete(ptr, PrimitiveType::PagedMemory)
+* @brief Example: operator delete(ptr, PrimitiveType::PagedMemory)
 */
 void __cdecl operator delete(_In_ void* ptr, _In_ PrimitiveType type);
 
 /**
-* \brief Example: operator delete[](ptr, PrimitiveType::PagedMemory)
+* @brief Example: operator delete[](ptr, PrimitiveType::PagedMemory)
 */
 void __cdecl operator delete[](_In_ void* ptr, PrimitiveType type);
 

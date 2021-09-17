@@ -31,12 +31,26 @@
 #include "winapi_exception.hpp"
 #include "meminfo.hpp"
 
+
+#define XSTAR_PIPE_OPERATOR_OR(T1, T2)\
+inline DWORD operator | (T1 lhs, T2 rhs)\
+{\
+    return static_cast<DWORD>(lhs) | static_cast<DWORD>(rhs);\
+}
+
+#define XSTAR_PIPE_OPERATOR_PLUS(T1, T2)\
+inline DWORD operator + (T1 lhs, T2 rhs)\
+{\
+    return static_cast<DWORD>(lhs) + static_cast<DWORD>(rhs);\
+}
+
+
 namespace xstar
 {
 
 //------------------------------------------------------------------------------
 
-    enum class PipeDircetion : DWORD
+    enum class PipeDirection : DWORD
     {
         In           = PIPE_ACCESS_INBOUND,
         Out          = PIPE_ACCESS_OUTBOUND,
@@ -52,35 +66,13 @@ namespace xstar
         WriteSACL    = ACCESS_SYSTEM_SECURITY
     };
 
-    inline DWORD operator | (PipeDircetion rvalue, PipeDircetion lvalue)
-    {
-        return static_cast<DWORD>(rvalue) | static_cast<DWORD>(lvalue);
-    }
+    XSTAR_PIPE_OPERATOR_OR(PipeDirection, PipeDirection)
+    XSTAR_PIPE_OPERATOR_OR(DWORD, PipeDirection)
+    XSTAR_PIPE_OPERATOR_OR(PipeDirection, DWORD)
 
-    inline DWORD operator | (DWORD rvalue, PipeDircetion lvalue)
-    {
-        return rvalue | static_cast<DWORD>(lvalue);
-    }
-
-    inline DWORD operator | (PipeDircetion rvalue, DWORD lvalue)
-    {
-        return static_cast<DWORD>(rvalue) | lvalue;
-    }
-
-    inline DWORD operator + (PipeDircetion rvalue, PipeDircetion lvalue)
-    {
-        return static_cast<DWORD>(rvalue) + static_cast<DWORD>(lvalue);
-    }
-
-    inline DWORD operator + (DWORD rvalue, PipeDircetion lvalue)
-    {
-        return rvalue + static_cast<DWORD>(lvalue);
-    }
-
-    inline DWORD operator + (PipeDircetion rvalue, DWORD lvalue)
-    {
-        return static_cast<DWORD>(rvalue) + lvalue;
-    }
+    XSTAR_PIPE_OPERATOR_PLUS(PipeDirection, PipeDirection)
+    XSTAR_PIPE_OPERATOR_PLUS(DWORD, PipeDirection)
+    XSTAR_PIPE_OPERATOR_PLUS(PipeDirection, DWORD)
 
 //------------------------------------------------------------------------------
 
@@ -102,35 +94,13 @@ namespace xstar
         RejectClients = PIPE_REJECT_REMOTE_CLIENTS
     };
 
-    inline DWORD operator | (PipeMode rvalue, PipeMode lvalue)
-    {
-        return static_cast<DWORD>(rvalue) | static_cast<DWORD>(lvalue);
-    }
+    XSTAR_PIPE_OPERATOR_OR(PipeMode, PipeMode)
+    XSTAR_PIPE_OPERATOR_OR(DWORD, PipeMode)
+    XSTAR_PIPE_OPERATOR_OR(PipeMode, DWORD)
 
-    inline DWORD operator | (DWORD rvalue, PipeMode lvalue)
-    {
-        return rvalue | static_cast<DWORD>(lvalue);
-    }
-
-    inline DWORD operator | (PipeMode rvalue, DWORD lvalue)
-    {
-        return static_cast<DWORD>(rvalue) | lvalue;
-    }
-
-    inline DWORD operator + (PipeMode rvalue, PipeMode lvalue)
-    {
-        return static_cast<DWORD>(rvalue) + static_cast<DWORD>(lvalue);
-    }
-
-    inline DWORD operator + (DWORD rvalue, PipeMode lvalue)
-    {
-        return rvalue + static_cast<DWORD>(lvalue);
-    }
-
-    inline DWORD operator + (PipeMode rvalue, DWORD lvalue)
-    {
-        return static_cast<DWORD>(rvalue) + lvalue;
-    }
+    XSTAR_PIPE_OPERATOR_PLUS(PipeMode, PipeMode)
+    XSTAR_PIPE_OPERATOR_PLUS(DWORD, PipeMode)
+    XSTAR_PIPE_OPERATOR_PLUS(PipeMode, DWORD)
 
 //------------------------------------------------------------------------------
 
@@ -151,24 +121,24 @@ namespace xstar
 
 //------------------------------------------------------------------------------
 
-    class NamedPipeServer
+    class NamedPipeServer final
     {
     public:
         NamedPipeServer(
             LPCTSTR name,
-            PipeDircetion direct
+            PipeDirection direct
         );
 
         NamedPipeServer(
             LPCTSTR name,
-            PipeDircetion direct,
+            PipeDirection direct,
             DWORD outBufSize,
             DWORD inpBufSize
         );
 
         NamedPipeServer(
             LPCTSTR name,
-            PipeDircetion direct,
+            PipeDirection direct,
             PipeMode mode,
             DWORD outBufSize = SmallPage_4KB,
             DWORD inpBufSize = SmallPage_4KB,
@@ -211,7 +181,7 @@ namespace xstar
 
 //------------------------------------------------------------------------------
 
-    class NamedPipeClient
+    class NamedPipeClient final
     {
     public:
         NamedPipeClient(LPCTSTR name, PipeAccess access);

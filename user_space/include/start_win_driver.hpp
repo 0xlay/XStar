@@ -36,7 +36,7 @@
 namespace xstar
 {
 
-    class StartWinDriver
+    class StartWinDriver final
     {
         using EntryPoint = LPSERVICE_MAIN_FUNCTIONW;
 
