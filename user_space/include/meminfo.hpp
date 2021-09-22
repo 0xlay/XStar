@@ -15,7 +15,7 @@
 // 
 // Creator: 0xlay
 // 
-// Envivroment: User mode and Kernel mode
+// Environment: User mode and Kernel mode
 //
 //------------------------------------------------------------------------------
 

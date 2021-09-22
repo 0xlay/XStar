@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\tstring.hpp" />
     <ClInclude Include="include\winapi_excepion.hpp" />
     <ClInclude Include="include\meminfo.hpp" />
     <ClInclude Include="include\named_pipe.hpp" />

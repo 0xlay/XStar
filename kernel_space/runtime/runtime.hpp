@@ -15,7 +15,7 @@
 // 
 // Creator: 0xlay
 // 
-// Envivroment: Kernel mode only
+// Environment: Kernel mode only
 //
 //------------------------------------------------------------------------------
 

@@ -15,7 +15,7 @@
 // 
 // Creator: 0xlay
 // 
-// Envivroment: User mode only
+// Environment: User mode only
 //
 //------------------------------------------------------------------------------
 
