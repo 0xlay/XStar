@@ -24,6 +24,7 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <tchar.h>
 
 namespace xstar
@@ -34,38 +35,46 @@ namespace xstar
     // @brief This macro is need for UNICODE string
     #define $T L""
     
-    using tstring       = std::wstring;
-    using tstringstream = std::wstringstream;
-    using tstring_view  = std::wstring_view;
-    using tchar         = wchar_t;
+    using tstring           = std::wstring;
+    using tstring_view      = std::wstring_view;
+    using tchar             = wchar_t;
 
-    auto& tcin          = std::wcin;
-    auto& tcout         = std::wcout;
-    auto& tcerr         = std::wcerr;
-    auto& tclog         = std::wclog;
-    auto& _Ptr_tcin     = std::_Ptr_wcin;
-    auto& _Ptr_tcout    = std::_Ptr_wcout;
-    auto& _Ptr_tcerr    = std::_Ptr_wcerr;
-    auto& _Ptr_tclog    = std::_Ptr_wclog;
+    using tstringbuf        = std::wstringbuf;
+    using tstringstream     = std::wstringstream;
+    using tistringstream    = std::wistringstream;
+    using tostringstream    = std::wostringstream;
+
+    auto& tcin              = std::wcin;
+    auto& tcout             = std::wcout;
+    auto& tcerr             = std::wcerr;
+    auto& tclog             = std::wclog;
+    auto& _Ptr_tcin         = std::_Ptr_wcin;
+    auto& _Ptr_tcout        = std::_Ptr_wcout;
+    auto& _Ptr_tcerr        = std::_Ptr_wcerr;
+    auto& _Ptr_tclog        = std::_Ptr_wclog;
 
 #else
 
     // @brief This macro is need for ASCII string
     #define $T ""
 
-    using tstring       = std::string;
-    using tstringstream = std::stringstream;
-    using tstring_view  = std::string_view;
-    using tchar         = char;
+    using tstring           = std::string;
+    using tstring_view      = std::string_view;
+    using tchar             = char;
 
-    auto& tcin          = std::cin;
-    auto& tcout         = std::cout;
-    auto& tcerr         = std::cerr;
-    auto& tclog         = std::clog;
-    auto& _Ptr_tcin     = std::_Ptr_cin;
-    auto& _Ptr_tcout    = std::_Ptr_cout;
-    auto& _Ptr_tcerr    = std::_Ptr_cerr;
-    auto& _Ptr_tclog    = std::_Ptr_clog;
+    using tstringbuf        = std::stringbuf;
+    using tstringstream     = std::stringstream;
+    using tistringstream    = std::istringstream;
+    using tostringstream    = std::ostringstream;
+
+    auto& tcin              = std::cin;
+    auto& tcout             = std::cout;
+    auto& tcerr             = std::cerr;
+    auto& tclog             = std::clog;
+    auto& _Ptr_tcin         = std::_Ptr_cin;
+    auto& _Ptr_tcout        = std::_Ptr_cout;
+    auto& _Ptr_tcerr        = std::_Ptr_cerr;
+    auto& _Ptr_tclog        = std::_Ptr_clog;
 
 #endif
 
