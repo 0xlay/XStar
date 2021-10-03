@@ -44,14 +44,14 @@ namespace xstar
     using tistringstream    = std::wistringstream;
     using tostringstream    = std::wostringstream;
 
-    auto& tcin              = std::wcin;
-    auto& tcout             = std::wcout;
-    auto& tcerr             = std::wcerr;
-    auto& tclog             = std::wclog;
-    auto& _Ptr_tcin         = std::_Ptr_wcin;
-    auto& _Ptr_tcout        = std::_Ptr_wcout;
-    auto& _Ptr_tcerr        = std::_Ptr_wcerr;
-    auto& _Ptr_tclog        = std::_Ptr_wclog;
+    inline auto& tcin              = std::wcin;
+    inline auto& tcout             = std::wcout;
+    inline auto& tcerr             = std::wcerr;
+    inline auto& tclog             = std::wclog;
+    inline auto& _Ptr_tcin         = std::_Ptr_wcin;
+    inline auto& _Ptr_tcout        = std::_Ptr_wcout;
+    inline auto& _Ptr_tcerr        = std::_Ptr_wcerr;
+    inline auto& _Ptr_tclog        = std::_Ptr_wclog;
 
 #else
 
@@ -67,14 +67,14 @@ namespace xstar
     using tistringstream    = std::istringstream;
     using tostringstream    = std::ostringstream;
 
-    auto& tcin              = std::cin;
-    auto& tcout             = std::cout;
-    auto& tcerr             = std::cerr;
-    auto& tclog             = std::clog;
-    auto& _Ptr_tcin         = std::_Ptr_cin;
-    auto& _Ptr_tcout        = std::_Ptr_cout;
-    auto& _Ptr_tcerr        = std::_Ptr_cerr;
-    auto& _Ptr_tclog        = std::_Ptr_clog;
+    inline auto& tcin              = std::cin;
+    inline auto& tcout             = std::cout;
+    inline auto& tcerr             = std::cerr;
+    inline auto& tclog             = std::clog;
+    inline auto& _Ptr_tcin         = std::_Ptr_cin;
+    inline auto& _Ptr_tcout        = std::_Ptr_cout;
+    inline auto& _Ptr_tcerr        = std::_Ptr_cerr;
+    inline auto& _Ptr_tclog        = std::_Ptr_clog;
 
 #endif
 
