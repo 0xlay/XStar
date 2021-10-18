@@ -29,157 +29,109 @@
 namespace xstar
 {
 
-    //=========================================================
-    // CloseSH needed for correct close handle.
-    // Supported: HWND, HANDLE, SC_HANDLE.
-    //=========================================================
-    template <class T>
-    class CloseSH
-    {
-    public:
-        static void CloseSmartHandle(T hObject)
-        { }
-    };
+	namespace _internal
+	{
+		template <typename Handle>
+		inline void CloseSmartHandle(Handle object)
+		{
+			static_assert(false, "Type isn't supported!");
+		}
 
-    //---------------------------------------------------------
-    // Partial specialization
-    //---------------------------------------------------------
+		template <>
+		inline void CloseSmartHandle(HANDLE object)
+		{
+			CloseHandle(object);
+		}
 
-    template <>
-    class CloseSH<HANDLE>
-    {
-    public:
-        static void CloseSmartHandle(HANDLE hObject)
-        {
-            CloseHandle(hObject);
-        }
-    };
+		template <>
+		inline void CloseSmartHandle(SC_HANDLE object)
+		{
+			CloseServiceHandle(object);
+		}
 
-    template <>
-    class CloseSH<SC_HANDLE>
-    {
-    public:
-        static void CloseSmartHandle(SC_HANDLE hObject)
-        {
-            CloseServiceHandle(hObject);
-        }
-    };
+		template <>
+		inline void CloseSmartHandle(HWND object)
+		{
+			CloseWindow(object);
+		}
 
-    template <>
-    class CloseSH<HWND>
-    {
-    public:
-        static void CloseSmartHandle(HWND hObject)
-        {
-            CloseWindow(hObject);
-        }
-    };
-
-    //---------------------------------------------------------
+		template <>
+		inline void CloseSmartHandle(HMODULE object)
+		{
+			FreeLibrary(object);
+		}
+	}
 
 
 
-    //=========================================================
-    // SmartHandle supported: HWND, HANDLE, SC_HANDLE
-    //=========================================================
-    template <class T>
-    class SmartHandle final
-    {
-    public:
-        SmartHandle() noexcept;
-        SmartHandle(T hObject) noexcept;
-        SmartHandle(SmartHandle&& other) noexcept;
-        ~SmartHandle();
+	/**
+	* @brief The SmartHandle is a wrapper above handle which use idiom RAII
+	* 
+	* @warning The SmartHandle supports HWND, HANDLE, SC_HANDLE 
+	*/
+	template <class Handle>
+	class SmartHandle final
+	{
+	public:
+		SmartHandle() noexcept;
+		SmartHandle(Handle object) noexcept;
+		~SmartHandle() noexcept;
 
-        SmartHandle(const SmartHandle&) = delete;
-        void operator=(const SmartHandle&) = delete;
+		SmartHandle(SmartHandle&& other) noexcept;
+		SmartHandle& operator=(SmartHandle&& other) noexcept;
 
-        void operator=(T hObject);
-        SmartHandle& operator=(SmartHandle&& other) noexcept;
+		SmartHandle(const SmartHandle&) = delete;
+		SmartHandle& operator=(const SmartHandle&) = delete;
 
-        T getHandle() const noexcept;
+		Handle getHandle() const noexcept;
+		Handle operator*() const noexcept;
 
-    private:
-        T hObject_;
-    };
+	private:
+		Handle object_;
+	};
 
+	template <class Handle>
+	SmartHandle<Handle>::SmartHandle() noexcept
+		: object_(nullptr)
+	{ }
 
+	template <class Handle>
+	SmartHandle<Handle>::SmartHandle(Handle object) noexcept
+		: object_(object)
+	{ }
 
-    //---------------------------------------------------------
-    // Complexity: O(1)
-    //---------------------------------------------------------
-    template <class T>
-    SmartHandle<T>::SmartHandle() noexcept
-        : hObject_(nullptr)
-    { }
+	template<class Handle>
+	SmartHandle<Handle>::SmartHandle(SmartHandle<Handle>&& other) noexcept
+	{
+		object_ = other.hObject_;
+		other.object_ = nullptr;
+	}
 
-    //---------------------------------------------------------
-    // Complexity: O(1)
-    //---------------------------------------------------------
-    template <class T>
-    SmartHandle<T>::SmartHandle(T hObject) noexcept
-        : hObject_(hObject)
-    { }
+	template <class Handle>
+	SmartHandle<Handle>::~SmartHandle() noexcept
+	{
+		if (object_)
+			_internal::CloseSmartHandle(object_);
+	}
 
-    //---------------------------------------------------------
-    // Complexity: O(1)
-    //---------------------------------------------------------
-    template<class T>
-    SmartHandle<T>::SmartHandle(SmartHandle&& other) noexcept
-    {
-        hObject_ = other.hObject_;
-        other.hObject_ = nullptr;
-    }
+	template <class Handle>
+	SmartHandle<Handle>& SmartHandle<Handle>::operator=(SmartHandle<Handle>&& other) noexcept
+	{
+		std::swap(object_, other.object_);
+		return *this;
+	}
 
-    //---------------------------------------------------------
-    // Complexity: O(1)
-    //---------------------------------------------------------
-    template <class T>
-    SmartHandle<T>::~SmartHandle()
-    {
-        if (hObject_)
-            CloseSH<T>::CloseSmartHandle(hObject_);
-    }
+	template <class Handle>
+	Handle SmartHandle<Handle>::getHandle() const noexcept
+	{
+		return object_;
+	}
 
-
-    //---------------------------------------------------------
-    // Complexity: O(1)
-    //---------------------------------------------------------
-    template <class T>
-    void SmartHandle<T>::operator=(T hObject)
-    {
-        if (hObject_)
-        {
-            CloseSH<T>::CloseSmartHandle(hObject_);
-            hObject_ = hObject;
-        }
-        else
-        {
-            hObject_ = hObject;
-        }
-    }
-
-    //---------------------------------------------------------
-    // Complexity: O(1)
-    //---------------------------------------------------------
-    template <class T>
-    SmartHandle<T>& SmartHandle<T>::operator=(SmartHandle&& other) noexcept
-    {
-        std::swap(hObject_, other.hObject_);
-        return *this;
-    }
-
-
-    //---------------------------------------------------------
-    // Complexity: O(1)
-    //---------------------------------------------------------
-    template <class T>
-    T SmartHandle<T>::getHandle() const noexcept
-    {
-        return hObject_;
-    }
-
-
+	template <class Handle>
+	Handle SmartHandle<Handle>::operator*() const noexcept
+	{
+		return object_;
+	}
 
 } // xstar
 #endif // _XSTAR_USER_SMART_HANDLE_HPP_

@@ -33,3 +33,10 @@ TEST(SmartHandleTests, SmartHandle__SC_HADNLE__Test)
     EXPECT_NE(serviceHandle.getHandle(), nullptr);
     EXPECT_NE(*serviceHandle, nullptr);
 }
+
+TEST(SmartHandleTests, SmartHandle__HMODULE__Test)
+{
+    xstar::SmartHandle<HMODULE> moduleHandle = LoadLibrary($T"kernel32.dll");
+    EXPECT_NE(moduleHandle.getHandle(), nullptr);
+    EXPECT_NE(*moduleHandle, nullptr);
+}
