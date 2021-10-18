@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "user_space", "user_space\us
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kernel_space", "kernel_space\kernel_space.vcxproj", "{8B2619EC-D086-4699-839D-DA2BBE1BA4BA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "user_space_tests", "user_space_tests\user_space_tests.vcxproj", "{EF92D94B-2DC1-4D62-A814-FF16903BA933}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -55,6 +57,18 @@ Global
 		{8B2619EC-D086-4699-839D-DA2BBE1BA4BA}.Release|x86.ActiveCfg = Release|Win32
 		{8B2619EC-D086-4699-839D-DA2BBE1BA4BA}.Release|x86.Build.0 = Release|Win32
 		{8B2619EC-D086-4699-839D-DA2BBE1BA4BA}.Release|x86.Deploy.0 = Release|Win32
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Debug|ARM.ActiveCfg = Debug|Win32
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Debug|x64.ActiveCfg = Debug|x64
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Debug|x64.Build.0 = Debug|x64
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Debug|x86.ActiveCfg = Debug|Win32
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Debug|x86.Build.0 = Debug|Win32
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Release|ARM.ActiveCfg = Release|Win32
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Release|ARM64.ActiveCfg = Release|Win32
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Release|x64.ActiveCfg = Release|x64
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Release|x64.Build.0 = Release|x64
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Release|x86.ActiveCfg = Release|Win32
+		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
