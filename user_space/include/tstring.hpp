@@ -32,17 +32,17 @@ namespace xstar
 
 #ifdef _UNICODE
     
-    // @brief This macro is need for UNICODE string
-    #define $T L""
-    
-    using tstring           = std::wstring;
-    using tstring_view      = std::wstring_view;
-    using tchar             = wchar_t;
+    #define $T L""      // @brief This macro is need for UNICODE string
+    #define $Tc(x) L##x // @brief This macro is need for UNICODE symbol
 
-    using tstringbuf        = std::wstringbuf;
-    using tstringstream     = std::wstringstream;
-    using tistringstream    = std::wistringstream;
-    using tostringstream    = std::wostringstream;
+    using tstring                  = std::wstring;
+    using tstring_view             = std::wstring_view;
+    using tchar                    = wchar_t;
+
+    using tstringbuf               = std::wstringbuf;
+    using tstringstream            = std::wstringstream;
+    using tistringstream           = std::wistringstream;
+    using tostringstream           = std::wostringstream;
 
     inline auto& tcin              = std::wcin;
     inline auto& tcout             = std::wcout;
@@ -55,17 +55,17 @@ namespace xstar
 
 #else
 
-    // @brief This macro is need for ASCII string
-    #define $T ""
+    #define $T ""    // @brief This macro is need for ASCII string
+    #define $Tc(x) x // @brief This macros is need for ASCII symbol
 
-    using tstring           = std::string;
-    using tstring_view      = std::string_view;
-    using tchar             = char;
+    using tstring                  = std::string;
+    using tstring_view             = std::string_view;
+    using tchar                    = char;
 
-    using tstringbuf        = std::stringbuf;
-    using tstringstream     = std::stringstream;
-    using tistringstream    = std::istringstream;
-    using tostringstream    = std::ostringstream;
+    using tstringbuf               = std::stringbuf;
+    using tstringstream            = std::stringstream;
+    using tistringstream           = std::istringstream;
+    using tostringstream           = std::ostringstream;
 
     inline auto& tcin              = std::cin;
     inline auto& tcout             = std::cout;
@@ -78,11 +78,17 @@ namespace xstar
 
 #endif
 
+    /*
+    * @brief The '_ts' tag creates tstring
+    */
     inline tstring operator ""_ts(const tchar* str, const size_t size)
     {
         return tstring(str, size);
     }
 
+    /*
+    * @brief The '_tsv' tag creates tstring_view
+    */
     inline tstring_view operator ""_tsv(const tchar* str, const size_t size)
     {
         return tstring_view(str, size);

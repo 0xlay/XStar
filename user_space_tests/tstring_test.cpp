@@ -44,14 +44,17 @@ TEST(TStringTests, TStringView__Test)
     auto tStrView = $T"Hello world"_tsv;
 
     EXPECT_EQ(typeid(tStrView), typeid(tstring_view));
-
+    
     CheckTStringBuffers(tStrView);
 }
 
 TEST(TStringTests, TChar__Test)
 {
     using namespace xstar;
-    auto symbol = $T('x');
-    CheckTStringBuffers(symbol);
+ 
+    auto symbol = $Tc('x');
+    
     EXPECT_EQ(typeid(symbol), typeid(tchar));
+	
+    CheckTStringBuffers(symbol);
 }
