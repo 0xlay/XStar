@@ -28,19 +28,10 @@ namespace xstar
     WinAPIException::WinAPIException()
         : msg_(getLastErrorStr()) { }
 
-    //---------------------------------------------------------
-    // Complexity:	O(1)
-    // Parameter:	message and last error = GetLastError();
-    //---------------------------------------------------------
     WinAPIException::WinAPIException(const char* msg, uint32_t lastError)
-        : msg_(msg + std::string(msg) + std::to_string(lastError))
+        : msg_(std::string(msg) + " Error code: " + std::to_string(lastError))
     { }
 
-
-    //---------------------------------------------------------
-    // Complexity:	O(1)
-    // Return:		error message
-    //---------------------------------------------------------
     const char* WinAPIException::what() const
     {
         return msg_.c_str();
@@ -48,10 +39,6 @@ namespace xstar
 
 
 
-    //---------------------------------------------------------
-    // Complexity:	O(n^2)
-    // Return:		error message
-    //---------------------------------------------------------
     std::string getLastErrorStr()
     {
         char msg_buf[256]{ 0 };
@@ -75,7 +62,5 @@ namespace xstar
 
         return std::string(msg_buf, 256);
     }
-
-
 
 } // xstar

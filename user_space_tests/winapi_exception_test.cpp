@@ -20,7 +20,7 @@ TEST(WinAPIExceptionTests, WinAPIException__WithArguments__Test)
 {
     using namespace xstar;
 
-    const char* msg = "Test error. Error code: 0x1";
+    const char* msg = "Test error. Error code: 1";
 
     try
     {
@@ -28,6 +28,6 @@ TEST(WinAPIExceptionTests, WinAPIException__WithArguments__Test)
     }
     catch (const std::exception& ex)
     {
-        EXPECT_EQ(ex.what(), msg);
+        EXPECT_EQ(std::string(ex.what()), msg);
     }
 }

@@ -41,9 +41,13 @@ namespace xstar
         std::string msg_;
     };
 
-
+    /*
+    * @brief The getLastErrorStr() function converts code from
+    * the getLastError() function to string message
+    * 
+    * @return an error message
+    */
     std::string getLastErrorStr();
-
 
 } // xstar
 #endif // _XSTAR_USER_EXCEPTION_HPP_
