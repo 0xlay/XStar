@@ -58,3 +58,12 @@ TEST(TStringTests, TChar__Test)
 	
     CheckTStringBuffers(symbol);
 }
+
+TEST(TStringTests, ToTString_Test)
+{
+    using namespace xstar;
+
+    tstring result = to_tstring(2021);
+
+    EXPECT_EQ(result, $T"2021");
+}

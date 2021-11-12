@@ -53,6 +53,53 @@ namespace xstar
     inline auto& _Ptr_tcerr        = std::_Ptr_wcerr;
     inline auto& _Ptr_tclog        = std::_Ptr_wclog;
 
+
+
+    inline tstring to_tstring(int val)
+    {
+        return std::to_wstring(val);
+    }
+
+    inline tstring to_tstring(float val)
+    {
+        return std::to_wstring(val);
+    }
+
+    inline tstring to_tstring(double val)
+    {
+        return std::to_wstring(val);
+    }
+
+    inline tstring to_tstring(long long val)
+    {
+        return std::to_wstring(val);
+    }
+
+    inline tstring to_tstring(long val)
+    {
+        return std::to_wstring(val);
+    }
+
+    inline tstring to_tstring(unsigned long long val)
+    {
+        return std::to_wstring(val);
+    }
+
+	inline tstring to_tstring(unsigned long val)
+	{
+		return std::to_wstring(val);
+	}
+
+	inline tstring to_tstring(unsigned int val)
+	{
+		return std::to_wstring(val);
+	}
+
+	inline tstring to_tstring(long double val)
+	{
+		return std::to_wstring(val);
+	}
+
 #else
 
     #define $T ""    // @brief This macro is need for ASCII string
@@ -75,6 +122,53 @@ namespace xstar
     inline auto& _Ptr_tcout        = std::_Ptr_cout;
     inline auto& _Ptr_tcerr        = std::_Ptr_cerr;
     inline auto& _Ptr_tclog        = std::_Ptr_clog;
+
+
+
+	inline tstring to_tstring(int val)
+	{
+		return std::to_string(val);
+	}
+
+	inline tstring to_tstring(float val)
+	{
+		return std::to_string(val);
+	}
+
+	inline tstring to_tstring(double val)
+	{
+		return std::to_string(val);
+	}
+
+	inline tstring to_tstring(long long val)
+	{
+		return std::to_string(val);
+	}
+
+	inline tstring to_tstring(long val)
+	{
+		return std::to_string(val);
+	}
+
+	inline tstring to_tstring(unsigned long long val)
+	{
+		return std::to_string(val);
+	}
+
+	inline tstring to_tstring(unsigned long val)
+	{
+		return std::to_string(val);
+	}
+
+	inline tstring to_tstring(unsigned int val)
+	{
+		return std::to_string(val);
+	}
+
+	inline tstring to_tstring(long double val)
+	{
+		return std::to_string(val);
+	}
 
 #endif
 
