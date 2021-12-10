@@ -18,9 +18,6 @@
     <ClInclude Include="include\winapi_excepion.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\meminfo.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\smart_handle.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
