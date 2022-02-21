@@ -284,6 +284,10 @@ NamedPipeServer::NamedPipeServer(
         timeOut, 
         security
     );
+    if (pipe_ == INVALID_HANDLE_VALUE)
+    {
+        throw WinAPIException();
+    }
 
     connectToPipe(pipe_, bufSize);
 }
