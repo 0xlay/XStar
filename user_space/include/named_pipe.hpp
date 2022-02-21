@@ -24,6 +24,7 @@
 
 #include <string>
 #include <memory>
+#include <vector>
 
 #include <Windows.h>
 #include <tchar.h>
@@ -32,23 +33,14 @@
 #include "meminfo.hpp"
 
 
-#define XSTAR_PIPE_OPERATOR_OR(T1, T2)\
-inline DWORD operator | (T1 lhs, T2 rhs)\
-{\
-    return static_cast<DWORD>(lhs) | static_cast<DWORD>(rhs);\
-}
-
-#define XSTAR_PIPE_OPERATOR_PLUS(T1, T2)\
-inline DWORD operator + (T1 lhs, T2 rhs)\
-{\
-    return static_cast<DWORD>(lhs) + static_cast<DWORD>(rhs);\
-}
-
-
 namespace xstar
 {
 
-//------------------------------------------------------------------------------
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // The PipeDirection
+    //
+    ////////////////////////////////////////////////////////////////////////////
 
     enum class PipeDirection : DWORD
     {
@@ -66,18 +58,18 @@ namespace xstar
         WriteSACL    = ACCESS_SYSTEM_SECURITY
     };
 
-    XSTAR_PIPE_OPERATOR_OR(PipeDirection, PipeDirection)
-    XSTAR_PIPE_OPERATOR_OR(DWORD, PipeDirection)
-    XSTAR_PIPE_OPERATOR_OR(PipeDirection, DWORD)
-
-    XSTAR_PIPE_OPERATOR_PLUS(PipeDirection, PipeDirection)
-    XSTAR_PIPE_OPERATOR_PLUS(DWORD, PipeDirection)
-    XSTAR_PIPE_OPERATOR_PLUS(PipeDirection, DWORD)
-
-//------------------------------------------------------------------------------
+    inline PipeDirection operator | (PipeDirection lhs, PipeDirection rhs)
+    {
+        return static_cast<PipeDirection>((DWORD)lhs | (DWORD)rhs);
+    }
 
 
-//------------------------------------------------------------------------------
+
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // The PipeMode
+    //
+    ////////////////////////////////////////////////////////////////////////////
 
     enum class PipeMode : DWORD
     {
@@ -94,15 +86,18 @@ namespace xstar
         RejectClients = PIPE_REJECT_REMOTE_CLIENTS
     };
 
-    XSTAR_PIPE_OPERATOR_OR(PipeMode, PipeMode)
-    XSTAR_PIPE_OPERATOR_OR(DWORD, PipeMode)
-    XSTAR_PIPE_OPERATOR_OR(PipeMode, DWORD)
+    inline PipeMode operator | (PipeMode lhs, PipeMode rhs)
+    {
+        return static_cast<PipeMode>((DWORD)lhs | (DWORD)rhs);
+    }
 
-    XSTAR_PIPE_OPERATOR_PLUS(PipeMode, PipeMode)
-    XSTAR_PIPE_OPERATOR_PLUS(DWORD, PipeMode)
-    XSTAR_PIPE_OPERATOR_PLUS(PipeMode, DWORD)
 
-//------------------------------------------------------------------------------
+
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // The PipeAccess
+    //
+    ////////////////////////////////////////////////////////////////////////////
 
     enum class PipeAccess : DWORD
     {
@@ -111,102 +106,122 @@ namespace xstar
         InOut = GENERIC_READ | GENERIC_WRITE
     };
 
-    typedef struct PipeInfo
+    struct PipeInfo
     {
         DWORD flags;
         DWORD outBufSize;
         DWORD inBufSize;
         DWORD maxInstances;
-    } PipeInfo_t;
+    };
 
-//------------------------------------------------------------------------------
+    struct PipeState
+    {
+        PipeMode mode;
+        DWORD curInstances;
+    };
 
-    class NamedPipeServer final
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // The PipeIO
+    //
+    ////////////////////////////////////////////////////////////////////////////
+
+    class PipeIO
+    {
+    public:
+        void connectToPipe(HANDLE pipe, DWORD maxNumOfChar = SmallPage_4KB);
+        virtual ~PipeIO() = default;
+
+        void write(const std::string& msg);
+        void write(const std::wstring& msg);
+        void write(const std::vector<char>& msg);
+        void write(int value);
+
+        void read(std::string& msg);
+        void read(std::wstring& msg);
+        void read(std::vector<char>& vector);
+        void read(int& value);
+
+        [[nodiscard]] PipeInfo getInfo() const;
+
+        /*
+         * @brief The setState method must set only PipeMode::ReadMsg,
+         * PipeMode::ReadByte, PipeMode::Wait, PipeMode::NoWait.
+         */
+        void setState(PipeMode mode);
+        [[nodiscard]] PipeState getState() const;
+
+    private:
+        HANDLE pipe_ = nullptr;
+        DWORD maxNumOfChar_ = 0;
+    };
+
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // The NamedPipeServer
+    //
+    ////////////////////////////////////////////////////////////////////////////
+
+    class NamedPipeServer final : public PipeIO
     {
     public:
         NamedPipeServer(
-            LPCTSTR name,
+            std::wstring_view name,
             PipeDirection direct
         );
 
         NamedPipeServer(
-            LPCTSTR name,
+            std::wstring_view name,
             PipeDirection direct,
-            DWORD outBufSize,
-            DWORD inpBufSize
+            DWORD bufSize
         );
 
         NamedPipeServer(
-            LPCTSTR name,
+            std::wstring_view name,
             PipeDirection direct,
             PipeMode mode,
-            DWORD outBufSize = SmallPage_4KB,
-            DWORD inpBufSize = SmallPage_4KB,
+            DWORD bufSize = SmallPage_4KB,
             DWORD maxInstances = PIPE_UNLIMITED_INSTANCES,
             DWORD timeOut = 0 /*default time-out 50ms*/,
             LPSECURITY_ATTRIBUTES security = nullptr
         );
 
-        ~NamedPipeServer();
+        ~NamedPipeServer() noexcept;
 
-        void connect();
-        void disconnect();
-
-        size_t write(const std::string& buf);
-        size_t write(const std::wstring& buf);
-        size_t write(const char* buf, uint32_t size);
-        size_t write(const wchar_t* buf, uint32_t size);
-        size_t write(int value);
-
-        size_t read(const std::unique_ptr<char[]>& buf, uint32_t size);
-        size_t read(const std::unique_ptr<wchar_t[]>& buf, uint32_t size);
-        size_t read(int& value);
-
-        PipeInfo_t getInfo();
-        void setState(PipeMode mode, DWORD maxBytes = 0, DWORD maxTimeout = 0);
-        // PeekNamedPipe
+        void wait();
+        void stopWait() noexcept;
 
     private:
-        #ifdef UNICODE
         std::wstring name_;
-        #else
-        std::string name_;
-        #endif
-
         HANDLE pipe_;
     };
 
-//------------------------------------------------------------------------------
 
 
-//------------------------------------------------------------------------------
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // The NamedPipeClient
+    //
+    ////////////////////////////////////////////////////////////////////////////
 
-    class NamedPipeClient final
+    class NamedPipeClient final : public PipeIO
     {
     public:
-        NamedPipeClient(LPCTSTR name, PipeAccess access);
-        ~NamedPipeClient();
+        NamedPipeClient(std::wstring_view name, PipeAccess access);
+        ~NamedPipeClient() noexcept;
         
         void connect();
-
-        size_t write(std::string buf);
-        size_t read(const std::unique_ptr<char[]>& buf, uint32_t size);
-
-        PipeInfo_t getInfo();
-        void setState(PipeMode mode, DWORD maxBytes = 0, DWORD maxTimeout = 0);
+        void disconnect() noexcept;
 
     private:
-        #ifdef UNICODE
         std::wstring name_;
-        #else
-        std::string name_;
-        #endif
-
-        PipeAccess access_;
         HANDLE pipe_;
+        PipeAccess access_;
     };
-
-//------------------------------------------------------------------------------
 
 } // xstar
 #endif // _XSTAR_USER_NAMED_PIPE_HPP_

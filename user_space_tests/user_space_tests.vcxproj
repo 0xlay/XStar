@@ -33,22 +33,23 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)bin\$(platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\IntermediateDir\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(platform)\$(Configuration)\user_space_tests</OutDir>
+    <IntDir>$(SolutionDir)bin\IntermediateDir\$(Platform)\user_space_tests</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)bin\$(platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\IntermediateDir\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(platform)\$(Configuration)\user_space_tests</OutDir>
+    <IntDir>$(SolutionDir)bin\IntermediateDir\$(Platform)\user_space_tests</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)bin\$(platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\IntermediateDir\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(platform)\$(Configuration)\user_space_tests</OutDir>
+    <IntDir>$(SolutionDir)bin\IntermediateDir\$(Platform)\user_space_tests</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)bin\$(platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\IntermediateDir\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(platform)\$(Configuration)\user_space_tests</OutDir>
+    <IntDir>$(SolutionDir)bin\IntermediateDir\$(Platform)\user_space_tests</IntDir>
   </PropertyGroup>
   <ItemGroup>
+    <ClInclude Include="fixture\named_pipe_fixture.hpp" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
