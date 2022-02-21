@@ -45,7 +45,7 @@ void PipeIO::write(const std::string& buf)
     if (!WriteFile(
         pipe_,
         buf.c_str(),
-        static_cast<DWORD>(buf.length() * sizeof(char)),
+        static_cast<DWORD>(buf.length()) * sizeof(char),
         &bytes,
         nullptr
     ))
@@ -230,6 +230,10 @@ NamedPipeServer::NamedPipeServer(
         0/*time-out 50ms*/, 
         nullptr
     );
+    if (pipe_ == INVALID_HANDLE_VALUE)
+    {
+        throw WinAPIException();
+    }
 
     connectToPipe(pipe_);
 }
@@ -240,6 +244,7 @@ NamedPipeServer::NamedPipeServer(
     PipeDirection direct,
     DWORD bufSize
 )
+    : name_(name)
 {
     pipe_ = CreateNamedPipeW(
         name_.c_str(),
@@ -250,6 +255,10 @@ NamedPipeServer::NamedPipeServer(
         0/*time-out 50ms*/, 
         nullptr
     );
+    if (pipe_ == INVALID_HANDLE_VALUE)
+    {
+        throw WinAPIException();
+    }
 
     connectToPipe(pipe_, bufSize);
 }
@@ -264,6 +273,7 @@ NamedPipeServer::NamedPipeServer(
     DWORD timeOut,
     LPSECURITY_ATTRIBUTES security
 )
+    : name_(name)
 {
     pipe_ = CreateNamedPipeW(
         name_.c_str(),
