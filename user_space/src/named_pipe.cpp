@@ -217,30 +217,6 @@ PipeState PipeIO::getState() const
 
 NamedPipeServer::NamedPipeServer(
     std::wstring_view name,
-    PipeDirection direct
-)
-    : name_(name)
-{
-    pipe_ = CreateNamedPipeW(
-        name_.c_str(),
-        static_cast<DWORD>(direct),
-        static_cast<DWORD>(PipeMode::ReadMsg | PipeMode::WriteMsg | PipeMode::Wait),
-        PIPE_UNLIMITED_INSTANCES,
-        SmallPage_4KB, SmallPage_4KB,
-        0/*time-out 50ms*/, 
-        nullptr
-    );
-    if (pipe_ == INVALID_HANDLE_VALUE)
-    {
-        throw WinAPIException();
-    }
-
-    connectToPipe(pipe_);
-}
-
-
-NamedPipeServer::NamedPipeServer(
-    std::wstring_view name,
     PipeDirection direct,
     DWORD bufSize
 )
@@ -322,8 +298,12 @@ void NamedPipeServer::stopWait() noexcept
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-NamedPipeClient::NamedPipeClient(std::wstring_view name, PipeAccess access)
-    : name_(name), pipe_(nullptr), access_(access)
+NamedPipeClient::NamedPipeClient(
+    std::wstring_view name, 
+    PipeAccess access, 
+    DWORD bufSize
+)
+    : name_(name), pipe_(nullptr), access_(access), bufSize_(bufSize)
 { }
 
 
@@ -349,7 +329,7 @@ void NamedPipeClient::connect()
         throw WinAPIException();
     }
 
-    connectToPipe(pipe_);
+    connectToPipe(pipe_, bufSize_);
 }
 
 

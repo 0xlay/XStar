@@ -171,11 +171,6 @@ namespace xstar
     public:
         NamedPipeServer(
             std::wstring_view name,
-            PipeDirection direct
-        );
-
-        NamedPipeServer(
-            std::wstring_view name,
             PipeDirection direct,
             DWORD bufSize
         );
@@ -183,7 +178,7 @@ namespace xstar
         NamedPipeServer(
             std::wstring_view name,
             PipeDirection direct,
-            PipeMode mode,
+            PipeMode mode = PipeMode::ReadMsg | PipeMode::WriteMsg | PipeMode::Wait,
             DWORD bufSize = SmallPage_4KB,
             DWORD maxInstances = PIPE_UNLIMITED_INSTANCES,
             DWORD timeOut = 0 /*default time-out 50ms*/,
@@ -211,7 +206,11 @@ namespace xstar
     class NamedPipeClient final : public PipeIO
     {
     public:
-        NamedPipeClient(std::wstring_view name, PipeAccess access);
+        NamedPipeClient(
+            std::wstring_view name, 
+            PipeAccess access, 
+            DWORD bufSize = SmallPage_4KB
+        );
         ~NamedPipeClient() noexcept;
         
         void connect();
@@ -221,6 +220,7 @@ namespace xstar
         std::wstring name_;
         HANDLE pipe_;
         PipeAccess access_;
+        DWORD bufSize_;
     };
 
 } // xstar
