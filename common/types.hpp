@@ -26,7 +26,7 @@ namespace xstar
 {
 
     using ErrorCode = unsigned long;
-
+    using Tag = unsigned long;
     using Byte = unsigned char;
 
 

@@ -49,6 +49,9 @@
     <ClInclude Include="src\smart_pointers.inl">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="runtime\allocator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="runtime\cpplibrary.cpp">
