@@ -26,8 +26,14 @@
 
 namespace xstar
 {
+
     template <typename T>
-    void swap(T& firstValue, T& secondValue);
+    void swap(T& firstValue, T& secondValue) noexcept
+    {
+        T tempValue = move(firstValue);
+        firstValue = move(secondValue);
+        secondValue = move(tempValue);
+    }
 
 } // xstar
 

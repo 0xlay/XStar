@@ -117,8 +117,41 @@ void __cdecl operator delete[](_In_ void* ptr, PrimitiveType type);
 //------------------------------------------------------------------------------
 
 
-template <typename T>
-[[nodiscard]] T&& move(T&& arg) noexcept
+//------------------------------------------------------------------------------
+// Remove reference
+//------------------------------------------------------------------------------
+
+template <class T>
+struct RemoveReference
 {
-    return static_cast<T&&>(arg);
+    using Type = T;
+    using ConstRefType = const T;
+};
+
+template <class T>
+struct RemoveReference<T&>
+{
+    using Type = T;
+    using ConstRefType = const T&;
+};
+
+template <class T>
+struct RemoveReference<T&&>
+{
+    using Type = T;
+    using ConstRefType = const T&&;
+};
+
+template <class T>
+using RemoveRef = typename RemoveReference<T>::Type;
+
+
+//------------------------------------------------------------------------------
+// Move operator
+//------------------------------------------------------------------------------
+
+template <typename T>
+[[nodiscard]] RemoveRef<T>&& move(T&& arg) noexcept
+{
+    return static_cast<RemoveRef<T>&&>(arg);
 }

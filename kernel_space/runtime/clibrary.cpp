@@ -36,7 +36,7 @@ void* __cdecl malloc(size_t size) noexcept
         ExAllocatePool2(
             POOL_FLAG_NON_PAGED | POOL_FLAG_CACHE_ALIGNED,
             size + sizeof(MEMBLOCK),
-            _C_LIBRARY_TAG_
+            _XSTAR_LIBRARY_TAG_
         )
     );
     #else // deprecated in Windows 10 2004
@@ -64,7 +64,7 @@ void __cdecl free(void* ptr) noexcept
     {
         ExFreePoolWithTag(
             getBasePointer(ptr), /* returns the base address of an instance of a structure */
-            _C_LIBRARY_TAG_
+            _XSTAR_LIBRARY_TAG_
         );
         ptr = nullptr;
     }
@@ -113,7 +113,7 @@ void* vmalloc(size_t size) noexcept
         ExAllocatePool2(
             POOL_FLAG_PAGED | POOL_FLAG_CACHE_ALIGNED,
             size + sizeof(MEMBLOCK),
-            _C_LIBRARY_TAG_
+            _XSTAR_LIBRARY_TAG_
         )
     );
     #else // deprecated in Windows 10 2004

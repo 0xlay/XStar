@@ -22,9 +22,8 @@
 #pragma once
 
 #include <ntddk.h>
+#include "meminfo.hpp"
 
-
-#define _C_LIBRARY_TAG_ 'RATS' // STAR
 
 /**
 * @brief This macro gets a pointer to base in the MEMBLOCK structure

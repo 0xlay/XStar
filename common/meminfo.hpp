@@ -24,6 +24,14 @@
 
 #include <sdkddkver.h>
 
+//------------------------------------------------------------------------------
+//
+// Constants
+//
+//------------------------------------------------------------------------------
+
+#define _XSTAR_LIBRARY_TAG_ 'RATS' // STAR
+
 namespace xstar
 {
 
@@ -37,4 +45,5 @@ namespace xstar
     };
 
 } // xstar
+
 #endif // _XSTAR_COMMON_MEMINFO_HPP_

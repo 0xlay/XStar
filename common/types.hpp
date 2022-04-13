@@ -29,6 +29,5 @@ namespace xstar
     using Tag = unsigned long;
     using Byte = unsigned char;
 
-
 } // xstar
 #endif // _XSTAR_COMMON_TYPES_HPP_

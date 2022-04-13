@@ -22,7 +22,6 @@
 #pragma once
 
 #include <wdm.h>
-#include "types.hpp"
 #include "meminfo.hpp"
 #include "algorithms.hpp"
 
@@ -32,16 +31,37 @@ namespace xstar
 
     /*
      *
-     * @brief The DefaultAllocator is class which implements simple allocator for
-     * kernel-mode.
+     * @brief The AllocTraits is class which describes properties for allocator
      *
      */
-    template <class DataType, POOL_TYPE type, Tag tag>
+    template <class DataType, POOL_TYPE type>
+    struct AllocTraits
+    {
+        using ValueType = DataType;
+        using Pointer = ValueType*;
+        using ConstPointer = const Pointer;
+        using SizeType = size_t;
+
+        enum {Size = sizeof(ValueType)};
+        enum {PoolTag = _XSTAR_LIBRARY_TAG_};
+        enum {PoolType = type | 16 /*throw exception if allocate was failed */ };
+    };
+
+    /*
+     *
+     * @brief The DefaultAllocator is class which implements simple allocator for
+     * kernel-mode
+     *
+     */
+    template <class DataType, class Traits>
     class DefaultAllocator final
     {
     public:
-        using Pointer = DataType*;
-        using ConstPointer = const Pointer;
+        using AllocTraits = Traits;
+        using ValueType = typename AllocTraits::ValueType;
+        using Pointer = typename AllocTraits::Pointer;
+        using ConstPointer = typename AllocTraits::ConstPointer;
+        using SizeType = typename AllocTraits::SizeType;
 
         //
         // Constructors
@@ -51,14 +71,25 @@ namespace xstar
             : size_(0), data_(nullptr)
         {}
 
+        DefaultAllocator(const DefaultAllocator& allocator)
+        {
+            if (allocator != *this)
+            {
+                size_ = allocator.size();
+                allocate(size_);
+                memcpy(data_, allocator.get(), size_ * AllocTraits::Size);
+            }
+        }
+
         DefaultAllocator(DefaultAllocator&& allocator) noexcept
             : DefaultAllocator()
         {
-            swap(data_, allocator.data_);
-            swap(size_, allocator.size_);
+            if (allocator != *this)
+            {
+                swap(data_, allocator.data_);
+                swap(size_, allocator.size_);
+            }
         }
-
-        DefaultAllocator(const DefaultAllocator& allocator) = delete;
 
         //
         // Destructor
@@ -75,21 +106,33 @@ namespace xstar
 
         DefaultAllocator& operator=(DefaultAllocator&& allocator) noexcept
         {
-            deallocate();
+            if (allocator != *this)
+            {
+                deallocate();
 
-            swap(data_, allocator.data_);
-            swap(size_, allocator.size_);
-
+                swap(data_, allocator.data_);
+                swap(size_, allocator.size_);
+            }
             return *this;
         }
 
-        DefaultAllocator& operator=(const DefaultAllocator& allocator) = delete;
+        DefaultAllocator& operator=(const DefaultAllocator& allocator)
+        {
+            if (allocator != *this)
+            {
+                deallocate();
+                size_ = allocator.size();
+                allocate(size_);
+                memcpy(data_, allocator.get(), size_ * AllocTraits::Size);
+            }
+            return *this;
+        }
 
         //
         // Public methods
         //
 
-        [[nodiscard]] Pointer allocate(size_t size) noexcept
+        Pointer allocate(size_t size)
         {
             if (data_)
             {
@@ -97,13 +140,19 @@ namespace xstar
             }
 
             size_t pageSize = 0;
-            while (pageSize < size)
+            size_t sizeInBytes = size * AllocTraits::Size;
+            while (pageSize < sizeInBytes)
             {
                 pageSize += SmallPage_4KB;
             }
+            sizeInBytes = pageSize;
 
-            size_ = pageSize;
-            data_ = ExAllocatePoolWithTag(type, size_, tag);
+            size_ = sizeInBytes / AllocTraits::Size;
+            data_ = static_cast<Pointer>(
+                ExAllocatePoolWithTag(static_cast<POOL_TYPE>(AllocTraits::PoolType),
+                                      sizeInBytes,
+                                      AllocTraits::PoolTag)
+            );
 
             return data_;
         }
@@ -112,13 +161,13 @@ namespace xstar
         {
             if (data_)
             {
-                ExFreePoolWithTag(data_, tag);
+                ExFreePoolWithTag(data_, AllocTraits::PoolTag);
                 size_ = 0;
                 data_ = nullptr;
             }
         }
 
-        [[nodiscard]] size_t size() const noexcept
+        [[nodiscard]] SizeType size() const noexcept
         {
             return size_;
         }
@@ -138,8 +187,26 @@ namespace xstar
     //
 
     private:
-        size_t size_;
+        SizeType size_;
         Pointer data_;
     };
+    
+    //
+    // Equal and non-equal operators
+    //
+
+    template <class DataType, class Traits>
+    bool operator== (const DefaultAllocator<DataType, Traits>& lhs,
+        const DefaultAllocator<DataType, Traits>& rhs)
+    {
+        return lhs.get() == rhs.get();
+    }
+
+    template <class DataType, class Traits>
+    bool operator!= (const DefaultAllocator<DataType, Traits>& lhs,
+        const DefaultAllocator<DataType, Traits>& rhs)
+    {
+        return lhs.get() != rhs.get();
+    }
 
 } // xstar

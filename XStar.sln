@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "user_space_tests", "user_sp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "common\common.vcxitems", "{F9BF4D22-DFB1-4ABF-A782-80588FAD65A1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kernel_space_test", "kernel_space_test\kernel_space_test.vcxproj", "{A1F15089-294A-40FF-8936-3B80398910BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -71,6 +73,30 @@ Global
 		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Release|x64.Build.0 = Release|x64
 		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Release|x86.ActiveCfg = Release|Win32
 		{EF92D94B-2DC1-4D62-A814-FF16903BA933}.Release|x86.Build.0 = Release|Win32
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|ARM.Build.0 = Debug|ARM
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|ARM.Deploy.0 = Debug|ARM
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|ARM64.Build.0 = Debug|ARM64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|x64.ActiveCfg = Debug|x64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|x64.Build.0 = Debug|x64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|x64.Deploy.0 = Debug|x64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|x86.Build.0 = Debug|Win32
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Debug|x86.Deploy.0 = Debug|Win32
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|ARM.ActiveCfg = Release|ARM
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|ARM.Build.0 = Release|ARM
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|ARM.Deploy.0 = Release|ARM
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|ARM64.ActiveCfg = Release|ARM64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|ARM64.Build.0 = Release|ARM64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|ARM64.Deploy.0 = Release|ARM64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|x64.ActiveCfg = Release|x64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|x64.Build.0 = Release|x64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|x64.Deploy.0 = Release|x64
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|x86.ActiveCfg = Release|Win32
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|x86.Build.0 = Release|Win32
+		{A1F15089-294A-40FF-8936-3B80398910BC}.Release|x86.Deploy.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -52,15 +52,15 @@
     <ClInclude Include="runtime\allocator.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\string.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="runtime\cpplibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="runtime\clibrary.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\algorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
