@@ -1,0 +1,139 @@
+\hypertarget{start__win__driver_8cpp_source}{}\doxysection{start\+\_\+win\+\_\+driver.\+cpp}
+\label{start__win__driver_8cpp_source}\index{user\_space/src/start\_win\_driver.cpp@{user\_space/src/start\_win\_driver.cpp}}
+\mbox{\hyperlink{start__win__driver_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00014}00014 \textcolor{comment}{// File: start\_win\_driver.cpp}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00018}00018 \textcolor{comment}{// Environment: User mode only}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00022}00022 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{start__win__driver_8hpp}{start\_win\_driver.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00025}00025 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00027}00027     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00028}00028     \textcolor{comment}{// Complexity: O(1)}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00029}00029     \textcolor{comment}{// Parameters: }}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00030}00030     \textcolor{comment}{//  service name}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00031}00031     \textcolor{comment}{//  computer name: default = nullptr}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00032}00032     \textcolor{comment}{//  database name: default = nullptr}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00033}00033     \textcolor{comment}{//  service access: default = SERVICE\_ALL\_ACCESS}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00034}00034     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00035}\mbox{\hyperlink{classxstar_1_1_start_win_driver_a32412cedea752376d0ffb82d0cc39ed7}{00035}}     \mbox{\hyperlink{classxstar_1_1_start_win_driver_a32412cedea752376d0ffb82d0cc39ed7}{StartWinDriver::StartWinDriver}}(}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00036}00036         \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* serviceName,}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00037}00037         \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* pcName,}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00038}00038         \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* dbName,}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00039}00039         uint32\_t access}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00040}00040     )}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00041}00041         : serviceName\_(serviceName), ServiceStatus\_\{ 0 \}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00042}00042     \{}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00043}00043         \mbox{\hyperlink{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}{SCM\_}} = OpenSCManager(pcName, dbName, SC\_MANAGER\_ALL\_ACCESS);}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00044}00044         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}{SCM\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}())}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00045}00045             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00048}00048         \mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}.reserve(MAX\_PATH);}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00049}00049         uint32\_t cntBytes = GetFullPathNameW(}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00050}00050             (\mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}} + L\textcolor{stringliteral}{"{}.sys"{}}).c\_str(),}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00051}00051             \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}.capacity()),}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00052}00052             \&\mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}[0],}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00053}00053             \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00054}00054         );}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00055}00055         \textcolor{keywordflow}{if} (cntBytes == 0)}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00056}00056             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00059}00059         \mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}} = OpenService(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}{SCM\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}}.c\_str(), access);}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00060}00060         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}())}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00061}00061         \{}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00062}00062             \mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}} = CreateService(}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00063}00063                 \mbox{\hyperlink{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}{SCM\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(),}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00064}00064                 \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}}.c\_str(), \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}}.c\_str(),}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00065}00065                 access | DELETE,}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00066}00066                 SERVICE\_KERNEL\_DRIVER,}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00067}00067                 SERVICE\_DEMAND\_START,}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00068}00068                 SERVICE\_ERROR\_IGNORE,}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00069}00069                 \mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}.c\_str(),}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00070}00070                 \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00071}00071             );}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00072}00072             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}())}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00073}00073                 \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00076}00076             \mbox{\hyperlink{classxstar_1_1_start_win_driver_af7ff86c8681bedfbf80765dabe54de34}{serviceCreated\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00077}00077         \}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00080}00080         \textcolor{keywordflow}{if} (!StartService(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), 0, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00081}00081             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00082}00082     \}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00084}00084     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00085}00085     \textcolor{comment}{// Complexity: O(1)}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00086}00086     \textcolor{comment}{// Parameters: service name and service access}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00087}00087     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00088}\mbox{\hyperlink{classxstar_1_1_start_win_driver_a3362e56c186b843665b9654094529189}{00088}}     \mbox{\hyperlink{classxstar_1_1_start_win_driver_a32412cedea752376d0ffb82d0cc39ed7}{StartWinDriver::StartWinDriver}}(\textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* serviceName, uint32\_t access)}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00089}00089         : \mbox{\hyperlink{classxstar_1_1_start_win_driver}{StartWinDriver}}(serviceName, nullptr, nullptr, access)}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00090}00090     \{ \}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00092}00092     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00093}00093     \textcolor{comment}{// Complexity: O(1)}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00094}00094     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00095}\mbox{\hyperlink{classxstar_1_1_start_win_driver_a53deb42a8c1ea04f0dc38e359fae2de4}{00095}}     \mbox{\hyperlink{classxstar_1_1_start_win_driver_a53deb42a8c1ea04f0dc38e359fae2de4}{StartWinDriver::\string~StartWinDriver}}()}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00096}00096     \{}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00097}00097         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_start_win_driver_a45b2d3898daf88e434abe012f4fc52d1}{ServiceStatus\_}}.dwCurrentState != SERVICE\_STOPPED)}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00098}00098             \mbox{\hyperlink{classxstar_1_1_start_win_driver_a4a1c63bb1086f5a70835017875d7457f}{Control}}(SERVICE\_CONTROL\_STOP);}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00100}00100         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_start_win_driver_af7ff86c8681bedfbf80765dabe54de34}{serviceCreated\_}})}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00101}00101             DeleteService(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}());}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00105}00105     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00106}00106     \textcolor{comment}{// Complexity:  O(1)}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00107}00107     \textcolor{comment}{// Parameter:   service control constant (SERVICE\_CONTROL\_STOP)}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00108}00108     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00109}\mbox{\hyperlink{classxstar_1_1_start_win_driver_a4a1c63bb1086f5a70835017875d7457f}{00109}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_start_win_driver_a4a1c63bb1086f5a70835017875d7457f}{StartWinDriver::Control}}(uint32\_t control)}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00110}00110     \{}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00111}00111         \textcolor{keywordflow}{if} (!ControlService(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), control, \&\mbox{\hyperlink{classxstar_1_1_start_win_driver_a45b2d3898daf88e434abe012f4fc52d1}{ServiceStatus\_}}))}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00112}00112             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00113}00113     \}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00115}00115     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00116}00116     \textcolor{comment}{// Complexity: O(1)}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00117}00117     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00118}\mbox{\hyperlink{classxstar_1_1_start_win_driver_a3cbe771015ff3463752b8c06edf576a8}{00118}}     \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* \mbox{\hyperlink{classxstar_1_1_start_win_driver_a3cbe771015ff3463752b8c06edf576a8}{StartWinDriver::getName}}() const noexcept}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00119}00119     \{}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00120}00120         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}}.c\_str();}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00121}00121     \}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00123}00123     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00124}00124     \textcolor{comment}{// Complexity: O(1)}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00125}00125     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00126}\mbox{\hyperlink{classxstar_1_1_start_win_driver_ad017585fc04abe8cb159d359a5bc24be}{00126}}     \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* \mbox{\hyperlink{classxstar_1_1_start_win_driver_ad017585fc04abe8cb159d359a5bc24be}{StartWinDriver::getPath}}() const noexcept}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00127}00127     \{}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00128}00128         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}.c\_str();}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00129}00129     \}}
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{start__win__driver_8cpp_source_l00133}00133 \} \textcolor{comment}{// xstar}}
+
+\end{DoxyCode}

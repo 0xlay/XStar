@@ -1,0 +1,69 @@
+\hypertarget{winapi__exception__test_8cpp}{}\doxysection{user\+\_\+space\+\_\+tests/winapi\+\_\+exception\+\_\+test.cpp File Reference}
+\label{winapi__exception__test_8cpp}\index{user\_space\_tests/winapi\_exception\_test.cpp@{user\_space\_tests/winapi\_exception\_test.cpp}}
+{\ttfamily \#include \char`\"{}pch.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{winapi__exception__test_8cpp_a7908fb5e35b13cd4d71ad379ad4e9fd9}{TEST}} (Win\+APIException\+Tests, Win\+APIException\+\_\+\+\_\+\+Without\+Arguments\+\_\+\+\_\+\+Test)
+\item 
+\mbox{\hyperlink{winapi__exception__test_8cpp_a1c3b44571b68840b42cc0b97de1e7cf1}{TEST}} (Win\+APIException\+Tests, Win\+APIException\+\_\+\+\_\+\+With\+Arguments\+\_\+\+\_\+\+Test)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{winapi__exception__test_8cpp_a1c3b44571b68840b42cc0b97de1e7cf1}\label{winapi__exception__test_8cpp_a1c3b44571b68840b42cc0b97de1e7cf1}} 
+\index{winapi\_exception\_test.cpp@{winapi\_exception\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!winapi\_exception\_test.cpp@{winapi\_exception\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Win\+APIException\+Tests}]{,  }\item[{Win\+APIException\+\_\+\+\_\+\+With\+Arguments\+\_\+\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{winapi__exception__test_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{winapi__exception__test_8cpp_source}{winapi\+\_\+exception\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020 \{}
+\DoxyCodeLine{00021     \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacexstar}{xstar}};}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg = \textcolor{stringliteral}{"{}Test error. Error code: 1"{}};}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00026     \{}
+\DoxyCodeLine{00027         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}(\textcolor{stringliteral}{"{}Test error."{}}, 1);}
+\DoxyCodeLine{00028     \}}
+\DoxyCodeLine{00029     \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::exception\& ex)}
+\DoxyCodeLine{00030     \{}
+\DoxyCodeLine{00031         EXPECT\_EQ(std::string(ex.what()), msg);}
+\DoxyCodeLine{00032     \}}
+\DoxyCodeLine{00033 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{winapi__exception__test_8cpp_a7908fb5e35b13cd4d71ad379ad4e9fd9}\label{winapi__exception__test_8cpp_a7908fb5e35b13cd4d71ad379ad4e9fd9}} 
+\index{winapi\_exception\_test.cpp@{winapi\_exception\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!winapi\_exception\_test.cpp@{winapi\_exception\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Win\+APIException\+Tests}]{,  }\item[{Win\+APIException\+\_\+\+\_\+\+Without\+Arguments\+\_\+\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{winapi__exception__test_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{winapi__exception__test_8cpp_source}{winapi\+\_\+exception\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004 \{}
+\DoxyCodeLine{00005     \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacexstar}{xstar}};}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007     \textcolor{keyword}{auto} invalidHandle = CreateFile(\$T\textcolor{stringliteral}{"{}"{}}, 0, 0, \textcolor{keyword}{nullptr}, OPEN\_EXISTING, 0, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009     \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00010     \{}
+\DoxyCodeLine{00011         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00012     \}}
+\DoxyCodeLine{00013     \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::exception\& ex)}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015         EXPECT\_NE(ex.what(), \mbox{\hyperlink{namespacexstar_a2f2f11cd766129e29f47dc9713f5c192}{getLastErrorStr}}());}
+\DoxyCodeLine{00016     \}}
+\DoxyCodeLine{00017 \}}
+
+\end{DoxyCode}

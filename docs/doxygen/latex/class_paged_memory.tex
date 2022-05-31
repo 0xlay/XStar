@@ -1,0 +1,115 @@
+\hypertarget{class_paged_memory}{}\doxysection{Paged\+Memory Class Reference}
+\label{class_paged_memory}\index{PagedMemory@{PagedMemory}}
+
+
+This class implements new and delete operators to allocate paged memory.  
+
+
+
+
+{\ttfamily \#include $<$paged\+\_\+memory.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{class_paged_memory_aa0c7c0207ca2450dde273bcb84922e12}{operator new}} (\+\_\+\+In\+\_\+ size\+\_\+t size)
+\item 
+void $\ast$ \mbox{\hyperlink{class_paged_memory_a7da2ab03e5c0175e3e70ea83ca0be311}{operator new\mbox{[}$\,$\mbox{]}}} (\+\_\+\+In\+\_\+ size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{class_paged_memory_a0be051559553d0921d3cdb785db8444b}{operator delete}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr) noexcept
+\item 
+void \mbox{\hyperlink{class_paged_memory_a5ed091680eef4ea6a016927abcd72422}{operator delete\mbox{[}$\,$\mbox{]}}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr) noexcept
+\item 
+void \mbox{\hyperlink{class_paged_memory_a1bc6fe71f9a27438da1ec456580264a9}{operator delete}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr, \+\_\+\+In\+\_\+ size\+\_\+t size) noexcept
+\item 
+void \mbox{\hyperlink{class_paged_memory_a66b58e986e0192ca6cc9ba4094f7a3a3}{operator delete\mbox{[}$\,$\mbox{]}}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr, \+\_\+\+In\+\_\+ size\+\_\+t size) noexcept
+\item 
+virtual \mbox{\hyperlink{class_paged_memory_a3f06106cd17bbf4df292c636155003cd}{$\sim$\+Paged\+Memory}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class implements new and delete operators to allocate paged memory. 
+
+\begin{DoxyWarning}{Warning}
+IRQL \texorpdfstring{$<$}{<}= APC\+\_\+\+LEVEL 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{paged__memory_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{paged__memory_8hpp_source}{paged\+\_\+memory.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_paged_memory_a3f06106cd17bbf4df292c636155003cd}\label{class_paged_memory_a3f06106cd17bbf4df292c636155003cd}} 
+\index{PagedMemory@{PagedMemory}!````~PagedMemory@{$\sim$PagedMemory}}
+\index{````~PagedMemory@{$\sim$PagedMemory}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{$\sim$PagedMemory()}{~PagedMemory()}}
+{\footnotesize\ttfamily virtual Paged\+Memory\+::$\sim$\+Paged\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_paged_memory_a0be051559553d0921d3cdb785db8444b}\label{class_paged_memory_a0be051559553d0921d3cdb785db8444b}} 
+\index{PagedMemory@{PagedMemory}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Paged\+Memory\+::operator delete (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_paged_memory_a1bc6fe71f9a27438da1ec456580264a9}\label{class_paged_memory_a1bc6fe71f9a27438da1ec456580264a9}} 
+\index{PagedMemory@{PagedMemory}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Paged\+Memory\+::operator delete (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr,  }\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_paged_memory_a5ed091680eef4ea6a016927abcd72422}\label{class_paged_memory_a5ed091680eef4ea6a016927abcd72422}} 
+\index{PagedMemory@{PagedMemory}!operator delete\mbox{[}\mbox{]}@{operator delete[]}}
+\index{operator delete\mbox{[}\mbox{]}@{operator delete[]}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete[]()}{operator delete[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Paged\+Memory\+::operator delete\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_paged_memory_a66b58e986e0192ca6cc9ba4094f7a3a3}\label{class_paged_memory_a66b58e986e0192ca6cc9ba4094f7a3a3}} 
+\index{PagedMemory@{PagedMemory}!operator delete\mbox{[}\mbox{]}@{operator delete[]}}
+\index{operator delete\mbox{[}\mbox{]}@{operator delete[]}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete[]()}{operator delete[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Paged\+Memory\+::operator delete\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr,  }\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_paged_memory_aa0c7c0207ca2450dde273bcb84922e12}\label{class_paged_memory_aa0c7c0207ca2450dde273bcb84922e12}} 
+\index{PagedMemory@{PagedMemory}!operator new@{operator new}}
+\index{operator new@{operator new}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator new()}{operator new()}}
+{\footnotesize\ttfamily void $\ast$ Paged\+Memory\+::operator new (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{paged__memory_8hpp_source_l00060}{60}} of file \mbox{\hyperlink{paged__memory_8hpp_source}{paged\+\_\+memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061 \{}
+\DoxyCodeLine{00062     \textcolor{keywordflow}{return} \mbox{\hyperlink{clibrary_8cpp_a592837a6fb94ee3a74ea4fe8411affe1}{vmalloc}}(size);}
+\DoxyCodeLine{00063 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_paged_memory_a7da2ab03e5c0175e3e70ea83ca0be311}\label{class_paged_memory_a7da2ab03e5c0175e3e70ea83ca0be311}} 
+\index{PagedMemory@{PagedMemory}!operator new\mbox{[}\mbox{]}@{operator new[]}}
+\index{operator new\mbox{[}\mbox{]}@{operator new[]}!PagedMemory@{PagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator new[]()}{operator new[]()}}
+{\footnotesize\ttfamily void $\ast$ Paged\+Memory\+::operator new\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{paged__memory_8hpp_source_l00066}{66}} of file \mbox{\hyperlink{paged__memory_8hpp_source}{paged\+\_\+memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067 \{}
+\DoxyCodeLine{00068     \textcolor{keywordflow}{return} \mbox{\hyperlink{clibrary_8cpp_a592837a6fb94ee3a74ea4fe8411affe1}{vmalloc}}(size);}
+\DoxyCodeLine{00069 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel\+\_\+space/runtime/\mbox{\hyperlink{paged__memory_8hpp}{paged\+\_\+memory.\+hpp}}\end{DoxyCompactItemize}

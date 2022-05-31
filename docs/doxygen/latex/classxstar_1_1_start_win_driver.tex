@@ -1,0 +1,313 @@
+\hypertarget{classxstar_1_1_start_win_driver}{}\doxysection{xstar\+::Start\+Win\+Driver Class Reference}
+\label{classxstar_1_1_start_win_driver}\index{xstar::StartWinDriver@{xstar::StartWinDriver}}
+
+
+{\ttfamily \#include $<$start\+\_\+win\+\_\+driver.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxstar_1_1_start_win_driver_a32412cedea752376d0ffb82d0cc39ed7}{Start\+Win\+Driver}} (const wchar\+\_\+t $\ast$service\+Name, const wchar\+\_\+t $\ast$pc\+Name=nullptr, const wchar\+\_\+t $\ast$db\+Name=nullptr, uint32\+\_\+t access=SERVICE\+\_\+\+ALL\+\_\+\+ACCESS)
+\item 
+\mbox{\hyperlink{classxstar_1_1_start_win_driver_a3362e56c186b843665b9654094529189}{Start\+Win\+Driver}} (const wchar\+\_\+t $\ast$service\+Name, uint32\+\_\+t access)
+\item 
+\mbox{\hyperlink{classxstar_1_1_start_win_driver_a53deb42a8c1ea04f0dc38e359fae2de4}{$\sim$\+Start\+Win\+Driver}} ()
+\item 
+\mbox{\hyperlink{classxstar_1_1_start_win_driver_a9df78eba2c76327617ed6b93eb01ce3c}{Start\+Win\+Driver}} (const \mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \&)=delete
+\item 
+void \mbox{\hyperlink{classxstar_1_1_start_win_driver_a9c6cec032a75efae9fa492311d5415de}{operator=}} (const \mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \&)=delete
+\item 
+\mbox{\hyperlink{classxstar_1_1_start_win_driver_aa853096ec4a1702908b70036ccf9bc6f}{Start\+Win\+Driver}} (\mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \& \mbox{\hyperlink{classxstar_1_1_start_win_driver_a54dd07b8004a543f67f720aa3749fb74}{operator=}} (\mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classxstar_1_1_start_win_driver_a4a1c63bb1086f5a70835017875d7457f}{Control}} (uint32\+\_\+t control)
+\item 
+const wchar\+\_\+t $\ast$ \mbox{\hyperlink{classxstar_1_1_start_win_driver_a3cbe771015ff3463752b8c06edf576a8}{get\+Name}} () const noexcept
+\item 
+const wchar\+\_\+t $\ast$ \mbox{\hyperlink{classxstar_1_1_start_win_driver_ad017585fc04abe8cb159d359a5bc24be}{get\+Path}} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_start_win_driver_ab37cc386d19c66311f291456c4f0ad65}{Entry\+Point}} = LPSERVICE\+\_\+\+MAIN\+\_\+\+FUNCTIONW
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::wstring \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{service\+Name\+\_\+}}
+\item 
+std\+::wstring \mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{full\+Service\+Path\+\_\+}}
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}$<$ SC\+\_\+\+HANDLE $>$ \mbox{\hyperlink{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}{SCM\+\_\+}}
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}$<$ SC\+\_\+\+HANDLE $>$ \mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\+\_\+}}
+\item 
+SERVICE\+\_\+\+STATUS \mbox{\hyperlink{classxstar_1_1_start_win_driver_a45b2d3898daf88e434abe012f4fc52d1}{Service\+Status\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classxstar_1_1_start_win_driver_af7ff86c8681bedfbf80765dabe54de34}{service\+Created\+\_\+}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{start__win__driver_8hpp_source}{start\+\_\+win\+\_\+driver.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_ab37cc386d19c66311f291456c4f0ad65}\label{classxstar_1_1_start_win_driver_ab37cc386d19c66311f291456c4f0ad65}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!EntryPoint@{EntryPoint}}
+\index{EntryPoint@{EntryPoint}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{EntryPoint}{EntryPoint}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxstar_1_1_start_win_driver_ab37cc386d19c66311f291456c4f0ad65}{xstar\+::\+Start\+Win\+Driver\+::\+Entry\+Point}} =  LPSERVICE\+\_\+\+MAIN\+\_\+\+FUNCTIONW\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{start__win__driver_8hpp_source}{start\+\_\+win\+\_\+driver.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a32412cedea752376d0ffb82d0cc39ed7}\label{classxstar_1_1_start_win_driver_a32412cedea752376d0ffb82d0cc39ed7}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!StartWinDriver@{StartWinDriver}}
+\index{StartWinDriver@{StartWinDriver}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{StartWinDriver()}{StartWinDriver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily xstar\+::\+Start\+Win\+Driver\+::\+Start\+Win\+Driver (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{service\+Name,  }\item[{const wchar\+\_\+t $\ast$}]{pc\+Name = {\ttfamily nullptr},  }\item[{const wchar\+\_\+t $\ast$}]{db\+Name = {\ttfamily nullptr},  }\item[{uint32\+\_\+t}]{access = {\ttfamily SERVICE\+\_\+ALL\+\_\+ACCESS} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{start__win__driver_8cpp_source}{start\+\_\+win\+\_\+driver.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041         : \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}}(serviceName), \mbox{\hyperlink{classxstar_1_1_start_win_driver_a45b2d3898daf88e434abe012f4fc52d1}{ServiceStatus\_}}\{ 0 \}}
+\DoxyCodeLine{00042     \{}
+\DoxyCodeLine{00043         \mbox{\hyperlink{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}{SCM\_}} = OpenSCManager(pcName, dbName, SC\_MANAGER\_ALL\_ACCESS);}
+\DoxyCodeLine{00044         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}{SCM\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}())}
+\DoxyCodeLine{00045             \textcolor{keywordflow}{throw} WinAPIException();}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048         \mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}.reserve(MAX\_PATH);}
+\DoxyCodeLine{00049         uint32\_t cntBytes = GetFullPathNameW(}
+\DoxyCodeLine{00050             (\mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}} + L\textcolor{stringliteral}{"{}.sys"{}}).c\_str(),}
+\DoxyCodeLine{00051             \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}.capacity()),}
+\DoxyCodeLine{00052             \&\mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}[0],}
+\DoxyCodeLine{00053             \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{00054         );}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{if} (cntBytes == 0)}
+\DoxyCodeLine{00056             \textcolor{keywordflow}{throw} WinAPIException();}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059         \mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}} = OpenService(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}{SCM\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}}.c\_str(), access);}
+\DoxyCodeLine{00060         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}())}
+\DoxyCodeLine{00061         \{}
+\DoxyCodeLine{00062             \mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}} = CreateService(}
+\DoxyCodeLine{00063                 \mbox{\hyperlink{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}{SCM\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(),}
+\DoxyCodeLine{00064                 \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}}.c\_str(), \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}}.c\_str(),}
+\DoxyCodeLine{00065                 access | DELETE,}
+\DoxyCodeLine{00066                 SERVICE\_KERNEL\_DRIVER,}
+\DoxyCodeLine{00067                 SERVICE\_DEMAND\_START,}
+\DoxyCodeLine{00068                 SERVICE\_ERROR\_IGNORE,}
+\DoxyCodeLine{00069                 \mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}.c\_str(),}
+\DoxyCodeLine{00070                 \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{00071             );}
+\DoxyCodeLine{00072             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}())}
+\DoxyCodeLine{00073                 \textcolor{keywordflow}{throw} WinAPIException();}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076             \mbox{\hyperlink{classxstar_1_1_start_win_driver_af7ff86c8681bedfbf80765dabe54de34}{serviceCreated\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00077         \}}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \textcolor{keywordflow}{if} (!StartService(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), 0, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{00081             \textcolor{keywordflow}{throw} WinAPIException();}
+\DoxyCodeLine{00082     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a3362e56c186b843665b9654094529189}\label{classxstar_1_1_start_win_driver_a3362e56c186b843665b9654094529189}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!StartWinDriver@{StartWinDriver}}
+\index{StartWinDriver@{StartWinDriver}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{StartWinDriver()}{StartWinDriver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily xstar\+::\+Start\+Win\+Driver\+::\+Start\+Win\+Driver (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{service\+Name,  }\item[{uint32\+\_\+t}]{access }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{start__win__driver_8cpp_source}{start\+\_\+win\+\_\+driver.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089         : \mbox{\hyperlink{classxstar_1_1_start_win_driver_a32412cedea752376d0ffb82d0cc39ed7}{StartWinDriver}}(serviceName, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, access)}
+\DoxyCodeLine{00090     \{ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a53deb42a8c1ea04f0dc38e359fae2de4}\label{classxstar_1_1_start_win_driver_a53deb42a8c1ea04f0dc38e359fae2de4}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!````~StartWinDriver@{$\sim$StartWinDriver}}
+\index{````~StartWinDriver@{$\sim$StartWinDriver}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{$\sim$StartWinDriver()}{~StartWinDriver()}}
+{\footnotesize\ttfamily xstar\+::\+Start\+Win\+Driver\+::$\sim$\+Start\+Win\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{start__win__driver_8cpp_source}{start\+\_\+win\+\_\+driver.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096     \{}
+\DoxyCodeLine{00097         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_start_win_driver_a45b2d3898daf88e434abe012f4fc52d1}{ServiceStatus\_}}.dwCurrentState != SERVICE\_STOPPED)}
+\DoxyCodeLine{00098             \mbox{\hyperlink{classxstar_1_1_start_win_driver_a4a1c63bb1086f5a70835017875d7457f}{Control}}(SERVICE\_CONTROL\_STOP);}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_start_win_driver_af7ff86c8681bedfbf80765dabe54de34}{serviceCreated\_}})}
+\DoxyCodeLine{00101             DeleteService(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}());}
+\DoxyCodeLine{00102     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a9df78eba2c76327617ed6b93eb01ce3c}\label{classxstar_1_1_start_win_driver_a9df78eba2c76327617ed6b93eb01ce3c}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!StartWinDriver@{StartWinDriver}}
+\index{StartWinDriver@{StartWinDriver}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{StartWinDriver()}{StartWinDriver()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily xstar\+::\+Start\+Win\+Driver\+::\+Start\+Win\+Driver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_aa853096ec4a1702908b70036ccf9bc6f}\label{classxstar_1_1_start_win_driver_aa853096ec4a1702908b70036ccf9bc6f}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!StartWinDriver@{StartWinDriver}}
+\index{StartWinDriver@{StartWinDriver}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{StartWinDriver()}{StartWinDriver()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily xstar\+::\+Start\+Win\+Driver\+::\+Start\+Win\+Driver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a4a1c63bb1086f5a70835017875d7457f}\label{classxstar_1_1_start_win_driver_a4a1c63bb1086f5a70835017875d7457f}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!Control@{Control}}
+\index{Control@{Control}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{Control()}{Control()}}
+{\footnotesize\ttfamily void xstar\+::\+Start\+Win\+Driver\+::\+Control (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{control }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{start__win__driver_8cpp_source}{start\+\_\+win\+\_\+driver.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110     \{}
+\DoxyCodeLine{00111         \textcolor{keywordflow}{if} (!ControlService(\mbox{\hyperlink{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}{service\_}}.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), control, \&\mbox{\hyperlink{classxstar_1_1_start_win_driver_a45b2d3898daf88e434abe012f4fc52d1}{ServiceStatus\_}}))}
+\DoxyCodeLine{00112             \textcolor{keywordflow}{throw} WinAPIException();}
+\DoxyCodeLine{00113     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a3cbe771015ff3463752b8c06edf576a8}\label{classxstar_1_1_start_win_driver_a3cbe771015ff3463752b8c06edf576a8}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!getName@{getName}}
+\index{getName@{getName}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const wchar\+\_\+t $\ast$ xstar\+::\+Start\+Win\+Driver\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8cpp_source_l00118}{118}} of file \mbox{\hyperlink{start__win__driver_8cpp_source}{start\+\_\+win\+\_\+driver.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119     \{}
+\DoxyCodeLine{00120         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}{serviceName\_}}.c\_str();}
+\DoxyCodeLine{00121     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_ad017585fc04abe8cb159d359a5bc24be}\label{classxstar_1_1_start_win_driver_ad017585fc04abe8cb159d359a5bc24be}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!getPath@{getPath}}
+\index{getPath@{getPath}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily const wchar\+\_\+t $\ast$ xstar\+::\+Start\+Win\+Driver\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8cpp_source_l00126}{126}} of file \mbox{\hyperlink{start__win__driver_8cpp_source}{start\+\_\+win\+\_\+driver.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127     \{}
+\DoxyCodeLine{00128         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}{fullServicePath\_}}.c\_str();}
+\DoxyCodeLine{00129     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a9c6cec032a75efae9fa492311d5415de}\label{classxstar_1_1_start_win_driver_a9c6cec032a75efae9fa492311d5415de}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!operator=@{operator=}}
+\index{operator=@{operator=}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xstar\+::\+Start\+Win\+Driver\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a54dd07b8004a543f67f720aa3749fb74}\label{classxstar_1_1_start_win_driver_a54dd07b8004a543f67f720aa3749fb74}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!operator=@{operator=}}
+\index{operator=@{operator=}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \& xstar\+::\+Start\+Win\+Driver\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_start_win_driver}{Start\+Win\+Driver}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}\label{classxstar_1_1_start_win_driver_a182b19ca5b24a519243bdd2228984f4e}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!fullServicePath\_@{fullServicePath\_}}
+\index{fullServicePath\_@{fullServicePath\_}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{fullServicePath\_}{fullServicePath\_}}
+{\footnotesize\ttfamily std\+::wstring xstar\+::\+Start\+Win\+Driver\+::full\+Service\+Path\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8hpp_source_l00070}{70}} of file \mbox{\hyperlink{start__win__driver_8hpp_source}{start\+\_\+win\+\_\+driver.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}\label{classxstar_1_1_start_win_driver_a0342e9c70db55eacbbd2b5ed180db825}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!SCM\_@{SCM\_}}
+\index{SCM\_@{SCM\_}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{SCM\_}{SCM\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}$<$SC\+\_\+\+HANDLE$>$ xstar\+::\+Start\+Win\+Driver\+::\+SCM\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8hpp_source_l00072}{72}} of file \mbox{\hyperlink{start__win__driver_8hpp_source}{start\+\_\+win\+\_\+driver.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}\label{classxstar_1_1_start_win_driver_a06bb31e10a6e7bc308d54d1fc6940d07}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!service\_@{service\_}}
+\index{service\_@{service\_}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{service\_}{service\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}$<$SC\+\_\+\+HANDLE$>$ xstar\+::\+Start\+Win\+Driver\+::service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{start__win__driver_8hpp_source}{start\+\_\+win\+\_\+driver.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_af7ff86c8681bedfbf80765dabe54de34}\label{classxstar_1_1_start_win_driver_af7ff86c8681bedfbf80765dabe54de34}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!serviceCreated\_@{serviceCreated\_}}
+\index{serviceCreated\_@{serviceCreated\_}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{serviceCreated\_}{serviceCreated\_}}
+{\footnotesize\ttfamily bool xstar\+::\+Start\+Win\+Driver\+::service\+Created\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8hpp_source_l00076}{76}} of file \mbox{\hyperlink{start__win__driver_8hpp_source}{start\+\_\+win\+\_\+driver.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}\label{classxstar_1_1_start_win_driver_a789b8fc22524f6652c29f451563953c3}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!serviceName\_@{serviceName\_}}
+\index{serviceName\_@{serviceName\_}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{serviceName\_}{serviceName\_}}
+{\footnotesize\ttfamily std\+::wstring xstar\+::\+Start\+Win\+Driver\+::service\+Name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8hpp_source_l00069}{69}} of file \mbox{\hyperlink{start__win__driver_8hpp_source}{start\+\_\+win\+\_\+driver.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_start_win_driver_a45b2d3898daf88e434abe012f4fc52d1}\label{classxstar_1_1_start_win_driver_a45b2d3898daf88e434abe012f4fc52d1}} 
+\index{xstar::StartWinDriver@{xstar::StartWinDriver}!ServiceStatus\_@{ServiceStatus\_}}
+\index{ServiceStatus\_@{ServiceStatus\_}!xstar::StartWinDriver@{xstar::StartWinDriver}}
+\doxysubsubsection{\texorpdfstring{ServiceStatus\_}{ServiceStatus\_}}
+{\footnotesize\ttfamily SERVICE\+\_\+\+STATUS xstar\+::\+Start\+Win\+Driver\+::\+Service\+Status\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{start__win__driver_8hpp_source_l00075}{75}} of file \mbox{\hyperlink{start__win__driver_8hpp_source}{start\+\_\+win\+\_\+driver.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+user\+\_\+space/include/\mbox{\hyperlink{start__win__driver_8hpp}{start\+\_\+win\+\_\+driver.\+hpp}}\item 
+user\+\_\+space/src/\mbox{\hyperlink{start__win__driver_8cpp}{start\+\_\+win\+\_\+driver.\+cpp}}\end{DoxyCompactItemize}

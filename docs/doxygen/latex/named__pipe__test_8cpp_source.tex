@@ -1,0 +1,112 @@
+\hypertarget{named__pipe__test_8cpp_source}{}\doxysection{named\+\_\+pipe\+\_\+test.\+cpp}
+\label{named__pipe__test_8cpp_source}\index{user\_space\_tests/named\_pipe\_test.cpp@{user\_space\_tests/named\_pipe\_test.cpp}}
+\mbox{\hyperlink{named__pipe__test_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pch_8h}{pch.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{named__pipe__fixture_8hpp}{fixture/named\_pipe\_fixture.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00005}\mbox{\hyperlink{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}{00005}} \mbox{\hyperlink{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}{TEST\_F}}(\mbox{\hyperlink{struct_named_pipe_test}{NamedPipeTest}}, WriteAndReadString)}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00007}00007     std::string sourceServer = \textcolor{stringliteral}{"{}Hello from Server!"{}};}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00008}00008     std::string sourceClient = \textcolor{stringliteral}{"{}Hello from Client!"{}};}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00009}00009     std::string destinationServer;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00010}00010     std::string destinationClient;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00013}00013     server\_-\/>write(sourceServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00014}00014     client\_-\/>read(destinationClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00016}00016     client\_-\/>write(sourceClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00017}00017     server\_-\/>read(destinationServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00020}00020     EXPECT\_EQ(sourceServer, destinationClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00021}00021     EXPECT\_EQ(sourceClient, destinationServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00022}00022 \}}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00025}\mbox{\hyperlink{named__pipe__test_8cpp_a16ee6f5dd9b1196860bdc95138e7411d}{00025}} \mbox{\hyperlink{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}{TEST\_F}}(\mbox{\hyperlink{struct_named_pipe_test}{NamedPipeTest}}, WriteAndReadWideString)}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00027}00027     std::wstring sourceServer = L\textcolor{stringliteral}{"{}Hello from Server!"{}};}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00028}00028     std::wstring sourceClient = L\textcolor{stringliteral}{"{}Hello from Client!"{}};}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00029}00029     std::wstring destinationServer;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00030}00030     std::wstring destinationClient;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00033}00033     server\_-\/>write(sourceServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00034}00034     client\_-\/>read(destinationClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00036}00036     client\_-\/>write(sourceClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00037}00037     server\_-\/>read(destinationServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00040}00040     EXPECT\_EQ(sourceServer, destinationClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00041}00041     EXPECT\_EQ(sourceClient, destinationServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00042}00042 \}}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00045}\mbox{\hyperlink{named__pipe__test_8cpp_a762b5a598e3159727678699137674b7d}{00045}} \mbox{\hyperlink{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}{TEST\_F}}(\mbox{\hyperlink{struct_named_pipe_test}{NamedPipeTest}}, WriteAndReadVectorOfBytes)}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00046}00046 \{}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00047}00047     std::vector<char> sourceServer = \{ \textcolor{charliteral}{'S'}, \textcolor{charliteral}{'e'}, \textcolor{charliteral}{'r'}, \textcolor{charliteral}{'v'}, \textcolor{charliteral}{'e'}, \textcolor{charliteral}{'r'} \};}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00048}00048     std::vector<char> sourceClient = \{ \textcolor{charliteral}{'C'}, \textcolor{charliteral}{'l'}, \textcolor{charliteral}{'i'}, \textcolor{charliteral}{'e'}, \textcolor{charliteral}{'n'}, \textcolor{charliteral}{'t'} \};}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00049}00049     std::vector<char> destinationServer;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00050}00050     std::vector<char> destinationClient;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00053}00053     server\_-\/>write(sourceServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00054}00054     client\_-\/>read(destinationClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00056}00056     client\_-\/>write(sourceClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00057}00057     server\_-\/>read(destinationServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00060}00060     EXPECT\_EQ(sourceServer, destinationClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00061}00061     EXPECT\_EQ(sourceClient, destinationServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00062}00062 \}}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00065}\mbox{\hyperlink{named__pipe__test_8cpp_a939aed63d2d7b144bc76b07dcfaaf189}{00065}} \mbox{\hyperlink{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}{TEST\_F}}(\mbox{\hyperlink{struct_named_pipe_test}{NamedPipeTest}}, WriteAndReadInteger)}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00066}00066 \{}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00067}00067     \textcolor{keywordtype}{int} sourceServer = 1;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00068}00068     \textcolor{keywordtype}{int} sourceClient = 2;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00069}00069     \textcolor{keywordtype}{int} destinationServer;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00070}00070     \textcolor{keywordtype}{int} destinationClient;}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00073}00073     server\_-\/>write(sourceServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00074}00074     client\_-\/>read(destinationClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00076}00076     client\_-\/>write(sourceClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00077}00077     server\_-\/>read(destinationServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00080}00080     EXPECT\_EQ(sourceServer, destinationClient);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00081}00081     EXPECT\_EQ(sourceClient, destinationServer);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00082}00082 \}}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00085}\mbox{\hyperlink{named__pipe__test_8cpp_ac750df48a833e7230a2ae4bdf94fd379}{00085}} \mbox{\hyperlink{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}{TEST\_F}}(\mbox{\hyperlink{struct_named_pipe_test}{NamedPipeTest}}, ClientSetAndGetPipeState)}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00086}00086 \{}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00087}00087     \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{xstar::PipeMode}} mode = \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}{xstar::PipeMode::ReadMsg}};}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00089}00089     client\_-\/>setState(mode);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00090}00090     \mbox{\hyperlink{structxstar_1_1_pipe_state}{xstar::PipeState}} state = client\_-\/>getState();}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00092}00092     EXPECT\_EQ(state.\mbox{\hyperlink{structxstar_1_1_pipe_state_aca1c9cc5f0060ebc83074d43dcc98b7c}{mode}}, mode);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00093}00093     EXPECT\_NE(state.\mbox{\hyperlink{structxstar_1_1_pipe_state_ac7dee769adde219c3a5efb6fe03bda47}{curInstances}}, 0);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00094}00094 \}}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00097}\mbox{\hyperlink{named__pipe__test_8cpp_a2172544f3bf1492952673d28d5885fa3}{00097}} \mbox{\hyperlink{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}{TEST\_F}}(\mbox{\hyperlink{struct_named_pipe_test}{NamedPipeTest}}, ServertSetAndGetPipeState)}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00098}00098 \{}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00099}00099     \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{xstar::PipeMode}} mode = \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaaa79651554c2676976f6848a999d84aac}{xstar::PipeMode::NoWait}} | \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaac436c659ad8f88223c0342dd623bf952}{xstar::PipeMode::ReadByte}};}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00101}00101     server\_-\/>setState(mode);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00102}00102     \mbox{\hyperlink{structxstar_1_1_pipe_state}{xstar::PipeState}} state = server\_-\/>getState();}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00104}00104     EXPECT\_EQ(state.\mbox{\hyperlink{structxstar_1_1_pipe_state_aca1c9cc5f0060ebc83074d43dcc98b7c}{mode}}, mode);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00105}00105     EXPECT\_NE(state.\mbox{\hyperlink{structxstar_1_1_pipe_state_ac7dee769adde219c3a5efb6fe03bda47}{curInstances}}, 0);}
+\DoxyCodeLine{\Hypertarget{named__pipe__test_8cpp_source_l00106}00106 \}}
+
+\end{DoxyCode}

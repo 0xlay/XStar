@@ -1,0 +1,165 @@
+\hypertarget{class_non_paged_memory}{}\doxysection{Non\+Paged\+Memory Class Reference}
+\label{class_non_paged_memory}\index{NonPagedMemory@{NonPagedMemory}}
+
+
+This class implements new and delete operators to allocate non paged memory.  
+
+
+
+
+{\ttfamily \#include $<$nonpaged\+\_\+memory.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{class_non_paged_memory_a6b54df648c528b685f116345098f4073}{operator new}} (\+\_\+\+In\+\_\+ size\+\_\+t size)
+\item 
+void $\ast$ \mbox{\hyperlink{class_non_paged_memory_a283876ca47048e79f9ac8e65bb63ad0b}{operator new\mbox{[}$\,$\mbox{]}}} (\+\_\+\+In\+\_\+ size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{class_non_paged_memory_ab5c9bb667c03a9f8372a8acdefbab6dd}{operator delete}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr) noexcept
+\item 
+void \mbox{\hyperlink{class_non_paged_memory_ab9772e213e9577be6fd1fa0e8a053b53}{operator delete\mbox{[}$\,$\mbox{]}}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr) noexcept
+\item 
+void \mbox{\hyperlink{class_non_paged_memory_a862ab0795f38d08d2f3ad00f642b6d8e}{operator delete}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr, \+\_\+\+In\+\_\+ size\+\_\+t size) noexcept
+\item 
+void \mbox{\hyperlink{class_non_paged_memory_ab8c3c5d37d8f66551c32f0ead154881a}{operator delete\mbox{[}$\,$\mbox{]}}} (\+\_\+\+Inout\+\_\+ void $\ast$ptr, \+\_\+\+In\+\_\+ size\+\_\+t size) noexcept
+\item 
+virtual \mbox{\hyperlink{class_non_paged_memory_a6d933372121ab1d7cf6010998c1679b0}{$\sim$\+Non\+Paged\+Memory}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class implements new and delete operators to allocate non paged memory. 
+
+\begin{DoxyWarning}{Warning}
+IRQL \texorpdfstring{$<$}{<}= DISPATCH\+\_\+\+LEVEL 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{nonpaged__memory_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{nonpaged__memory_8hpp_source}{nonpaged\+\_\+memory.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_non_paged_memory_a6d933372121ab1d7cf6010998c1679b0}\label{class_non_paged_memory_a6d933372121ab1d7cf6010998c1679b0}} 
+\index{NonPagedMemory@{NonPagedMemory}!````~NonPagedMemory@{$\sim$NonPagedMemory}}
+\index{````~NonPagedMemory@{$\sim$NonPagedMemory}!NonPagedMemory@{NonPagedMemory}}
+\doxysubsubsection{\texorpdfstring{$\sim$NonPagedMemory()}{~NonPagedMemory()}}
+{\footnotesize\ttfamily virtual Non\+Paged\+Memory\+::$\sim$\+Non\+Paged\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_non_paged_memory_ab5c9bb667c03a9f8372a8acdefbab6dd}\label{class_non_paged_memory_ab5c9bb667c03a9f8372a8acdefbab6dd}} 
+\index{NonPagedMemory@{NonPagedMemory}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!NonPagedMemory@{NonPagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Non\+Paged\+Memory\+::operator delete (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{nonpaged__memory_8hpp_source_l00072}{72}} of file \mbox{\hyperlink{nonpaged__memory_8hpp_source}{nonpaged\+\_\+memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073 \{}
+\DoxyCodeLine{00074     \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(ptr);}
+\DoxyCodeLine{00075 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_non_paged_memory_a862ab0795f38d08d2f3ad00f642b6d8e}\label{class_non_paged_memory_a862ab0795f38d08d2f3ad00f642b6d8e}} 
+\index{NonPagedMemory@{NonPagedMemory}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!NonPagedMemory@{NonPagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Non\+Paged\+Memory\+::operator delete (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr,  }\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{nonpaged__memory_8hpp_source_l00084}{84}} of file \mbox{\hyperlink{nonpaged__memory_8hpp_source}{nonpaged\+\_\+memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085 \{}
+\DoxyCodeLine{00086     ASSERT(ptr != \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00087     ASSERT(size > 0);}
+\DoxyCodeLine{00088     UNREFERENCED\_PARAMETER(size);}
+\DoxyCodeLine{00089     \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(ptr);}
+\DoxyCodeLine{00090 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_non_paged_memory_ab9772e213e9577be6fd1fa0e8a053b53}\label{class_non_paged_memory_ab9772e213e9577be6fd1fa0e8a053b53}} 
+\index{NonPagedMemory@{NonPagedMemory}!operator delete\mbox{[}\mbox{]}@{operator delete[]}}
+\index{operator delete\mbox{[}\mbox{]}@{operator delete[]}!NonPagedMemory@{NonPagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete[]()}{operator delete[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Non\+Paged\+Memory\+::operator delete\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{nonpaged__memory_8hpp_source_l00078}{78}} of file \mbox{\hyperlink{nonpaged__memory_8hpp_source}{nonpaged\+\_\+memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079 \{}
+\DoxyCodeLine{00080     \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(ptr);}
+\DoxyCodeLine{00081 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_non_paged_memory_ab8c3c5d37d8f66551c32f0ead154881a}\label{class_non_paged_memory_ab8c3c5d37d8f66551c32f0ead154881a}} 
+\index{NonPagedMemory@{NonPagedMemory}!operator delete\mbox{[}\mbox{]}@{operator delete[]}}
+\index{operator delete\mbox{[}\mbox{]}@{operator delete[]}!NonPagedMemory@{NonPagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator delete[]()}{operator delete[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Non\+Paged\+Memory\+::operator delete\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\+\_\+\+Inout\+\_\+ void $\ast$}]{ptr,  }\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{nonpaged__memory_8hpp_source_l00093}{93}} of file \mbox{\hyperlink{nonpaged__memory_8hpp_source}{nonpaged\+\_\+memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094 \{}
+\DoxyCodeLine{00095     ASSERT(ptr != \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00096     ASSERT(size > 0);}
+\DoxyCodeLine{00097     UNREFERENCED\_PARAMETER(size);}
+\DoxyCodeLine{00098     \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(ptr);}
+\DoxyCodeLine{00099 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_non_paged_memory_a6b54df648c528b685f116345098f4073}\label{class_non_paged_memory_a6b54df648c528b685f116345098f4073}} 
+\index{NonPagedMemory@{NonPagedMemory}!operator new@{operator new}}
+\index{operator new@{operator new}!NonPagedMemory@{NonPagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator new()}{operator new()}}
+{\footnotesize\ttfamily void $\ast$ Non\+Paged\+Memory\+::operator new (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{nonpaged__memory_8hpp_source_l00060}{60}} of file \mbox{\hyperlink{nonpaged__memory_8hpp_source}{nonpaged\+\_\+memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061 \{}
+\DoxyCodeLine{00062     \textcolor{keywordflow}{return} \mbox{\hyperlink{clibrary_8cpp_a80f02c6461f5469b252ce44a7cbec653}{malloc}}(size);}
+\DoxyCodeLine{00063 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_non_paged_memory_a283876ca47048e79f9ac8e65bb63ad0b}\label{class_non_paged_memory_a283876ca47048e79f9ac8e65bb63ad0b}} 
+\index{NonPagedMemory@{NonPagedMemory}!operator new\mbox{[}\mbox{]}@{operator new[]}}
+\index{operator new\mbox{[}\mbox{]}@{operator new[]}!NonPagedMemory@{NonPagedMemory}}
+\doxysubsubsection{\texorpdfstring{operator new[]()}{operator new[]()}}
+{\footnotesize\ttfamily void $\ast$ Non\+Paged\+Memory\+::operator new\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{nonpaged__memory_8hpp_source_l00066}{66}} of file \mbox{\hyperlink{nonpaged__memory_8hpp_source}{nonpaged\+\_\+memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067 \{}
+\DoxyCodeLine{00068     \textcolor{keywordflow}{return} \mbox{\hyperlink{clibrary_8cpp_a80f02c6461f5469b252ce44a7cbec653}{malloc}}(size);}
+\DoxyCodeLine{00069 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel\+\_\+space/runtime/\mbox{\hyperlink{nonpaged__memory_8hpp}{nonpaged\+\_\+memory.\+hpp}}\end{DoxyCompactItemize}

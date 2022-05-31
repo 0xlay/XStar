@@ -1,0 +1,172 @@
+\hypertarget{kernel__test_8hpp}{}\doxysection{kernel\+\_\+space\+\_\+test/kernel\+\_\+test.hpp File Reference}
+\label{kernel__test_8hpp}\index{kernel\_space\_test/kernel\_test.hpp@{kernel\_space\_test/kernel\_test.hpp}}
+{\ttfamily \#include $<$ntddk.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_aac1cb2c5abf5cff20475a5946fd0a95f}{XSTAR\+\_\+\+KTEST}}(test\+\_\+suite,  test\+\_\+case)~void XStar\+\_\+\#\#test\+\_\+suite\+\_\+\#\#test\+\_\+case()
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\+\_\+\+CALL\+\_\+\+KTEST}}(test\+\_\+suite,  test\+\_\+case)~XStar\+\_\+\#\#test\+\_\+suite\+\_\+\#\#test\+\_\+case()
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_adfef0c3747cf1deca428504aa6da769a}{XSTAR\+\_\+\+KTEST\+\_\+\+SUITE}}(test\+\_\+suite)~void XStar\+\_\+\+Run\+\_\+\#\#test\+\_\+suite()
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_a4b22940356d345af16dcb18f6e817d4f}{XSTAR\+\_\+\+KTEST\+\_\+\+RUN\+\_\+\+SUITE}}(test\+\_\+suite)~XStar\+\_\+\+Run\+\_\+\#\#test\+\_\+suite()
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\+\_\+\+KTEST\+\_\+\+RUN\+\_\+\+TEST}}(test,  method\+\_\+name)
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+EQ}}(exp1,  exp2)~    NT\+\_\+\+ASSERT(exp1 == exp2)
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_a7bf9c9ee2add11b26be102c1f45caba1}{XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+NE}}(exp1,  exp2)~    NT\+\_\+\+ASSERT(exp1 != exp2)
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_a8a86a06b2e6db005a8f8443f16247149}{XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+GT}}(exp1,  exp2)~    NT\+\_\+\+ASSERT(exp1 $>$ exp2)
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_a8bf4336918ed8119bfde50d75cbfb93f}{XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+GE}}(exp1,  exp2)~    NT\+\_\+\+ASSERT(exp1 $>$= exp2)
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_a39c0426ea0a526ffe425672ebec52d5c}{XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+LT}}(exp1,  exp2)~    NT\+\_\+\+ASSERT(exp1 $<$ exp2)
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_aa62b58b8067ea75e13ef4202abe7a17b}{XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+LE}}(exp1,  exp2)~    NT\+\_\+\+ASSERT(exp1 $<$= exp2)
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_a37bdbf46a9970e0ed73bfd2ed4c01e43}{XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+TRUE}}(exp)~    NT\+\_\+\+ASSERT(exp)
+\item 
+\#define \mbox{\hyperlink{kernel__test_8hpp_ae1711129cef7e718dca47ec6f1de83c9}{XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+FALSE}}(exp)~    NT\+\_\+\+ASSERT(!exp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}\label{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_CALL\_KTEST@{XSTAR\_CALL\_KTEST}}
+\index{XSTAR\_CALL\_KTEST@{XSTAR\_CALL\_KTEST}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_CALL\_KTEST}{XSTAR\_CALL\_KTEST}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+CALL\+\_\+\+KTEST(\begin{DoxyParamCaption}\item[{}]{test\+\_\+suite,  }\item[{}]{test\+\_\+case }\end{DoxyParamCaption})~XStar\+\_\+\#\#test\+\_\+suite\+\_\+\#\#test\+\_\+case()}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00007}{7}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_aac1cb2c5abf5cff20475a5946fd0a95f}\label{kernel__test_8hpp_aac1cb2c5abf5cff20475a5946fd0a95f}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST}{XSTAR\_KTEST}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST(\begin{DoxyParamCaption}\item[{}]{test\+\_\+suite,  }\item[{}]{test\+\_\+case }\end{DoxyParamCaption})~void XStar\+\_\+\#\#test\+\_\+suite\+\_\+\#\#test\+\_\+case()}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00004}{4}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}\label{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_ASSERT\_EQ@{XSTAR\_KTEST\_ASSERT\_EQ}}
+\index{XSTAR\_KTEST\_ASSERT\_EQ@{XSTAR\_KTEST\_ASSERT\_EQ}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_ASSERT\_EQ}{XSTAR\_KTEST\_ASSERT\_EQ}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{exp1,  }\item[{}]{exp2 }\end{DoxyParamCaption})~    NT\+\_\+\+ASSERT(exp1 == exp2)}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_ae1711129cef7e718dca47ec6f1de83c9}\label{kernel__test_8hpp_ae1711129cef7e718dca47ec6f1de83c9}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_ASSERT\_FALSE@{XSTAR\_KTEST\_ASSERT\_FALSE}}
+\index{XSTAR\_KTEST\_ASSERT\_FALSE@{XSTAR\_KTEST\_ASSERT\_FALSE}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_ASSERT\_FALSE}{XSTAR\_KTEST\_ASSERT\_FALSE}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+FALSE(\begin{DoxyParamCaption}\item[{}]{exp }\end{DoxyParamCaption})~    NT\+\_\+\+ASSERT(!exp)}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00046}{46}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_a8bf4336918ed8119bfde50d75cbfb93f}\label{kernel__test_8hpp_a8bf4336918ed8119bfde50d75cbfb93f}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_ASSERT\_GE@{XSTAR\_KTEST\_ASSERT\_GE}}
+\index{XSTAR\_KTEST\_ASSERT\_GE@{XSTAR\_KTEST\_ASSERT\_GE}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_ASSERT\_GE}{XSTAR\_KTEST\_ASSERT\_GE}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+GE(\begin{DoxyParamCaption}\item[{}]{exp1,  }\item[{}]{exp2 }\end{DoxyParamCaption})~    NT\+\_\+\+ASSERT(exp1 $>$= exp2)}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_a8a86a06b2e6db005a8f8443f16247149}\label{kernel__test_8hpp_a8a86a06b2e6db005a8f8443f16247149}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_ASSERT\_GT@{XSTAR\_KTEST\_ASSERT\_GT}}
+\index{XSTAR\_KTEST\_ASSERT\_GT@{XSTAR\_KTEST\_ASSERT\_GT}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_ASSERT\_GT}{XSTAR\_KTEST\_ASSERT\_GT}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+GT(\begin{DoxyParamCaption}\item[{}]{exp1,  }\item[{}]{exp2 }\end{DoxyParamCaption})~    NT\+\_\+\+ASSERT(exp1 $>$ exp2)}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00031}{31}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_aa62b58b8067ea75e13ef4202abe7a17b}\label{kernel__test_8hpp_aa62b58b8067ea75e13ef4202abe7a17b}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_ASSERT\_LE@{XSTAR\_KTEST\_ASSERT\_LE}}
+\index{XSTAR\_KTEST\_ASSERT\_LE@{XSTAR\_KTEST\_ASSERT\_LE}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_ASSERT\_LE}{XSTAR\_KTEST\_ASSERT\_LE}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+LE(\begin{DoxyParamCaption}\item[{}]{exp1,  }\item[{}]{exp2 }\end{DoxyParamCaption})~    NT\+\_\+\+ASSERT(exp1 $<$= exp2)}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00040}{40}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_a39c0426ea0a526ffe425672ebec52d5c}\label{kernel__test_8hpp_a39c0426ea0a526ffe425672ebec52d5c}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_ASSERT\_LT@{XSTAR\_KTEST\_ASSERT\_LT}}
+\index{XSTAR\_KTEST\_ASSERT\_LT@{XSTAR\_KTEST\_ASSERT\_LT}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_ASSERT\_LT}{XSTAR\_KTEST\_ASSERT\_LT}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+LT(\begin{DoxyParamCaption}\item[{}]{exp1,  }\item[{}]{exp2 }\end{DoxyParamCaption})~    NT\+\_\+\+ASSERT(exp1 $<$ exp2)}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00037}{37}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_a7bf9c9ee2add11b26be102c1f45caba1}\label{kernel__test_8hpp_a7bf9c9ee2add11b26be102c1f45caba1}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_ASSERT\_NE@{XSTAR\_KTEST\_ASSERT\_NE}}
+\index{XSTAR\_KTEST\_ASSERT\_NE@{XSTAR\_KTEST\_ASSERT\_NE}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_ASSERT\_NE}{XSTAR\_KTEST\_ASSERT\_NE}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+NE(\begin{DoxyParamCaption}\item[{}]{exp1,  }\item[{}]{exp2 }\end{DoxyParamCaption})~    NT\+\_\+\+ASSERT(exp1 != exp2)}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_a37bdbf46a9970e0ed73bfd2ed4c01e43}\label{kernel__test_8hpp_a37bdbf46a9970e0ed73bfd2ed4c01e43}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_ASSERT\_TRUE@{XSTAR\_KTEST\_ASSERT\_TRUE}}
+\index{XSTAR\_KTEST\_ASSERT\_TRUE@{XSTAR\_KTEST\_ASSERT\_TRUE}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_ASSERT\_TRUE}{XSTAR\_KTEST\_ASSERT\_TRUE}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+ASSERT\+\_\+\+TRUE(\begin{DoxyParamCaption}\item[{}]{exp }\end{DoxyParamCaption})~    NT\+\_\+\+ASSERT(exp)}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_a4b22940356d345af16dcb18f6e817d4f}\label{kernel__test_8hpp_a4b22940356d345af16dcb18f6e817d4f}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_RUN\_SUITE@{XSTAR\_KTEST\_RUN\_SUITE}}
+\index{XSTAR\_KTEST\_RUN\_SUITE@{XSTAR\_KTEST\_RUN\_SUITE}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_RUN\_SUITE}{XSTAR\_KTEST\_RUN\_SUITE}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+RUN\+\_\+\+SUITE(\begin{DoxyParamCaption}\item[{}]{test\+\_\+suite }\end{DoxyParamCaption})~XStar\+\_\+\+Run\+\_\+\#\#test\+\_\+suite()}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}\label{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_RUN\_TEST@{XSTAR\_KTEST\_RUN\_TEST}}
+\index{XSTAR\_KTEST\_RUN\_TEST@{XSTAR\_KTEST\_RUN\_TEST}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_RUN\_TEST}{XSTAR\_KTEST\_RUN\_TEST}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+RUN\+\_\+\+TEST(\begin{DoxyParamCaption}\item[{}]{test,  }\item[{}]{method\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{KdPrint((\textcolor{stringliteral}{"{}Start \%s!\(\backslash\)n"{}}, method\_name));\(\backslash\)}
+\DoxyCodeLine{test;\(\backslash\)}
+\DoxyCodeLine{KdPrint((\textcolor{stringliteral}{"{}Finish \%s!\(\backslash\)n"{}}, method\_name))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+
+\mbox{\Hypertarget{kernel__test_8hpp_adfef0c3747cf1deca428504aa6da769a}\label{kernel__test_8hpp_adfef0c3747cf1deca428504aa6da769a}} 
+\index{kernel\_test.hpp@{kernel\_test.hpp}!XSTAR\_KTEST\_SUITE@{XSTAR\_KTEST\_SUITE}}
+\index{XSTAR\_KTEST\_SUITE@{XSTAR\_KTEST\_SUITE}!kernel\_test.hpp@{kernel\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_SUITE}{XSTAR\_KTEST\_SUITE}}
+{\footnotesize\ttfamily \#define XSTAR\+\_\+\+KTEST\+\_\+\+SUITE(\begin{DoxyParamCaption}\item[{}]{test\+\_\+suite }\end{DoxyParamCaption})~void XStar\+\_\+\+Run\+\_\+\#\#test\+\_\+suite()}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__test_8hpp_source_l00010}{10}} of file \mbox{\hyperlink{kernel__test_8hpp_source}{kernel\+\_\+test.\+hpp}}.
+

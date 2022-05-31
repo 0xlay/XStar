@@ -1,0 +1,53 @@
+\hypertarget{kernel__test_8hpp_source}{}\doxysection{kernel\+\_\+test.\+hpp}
+\label{kernel__test_8hpp_source}\index{kernel\_space\_test/kernel\_test.hpp@{kernel\_space\_test/kernel\_test.hpp}}
+\mbox{\hyperlink{kernel__test_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00002}00002 \textcolor{preprocessor}{\#include <ntddk.h>}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00004}\mbox{\hyperlink{kernel__test_8hpp_aac1cb2c5abf5cff20475a5946fd0a95f}{00004}} \textcolor{preprocessor}{\#define XSTAR\_KTEST(test\_suite, test\_case)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00005}00005 \textcolor{preprocessor}{void XStar\_\#\#test\_suite\_\#\#test\_case()}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00007}\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{00007}} \textcolor{preprocessor}{\#define XSTAR\_CALL\_KTEST(test\_suite, test\_case)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00008}00008 \textcolor{preprocessor}{XStar\_\#\#test\_suite\_\#\#test\_case()}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00010}\mbox{\hyperlink{kernel__test_8hpp_adfef0c3747cf1deca428504aa6da769a}{00010}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_SUITE(test\_suite)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00011}00011 \textcolor{preprocessor}{void XStar\_Run\_\#\#test\_suite()}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00013}\mbox{\hyperlink{kernel__test_8hpp_a4b22940356d345af16dcb18f6e817d4f}{00013}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_RUN\_SUITE(test\_suite)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00014}00014 \textcolor{preprocessor}{XStar\_Run\_\#\#test\_suite()}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00016}\mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{00016}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_RUN\_TEST(test, method\_name)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00017}00017 \textcolor{preprocessor}{KdPrint(("{}Start \%s!\(\backslash\)n"{}}, method\_name));\(\backslash\)}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00018}00018 test;\(\backslash\)}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00019}00019 KdPrint(("{}Finish \%s!\(\backslash\)n"{}, method\_name))}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00021}00021 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00022}00022 \textcolor{comment}{// Assertions}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00023}00023 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00025}\mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{00025}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_ASSERT\_EQ(exp1, exp2)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00026}00026 \textcolor{preprocessor}{    NT\_ASSERT(exp1 == exp2)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00028}\mbox{\hyperlink{kernel__test_8hpp_a7bf9c9ee2add11b26be102c1f45caba1}{00028}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_ASSERT\_NE(exp1, exp2)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00029}00029 \textcolor{preprocessor}{    NT\_ASSERT(exp1 != exp2)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00031}\mbox{\hyperlink{kernel__test_8hpp_a8a86a06b2e6db005a8f8443f16247149}{00031}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_ASSERT\_GT(exp1, exp2)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00032}00032 \textcolor{preprocessor}{    NT\_ASSERT(exp1 > exp2)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00034}\mbox{\hyperlink{kernel__test_8hpp_a8bf4336918ed8119bfde50d75cbfb93f}{00034}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_ASSERT\_GE(exp1, exp2)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00035}00035 \textcolor{preprocessor}{    NT\_ASSERT(exp1 >= exp2)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00037}\mbox{\hyperlink{kernel__test_8hpp_a39c0426ea0a526ffe425672ebec52d5c}{00037}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_ASSERT\_LT(exp1, exp2)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00038}00038 \textcolor{preprocessor}{    NT\_ASSERT(exp1 < exp2)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00040}\mbox{\hyperlink{kernel__test_8hpp_aa62b58b8067ea75e13ef4202abe7a17b}{00040}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_ASSERT\_LE(exp1, exp2)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00041}00041 \textcolor{preprocessor}{    NT\_ASSERT(exp1 <= exp2)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00043}\mbox{\hyperlink{kernel__test_8hpp_a37bdbf46a9970e0ed73bfd2ed4c01e43}{00043}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_ASSERT\_TRUE(exp)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00044}00044 \textcolor{preprocessor}{    NT\_ASSERT(exp)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00046}\mbox{\hyperlink{kernel__test_8hpp_ae1711129cef7e718dca47ec6f1de83c9}{00046}} \textcolor{preprocessor}{\#define XSTAR\_KTEST\_ASSERT\_FALSE(exp)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{kernel__test_8hpp_source_l00047}00047 \textcolor{preprocessor}{    NT\_ASSERT(!exp)}}
+
+\end{DoxyCode}

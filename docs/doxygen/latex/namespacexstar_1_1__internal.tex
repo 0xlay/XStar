@@ -1,0 +1,108 @@
+\hypertarget{namespacexstar_1_1__internal}{}\doxysection{xstar\+::\+\_\+internal Namespace Reference}
+\label{namespacexstar_1_1__internal}\index{xstar::\_internal@{xstar::\_internal}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Handle $>$ }\\void \mbox{\hyperlink{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}{Close\+Smart\+Handle}} (Handle object)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespacexstar_1_1__internal_a1e238169e78f9c18c9ae7e9a3d1e2eab}{Close\+Smart\+Handle}} (HANDLE object)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespacexstar_1_1__internal_a743775504a036ee46e23cd8fbf26fcac}{Close\+Smart\+Handle}} (SC\+\_\+\+HANDLE object)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespacexstar_1_1__internal_a762e1239b1e4a7876a4b49009f9aef04}{Close\+Smart\+Handle}} (HWND object)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespacexstar_1_1__internal_a8f75647985eb8378d7c80dd0c2613dcb}{Close\+Smart\+Handle}} (HMODULE object)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}\label{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}} 
+\index{xstar::\_internal@{xstar::\_internal}!CloseSmartHandle@{CloseSmartHandle}}
+\index{CloseSmartHandle@{CloseSmartHandle}!xstar::\_internal@{xstar::\_internal}}
+\doxysubsubsection{\texorpdfstring{CloseSmartHandle()}{CloseSmartHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename Handle $>$ \\
+void xstar\+::\+\_\+internal\+::\+Close\+Smart\+Handle (\begin{DoxyParamCaption}\item[{Handle}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036         \{}
+\DoxyCodeLine{00037             \textcolor{keyword}{static\_assert}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"{}Type isn't supported!"{}});}
+\DoxyCodeLine{00038         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_1_1__internal_a1e238169e78f9c18c9ae7e9a3d1e2eab}\label{namespacexstar_1_1__internal_a1e238169e78f9c18c9ae7e9a3d1e2eab}} 
+\index{xstar::\_internal@{xstar::\_internal}!CloseSmartHandle@{CloseSmartHandle}}
+\index{CloseSmartHandle@{CloseSmartHandle}!xstar::\_internal@{xstar::\_internal}}
+\doxysubsubsection{\texorpdfstring{CloseSmartHandle()}{CloseSmartHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void xstar\+::\+\_\+internal\+::\+Close\+Smart\+Handle (\begin{DoxyParamCaption}\item[{HANDLE}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042         \{}
+\DoxyCodeLine{00043             CloseHandle(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00044         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_1_1__internal_a8f75647985eb8378d7c80dd0c2613dcb}\label{namespacexstar_1_1__internal_a8f75647985eb8378d7c80dd0c2613dcb}} 
+\index{xstar::\_internal@{xstar::\_internal}!CloseSmartHandle@{CloseSmartHandle}}
+\index{CloseSmartHandle@{CloseSmartHandle}!xstar::\_internal@{xstar::\_internal}}
+\doxysubsubsection{\texorpdfstring{CloseSmartHandle()}{CloseSmartHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void xstar\+::\+\_\+internal\+::\+Close\+Smart\+Handle (\begin{DoxyParamCaption}\item[{HMODULE}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00059}{59}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060         \{}
+\DoxyCodeLine{00061             FreeLibrary(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00062         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_1_1__internal_a762e1239b1e4a7876a4b49009f9aef04}\label{namespacexstar_1_1__internal_a762e1239b1e4a7876a4b49009f9aef04}} 
+\index{xstar::\_internal@{xstar::\_internal}!CloseSmartHandle@{CloseSmartHandle}}
+\index{CloseSmartHandle@{CloseSmartHandle}!xstar::\_internal@{xstar::\_internal}}
+\doxysubsubsection{\texorpdfstring{CloseSmartHandle()}{CloseSmartHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void xstar\+::\+\_\+internal\+::\+Close\+Smart\+Handle (\begin{DoxyParamCaption}\item[{HWND}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054         \{}
+\DoxyCodeLine{00055             CloseWindow(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00056         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexstar_1_1__internal_a743775504a036ee46e23cd8fbf26fcac}\label{namespacexstar_1_1__internal_a743775504a036ee46e23cd8fbf26fcac}} 
+\index{xstar::\_internal@{xstar::\_internal}!CloseSmartHandle@{CloseSmartHandle}}
+\index{CloseSmartHandle@{CloseSmartHandle}!xstar::\_internal@{xstar::\_internal}}
+\doxysubsubsection{\texorpdfstring{CloseSmartHandle()}{CloseSmartHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void xstar\+::\+\_\+internal\+::\+Close\+Smart\+Handle (\begin{DoxyParamCaption}\item[{SC\+\_\+\+HANDLE}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048         \{}
+\DoxyCodeLine{00049             CloseServiceHandle(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00050         \}}
+
+\end{DoxyCode}

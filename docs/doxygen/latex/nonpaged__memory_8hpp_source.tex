@@ -1,0 +1,97 @@
+\hypertarget{nonpaged__memory_8hpp_source}{}\doxysection{nonpaged\+\_\+memory.\+hpp}
+\label{nonpaged__memory_8hpp_source}\index{kernel\_space/runtime/nonpaged\_memory.hpp@{kernel\_space/runtime/nonpaged\_memory.hpp}}
+\mbox{\hyperlink{nonpaged__memory_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00014}00014 \textcolor{comment}{// File: nonpaged\_memory.hpp}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: Kernel mode only}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00024}00024 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{clibrary_8hpp}{clibrary.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00034}\mbox{\hyperlink{class_non_paged_memory}{00034}} \textcolor{keyword}{class }\mbox{\hyperlink{class_non_paged_memory}{NonPagedMemory}}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00035}00035 \{}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00036}00036 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00037}00037     \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00038}00038     \textcolor{keywordtype}{void}* \textcolor{keyword}{operator} \textcolor{keyword}{new}(\_In\_ \textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00040}00040     \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00041}00041     \textcolor{keywordtype}{void}* \textcolor{keyword}{operator} \textcolor{keyword}{new}[](\_In\_ \textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00043}00043     \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00044}00044     \textcolor{keywordtype}{void} \textcolor{keyword}{operator} \textcolor{keyword}{delete}(\_Inout\_ \textcolor{keywordtype}{void}* ptr) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00046}00046     \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00047}00047     \textcolor{keywordtype}{void} \textcolor{keyword}{operator} \textcolor{keyword}{delete}[](\_Inout\_ \textcolor{keywordtype}{void}* ptr) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00049}00049     \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00050}00050     \textcolor{keywordtype}{void} \textcolor{keyword}{operator} \textcolor{keyword}{delete}(\_Inout\_ \textcolor{keywordtype}{void}* ptr, \_In\_ \textcolor{keywordtype}{size\_t} size) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00052}00052     \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00053}00053     \textcolor{keywordtype}{void} \textcolor{keyword}{operator} \textcolor{keyword}{delete}[](\_Inout\_ \textcolor{keywordtype}{void}* ptr, \_In\_ \textcolor{keywordtype}{size\_t} size) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00055}\mbox{\hyperlink{class_non_paged_memory_a6d933372121ab1d7cf6010998c1679b0}{00055}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_non_paged_memory_a6d933372121ab1d7cf6010998c1679b0}{\string~NonPagedMemory}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00056}00056 \};}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00059}00059 \_Use\_decl\_annotations\_}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00060}\mbox{\hyperlink{class_non_paged_memory_a6b54df648c528b685f116345098f4073}{00060}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void}* NonPagedMemory::operator \textcolor{keyword}{new}(\textcolor{keywordtype}{size\_t} size)}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00061}00061 \{}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00062}00062     \textcolor{keywordflow}{return} \mbox{\hyperlink{clibrary_8cpp_a80f02c6461f5469b252ce44a7cbec653}{malloc}}(size);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00065}00065 \_Use\_decl\_annotations\_}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00066}\mbox{\hyperlink{class_non_paged_memory_a283876ca47048e79f9ac8e65bb63ad0b}{00066}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void}* NonPagedMemory::operator \textcolor{keyword}{new}[](\_In\_ \textcolor{keywordtype}{size\_t} size)}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00067}00067 \{}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00068}00068     \textcolor{keywordflow}{return} \mbox{\hyperlink{clibrary_8cpp_a80f02c6461f5469b252ce44a7cbec653}{malloc}}(size);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00069}00069 \}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00071}00071 \_Use\_decl\_annotations\_}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00072}\mbox{\hyperlink{class_non_paged_memory_ab5c9bb667c03a9f8372a8acdefbab6dd}{00072}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} NonPagedMemory::operator \textcolor{keyword}{delete}(\_Inout\_ \textcolor{keywordtype}{void}* ptr) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00073}00073 \{}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00074}00074     \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(ptr);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00075}00075 \}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00077}00077 \_Use\_decl\_annotations\_}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00078}\mbox{\hyperlink{class_non_paged_memory_ab9772e213e9577be6fd1fa0e8a053b53}{00078}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} NonPagedMemory::operator \textcolor{keyword}{delete}[](\_Inout\_ \textcolor{keywordtype}{void}* ptr) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00079}00079 \{}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00080}00080     \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(ptr);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00083}00083 \_Use\_decl\_annotations\_}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00084}\mbox{\hyperlink{class_non_paged_memory_a862ab0795f38d08d2f3ad00f642b6d8e}{00084}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} NonPagedMemory::operator \textcolor{keyword}{delete}(\_Inout\_ \textcolor{keywordtype}{void}* ptr, \_In\_ \textcolor{keywordtype}{size\_t} size) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00085}00085 \{}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00086}00086     ASSERT(ptr != \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00087}00087     ASSERT(size > 0);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00088}00088     UNREFERENCED\_PARAMETER(size);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00089}00089     \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(ptr);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00090}00090 \}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00092}00092 \_Use\_decl\_annotations\_}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00093}\mbox{\hyperlink{class_non_paged_memory_ab8c3c5d37d8f66551c32f0ead154881a}{00093}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} NonPagedMemory::operator \textcolor{keyword}{delete}[](\_Inout\_ \textcolor{keywordtype}{void}* ptr, \_In\_ \textcolor{keywordtype}{size\_t} size) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00094}00094 \{}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00095}00095     ASSERT(ptr != \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00096}00096     ASSERT(size > 0);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00097}00097     UNREFERENCED\_PARAMETER(size);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00098}00098     \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(ptr);}
+\DoxyCodeLine{\Hypertarget{nonpaged__memory_8hpp_source_l00099}00099 \}}
+
+\end{DoxyCode}

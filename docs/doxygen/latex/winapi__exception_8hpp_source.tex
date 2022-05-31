@@ -1,0 +1,59 @@
+\hypertarget{winapi__exception_8hpp_source}{}\doxysection{winapi\+\_\+exception.\+hpp}
+\label{winapi__exception_8hpp_source}\index{user\_space/include/winapi\_exception.hpp@{user\_space/include/winapi\_exception.hpp}}
+\mbox{\hyperlink{winapi__exception_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00014}00014 \textcolor{comment}{// File: winapi\_exception.hpp}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: User mode only}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#ifndef \_XSTAR\_USER\_EXCEPTION\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00023}00023 \textcolor{preprocessor}{\#define \_XSTAR\_USER\_EXCEPTION\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00025}00025 \textcolor{preprocessor}{\#include <Windows.h>}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00026}00026 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00027}00027 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00028}00028 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00030}00030 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00031}00031 \{}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00033}\mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{00033}}     \textcolor{keyword}{class }\mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}} : \textcolor{keyword}{public} std::exception}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00034}00034     \{}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00035}00035     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00036}00036         \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a016573cc926e7811640b44d9f7611797}{WinAPIException}}();}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00037}00037         \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a016573cc926e7811640b44d9f7611797}{WinAPIException}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg, uint32\_t lastError);}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00038}00038         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a48d30b4209175699080ca9bb41b4e529}{what}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00040}00040     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00041}\mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_aa400308cdac83269c0956d94722b92bd}{00041}}         std::string \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_aa400308cdac83269c0956d94722b92bd}{msg\_}};}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00042}00042     \};}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00044}00044     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00045}00045 \textcolor{comment}{    * @brief The getLastErrorStr() function converts code from}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00046}00046 \textcolor{comment}{    * the getLastError() function to string message}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00047}00047 \textcolor{comment}{    * }}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00048}00048 \textcolor{comment}{    * @return an error message}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00049}00049 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00050}00050     std::string \mbox{\hyperlink{namespacexstar_a2f2f11cd766129e29f47dc9713f5c192}{getLastErrorStr}}();}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00052}00052 \} \textcolor{comment}{// xstar}}
+\DoxyCodeLine{\Hypertarget{winapi__exception_8hpp_source_l00053}00053 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_XSTAR\_USER\_EXCEPTION\_HPP\_}}
+
+\end{DoxyCode}

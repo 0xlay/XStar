@@ -1,0 +1,52 @@
+\hypertarget{smart__lock_8hpp_source}{}\doxysection{smart\+\_\+lock.\+hpp}
+\label{smart__lock_8hpp_source}\index{kernel\_space/include/smart\_lock.hpp@{kernel\_space/include/smart\_lock.hpp}}
+\mbox{\hyperlink{smart__lock_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00014}00014 \textcolor{comment}{// File: smart\_lock.hpp}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: Kernel mode only}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#ifndef \_XSTAR\_KERNEL\_SMART\_LOCK\_UNLOCK\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00023}00023 \textcolor{preprocessor}{\#define \_XSTAR\_KERNEL\_SMART\_LOCK\_UNLOCK\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00025}00025 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00030}00030     \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00031}\mbox{\hyperlink{classxstar_1_1_smart_lock}{00031}}     \textcolor{keyword}{class }\mbox{\hyperlink{classxstar_1_1_smart_lock}{SmartLock}} final}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00032}00032     \{}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00033}00033     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00034}\mbox{\hyperlink{classxstar_1_1_smart_lock_a5ec8f3bea88bee59cb08f21dae88fc89}{00034}}         \mbox{\hyperlink{classxstar_1_1_smart_lock_a5ec8f3bea88bee59cb08f21dae88fc89}{SmartLock}}(\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\& \textcolor{keywordtype}{object}) : \mbox{\hyperlink{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}{object\_}}(object)}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00035}00035         \{}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00036}00036             \mbox{\hyperlink{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}{object\_}}.Lock();}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00037}00037         \}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00038}\mbox{\hyperlink{classxstar_1_1_smart_lock_ae1caa7d595e8522925afad5a10b3a2b3}{00038}}         \mbox{\hyperlink{classxstar_1_1_smart_lock_ae1caa7d595e8522925afad5a10b3a2b3}{\string~SmartLock}}()}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00039}00039         \{}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00040}00040             \mbox{\hyperlink{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}{object\_}}.Unlock();}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00041}00041         \}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00043}00043     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00044}\mbox{\hyperlink{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}{00044}}         \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\& \mbox{\hyperlink{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}{object\_}};}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00045}00045     \};}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00047}00047 \}}
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{smart__lock_8hpp_source_l00049}00049 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_XSTAR\_KERNEL\_SMART\_LOCK\_UNLOCK\_HPP\_}}
+
+\end{DoxyCode}

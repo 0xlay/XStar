@@ -1,0 +1,91 @@
+\hypertarget{classxstar_1_1_smart_lock}{}\doxysection{xstar\+::Smart\+Lock\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classxstar_1_1_smart_lock}\index{xstar::SmartLock$<$ T $>$@{xstar::SmartLock$<$ T $>$}}
+
+
+This class is equivalent to lock\+\_\+guard from STL.  
+
+
+
+
+{\ttfamily \#include $<$smart\+\_\+lock.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_lock_a5ec8f3bea88bee59cb08f21dae88fc89}{Smart\+Lock}} (\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} \&object)
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_lock_ae1caa7d595e8522925afad5a10b3a2b3}{$\sim$\+Smart\+Lock}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} \& \mbox{\hyperlink{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}{object\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}$>$\newline
+class xstar\+::\+Smart\+Lock$<$ T $>$}
+This class is equivalent to lock\+\_\+guard from STL. 
+
+Definition at line \mbox{\hyperlink{smart__lock_8hpp_source_l00031}{31}} of file \mbox{\hyperlink{smart__lock_8hpp_source}{smart\+\_\+lock.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxstar_1_1_smart_lock_a5ec8f3bea88bee59cb08f21dae88fc89}\label{classxstar_1_1_smart_lock_a5ec8f3bea88bee59cb08f21dae88fc89}} 
+\index{xstar::SmartLock$<$ T $>$@{xstar::SmartLock$<$ T $>$}!SmartLock@{SmartLock}}
+\index{SmartLock@{SmartLock}!xstar::SmartLock$<$ T $>$@{xstar::SmartLock$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SmartLock()}{SmartLock()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{classxstar_1_1_smart_lock}{xstar\+::\+Smart\+Lock}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Smart\+Lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__lock_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{smart__lock_8hpp_source}{smart\+\_\+lock.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034                              : \mbox{\hyperlink{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}{object\_}}(\textcolor{keywordtype}{object})}
+\DoxyCodeLine{00035         \{}
+\DoxyCodeLine{00036             \mbox{\hyperlink{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}{object\_}}.Lock();}
+\DoxyCodeLine{00037         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_smart_lock_ae1caa7d595e8522925afad5a10b3a2b3}\label{classxstar_1_1_smart_lock_ae1caa7d595e8522925afad5a10b3a2b3}} 
+\index{xstar::SmartLock$<$ T $>$@{xstar::SmartLock$<$ T $>$}!````~SmartLock@{$\sim$SmartLock}}
+\index{````~SmartLock@{$\sim$SmartLock}!xstar::SmartLock$<$ T $>$@{xstar::SmartLock$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SmartLock()}{~SmartLock()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{classxstar_1_1_smart_lock}{xstar\+::\+Smart\+Lock}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::$\sim$\mbox{\hyperlink{classxstar_1_1_smart_lock}{Smart\+Lock}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__lock_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{smart__lock_8hpp_source}{smart\+\_\+lock.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039         \{}
+\DoxyCodeLine{00040             \mbox{\hyperlink{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}{object\_}}.Unlock();}
+\DoxyCodeLine{00041         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}\label{classxstar_1_1_smart_lock_a308b0d201ee7a3e60d1bb998a28fe231}} 
+\index{xstar::SmartLock$<$ T $>$@{xstar::SmartLock$<$ T $>$}!object\_@{object\_}}
+\index{object\_@{object\_}!xstar::SmartLock$<$ T $>$@{xstar::SmartLock$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{object\_}{object\_}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\& \mbox{\hyperlink{classxstar_1_1_smart_lock}{xstar\+::\+Smart\+Lock}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__lock_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{smart__lock_8hpp_source}{smart\+\_\+lock.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel\+\_\+space/include/\mbox{\hyperlink{smart__lock_8hpp}{smart\+\_\+lock.\+hpp}}\end{DoxyCompactItemize}

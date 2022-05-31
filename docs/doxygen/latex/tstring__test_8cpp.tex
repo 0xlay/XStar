@@ -1,0 +1,147 @@
+\hypertarget{tstring__test_8cpp}{}\doxysection{user\+\_\+space\+\_\+tests/tstring\+\_\+test.cpp File Reference}
+\label{tstring__test_8cpp}\index{user\_space\_tests/tstring\_test.cpp@{user\_space\_tests/tstring\_test.cpp}}
+{\ttfamily \#include \char`\"{}pch.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{tstring__test_8cpp_a35fdba7e90c7517fc78efb09b9012a13}{Check\+TString\+Buffers}} (Type \&\&object)
+\item 
+\mbox{\hyperlink{tstring__test_8cpp_a51bdc43267ea4a568cfbffa5800a416f}{TEST}} (TString\+Tests, TString\+\_\+\+\_\+\+Test)
+\item 
+\mbox{\hyperlink{tstring__test_8cpp_a62902cb868797876e1811c9431f73297}{TEST}} (TString\+Tests, TString\+View\+\_\+\+\_\+\+Test)
+\item 
+\mbox{\hyperlink{tstring__test_8cpp_a30801ca0c05ce6912b722aa53adcfcbf}{TEST}} (TString\+Tests, TChar\+\_\+\+\_\+\+Test)
+\item 
+\mbox{\hyperlink{tstring__test_8cpp_a4dbb15d47eb9fb171ab3b38f5c2dfaaf}{TEST}} (TString\+Tests, To\+TString\+\_\+\+Test)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tstring__test_8cpp_a35fdba7e90c7517fc78efb09b9012a13}\label{tstring__test_8cpp_a35fdba7e90c7517fc78efb09b9012a13}} 
+\index{tstring\_test.cpp@{tstring\_test.cpp}!CheckTStringBuffers@{CheckTStringBuffers}}
+\index{CheckTStringBuffers@{CheckTStringBuffers}!tstring\_test.cpp@{tstring\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckTStringBuffers()}{CheckTStringBuffers()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void Check\+TString\+Buffers (\begin{DoxyParamCaption}\item[{Type \&\&}]{object }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tstring__test_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{tstring__test_8cpp_source}{tstring\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005 \{}
+\DoxyCodeLine{00006     \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacexstar}{xstar}};}
+\DoxyCodeLine{00007     }
+\DoxyCodeLine{00008     \mbox{\hyperlink{namespacexstar_a6247e523bb4ed48ece0a265e61408990}{tstring}} bufForIstream;}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010     \mbox{\hyperlink{namespacexstar_ad6f1e1804517c34b621a88f16ce4e477}{tstringbuf}} tStrBuf;}
+\DoxyCodeLine{00011     \mbox{\hyperlink{namespacexstar_a5bd15845a7fd969c173b39bff8b5e645}{tstringstream}} tStrStream;}
+\DoxyCodeLine{00012     \mbox{\hyperlink{namespacexstar_a1e0b2fada83c16e7beee1ccaaea47fbd}{tostringstream}} tOStrStream;}
+\DoxyCodeLine{00013     \mbox{\hyperlink{namespacexstar_a0f727303ca282b4203cc9719223cfc82}{tistringstream}} tIStrStream;}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015     tStrStream << object;}
+\DoxyCodeLine{00016     tOStrStream << object;}
+\DoxyCodeLine{00017     tIStrStream >> bufForIstream;}
+\DoxyCodeLine{00018 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{tstring__test_8cpp_a30801ca0c05ce6912b722aa53adcfcbf}\label{tstring__test_8cpp_a30801ca0c05ce6912b722aa53adcfcbf}} 
+\index{tstring\_test.cpp@{tstring\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tstring\_test.cpp@{tstring\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{TString\+Tests}]{,  }\item[{TChar\+\_\+\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tstring__test_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{tstring__test_8cpp_source}{tstring\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052 \{}
+\DoxyCodeLine{00053     \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacexstar}{xstar}};}
+\DoxyCodeLine{00054  }
+\DoxyCodeLine{00055     \textcolor{keyword}{auto} symbol = \$Tc(\textcolor{charliteral}{'x'});}
+\DoxyCodeLine{00056     }
+\DoxyCodeLine{00057     EXPECT\_EQ(\textcolor{keyword}{typeid}(symbol), \textcolor{keyword}{typeid}(\mbox{\hyperlink{namespacexstar_ac2ebd941b2ed17ddc0b2eb56fe1d0266}{tchar}}));}
+\DoxyCodeLine{00058     }
+\DoxyCodeLine{00059     \mbox{\hyperlink{tstring__test_8cpp_a35fdba7e90c7517fc78efb09b9012a13}{CheckTStringBuffers}}(symbol);}
+\DoxyCodeLine{00060 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{tstring__test_8cpp_a4dbb15d47eb9fb171ab3b38f5c2dfaaf}\label{tstring__test_8cpp_a4dbb15d47eb9fb171ab3b38f5c2dfaaf}} 
+\index{tstring\_test.cpp@{tstring\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tstring\_test.cpp@{tstring\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{TString\+Tests}]{,  }\item[{To\+TString\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tstring__test_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{tstring__test_8cpp_source}{tstring\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063 \{}
+\DoxyCodeLine{00064     \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacexstar}{xstar}};}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066     \mbox{\hyperlink{namespacexstar_a6247e523bb4ed48ece0a265e61408990}{tstring}} result = \mbox{\hyperlink{namespacexstar_a69c9d5841eb701420438d6078fb7f999}{to\_tstring}}(2021);}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068     EXPECT\_EQ(result, \$T\textcolor{stringliteral}{"{}2021"{}});}
+\DoxyCodeLine{00069 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{tstring__test_8cpp_a51bdc43267ea4a568cfbffa5800a416f}\label{tstring__test_8cpp_a51bdc43267ea4a568cfbffa5800a416f}} 
+\index{tstring\_test.cpp@{tstring\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tstring\_test.cpp@{tstring\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{TString\+Tests}]{,  }\item[{TString\+\_\+\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tstring__test_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{tstring__test_8cpp_source}{tstring\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacexstar}{xstar}};}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024 \textcolor{preprocessor}{\#pragma warning(push)}}
+\DoxyCodeLine{00025 \textcolor{preprocessor}{\#pragma warning(disable : 26444)}}
+\DoxyCodeLine{00026     \mbox{\hyperlink{namespacexstar_a6247e523bb4ed48ece0a265e61408990}{tstring}}(\$T\textcolor{stringliteral}{"{}Hello world"{}});}
+\DoxyCodeLine{00027 \textcolor{preprocessor}{\#pragma warning(pop)}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     \textcolor{keyword}{auto} tStr = \$T\textcolor{stringliteral}{"{}Hello world"{}}\_ts;}
+\DoxyCodeLine{00030     \textcolor{keyword}{auto} constTCharPointer = \$T\textcolor{stringliteral}{"{}Hello world"{}};}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032     EXPECT\_EQ(\textcolor{keyword}{typeid}(tStr), \textcolor{keyword}{typeid}(\mbox{\hyperlink{namespacexstar_a6247e523bb4ed48ece0a265e61408990}{tstring}}));}
+\DoxyCodeLine{00033     EXPECT\_EQ(\textcolor{keyword}{typeid}(constTCharPointer), \textcolor{keyword}{typeid}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacexstar_ac2ebd941b2ed17ddc0b2eb56fe1d0266}{tchar}}*));}
+\DoxyCodeLine{00034     }
+\DoxyCodeLine{00035     \mbox{\hyperlink{tstring__test_8cpp_a35fdba7e90c7517fc78efb09b9012a13}{CheckTStringBuffers}}(tStr);}
+\DoxyCodeLine{00036     \mbox{\hyperlink{tstring__test_8cpp_a35fdba7e90c7517fc78efb09b9012a13}{CheckTStringBuffers}}(constTCharPointer);}
+\DoxyCodeLine{00037 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{tstring__test_8cpp_a62902cb868797876e1811c9431f73297}\label{tstring__test_8cpp_a62902cb868797876e1811c9431f73297}} 
+\index{tstring\_test.cpp@{tstring\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tstring\_test.cpp@{tstring\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{TString\+Tests}]{,  }\item[{TString\+View\+\_\+\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tstring__test_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{tstring__test_8cpp_source}{tstring\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040 \{}
+\DoxyCodeLine{00041     \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacexstar}{xstar}};}
+\DoxyCodeLine{00042     }
+\DoxyCodeLine{00043     \mbox{\hyperlink{namespacexstar_a952c1f2d170386424883b0e3a7f3201a}{tstring\_view}}(\$T\textcolor{stringliteral}{"{}Hello world"{}});}
+\DoxyCodeLine{00044     \textcolor{keyword}{auto} tStrView = \$T\textcolor{stringliteral}{"{}Hello world"{}}\_tsv;}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     EXPECT\_EQ(\textcolor{keyword}{typeid}(tStrView), \textcolor{keyword}{typeid}(\mbox{\hyperlink{namespacexstar_a952c1f2d170386424883b0e3a7f3201a}{tstring\_view}}));}
+\DoxyCodeLine{00047     }
+\DoxyCodeLine{00048     \mbox{\hyperlink{tstring__test_8cpp_a35fdba7e90c7517fc78efb09b9012a13}{CheckTStringBuffers}}(tStrView);}
+\DoxyCodeLine{00049 \}}
+
+\end{DoxyCode}

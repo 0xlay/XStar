@@ -1,0 +1,138 @@
+\hypertarget{smart__handle_8hpp_source}{}\doxysection{smart\+\_\+handle.\+hpp}
+\label{smart__handle_8hpp_source}\index{user\_space/include/smart\_handle.hpp@{user\_space/include/smart\_handle.hpp}}
+\mbox{\hyperlink{smart__handle_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00014}00014 \textcolor{comment}{// File: smart\_handle.hpp}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: User mode only}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#ifndef \_XSTAR\_USER\_SMART\_HANDLE\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00023}00023 \textcolor{preprocessor}{\#define \_XSTAR\_USER\_SMART\_HANDLE\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00026}00026 \textcolor{preprocessor}{\#include <Windows.h>}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00027}00027 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00029}00029 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00032}\mbox{\hyperlink{namespacexstar_1_1__internal}{00032}}     \textcolor{keyword}{namespace }\_internal}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00033}00033     \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00034}00034         \textcolor{keyword}{template} <\textcolor{keyword}{typename} Handle>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00035}\mbox{\hyperlink{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}{00035}}         \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}{CloseSmartHandle}}(Handle \textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00036}00036         \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00037}00037             \textcolor{keyword}{static\_assert}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"{}Type isn't supported!"{}});}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00040}00040         \textcolor{keyword}{template} <>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00041}\mbox{\hyperlink{namespacexstar_1_1__internal_a1e238169e78f9c18c9ae7e9a3d1e2eab}{00041}}         \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}{CloseSmartHandle}}(HANDLE \textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00042}00042         \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00043}00043             CloseHandle(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00044}00044         \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00046}00046         \textcolor{keyword}{template} <>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00047}\mbox{\hyperlink{namespacexstar_1_1__internal_a743775504a036ee46e23cd8fbf26fcac}{00047}}         \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}{CloseSmartHandle}}(SC\_HANDLE \textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00048}00048         \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00049}00049             CloseServiceHandle(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00050}00050         \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00052}00052         \textcolor{keyword}{template} <>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00053}\mbox{\hyperlink{namespacexstar_1_1__internal_a762e1239b1e4a7876a4b49009f9aef04}{00053}}         \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}{CloseSmartHandle}}(HWND \textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00054}00054         \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00055}00055             CloseWindow(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00056}00056         \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00058}00058         \textcolor{keyword}{template} <>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00059}\mbox{\hyperlink{namespacexstar_1_1__internal_a8f75647985eb8378d7c80dd0c2613dcb}{00059}}         \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}{CloseSmartHandle}}(HMODULE \textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00060}00060         \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00061}00061             FreeLibrary(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00062}00062         \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00072}00072     \textcolor{keyword}{template} <\textcolor{keyword}{class} Handle>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00073}\mbox{\hyperlink{classxstar_1_1_smart_handle}{00073}}     \textcolor{keyword}{class }\mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}} final}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00074}00074     \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00075}00075     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00076}\mbox{\hyperlink{classxstar_1_1_smart_handle_acbb7b26c8011166f1dcd145824897507}{00076}}         \mbox{\hyperlink{classxstar_1_1_smart_handle_acbb7b26c8011166f1dcd145824897507}{SmartHandle}}() noexcept;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00077}\mbox{\hyperlink{classxstar_1_1_smart_handle_a2d1c3356289090360b1dfae6508d41fc}{00077}}         \mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}(Handle \textcolor{keywordtype}{object}) noexcept;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00078}\mbox{\hyperlink{classxstar_1_1_smart_handle_ab1faa07ff7f29bc59cc2154ec430bee1}{00078}}         \string~\mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}() noexcept;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00080}\mbox{\hyperlink{classxstar_1_1_smart_handle_a07bfbe07e36fb8d16b9510de18f0ed85}{00080}}         \mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}(\mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}\&\& other) noexcept;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00081}\mbox{\hyperlink{classxstar_1_1_smart_handle_a9ce2cb2024bc70a83b131b437ee88bba}{00081}}         \mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}\& operator=(\mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}\&\& other) noexcept;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00083}\mbox{\hyperlink{classxstar_1_1_smart_handle_a1c69865a71287353ce13b3c6fb24df6b}{00083}}         \mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}(const \mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}\&) = delete;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00084}\mbox{\hyperlink{classxstar_1_1_smart_handle_aab11beba50d732358632f632aad7ac25}{00084}}         \mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}\& operator=(const \mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}\&) = delete;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00086}\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{00086}}         Handle \mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}() const noexcept;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00087}\mbox{\hyperlink{classxstar_1_1_smart_handle_a0aada12fb3c11e9129aca6ddd85b0a73}{00087}}         Handle operator*() const noexcept;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00089}00089     private:}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00090}\mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{00090}}         Handle \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}};}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00091}00091     \};}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00093}00093     template <class Handle>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00094}\mbox{\hyperlink{classxstar_1_1_smart_handle_acbb7b26c8011166f1dcd145824897507}{00094}}     \mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}<Handle>::\mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle}}() noexcept}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00095}00095         : \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}}(\textcolor{keywordtype}{nullptr})}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00096}00096     \{ \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00098}00098     \textcolor{keyword}{template} <\textcolor{keyword}{class} Handle>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00099}\mbox{\hyperlink{classxstar_1_1_smart_handle_a2d1c3356289090360b1dfae6508d41fc}{00099}}     \mbox{\hyperlink{classxstar_1_1_smart_handle_acbb7b26c8011166f1dcd145824897507}{SmartHandle<Handle>::SmartHandle}}(Handle \textcolor{keywordtype}{object}) noexcept}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00100}00100         : \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}}(\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00101}00101     \{ \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00103}00103     \textcolor{keyword}{template}<\textcolor{keyword}{class} Handle>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00104}\mbox{\hyperlink{classxstar_1_1_smart_handle_a07bfbe07e36fb8d16b9510de18f0ed85}{00104}}     \mbox{\hyperlink{classxstar_1_1_smart_handle_acbb7b26c8011166f1dcd145824897507}{SmartHandle<Handle>::SmartHandle}}(\mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle<Handle>}}\&\& other) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00105}00105     \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00106}00106         \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}} = other.hObject\_;}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00107}00107         other.object\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00108}00108     \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00110}00110     \textcolor{keyword}{template} <\textcolor{keyword}{class} Handle>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00111}\mbox{\hyperlink{classxstar_1_1_smart_handle_ab1faa07ff7f29bc59cc2154ec430bee1}{00111}}     \mbox{\hyperlink{classxstar_1_1_smart_handle_ab1faa07ff7f29bc59cc2154ec430bee1}{SmartHandle<Handle>::\string~SmartHandle}}() noexcept}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00112}00112     \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00113}00113         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}})}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00114}00114             \mbox{\hyperlink{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}{\_internal::CloseSmartHandle}}(\mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}});}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00115}00115     \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00117}00117     \textcolor{keyword}{template} <\textcolor{keyword}{class} Handle>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00118}\mbox{\hyperlink{classxstar_1_1_smart_handle_a9ce2cb2024bc70a83b131b437ee88bba}{00118}}     \mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle<Handle>}}\& \mbox{\hyperlink{classxstar_1_1_smart_handle_a9ce2cb2024bc70a83b131b437ee88bba}{SmartHandle<Handle>::operator=}}(\mbox{\hyperlink{classxstar_1_1_smart_handle}{SmartHandle<Handle>}}\&\& other) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00119}00119     \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00120}00120         \mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{std::swap}}(\mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}}, other.object\_);}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00121}00121         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00122}00122     \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00124}00124     \textcolor{keyword}{template} <\textcolor{keyword}{class} Handle>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00125}\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{00125}}     Handle \mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{SmartHandle<Handle>::getHandle}}() const noexcept}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00126}00126     \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00127}00127         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}};}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00128}00128     \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00130}00130     \textcolor{keyword}{template} <\textcolor{keyword}{class} Handle>}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00131}\mbox{\hyperlink{classxstar_1_1_smart_handle_a0aada12fb3c11e9129aca6ddd85b0a73}{00131}}     Handle \mbox{\hyperlink{classxstar_1_1_smart_handle_a0aada12fb3c11e9129aca6ddd85b0a73}{SmartHandle<Handle>::operator*}}() const noexcept}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00132}00132     \{}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00133}00133         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}};}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00134}00134     \}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00136}00136 \} \textcolor{comment}{// xstar}}
+\DoxyCodeLine{\Hypertarget{smart__handle_8hpp_source_l00137}00137 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_XSTAR\_USER\_SMART\_HANDLE\_HPP\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,106 @@
+\hypertarget{smart__handle__test_8cpp}{}\doxysection{user\+\_\+space\+\_\+tests/smart\+\_\+handle\+\_\+test.cpp File Reference}
+\label{smart__handle__test_8cpp}\index{user\_space\_tests/smart\_handle\_test.cpp@{user\_space\_tests/smart\_handle\_test.cpp}}
+{\ttfamily \#include \char`\"{}pch.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{smart__handle__test_8cpp_a48c850cf088f3323dfd7249df5be1c82}{TEST}} (Smart\+Handle\+Tests, Smart\+Hadnle\+\_\+\+\_\+\+HWND\+\_\+\+\_\+\+Test)
+\item 
+\mbox{\hyperlink{smart__handle__test_8cpp_a30fe5a0d50783e9545cbe8a924e518c7}{TEST}} (Smart\+Handle\+Tests, Smart\+Hadnle\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+\+Test)
+\item 
+\mbox{\hyperlink{smart__handle__test_8cpp_a85aafdf3e1db01f460a3302d25cf3c4d}{TEST}} (Smart\+Handle\+Tests, Smart\+Handle\+\_\+\+\_\+\+SC\+\_\+\+HADNLE\+\_\+\+\_\+\+Test)
+\item 
+\mbox{\hyperlink{smart__handle__test_8cpp_a3cddd449424828d522d36ac5e524600d}{TEST}} (Smart\+Handle\+Tests, Smart\+Handle\+\_\+\+\_\+\+HMODULE\+\_\+\+\_\+\+Test)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{smart__handle__test_8cpp_a30fe5a0d50783e9545cbe8a924e518c7}\label{smart__handle__test_8cpp_a30fe5a0d50783e9545cbe8a924e518c7}} 
+\index{smart\_handle\_test.cpp@{smart\_handle\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!smart\_handle\_test.cpp@{smart\_handle\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Smart\+Handle\+Tests}]{,  }\item[{Smart\+Hadnle\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle__test_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{smart__handle__test_8cpp_source}{smart\+\_\+handle\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     \mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar::SmartHandle<HANDLE>}} handle = CreateEvent(\textcolor{keyword}{nullptr}, \textcolor{keyword}{true}, \textcolor{keyword}{true}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00026     EXPECT\_NE(handle.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00027     EXPECT\_NE(*handle, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00028 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{smart__handle__test_8cpp_a48c850cf088f3323dfd7249df5be1c82}\label{smart__handle__test_8cpp_a48c850cf088f3323dfd7249df5be1c82}} 
+\index{smart\_handle\_test.cpp@{smart\_handle\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!smart\_handle\_test.cpp@{smart\_handle\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Smart\+Handle\+Tests}]{,  }\item[{Smart\+Hadnle\+\_\+\+\_\+\+HWND\+\_\+\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle__test_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{smart__handle__test_8cpp_source}{smart\+\_\+handle\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004 \{}
+\DoxyCodeLine{00005     \mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar::SmartHandle<HWND>}} hwnd = CreateWindowEx(}
+\DoxyCodeLine{00006         WS\_EX\_APPWINDOW,}
+\DoxyCodeLine{00007         \$T\textcolor{stringliteral}{"{}\#32769"{}}, \textcolor{comment}{/*The class for the desktop window*/}}
+\DoxyCodeLine{00008         \textcolor{keyword}{nullptr}, }
+\DoxyCodeLine{00009         WS\_VISIBLE,}
+\DoxyCodeLine{00010         0, }
+\DoxyCodeLine{00011         0, }
+\DoxyCodeLine{00012         0, }
+\DoxyCodeLine{00013         0, }
+\DoxyCodeLine{00014         \textcolor{keyword}{nullptr}, }
+\DoxyCodeLine{00015         \textcolor{keyword}{nullptr}, }
+\DoxyCodeLine{00016         \textcolor{keyword}{nullptr}, }
+\DoxyCodeLine{00017         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{00018     );}
+\DoxyCodeLine{00019     EXPECT\_NE(hwnd.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00020     EXPECT\_NE(*hwnd, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{smart__handle__test_8cpp_a3cddd449424828d522d36ac5e524600d}\label{smart__handle__test_8cpp_a3cddd449424828d522d36ac5e524600d}} 
+\index{smart\_handle\_test.cpp@{smart\_handle\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!smart\_handle\_test.cpp@{smart\_handle\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Smart\+Handle\+Tests}]{,  }\item[{Smart\+Handle\+\_\+\+\_\+\+HMODULE\+\_\+\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle__test_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{smart__handle__test_8cpp_source}{smart\+\_\+handle\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038 \{}
+\DoxyCodeLine{00039     \mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar::SmartHandle<HMODULE>}} moduleHandle = LoadLibrary(\$T\textcolor{stringliteral}{"{}kernel32.dll"{}});}
+\DoxyCodeLine{00040     EXPECT\_NE(moduleHandle.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00041     EXPECT\_NE(*moduleHandle, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{smart__handle__test_8cpp_a85aafdf3e1db01f460a3302d25cf3c4d}\label{smart__handle__test_8cpp_a85aafdf3e1db01f460a3302d25cf3c4d}} 
+\index{smart\_handle\_test.cpp@{smart\_handle\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!smart\_handle\_test.cpp@{smart\_handle\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Smart\+Handle\+Tests}]{,  }\item[{Smart\+Handle\+\_\+\+\_\+\+SC\+\_\+\+HADNLE\+\_\+\+\_\+\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle__test_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{smart__handle__test_8cpp_source}{smart\+\_\+handle\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031 \{}
+\DoxyCodeLine{00032     \mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar::SmartHandle<SC\_HANDLE>}} serviceHandle = OpenSCManager(\textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, SC\_MANAGER\_CONNECT);}
+\DoxyCodeLine{00033     EXPECT\_NE(serviceHandle.\mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{getHandle}}(), \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00034     EXPECT\_NE(*serviceHandle, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00035 \}}
+
+\end{DoxyCode}

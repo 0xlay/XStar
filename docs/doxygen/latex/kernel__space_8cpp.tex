@@ -1,0 +1,37 @@
+\hypertarget{kernel__space_8cpp}{}\doxysection{kernel\+\_\+space\+\_\+test/kernel\+\_\+space.cpp File Reference}
+\label{kernel__space_8cpp}\index{kernel\_space\_test/kernel\_space.cpp@{kernel\_space\_test/kernel\_space.cpp}}
+{\ttfamily \#include \char`\"{}kernel\+\_\+space.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string\+\_\+test.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+NTSTATUS \mbox{\hyperlink{kernel__space_8cpp_a4ed7faf004ab5dee6ce9d9b019cda097}{Driver\+Entry}} (PDRIVER\+\_\+\+OBJECT Driver\+Object, PUNICODE\+\_\+\+STRING Registry\+Path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kernel__space_8cpp_a4ed7faf004ab5dee6ce9d9b019cda097}\label{kernel__space_8cpp_a4ed7faf004ab5dee6ce9d9b019cda097}} 
+\index{kernel\_space.cpp@{kernel\_space.cpp}!DriverEntry@{DriverEntry}}
+\index{DriverEntry@{DriverEntry}!kernel\_space.cpp@{kernel\_space.cpp}}
+\doxysubsubsection{\texorpdfstring{DriverEntry()}{DriverEntry()}}
+{\footnotesize\ttfamily NTSTATUS Driver\+Entry (\begin{DoxyParamCaption}\item[{PDRIVER\+\_\+\+OBJECT}]{Driver\+Object,  }\item[{PUNICODE\+\_\+\+STRING}]{Registry\+Path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__space_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{kernel__space_8cpp_source}{kernel\+\_\+space.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015 \{}
+\DoxyCodeLine{00016     KdPrint((\textcolor{stringliteral}{"{}Driver Entry start!\(\backslash\)n"{}}));}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018     \textcolor{comment}{//}}
+\DoxyCodeLine{00019     \textcolor{comment}{// Run all tests}}
+\DoxyCodeLine{00020     \textcolor{comment}{//}}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022     \mbox{\hyperlink{kernel__test_8hpp_a4b22940356d345af16dcb18f6e817d4f}{XSTAR\_KTEST\_RUN\_SUITE}}(StringTest);}
+\DoxyCodeLine{00023     }
+\DoxyCodeLine{00024     \textcolor{keywordflow}{return} STATUS\_FAILED\_DRIVER\_ENTRY;}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}

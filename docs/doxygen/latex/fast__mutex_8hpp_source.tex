@@ -1,0 +1,75 @@
+\hypertarget{fast__mutex_8hpp_source}{}\doxysection{fast\+\_\+mutex.\+hpp}
+\label{fast__mutex_8hpp_source}\index{kernel\_space/include/fast\_mutex.hpp@{kernel\_space/include/fast\_mutex.hpp}}
+\mbox{\hyperlink{fast__mutex_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00014}00014 \textcolor{comment}{// File: fast\_mutex.hpp}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: Kernel mode only}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#ifndef \_XSTAR\_KERNEL\_FAST\_MUTEX\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00023}00023 \textcolor{preprocessor}{\#define \_XSTAR\_KERNEL\_FAST\_MUTEX\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00025}00025 \textcolor{preprocessor}{\#include <wdm.h>}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00028}00028 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00033}\mbox{\hyperlink{classxstar_1_1_fast_mutex}{00033}}     \textcolor{keyword}{class }\mbox{\hyperlink{classxstar_1_1_fast_mutex}{FastMutex}} final}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00034}00034     \{}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00035}00035     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00036}00036         \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00037}00037         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_fast_mutex_a5a3be916acc8d011cc789fb4d0601122}{Init}}();}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00038}00038         }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00039}00039         \_IRQL\_raises\_(APC\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00040}00040         \_IRQL\_saves\_global\_(OldIrql, \mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\_}})}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00041}00041         \_IRQL\_requires\_max\_(APC\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00042}00042         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_fast_mutex_a5858311c7b56ff76870b7f1c7464147a}{Lock}}();}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00044}00044         \_IRQL\_restores\_global\_(OldIrql, \mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\_}})}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00045}00045         \_IRQL\_requires\_(APC\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00046}00046         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_fast_mutex_a828a843707a6098998783eb0641e445f}{Unlock}}();}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00048}00048     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00049}\mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{00049}}         FAST\_MUTEX \mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\_}}; \textcolor{comment}{// Always, non paged pool}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00050}00050     \};}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00055}00055     \_Use\_decl\_annotations\_}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00056}\mbox{\hyperlink{classxstar_1_1_fast_mutex_a5a3be916acc8d011cc789fb4d0601122}{00056}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_fast_mutex_a5a3be916acc8d011cc789fb4d0601122}{FastMutex::Init}}()}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00057}00057     \{}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00058}00058         ExInitializeFastMutex(\&\mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\_}});}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00064}00064     \_Use\_decl\_annotations\_}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00065}\mbox{\hyperlink{classxstar_1_1_fast_mutex_a5858311c7b56ff76870b7f1c7464147a}{00065}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_fast_mutex_a5858311c7b56ff76870b7f1c7464147a}{FastMutex::Lock}}()}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00066}00066     \{}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00067}00067         ExAcquireFastMutex(\&\mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\_}});}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00068}00068     \}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00073}00073     \_Use\_decl\_annotations\_}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00074}\mbox{\hyperlink{classxstar_1_1_fast_mutex_a828a843707a6098998783eb0641e445f}{00074}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_fast_mutex_a828a843707a6098998783eb0641e445f}{FastMutex::Unlock}}()}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00075}00075     \{}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00076}00076         ExReleaseFastMutex(\&\mbox{\hyperlink{classxstar_1_1_fast_mutex_a69ac94239952aec0720a09561f7dffb5}{mutex\_}});}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00079}00079 \}}
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{fast__mutex_8hpp_source_l00081}00081 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_XSTAR\_KERNEL\_FAST\_MUTEX\_HPP\_}}
+
+\end{DoxyCode}

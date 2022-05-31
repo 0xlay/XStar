@@ -1,0 +1,65 @@
+\hypertarget{smart__pointers_8hpp_source}{}\doxysection{smart\+\_\+pointers.\+hpp}
+\label{smart__pointers_8hpp_source}\index{kernel\_space/include/smart\_pointers.hpp@{kernel\_space/include/smart\_pointers.hpp}}
+\mbox{\hyperlink{smart__pointers_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00014}00014 \textcolor{comment}{// File: smart\_pointers.hpp}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: Kernel mode only}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#ifndef \_XSTAR\_KERNEL\_SMART\_POINTERS\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00023}00023 \textcolor{preprocessor}{\#define \_XSTAR\_KERNEL\_SMART\_POINTERS\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00025}00025 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{runtime_8hpp}{runtime.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00026}00026 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{algorithms_8hpp}{algorithms.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00028}00028 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00036}00036     \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00037}\mbox{\hyperlink{classxstar_1_1_unique_pointer}{00037}}     \textcolor{keyword}{class }\mbox{\hyperlink{classxstar_1_1_unique_pointer}{UniquePointer}} final}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00038}00038     \{}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00039}00039     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00040}00040         \mbox{\hyperlink{classxstar_1_1_unique_pointer_a0d9de09eb2175db7f11db024fb38ef34}{UniquePointer}}();}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00041}00041         \mbox{\hyperlink{classxstar_1_1_unique_pointer_a0d9de09eb2175db7f11db024fb38ef34}{UniquePointer}}(\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}* pointer);}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00042}00042         \mbox{\hyperlink{classxstar_1_1_unique_pointer_adc4fdc6d99d39de97912830ac11e8ce4}{\string~UniquePointer}}();}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00044}00044         \mbox{\hyperlink{classxstar_1_1_unique_pointer_a0d9de09eb2175db7f11db024fb38ef34}{UniquePointer}}(\mbox{\hyperlink{classxstar_1_1_unique_pointer}{UniquePointer}}\&\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00045}00045         \mbox{\hyperlink{classxstar_1_1_unique_pointer}{UniquePointer}}\& \mbox{\hyperlink{classxstar_1_1_unique_pointer_a52960a0158fd4b079408b7d7dff360aa}{operator=}}(\mbox{\hyperlink{classxstar_1_1_unique_pointer}{UniquePointer}}\&\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00047}\mbox{\hyperlink{classxstar_1_1_unique_pointer_acf9d2a20fb3a266cd97b6a1f171576c2}{00047}}         \mbox{\hyperlink{classxstar_1_1_unique_pointer_acf9d2a20fb3a266cd97b6a1f171576c2}{UniquePointer}}(\textcolor{keyword}{const} \mbox{\hyperlink{classxstar_1_1_unique_pointer}{UniquePointer}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00048}\mbox{\hyperlink{classxstar_1_1_unique_pointer_ad98dc16e13a49800b5a85c9c6077e82b}{00048}}         \mbox{\hyperlink{classxstar_1_1_unique_pointer}{UniquePointer}}\& \mbox{\hyperlink{classxstar_1_1_unique_pointer_ad98dc16e13a49800b5a85c9c6077e82b}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classxstar_1_1_unique_pointer}{UniquePointer}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00050}00050         \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\& \mbox{\hyperlink{classxstar_1_1_unique_pointer_a1de2d9f250fd135b8c5f962df7026f41}{operator*}}();}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00051}00051         \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}* \mbox{\hyperlink{classxstar_1_1_unique_pointer_ae88b82298d014da1f787f7a22fedf8e0}{operator-\/>}}();}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00053}00053         \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}* \mbox{\hyperlink{classxstar_1_1_unique_pointer_a0f3350a0ea91746f2a4afd61d17fe753}{getPointer}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00054}00054         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_unique_pointer_a946f71fe4329baf4bff43873960b07af}{release}}();}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00055}00055         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_unique_pointer_a86a59cedf0cb513c894694be5b8e5b9a}{reset}}(\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}* pointer);}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00057}00057     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00058}\mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{00058}}         \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}* \mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}};}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00059}00059     \};}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00062}00062 \}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00064}00064 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{smart__pointers_8inl}{smart\_pointers.inl}}"{}}}
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{smart__pointers_8hpp_source_l00066}00066 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_XSTAR\_KERNEL\_SMART\_POINTERS\_HPP\_}}
+
+\end{DoxyCode}

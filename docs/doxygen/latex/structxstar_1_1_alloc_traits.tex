@@ -1,0 +1,150 @@
+\hypertarget{structxstar_1_1_alloc_traits}{}\doxysection{xstar\+::Alloc\+Traits\texorpdfstring{$<$}{<} Data\+Type, type \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structxstar_1_1_alloc_traits}\index{xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}}
+
+
+{\ttfamily \#include $<$allocator.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}{Size}} = sizeof(Value\+Type)
+ \}
+\item 
+enum \{ \mbox{\hyperlink{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401daa75565d3d5645d97d3c4ab31a32423d57}{Pool\+Tag}} = \+\_\+\+XSTAR\+\_\+\+LIBRARY\+\_\+\+TAG\+\_\+
+ \}
+\item 
+enum \{ \mbox{\hyperlink{structxstar_1_1_alloc_traits_a53e648bec747305e3c25c9a556f82cdeafd5020cbd582c4bc1b2e83f554b21c4f}{Pool\+Type}} = type $\vert$ 16
+ \}
+\item 
+using \mbox{\hyperlink{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}{Value\+Type}} = Data\+Type
+\item 
+using \mbox{\hyperlink{structxstar_1_1_alloc_traits_a8752ea722615626c0b32917f1d1a45a8}{Pointer}} = \mbox{\hyperlink{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}{Value\+Type}} $\ast$
+\item 
+using \mbox{\hyperlink{structxstar_1_1_alloc_traits_af6a3de69f3f530a999655f59b538ea44}{Const\+Pointer}} = const \mbox{\hyperlink{structxstar_1_1_alloc_traits_a8752ea722615626c0b32917f1d1a45a8}{Pointer}}
+\item 
+using \mbox{\hyperlink{structxstar_1_1_alloc_traits_a65e32b43f2be1d9f2223a61f49e7c867}{Size\+Type}} = size\+\_\+t
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Data\+Type, POOL\+\_\+\+TYPE type$>$\newline
+struct xstar\+::\+Alloc\+Traits$<$ Data\+Type, type $>$}
+
+
+Definition at line \mbox{\hyperlink{allocator_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{allocator_8hpp_source}{allocator.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structxstar_1_1_alloc_traits_af6a3de69f3f530a999655f59b538ea44}\label{structxstar_1_1_alloc_traits_af6a3de69f3f530a999655f59b538ea44}} 
+\index{xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}!ConstPointer@{ConstPointer}}
+\index{ConstPointer@{ConstPointer}!xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}}
+\doxysubsubsection{\texorpdfstring{ConstPointer}{ConstPointer}}
+{\footnotesize\ttfamily template$<$class Data\+Type , POOL\+\_\+\+TYPE type$>$ \\
+using \mbox{\hyperlink{structxstar_1_1_alloc_traits}{xstar\+::\+Alloc\+Traits}}$<$ Data\+Type, type $>$\+::\+Const\+Pointer =  const \mbox{\hyperlink{structxstar_1_1_alloc_traits_a8752ea722615626c0b32917f1d1a45a8}{Pointer}}}
+
+
+
+Definition at line \mbox{\hyperlink{allocator_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{allocator_8hpp_source}{allocator.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_alloc_traits_a8752ea722615626c0b32917f1d1a45a8}\label{structxstar_1_1_alloc_traits_a8752ea722615626c0b32917f1d1a45a8}} 
+\index{xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}!Pointer@{Pointer}}
+\index{Pointer@{Pointer}!xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}}
+\doxysubsubsection{\texorpdfstring{Pointer}{Pointer}}
+{\footnotesize\ttfamily template$<$class Data\+Type , POOL\+\_\+\+TYPE type$>$ \\
+using \mbox{\hyperlink{structxstar_1_1_alloc_traits}{xstar\+::\+Alloc\+Traits}}$<$ Data\+Type, type $>$\+::\+Pointer =  \mbox{\hyperlink{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}{Value\+Type}}$\ast$}
+
+
+
+Definition at line \mbox{\hyperlink{allocator_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{allocator_8hpp_source}{allocator.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_alloc_traits_a65e32b43f2be1d9f2223a61f49e7c867}\label{structxstar_1_1_alloc_traits_a65e32b43f2be1d9f2223a61f49e7c867}} 
+\index{xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}!SizeType@{SizeType}}
+\index{SizeType@{SizeType}!xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}}
+\doxysubsubsection{\texorpdfstring{SizeType}{SizeType}}
+{\footnotesize\ttfamily template$<$class Data\+Type , POOL\+\_\+\+TYPE type$>$ \\
+using \mbox{\hyperlink{structxstar_1_1_alloc_traits}{xstar\+::\+Alloc\+Traits}}$<$ Data\+Type, type $>$\+::\+Size\+Type =  size\+\_\+t}
+
+
+
+Definition at line \mbox{\hyperlink{allocator_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{allocator_8hpp_source}{allocator.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}\label{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}} 
+\index{xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}!ValueType@{ValueType}}
+\index{ValueType@{ValueType}!xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}}
+\doxysubsubsection{\texorpdfstring{ValueType}{ValueType}}
+{\footnotesize\ttfamily template$<$class Data\+Type , POOL\+\_\+\+TYPE type$>$ \\
+using \mbox{\hyperlink{structxstar_1_1_alloc_traits}{xstar\+::\+Alloc\+Traits}}$<$ Data\+Type, type $>$\+::\+Value\+Type =  Data\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{allocator_8hpp_source_l00040}{40}} of file \mbox{\hyperlink{allocator_8hpp_source}{allocator.\+hpp}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586}\label{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$class Data\+Type , POOL\+\_\+\+TYPE type$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Size@{Size}!xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}}\index{xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}!Size@{Size}}}\mbox{\Hypertarget{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}\label{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}} 
+Size&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{allocator_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{allocator_8hpp_source}{allocator.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045 \{\mbox{\hyperlink{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}{Size}} = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}{ValueType}})\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401da}\label{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401da}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$class Data\+Type , POOL\+\_\+\+TYPE type$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PoolTag@{PoolTag}!xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}}\index{xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}!PoolTag@{PoolTag}}}\mbox{\Hypertarget{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401daa75565d3d5645d97d3c4ab31a32423d57}\label{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401daa75565d3d5645d97d3c4ab31a32423d57}} 
+Pool\+Tag&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{allocator_8hpp_source_l00046}{46}} of file \mbox{\hyperlink{allocator_8hpp_source}{allocator.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046 \{\mbox{\hyperlink{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401daa75565d3d5645d97d3c4ab31a32423d57}{PoolTag}} = \mbox{\hyperlink{meminfo_8hpp_a45e4ad6094e82ff6fed2383ff09a8ade}{\_XSTAR\_LIBRARY\_TAG\_}}\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structxstar_1_1_alloc_traits_a53e648bec747305e3c25c9a556f82cde}\label{structxstar_1_1_alloc_traits_a53e648bec747305e3c25c9a556f82cde}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$class Data\+Type , POOL\+\_\+\+TYPE type$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PoolType@{PoolType}!xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}}\index{xstar::AllocTraits$<$ DataType, type $>$@{xstar::AllocTraits$<$ DataType, type $>$}!PoolType@{PoolType}}}\mbox{\Hypertarget{structxstar_1_1_alloc_traits_a53e648bec747305e3c25c9a556f82cdeafd5020cbd582c4bc1b2e83f554b21c4f}\label{structxstar_1_1_alloc_traits_a53e648bec747305e3c25c9a556f82cdeafd5020cbd582c4bc1b2e83f554b21c4f}} 
+Pool\+Type&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{allocator_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{allocator_8hpp_source}{allocator.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047 \{\mbox{\hyperlink{structxstar_1_1_alloc_traits_a53e648bec747305e3c25c9a556f82cdeafd5020cbd582c4bc1b2e83f554b21c4f}{PoolType}} = type | 16 \textcolor{comment}{/*throw exception if allocate was failed */} \};}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel\+\_\+space/runtime/\mbox{\hyperlink{allocator_8hpp}{allocator.\+hpp}}\end{DoxyCompactItemize}

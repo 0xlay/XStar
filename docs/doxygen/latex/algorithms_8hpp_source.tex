@@ -1,0 +1,46 @@
+\hypertarget{algorithms_8hpp_source}{}\doxysection{algorithms.\+hpp}
+\label{algorithms_8hpp_source}\index{kernel\_space/include/algorithms.hpp@{kernel\_space/include/algorithms.hpp}}
+\mbox{\hyperlink{algorithms_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00014}00014 \textcolor{comment}{// File: algorithms.hpp}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: Kernel mode only}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#ifndef \_XSTAR\_KERNEL\_ALGORITHMS\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00023}00023 \textcolor{preprocessor}{\#define \_XSTAR\_KERNEL\_ALGORITHMS\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00025}00025 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{runtime_8hpp}{runtime.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00027}00027 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00028}00028 \{}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00030}00030     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00031}\mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{00031}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{swap}}(\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\& firstValue, \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\& secondValue) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00032}00032     \{}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00033}00033         \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} tempValue = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(firstValue);}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00034}00034         firstValue = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(secondValue);}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00035}00035         secondValue = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(tempValue);}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00038}00038 \} \textcolor{comment}{// xstar}}
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{algorithms_8hpp_source_l00040}00040 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_XSTAR\_KERNEL\_ALGORITHMS\_HPP\_}}
+
+\end{DoxyCode}

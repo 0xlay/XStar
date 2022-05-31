@@ -1,0 +1,131 @@
+\hypertarget{string__test_8hpp_source}{}\doxysection{string\+\_\+test.\+hpp}
+\label{string__test_8hpp_source}\index{kernel\_space\_test/string\_test.hpp@{kernel\_space\_test/string\_test.hpp}}
+\mbox{\hyperlink{string__test_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{kernel__test_8hpp}{kernel\_test.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{string_8hpp}{string.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00006}\mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{00006}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, Move)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00008}00008     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} dest(\mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}}(\textcolor{stringliteral}{"{}Hello World!"{}}));}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00010}00010     dest = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(\textcolor{stringliteral}{"{}My Friend"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00012}00012     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(dest, \textcolor{stringliteral}{"{}My Friend"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00013}00013 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00015}\mbox{\hyperlink{string__test_8hpp_a7bd85a1a805705089e478f9355e6233f}{00015}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, Copy)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00017}00017     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src(\textcolor{stringliteral}{"{}Hello World!"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00018}00018     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} dest = src;}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00020}00020     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(src, dest);}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00021}00021 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00023}\mbox{\hyperlink{string__test_8hpp_a73198ed6e2f5d20d36875b7bb06f73ad}{00023}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, Iterators)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00024}00024 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00025}00025     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src(\textcolor{stringliteral}{"{}Hello"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00026}00026     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(*src.\mbox{\hyperlink{classxstar_1_1_basic_string_a3bbda2c9fd2dfa8b3451509018655d37}{begin}}(), \textcolor{charliteral}{'H'});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00027}00027     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(*(src.\mbox{\hyperlink{classxstar_1_1_basic_string_ab9856a001ef895fa8e8d3b07c18ce08a}{end}}() -\/ 1), \textcolor{charliteral}{'o'});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00030}\mbox{\hyperlink{string__test_8hpp_ac36de51d745f678407d1f6109515fac2}{00030}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, ConstIterators)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00031}00031 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00032}00032     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src(\textcolor{stringliteral}{"{}Hello"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00034}00034     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(*src.\mbox{\hyperlink{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}{cbegin}}(), \textcolor{charliteral}{'H'});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00035}00035     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(*(src.\mbox{\hyperlink{classxstar_1_1_basic_string_af6d50be4306e543f2c843477be9702b3}{cend}}() -\/ 1), \textcolor{charliteral}{'o'});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00038}\mbox{\hyperlink{string__test_8hpp_aac946902c246bb7d8e9b1667ec012a91}{00038}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, Equal)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00040}00040     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Hello World!"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00041}00041     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Hello World!"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00043}00043     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(src1, src2);}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00044}00044 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00046}\mbox{\hyperlink{string__test_8hpp_ac942ccaba41959b9ea39ea9efae41c03}{00046}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, NotEqual)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00047}00047 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00048}00048     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Hello World!"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00049}00049     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Hi World!"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00051}00051     \mbox{\hyperlink{kernel__test_8hpp_a7bf9c9ee2add11b26be102c1f45caba1}{XSTAR\_KTEST\_ASSERT\_NE}}(src1, src2);}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00052}00052 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00054}\mbox{\hyperlink{string__test_8hpp_a0b9a73b967c0b5e99d38bf4d15e9764d}{00054}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, Greater)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00055}00055 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00056}00056     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00057}00057     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00059}00059     \mbox{\hyperlink{kernel__test_8hpp_a8a86a06b2e6db005a8f8443f16247149}{XSTAR\_KTEST\_ASSERT\_GT}}(src1, src2);}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00060}00060 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00062}\mbox{\hyperlink{string__test_8hpp_a0f1723465347aac77ca11bf37d0da34f}{00062}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, GreaterOrEqual)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00063}00063 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00064}00064     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00065}00065     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00066}00066     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src3(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00068}00068     \mbox{\hyperlink{kernel__test_8hpp_a8bf4336918ed8119bfde50d75cbfb93f}{XSTAR\_KTEST\_ASSERT\_GE}}(src1, src2);}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00069}00069     \mbox{\hyperlink{kernel__test_8hpp_a8bf4336918ed8119bfde50d75cbfb93f}{XSTAR\_KTEST\_ASSERT\_GE}}(src2, src3);}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00070}00070 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00072}\mbox{\hyperlink{string__test_8hpp_abeed4ddd91cb189ef9d7ced65decd6ad}{00072}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, Less)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00073}00073 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00074}00074     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00075}00075     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00077}00077     \mbox{\hyperlink{kernel__test_8hpp_a39c0426ea0a526ffe425672ebec52d5c}{XSTAR\_KTEST\_ASSERT\_LT}}(src1, src2);}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00078}00078 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00080}\mbox{\hyperlink{string__test_8hpp_a62eac4b4456c348165bff42c0d7c3d20}{00080}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, LessOrEqual)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00081}00081 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00082}00082     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00083}00083     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00084}00084     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src3(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00086}00086     \mbox{\hyperlink{kernel__test_8hpp_aa62b58b8067ea75e13ef4202abe7a17b}{XSTAR\_KTEST\_ASSERT\_LE}}(src1, src2);}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00087}00087     \mbox{\hyperlink{kernel__test_8hpp_aa62b58b8067ea75e13ef4202abe7a17b}{XSTAR\_KTEST\_ASSERT\_LE}}(src2, src3);}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00088}00088 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00090}\mbox{\hyperlink{string__test_8hpp_a5e6cf91ce30ec8416cf96b3c194cfb2c}{00090}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, SquareBracket)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00091}00091 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00092}00092     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} str(\textcolor{stringliteral}{"{}Hello"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00093}00093     str[0] = \textcolor{charliteral}{'h'};}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00095}00095     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(str, \textcolor{stringliteral}{"{}hello"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00096}00096 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00098}\mbox{\hyperlink{string__test_8hpp_a643647e18ae0ab7d4c2309147f103d8c}{00098}} \mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\_KTEST}}(StringTest, Concatenation)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00099}00099 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00100}00100     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} str(\textcolor{stringliteral}{"{}Hello, "{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00101}00101     str += \textcolor{stringliteral}{"{}0xlay!"{}};}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00103}00103     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(str, \textcolor{stringliteral}{"{}Hello, 0xlay!"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00104}00104 \}}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00106}\mbox{\hyperlink{string__test_8hpp_acaf1ba439d47118e7ced8d23a72501aa}{00106}} \mbox{\hyperlink{string__test_8hpp_acaf1ba439d47118e7ced8d23a72501aa}{XSTAR\_KTEST\_SUITE}}(StringTest)}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00107}00107 \{}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00108}00108     KdPrint((\textcolor{stringliteral}{"{}StringTest START!\(\backslash\)n"{}}));}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00110}00110     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Move), \textcolor{stringliteral}{"{}StringTest::Move()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00111}00111     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Copy), \textcolor{stringliteral}{"{}StringTest::Copy()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00112}00112     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Iterators), \textcolor{stringliteral}{"{}StringTest::Iterators()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00113}00113     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, ConstIterators), \textcolor{stringliteral}{"{}StringTest::ConstIterators()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00114}00114     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Equal), \textcolor{stringliteral}{"{}StringTest::Equal()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00115}00115     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, NotEqual), \textcolor{stringliteral}{"{}StringTest::NotEqual()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00116}00116     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Greater), \textcolor{stringliteral}{"{}StringTest::Greater()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00117}00117     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, GreaterOrEqual), \textcolor{stringliteral}{"{}StringTest::GreaterOrEqual()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00118}00118     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Less), \textcolor{stringliteral}{"{}StringTest::Less()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00119}00119     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, LessOrEqual), \textcolor{stringliteral}{"{}StringTest::LessOrEqual()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00120}00120     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, SquareBracket), \textcolor{stringliteral}{"{}StringTest::SquareBracketl()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00121}00121     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, LessOrEqual), \textcolor{stringliteral}{"{}StringTest::LessOrEqual()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00122}00122     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Concatenation), \textcolor{stringliteral}{"{}StringTest::Concatenation()"{}});}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00124}00124     KdPrint((\textcolor{stringliteral}{"{}StringTest FINISH!\(\backslash\)n"{}}));}
+\DoxyCodeLine{\Hypertarget{string__test_8hpp_source_l00125}00125 \}}
+
+\end{DoxyCode}

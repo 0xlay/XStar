@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['calloc_0',['calloc',['../clibrary_8hpp.html#a150444fa8d8b5a95a3b8860dbcfa7707',1,'calloc(_In_ size_t num, _In_ size_t size) noexcept:&#160;clibrary.hpp'],['../clibrary_8cpp.html#a7353decf48412ebe8d90f2bc3369e551',1,'calloc(size_t num, size_t size) noexcept:&#160;clibrary.cpp']]],
+  ['capacity_1',['capacity',['../classxstar_1_1_basic_string.html#a550c3ffa4322ac5df238b96e1b66042b',1,'xstar::BasicString']]],
+  ['cbegin_2',['cbegin',['../classxstar_1_1_basic_string.html#ae4436f98e8f4cc059123968944955616',1,'xstar::BasicString']]],
+  ['cend_3',['cend',['../classxstar_1_1_basic_string.html#af6d50be4306e543f2c843477be9702b3',1,'xstar::BasicString']]],
+  ['chartraits_4',['CharTraits',['../classxstar_1_1_basic_string.html#a6748827ac8001ca7ba9e2e4158f95c9c',1,'xstar::BasicString::CharTraits()'],['../structxstar_1_1_char_traits.html',1,'xstar::CharTraits&lt; T &gt;']]],
+  ['chartype_5',['CharType',['../structxstar_1_1_char_traits.html#aa8c6f414a9a18ed9fec7ae7f7caf1b74',1,'xstar::CharTraits::CharType()'],['../classxstar_1_1_basic_string.html#a6e84d7bd2a71397b84b8e61dc7cadb7d',1,'xstar::BasicString::CharType()']]],
+  ['checktstringbuffers_6',['CheckTStringBuffers',['../tstring__test_8cpp.html#a35fdba7e90c7517fc78efb09b9012a13',1,'tstring_test.cpp']]],
+  ['clibrary_2ecpp_7',['clibrary.cpp',['../clibrary_8cpp.html',1,'']]],
+  ['clibrary_2ehpp_8',['clibrary.hpp',['../clibrary_8hpp.html',1,'']]],
+  ['client_5f_9',['client_',['../struct_named_pipe_test.html#a46283923a7ce82de8c0df963ce9a91ae',1,'NamedPipeTest']]],
+  ['closesmarthandle_10',['CloseSmartHandle',['../namespacexstar_1_1__internal.html#a8f75647985eb8378d7c80dd0c2613dcb',1,'xstar::_internal::CloseSmartHandle(HMODULE object)'],['../namespacexstar_1_1__internal.html#aa4cf1e34d64a616e2a04a3a4b9e0fe5a',1,'xstar::_internal::CloseSmartHandle(Handle object)'],['../namespacexstar_1_1__internal.html#a1e238169e78f9c18c9ae7e9a3d1e2eab',1,'xstar::_internal::CloseSmartHandle(HANDLE object)'],['../namespacexstar_1_1__internal.html#a743775504a036ee46e23cd8fbf26fcac',1,'xstar::_internal::CloseSmartHandle(SC_HANDLE object)'],['../namespacexstar_1_1__internal.html#a762e1239b1e4a7876a4b49009f9aef04',1,'xstar::_internal::CloseSmartHandle(HWND object)']]],
+  ['compare_11',['compare',['../structxstar_1_1_char_traits.html#a04762bb3611fa79730de072860a87f02',1,'xstar::CharTraits']]],
+  ['connect_12',['connect',['../classxstar_1_1_named_pipe_client.html#ad002d5221c5ca546e7fa638f9bc79f1a',1,'xstar::NamedPipeClient']]],
+  ['connecttopipe_13',['connectToPipe',['../classxstar_1_1_pipe_i_o.html#aa271cdaeff6c15e67a259d99ac704a0b',1,'xstar::PipeIO']]],
+  ['constiterator_14',['ConstIterator',['../classxstar_1_1_basic_string.html#a6b694c5d8d79376ab9414fad6b81f74c',1,'xstar::BasicString::ConstIterator()'],['../structxstar_1_1_char_traits.html#aa041514dbae595fb2c0cd33074c66153',1,'xstar::CharTraits::ConstIterator()']]],
+  ['constpointer_15',['ConstPointer',['../structxstar_1_1_char_traits.html#aba325069b79dd03a61d94c2c0887a79f',1,'xstar::CharTraits::ConstPointer()'],['../structxstar_1_1_alloc_traits.html#af6a3de69f3f530a999655f59b538ea44',1,'xstar::AllocTraits::ConstPointer()'],['../classxstar_1_1_default_allocator.html#a111e8fc81ef22ddb9655c6a58fb55e7f',1,'xstar::DefaultAllocator::ConstPointer()'],['../classxstar_1_1_basic_string.html#ab8072dfc55e2bc0e09f4a9c496eb6404',1,'xstar::BasicString::ConstPointer()']]],
+  ['constreference_16',['ConstReference',['../structxstar_1_1_char_traits.html#addf45723cf5acee3ff132c1eccf704f7',1,'xstar::CharTraits::ConstReference()'],['../classxstar_1_1_basic_string.html#a039542233efeb48abcde477f30d84834',1,'xstar::BasicString::ConstReference()']]],
+  ['constreftype_17',['ConstRefType',['../struct_remove_reference.html#a4df4b557566f9e39a6dc9780599ba484',1,'RemoveReference::ConstRefType()'],['../struct_remove_reference_3_01_t_01_6_01_4.html#ae3fceb7510a4b4268bc7eacae98ca348',1,'RemoveReference&lt; T &amp; &gt;::ConstRefType()'],['../struct_remove_reference_3_01_t_01_6_6_01_4.html#a6d7bf5eb773be884b6c5d3199fe8fc15',1,'RemoveReference&lt; T &amp;&amp; &gt;::ConstRefType()']]],
+  ['control_18',['Control',['../classxstar_1_1_start_win_driver.html#a4a1c63bb1086f5a70835017875d7457f',1,'xstar::StartWinDriver']]],
+  ['copy_19',['copy',['../structxstar_1_1_char_traits.html#acc409dbeb06ef8bce6459c7d0706b23e',1,'xstar::CharTraits']]],
+  ['cpplibrary_2ecpp_20',['cpplibrary.cpp',['../cpplibrary_8cpp.html',1,'']]],
+  ['cpplibrary_2ehpp_21',['cpplibrary.hpp',['../cpplibrary_8hpp.html',1,'']]],
+  ['curinstances_22',['curInstances',['../structxstar_1_1_pipe_state.html#ac7dee769adde219c3a5efb6fe03bda47',1,'xstar::PipeState']]]
+];

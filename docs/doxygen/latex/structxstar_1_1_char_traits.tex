@@ -1,0 +1,266 @@
+\hypertarget{structxstar_1_1_char_traits}{}\doxysection{xstar\+::Char\+Traits\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structxstar_1_1_char_traits}\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+
+
+{\ttfamily \#include $<$string.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} = \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}
+\item 
+using \mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Arg\+Type}} = const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} $\ast$
+\item 
+using \mbox{\hyperlink{structxstar_1_1_char_traits_a1325210f70ab59fd3c553a8041c3212e}{Reference}} = \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} \&
+\item 
+using \mbox{\hyperlink{structxstar_1_1_char_traits_addf45723cf5acee3ff132c1eccf704f7}{Const\+Reference}} = const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} \&
+\item 
+using \mbox{\hyperlink{structxstar_1_1_char_traits_a7edc2a4819f998ad5bcf360987e43dc2}{Pointer}} = \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} $\ast$
+\item 
+using \mbox{\hyperlink{structxstar_1_1_char_traits_aba325069b79dd03a61d94c2c0887a79f}{Const\+Pointer}} = const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} $\ast$
+\item 
+using \mbox{\hyperlink{structxstar_1_1_char_traits_a07e78a14d3887900a58deafbe0468608}{Iterator}} = \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} $\ast$
+\item 
+using \mbox{\hyperlink{structxstar_1_1_char_traits_aa041514dbae595fb2c0cd33074c66153}{Const\+Iterator}} = const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} $\ast$
+\item 
+using \mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{Size\+Type}} = size\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr void \mbox{\hyperlink{structxstar_1_1_char_traits_a6ee8fa0fb4f4ebad7676a0a30fb026bf}{assign}} (\mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} \&dst, const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} \&src) noexcept
+\item 
+static \mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{Size\+Type}} \mbox{\hyperlink{structxstar_1_1_char_traits_a98f8d54bbc3f0052a15e2d01fb83b785}{length}} (\mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Arg\+Type}} str)
+\item 
+static void \mbox{\hyperlink{structxstar_1_1_char_traits_acc409dbeb06ef8bce6459c7d0706b23e}{copy}} (\mbox{\hyperlink{structxstar_1_1_char_traits_a7edc2a4819f998ad5bcf360987e43dc2}{Pointer}} dst, \mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Arg\+Type}} src, \mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{Size\+Type}} num\+Of\+Elem)
+\item 
+static int \mbox{\hyperlink{structxstar_1_1_char_traits_a04762bb3611fa79730de072860a87f02}{compare}} (\mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Arg\+Type}} lhs, \mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Arg\+Type}} rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{Size\+Type}} \mbox{\hyperlink{structxstar_1_1_char_traits_aadb074836c9b0a44191969e63fccfa5b}{size}} = sizeof(\mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}$>$\newline
+struct xstar\+::\+Char\+Traits$<$ T $>$}
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}\label{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!ArgType@{ArgType}}
+\index{ArgType@{ArgType}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ArgType}{ArgType}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+using \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Arg\+Type =  const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}}$\ast$}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}\label{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!CharType@{CharType}}
+\index{CharType@{CharType}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CharType}{CharType}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+using \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Char\+Type =  \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_char_traits_aa041514dbae595fb2c0cd33074c66153}\label{structxstar_1_1_char_traits_aa041514dbae595fb2c0cd33074c66153}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!ConstIterator@{ConstIterator}}
+\index{ConstIterator@{ConstIterator}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ConstIterator}{ConstIterator}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+using \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Const\+Iterator =  const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}}$\ast$}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_char_traits_aba325069b79dd03a61d94c2c0887a79f}\label{structxstar_1_1_char_traits_aba325069b79dd03a61d94c2c0887a79f}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!ConstPointer@{ConstPointer}}
+\index{ConstPointer@{ConstPointer}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ConstPointer}{ConstPointer}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+using \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Const\+Pointer =  const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}}$\ast$}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_char_traits_addf45723cf5acee3ff132c1eccf704f7}\label{structxstar_1_1_char_traits_addf45723cf5acee3ff132c1eccf704f7}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!ConstReference@{ConstReference}}
+\index{ConstReference@{ConstReference}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ConstReference}{ConstReference}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+using \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Const\+Reference =  const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}}\&}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_char_traits_a07e78a14d3887900a58deafbe0468608}\label{structxstar_1_1_char_traits_a07e78a14d3887900a58deafbe0468608}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+using \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Iterator =  \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}}$\ast$}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_char_traits_a7edc2a4819f998ad5bcf360987e43dc2}\label{structxstar_1_1_char_traits_a7edc2a4819f998ad5bcf360987e43dc2}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!Pointer@{Pointer}}
+\index{Pointer@{Pointer}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Pointer}{Pointer}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+using \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Pointer =  \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}}$\ast$}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_char_traits_a1325210f70ab59fd3c553a8041c3212e}\label{structxstar_1_1_char_traits_a1325210f70ab59fd3c553a8041c3212e}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!Reference@{Reference}}
+\index{Reference@{Reference}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Reference}{Reference}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+using \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Reference =  \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}}\&}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00040}{40}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}\label{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!SizeType@{SizeType}}
+\index{SizeType@{SizeType}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SizeType}{SizeType}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+using \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Size\+Type =  size\+\_\+t}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00046}{46}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structxstar_1_1_char_traits_a6ee8fa0fb4f4ebad7676a0a30fb026bf}\label{structxstar_1_1_char_traits_a6ee8fa0fb4f4ebad7676a0a30fb026bf}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!assign@{assign}}
+\index{assign@{assign}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{assign()}{assign()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+static constexpr void \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} \&}]{dst,  }\item[{const \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}} \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00050}{50}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051         \{}
+\DoxyCodeLine{00052             dst = src;}
+\DoxyCodeLine{00053         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structxstar_1_1_char_traits_a04762bb3611fa79730de072860a87f02}\label{structxstar_1_1_char_traits_a04762bb3611fa79730de072860a87f02}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!compare@{compare}}
+\index{compare@{compare}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+static int \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::compare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Arg\+Type}}}]{lhs,  }\item[{\mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Arg\+Type}}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00067}{67}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068         \{}
+\DoxyCodeLine{00069             \textcolor{keywordtype}{int} flag = 0;}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071             \textcolor{keywordflow}{for} (\mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{SizeType}} i = 0; lhs[i] != 0 || rhs[i] != 0; ++i)}
+\DoxyCodeLine{00072             \{}
+\DoxyCodeLine{00073                 \textcolor{keywordflow}{if} (lhs[i] < rhs[i])}
+\DoxyCodeLine{00074                 \{}
+\DoxyCodeLine{00075                     -\/-\/flag;}
+\DoxyCodeLine{00076                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00077                 \}}
+\DoxyCodeLine{00078                 \textcolor{keywordflow}{if} (lhs[i] > rhs[i])}
+\DoxyCodeLine{00079                 \{}
+\DoxyCodeLine{00080                     ++flag;}
+\DoxyCodeLine{00081                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082                 \}}
+\DoxyCodeLine{00083             \}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085             \textcolor{keywordflow}{return} flag;}
+\DoxyCodeLine{00086         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structxstar_1_1_char_traits_acc409dbeb06ef8bce6459c7d0706b23e}\label{structxstar_1_1_char_traits_acc409dbeb06ef8bce6459c7d0706b23e}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!copy@{copy}}
+\index{copy@{copy}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+static void \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structxstar_1_1_char_traits_a7edc2a4819f998ad5bcf360987e43dc2}{Pointer}}}]{dst,  }\item[{\mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Arg\+Type}}}]{src,  }\item[{\mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{Size\+Type}}}]{num\+Of\+Elem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00062}{62}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063         \{}
+\DoxyCodeLine{00064             memcpy(dst, src, numOfElem * \mbox{\hyperlink{structxstar_1_1_char_traits_aadb074836c9b0a44191969e63fccfa5b}{size}});}
+\DoxyCodeLine{00065         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structxstar_1_1_char_traits_a98f8d54bbc3f0052a15e2d01fb83b785}\label{structxstar_1_1_char_traits_a98f8d54bbc3f0052a15e2d01fb83b785}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!length@{length}}
+\index{length@{length}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+static \mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{Size\+Type}} \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Arg\+Type}}}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00055}{55}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056         \{}
+\DoxyCodeLine{00057             \mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{SizeType}} len = 0;}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{for} (; str[len] != 0; ++len);}
+\DoxyCodeLine{00059             \textcolor{keywordflow}{return} len;}
+\DoxyCodeLine{00060         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structxstar_1_1_char_traits_aadb074836c9b0a44191969e63fccfa5b}\label{structxstar_1_1_char_traits_aadb074836c9b0a44191969e63fccfa5b}} 
+\index{xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}!size@{size}}
+\index{size@{size}!xstar::CharTraits$<$ T $>$@{xstar::CharTraits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+constexpr \mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{Size\+Type}} \mbox{\hyperlink{structxstar_1_1_char_traits}{xstar\+::\+Char\+Traits}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::size = sizeof(\mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Type}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00048}{48}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel\+\_\+space/include/\mbox{\hyperlink{string_8hpp}{string.\+hpp}}\end{DoxyCompactItemize}

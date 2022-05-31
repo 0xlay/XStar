@@ -1,0 +1,405 @@
+\hypertarget{classxstar_1_1_pipe_i_o}{}\doxysection{xstar\+::Pipe\+IO Class Reference}
+\label{classxstar_1_1_pipe_i_o}\index{xstar::PipeIO@{xstar::PipeIO}}
+
+
+{\ttfamily \#include $<$named\+\_\+pipe.\+hpp$>$}
+
+Inheritance diagram for xstar\+::Pipe\+IO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classxstar_1_1_pipe_i_o}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_aa271cdaeff6c15e67a259d99ac704a0b}{connect\+To\+Pipe}} (HANDLE pipe, DWORD max\+Num\+Of\+Char=\mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{Small\+Page\+\_\+4\+KB}})
+\item 
+virtual \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a060dd3447ac3ee3657dd752dc1b57285}{$\sim$\+Pipe\+IO}} ()=default
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a2884f1143d1a9a5b2bcde5c8f42a147d}{write}} (const std\+::string \&msg)
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a4dfba1d50369bc57dc939422751cf2f1}{write}} (const std\+::wstring \&msg)
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_ac5f54af6d8238567d4163d3d1056eacb}{write}} (const std\+::vector$<$ char $>$ \&msg)
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a4695bae831cfa36343fec93c33c7b9f4}{write}} (int value)
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_aa73f5068cf254ae86f82bb2e9e27cdb6}{read}} (std\+::string \&msg)
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a93be42f85073a42c549971abc81b89a4}{read}} (std\+::wstring \&msg)
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a7c6a15a9ebe20bc57048737aee39d963}{read}} (std\+::vector$<$ char $>$ \&vector)
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a3372db48258b0b748f51f22c390d723f}{read}} (int \&value)
+\item 
+\mbox{\hyperlink{structxstar_1_1_pipe_info}{Pipe\+Info}} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a4420600b1b569e6695d315993b151bbb}{get\+Info}} () const
+\item 
+void \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a01ac81d225b27e68a7200d8479988f9f}{set\+State}} (\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}} mode)
+\item 
+\mbox{\hyperlink{structxstar_1_1_pipe_state}{Pipe\+State}} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a9a9525eef147a540285d3ad11cc6c063}{get\+State}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+HANDLE \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\+\_\+}} = nullptr
+\item 
+DWORD \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a625fb15e344b73528d6f38757de21e47}{max\+Num\+Of\+Char\+\_\+}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8hpp_source_l00131}{131}} of file \mbox{\hyperlink{named__pipe_8hpp_source}{named\+\_\+pipe.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a060dd3447ac3ee3657dd752dc1b57285}\label{classxstar_1_1_pipe_i_o_a060dd3447ac3ee3657dd752dc1b57285}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!````~PipeIO@{$\sim$PipeIO}}
+\index{````~PipeIO@{$\sim$PipeIO}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{$\sim$PipeIO()}{~PipeIO()}}
+{\footnotesize\ttfamily virtual xstar\+::\+Pipe\+IO\+::$\sim$\+Pipe\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_aa271cdaeff6c15e67a259d99ac704a0b}\label{classxstar_1_1_pipe_i_o_aa271cdaeff6c15e67a259d99ac704a0b}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!connectToPipe@{connectToPipe}}
+\index{connectToPipe@{connectToPipe}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{connectToPipe()}{connectToPipe()}}
+{\footnotesize\ttfamily void Pipe\+IO\+::connect\+To\+Pipe (\begin{DoxyParamCaption}\item[{HANDLE}]{pipe,  }\item[{DWORD}]{max\+Num\+Of\+Char = {\ttfamily \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{Small\+Page\+\_\+4\+KB}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035 \{}
+\DoxyCodeLine{00036     \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}} = pipe;}
+\DoxyCodeLine{00037     \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a625fb15e344b73528d6f38757de21e47}{maxNumOfChar\_}} = maxNumOfChar;}
+\DoxyCodeLine{00038 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a4420600b1b569e6695d315993b151bbb}\label{classxstar_1_1_pipe_i_o_a4420600b1b569e6695d315993b151bbb}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxstar_1_1_pipe_info}{Pipe\+Info}} Pipe\+IO\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00162}{162}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00163 \{}
+\DoxyCodeLine{00164     \mbox{\hyperlink{structxstar_1_1_pipe_info}{PipeInfo}} info\{ \};}
+\DoxyCodeLine{00165     \textcolor{keywordflow}{if} (!GetNamedPipeInfo(}
+\DoxyCodeLine{00166         \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}},}
+\DoxyCodeLine{00167         \&info.flags,}
+\DoxyCodeLine{00168         \&info.outBufSize,}
+\DoxyCodeLine{00169         \&info.inBufSize,}
+\DoxyCodeLine{00170         \&info.maxInstances}
+\DoxyCodeLine{00171     ))}
+\DoxyCodeLine{00172     \{}
+\DoxyCodeLine{00173         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00174     \}}
+\DoxyCodeLine{00175 }
+\DoxyCodeLine{00176     \textcolor{keywordflow}{return} info;}
+\DoxyCodeLine{00177 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a9a9525eef147a540285d3ad11cc6c063}\label{classxstar_1_1_pipe_i_o_a9a9525eef147a540285d3ad11cc6c063}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!getState@{getState}}
+\index{getState@{getState}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxstar_1_1_pipe_state}{Pipe\+State}} Pipe\+IO\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00191}{191}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00192 \{}
+\DoxyCodeLine{00193     \mbox{\hyperlink{structxstar_1_1_pipe_state}{PipeState}} state;}
+\DoxyCodeLine{00194     \textcolor{keywordflow}{if} (!::GetNamedPipeHandleStateW(}
+\DoxyCodeLine{00195         \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}},}
+\DoxyCodeLine{00196         \textcolor{keyword}{reinterpret\_cast<}LPDWORD\textcolor{keyword}{>}(\&state.\mbox{\hyperlink{structxstar_1_1_pipe_state_aca1c9cc5f0060ebc83074d43dcc98b7c}{mode}}),}
+\DoxyCodeLine{00197         \&state.\mbox{\hyperlink{structxstar_1_1_pipe_state_ac7dee769adde219c3a5efb6fe03bda47}{curInstances}},}
+\DoxyCodeLine{00198         \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00199         \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00200         \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00201         0}
+\DoxyCodeLine{00202     ))}
+\DoxyCodeLine{00203     \{}
+\DoxyCodeLine{00204         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00205     \}}
+\DoxyCodeLine{00206 }
+\DoxyCodeLine{00207     \textcolor{keywordflow}{return} state;}
+\DoxyCodeLine{00208 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a3372db48258b0b748f51f22c390d723f}\label{classxstar_1_1_pipe_i_o_a3372db48258b0b748f51f22c390d723f}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!read@{read}}
+\index{read@{read}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Pipe\+IO\+::read (\begin{DoxyParamCaption}\item[{int \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00151}{151}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152 \{}
+\DoxyCodeLine{00153     DWORD bytes = 0;}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{00155     \textcolor{keywordflow}{if} (!ReadFile(\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}}, \&value, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), \&bytes, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{00156     \{}
+\DoxyCodeLine{00157         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00158     \}}
+\DoxyCodeLine{00159 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_aa73f5068cf254ae86f82bb2e9e27cdb6}\label{classxstar_1_1_pipe_i_o_aa73f5068cf254ae86f82bb2e9e27cdb6}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!read@{read}}
+\index{read@{read}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Pipe\+IO\+::read (\begin{DoxyParamCaption}\item[{std\+::string \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110 \{}
+\DoxyCodeLine{00111     msg.resize(\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a625fb15e344b73528d6f38757de21e47}{maxNumOfChar\_}});}
+\DoxyCodeLine{00112     DWORD bytes = 0;}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{00114     \textcolor{keywordflow}{if} (!ReadFile(\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}}, \&msg[0], msg.size(), \&bytes, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{00115     \{}
+\DoxyCodeLine{00116         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00117     \}}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     msg.resize(bytes);}
+\DoxyCodeLine{00120 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a7c6a15a9ebe20bc57048737aee39d963}\label{classxstar_1_1_pipe_i_o_a7c6a15a9ebe20bc57048737aee39d963}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!read@{read}}
+\index{read@{read}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Pipe\+IO\+::read (\begin{DoxyParamCaption}\item[{std\+::vector$<$ char $>$ \&}]{vector }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00137}{137}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138 \{}
+\DoxyCodeLine{00139     msg.resize(\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a625fb15e344b73528d6f38757de21e47}{maxNumOfChar\_}});}
+\DoxyCodeLine{00140     DWORD bytes = 0;}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142     \textcolor{keywordflow}{if} (!ReadFile(\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}}, \&msg[0], msg.size(), \&bytes, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{00143     \{}
+\DoxyCodeLine{00144         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00145     \}}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00147     msg.resize(bytes);}
+\DoxyCodeLine{00148 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a93be42f85073a42c549971abc81b89a4}\label{classxstar_1_1_pipe_i_o_a93be42f85073a42c549971abc81b89a4}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!read@{read}}
+\index{read@{read}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Pipe\+IO\+::read (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124 \{}
+\DoxyCodeLine{00125     msg.resize(\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a625fb15e344b73528d6f38757de21e47}{maxNumOfChar\_}});}
+\DoxyCodeLine{00126     DWORD bytes = 0;}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128     \textcolor{keywordflow}{if} (!ReadFile(\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}}, \&msg[0], msg.size(), \&bytes, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{00129     \{}
+\DoxyCodeLine{00130         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00131     \}}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133     msg.resize(bytes / \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}));}
+\DoxyCodeLine{00134 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a01ac81d225b27e68a7200d8479988f9f}\label{classxstar_1_1_pipe_i_o_a01ac81d225b27e68a7200d8479988f9f}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!setState@{setState}}
+\index{setState@{setState}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Pipe\+IO\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{Pipe\+Mode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00180}{180}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181 \{}
+\DoxyCodeLine{00182     DWORD mode\_ = \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(mode);}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184     \textcolor{keywordflow}{if} (!SetNamedPipeHandleState(\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}}, \&mode\_, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{00185     \{}
+\DoxyCodeLine{00186         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00187     \}}
+\DoxyCodeLine{00188 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a2884f1143d1a9a5b2bcde5c8f42a147d}\label{classxstar_1_1_pipe_i_o_a2884f1143d1a9a5b2bcde5c8f42a147d}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!write@{write}}
+\index{write@{write}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Pipe\+IO\+::write (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042 \{}
+\DoxyCodeLine{00043     DWORD bytes = 0;}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keywordflow}{if} (!WriteFile(}
+\DoxyCodeLine{00046         \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}},}
+\DoxyCodeLine{00047         buf.c\_str(),}
+\DoxyCodeLine{00048         \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(buf.length()) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),}
+\DoxyCodeLine{00049         \&bytes,}
+\DoxyCodeLine{00050         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{00051     ))}
+\DoxyCodeLine{00052     \{}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00054     \}}
+\DoxyCodeLine{00055 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_ac5f54af6d8238567d4163d3d1056eacb}\label{classxstar_1_1_pipe_i_o_ac5f54af6d8238567d4163d3d1056eacb}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!write@{write}}
+\index{write@{write}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Pipe\+IO\+::write (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ char $>$ \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076 \{}
+\DoxyCodeLine{00077     DWORD bytes = 0;}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     \textcolor{keywordflow}{if} (!WriteFile(}
+\DoxyCodeLine{00080         \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}},}
+\DoxyCodeLine{00081         \&msg[0],}
+\DoxyCodeLine{00082         msg.size(),}
+\DoxyCodeLine{00083         \&bytes,}
+\DoxyCodeLine{00084         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{00085     ))}
+\DoxyCodeLine{00086     \{}
+\DoxyCodeLine{00087         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00088     \}}
+\DoxyCodeLine{00089 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a4dfba1d50369bc57dc939422751cf2f1}\label{classxstar_1_1_pipe_i_o_a4dfba1d50369bc57dc939422751cf2f1}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!write@{write}}
+\index{write@{write}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Pipe\+IO\+::write (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059 \{}
+\DoxyCodeLine{00060     DWORD bytes = 0;}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062     \textcolor{keywordflow}{if} (!WriteFile(}
+\DoxyCodeLine{00063         \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}},}
+\DoxyCodeLine{00064         buf.c\_str(),}
+\DoxyCodeLine{00065         \textcolor{keyword}{static\_cast<}DWORD\textcolor{keyword}{>}(buf.length()) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{wchar\_t}),}
+\DoxyCodeLine{00066         \&bytes,}
+\DoxyCodeLine{00067         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{00068     ))}
+\DoxyCodeLine{00069     \{}
+\DoxyCodeLine{00070         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00071     \}}
+\DoxyCodeLine{00072 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a4695bae831cfa36343fec93c33c7b9f4}\label{classxstar_1_1_pipe_i_o_a4695bae831cfa36343fec93c33c7b9f4}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!write@{write}}
+\index{write@{write}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Pipe\+IO\+::write (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{named__pipe_8cpp_source}{named\+\_\+pipe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00093 \{}
+\DoxyCodeLine{00094     DWORD bytes = 0;}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096     \textcolor{keywordflow}{if} (!WriteFile(}
+\DoxyCodeLine{00097         \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}},}
+\DoxyCodeLine{00098         \&value,}
+\DoxyCodeLine{00099         \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),}
+\DoxyCodeLine{00100         \&bytes,}
+\DoxyCodeLine{00101         \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{00102     ))}
+\DoxyCodeLine{00103     \{}
+\DoxyCodeLine{00104         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception}{WinAPIException}}();}
+\DoxyCodeLine{00105     \}}
+\DoxyCodeLine{00106 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a625fb15e344b73528d6f38757de21e47}\label{classxstar_1_1_pipe_i_o_a625fb15e344b73528d6f38757de21e47}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!maxNumOfChar\_@{maxNumOfChar\_}}
+\index{maxNumOfChar\_@{maxNumOfChar\_}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{maxNumOfChar\_}{maxNumOfChar\_}}
+{\footnotesize\ttfamily DWORD xstar\+::\+Pipe\+IO\+::max\+Num\+Of\+Char\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8hpp_source_l00158}{158}} of file \mbox{\hyperlink{named__pipe_8hpp_source}{named\+\_\+pipe.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}\label{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}} 
+\index{xstar::PipeIO@{xstar::PipeIO}!pipe\_@{pipe\_}}
+\index{pipe\_@{pipe\_}!xstar::PipeIO@{xstar::PipeIO}}
+\doxysubsubsection{\texorpdfstring{pipe\_}{pipe\_}}
+{\footnotesize\ttfamily HANDLE xstar\+::\+Pipe\+IO\+::pipe\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe_8hpp_source_l00157}{157}} of file \mbox{\hyperlink{named__pipe_8hpp_source}{named\+\_\+pipe.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+user\+\_\+space/include/\mbox{\hyperlink{named__pipe_8hpp}{named\+\_\+pipe.\+hpp}}\item 
+user\+\_\+space/src/\mbox{\hyperlink{named__pipe_8cpp}{named\+\_\+pipe.\+cpp}}\end{DoxyCompactItemize}

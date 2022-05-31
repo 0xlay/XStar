@@ -1,0 +1,55 @@
+\hypertarget{meminfo_8hpp_source}{}\doxysection{meminfo.\+hpp}
+\label{meminfo_8hpp_source}\index{common/meminfo.hpp@{common/meminfo.hpp}}
+\mbox{\hyperlink{meminfo_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00014}00014 \textcolor{comment}{// File: meminfo.hpp}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: User mode and Kernel mode}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#ifndef \_XSTAR\_COMMON\_MEMINFO\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00023}00023 \textcolor{preprocessor}{\#define \_XSTAR\_COMMON\_MEMINFO\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00025}00025 \textcolor{preprocessor}{\#include <sdkddkver.h>}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00027}00027 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00028}00028 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00029}00029 \textcolor{comment}{// Constants}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00030}00030 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00031}00031 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00033}\mbox{\hyperlink{meminfo_8hpp_a45e4ad6094e82ff6fed2383ff09a8ade}{00033}} \textcolor{preprocessor}{\#define \_XSTAR\_LIBRARY\_TAG\_ 'RATS' }\textcolor{comment}{// STAR}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00035}\mbox{\hyperlink{namespacexstar}{00035}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00036}00036 \{}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00038}\mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870}{00038}}     \textcolor{keyword}{enum} \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870}{VirtualMemory}}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00039}00039     \{}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00040}\mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{00040}}         \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{SmallPage\_4KB}} = 4'096u,           }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00041}\mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870ac5a38635a44b603551bedd3acc002f6f}{00041}}         \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870ac5a38635a44b603551bedd3acc002f6f}{LargePage\_2MB}} = 2'097'152u,       }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00042}00042 \textcolor{preprocessor}{        \#if WINVER >= \_WIN32\_WINNT\_WIN10}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00043}00043         \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a623aed70915efed9b2b9155088ef9f11}{HugePage\_1GB}}  = 1'073'741'824     }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00044}00044 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00045}\mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a623aed70915efed9b2b9155088ef9f11}{00045}}     \};}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00047}00047 \} \textcolor{comment}{// xstar}}
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{meminfo_8hpp_source_l00049}00049 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_XSTAR\_COMMON\_MEMINFO\_HPP\_}}
+
+\end{DoxyCode}

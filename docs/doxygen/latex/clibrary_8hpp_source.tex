@@ -1,0 +1,117 @@
+\hypertarget{clibrary_8hpp_source}{}\doxysection{clibrary.\+hpp}
+\label{clibrary_8hpp_source}\index{kernel\_space/runtime/clibrary.hpp@{kernel\_space/runtime/clibrary.hpp}}
+\mbox{\hyperlink{clibrary_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00014}00014 \textcolor{comment}{// File: clibrary.hpp}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: Kernel mode only}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00024}00024 \textcolor{preprocessor}{\#include <ntddk.h>}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00025}00025 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{meminfo_8hpp}{meminfo.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00031}\mbox{\hyperlink{clibrary_8hpp_a0a4b1dd0c173e8647383f0f1424a456a}{00031}} \textcolor{preprocessor}{\#define getBasePointer(data\_ptr)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00032}00032 \textcolor{preprocessor}{ (static\_cast<char*>(data\_ptr) -\/ sizeof(size\_t))}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00037}\mbox{\hyperlink{clibrary_8hpp_abea415c8f6dfb8cbc2478170de165a8f}{00037}} \textcolor{preprocessor}{\#define getDataPointer(base\_ptr)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00038}00038 \textcolor{preprocessor}{ (reinterpret\_cast<char*>(base\_ptr) + sizeof(size\_t))}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00041}00041 \textcolor{preprocessor}{\#pragma pack(push, 1)}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00042}\mbox{\hyperlink{struct___m_e_m_b_l_o_c_k}{00042}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct___m_e_m_b_l_o_c_k}{\_MEMBLOCK}}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00044}\mbox{\hyperlink{struct___m_e_m_b_l_o_c_k_a7022b77025ce284a7a1e46390274654e}{00044}}     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{struct___m_e_m_b_l_o_c_k_a7022b77025ce284a7a1e46390274654e}{size}};}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00045}\mbox{\hyperlink{struct___m_e_m_b_l_o_c_k_a2236e91a4b92364a9568d25d69ec40f6}{00045}}     \textcolor{keywordtype}{void}* \mbox{\hyperlink{struct___m_e_m_b_l_o_c_k_a2236e91a4b92364a9568d25d69ec40f6}{data}};}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00046}\mbox{\hyperlink{clibrary_8hpp_af8a8e02aa496a3b2d6a886d3a04c84ff}{00046}} \} \mbox{\hyperlink{clibrary_8hpp_af8a8e02aa496a3b2d6a886d3a04c84ff}{MEMBLOCK}}, *\mbox{\hyperlink{clibrary_8hpp_ab06710215122364ce3614546136fcb7a}{PMEMBLOCK}};}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00047}00047 \textcolor{preprocessor}{\#pragma pack(pop)}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00050}00050 EXTERN\_C\_START}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00052}00052 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00053}00053 \textcolor{comment}{// Non paged memory}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00054}00054 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00056}00056 \_\_drv\_when(\textcolor{keywordflow}{return} != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00057}00057 \_Check\_return\_}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00058}00058 \_Post\_writable\_size\_(size)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00059}00059 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00060}\mbox{\hyperlink{clibrary_8hpp_a191b12f3d2ce1ca0840de6162b8516d3}{00060}} void* \_\_cdecl \mbox{\hyperlink{clibrary_8hpp_a191b12f3d2ce1ca0840de6162b8516d3}{malloc}}(\_In\_ \textcolor{keywordtype}{size\_t} size) noexcept;}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00062}00062 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00063}\mbox{\hyperlink{clibrary_8hpp_ae45158f213b4fc1801da391ef8e9535b}{00063}} \textcolor{keywordtype}{void} \_\_cdecl \mbox{\hyperlink{clibrary_8hpp_ae45158f213b4fc1801da391ef8e9535b}{free}}(\_Inout\_ \textcolor{keywordtype}{void}* ptr) noexcept;}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00065}00065 \_\_drv\_when(return != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00066}00066 \_Check\_return\_}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00067}00067 \_Post\_writable\_size\_(size)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00068}00068 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00069}\mbox{\hyperlink{clibrary_8hpp_a150444fa8d8b5a95a3b8860dbcfa7707}{00069}} \textcolor{keywordtype}{void}* \_\_cdecl \mbox{\hyperlink{clibrary_8hpp_a150444fa8d8b5a95a3b8860dbcfa7707}{calloc}}(\_In\_ \textcolor{keywordtype}{size\_t} num, \_In\_ \textcolor{keywordtype}{size\_t} size) noexcept;}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00071}00071 \_\_drv\_when(return != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00072}00072 \_Check\_return\_}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00073}00073 \_Post\_writable\_size\_(new\_size)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00074}00074 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00075}\mbox{\hyperlink{clibrary_8hpp_ac891774bb0330f92148ed7b7babfda61}{00075}} \textcolor{keywordtype}{void}* \_\_cdecl \mbox{\hyperlink{clibrary_8hpp_ac891774bb0330f92148ed7b7babfda61}{realloc}}(\_Inout\_ \textcolor{keywordtype}{void}* ptr, \_In\_ \textcolor{keywordtype}{size\_t} new\_size) noexcept;}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00077}00077 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00080}00080 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00081}00081 \textcolor{comment}{// Paged memory}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00082}00082 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00084}00084 \_\_drv\_when(return != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00085}00085 \_Check\_return\_ }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00086}00086 \_Post\_writable\_size\_(size)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00087}00087 \_IRQL\_requires\_max\_(APC\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00088}\mbox{\hyperlink{clibrary_8hpp_a371852db8647a962c063f446d1ffbd8c}{00088}} \textcolor{keywordtype}{void}* \mbox{\hyperlink{clibrary_8hpp_a371852db8647a962c063f446d1ffbd8c}{vmalloc}}(\_In\_ \textcolor{keywordtype}{size\_t} size) noexcept;}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00090}00090 \_IRQL\_requires\_max\_(APC\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00091}\mbox{\hyperlink{clibrary_8hpp_a72f3bec3bf153f4cb45e2e3d9e4bf8ec}{00091}} \textcolor{keywordtype}{void} \_\_cdecl \mbox{\hyperlink{clibrary_8hpp_a72f3bec3bf153f4cb45e2e3d9e4bf8ec}{vfree}}(\_Inout\_ \textcolor{keywordtype}{void}* ptr) noexcept;}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00093}00093 \_\_drv\_when(return != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00094}00094 \_Check\_return\_}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00095}00095 \_Post\_writable\_size\_(size)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00096}00096 \_IRQL\_requires\_max\_(APC\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00097}\mbox{\hyperlink{clibrary_8hpp_a7f65e9f92b39638141b86ce010a9df3c}{00097}} \textcolor{keywordtype}{void}* \_\_cdecl \mbox{\hyperlink{clibrary_8hpp_a7f65e9f92b39638141b86ce010a9df3c}{vcalloc}}(\_In\_ \textcolor{keywordtype}{size\_t} num, \_In\_ \textcolor{keywordtype}{size\_t} size) noexcept;}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00099}00099 \_\_drv\_when(return != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00100}00100 \_Check\_return\_}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00101}00101 \_Post\_writable\_size\_(new\_size)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00102}00102 \_IRQL\_requires\_max\_(APC\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00103}\mbox{\hyperlink{clibrary_8hpp_a99cc4959e039afb4b05815cc9715daa0}{00103}} \textcolor{keywordtype}{void}* \_\_cdecl \mbox{\hyperlink{clibrary_8hpp_a99cc4959e039afb4b05815cc9715daa0}{vrealloc}}(\_Inout\_ \textcolor{keywordtype}{void}* ptr, \_In\_ \textcolor{keywordtype}{size\_t} new\_size) noexcept;}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00105}00105 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00107}00107 EXTERN\_C\_END}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00110}00110 \textcolor{preprocessor}{\#ifdef ALLOC\_PRAGMA}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00112}00112 \textcolor{preprocessor}{\#pragma alloc\_text(PAGE, vmalloc)}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00113}00113 \textcolor{preprocessor}{\#pragma alloc\_text(PAGE, vfree)}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00114}00114 \textcolor{preprocessor}{\#pragma alloc\_text(PAGE, vcalloc)}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00115}00115 \textcolor{preprocessor}{\#pragma alloc\_text(PAGE, vrealloc)}}
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{clibrary_8hpp_source_l00117}00117 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

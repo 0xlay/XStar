@@ -1,0 +1,277 @@
+\hypertarget{classxstar_1_1_unique_pointer}{}\doxysection{xstar\+::Unique\+Pointer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classxstar_1_1_unique_pointer}\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+
+
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} is using windows exception.\+You will need using operator \+\_\+\+\_\+try, \+\_\+\+\_\+except.  
+
+
+
+
+{\ttfamily \#include $<$smart\+\_\+pointers.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxstar_1_1_unique_pointer_a0d9de09eb2175db7f11db024fb38ef34}{Unique\+Pointer}} ()
+\item 
+\mbox{\hyperlink{classxstar_1_1_unique_pointer_ac566536c0565539f025d87fd8a78b925}{Unique\+Pointer}} (\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $\ast$pointer)
+\item 
+\mbox{\hyperlink{classxstar_1_1_unique_pointer_adc4fdc6d99d39de97912830ac11e8ce4}{$\sim$\+Unique\+Pointer}} ()
+\item 
+\mbox{\hyperlink{classxstar_1_1_unique_pointer_a1ff005fc2b5a913596a009fbdd4fceb4}{Unique\+Pointer}} (\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} \& \mbox{\hyperlink{classxstar_1_1_unique_pointer_a52960a0158fd4b079408b7d7dff360aa}{operator=}} (\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_unique_pointer_acf9d2a20fb3a266cd97b6a1f171576c2}{Unique\+Pointer}} (const \mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} \&)=delete
+\item 
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} \& \mbox{\hyperlink{classxstar_1_1_unique_pointer_ad98dc16e13a49800b5a85c9c6077e82b}{operator=}} (const \mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} \&)=delete
+\item 
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} \& \mbox{\hyperlink{classxstar_1_1_unique_pointer_a1de2d9f250fd135b8c5f962df7026f41}{operator$\ast$}} ()
+\item 
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $\ast$ \mbox{\hyperlink{classxstar_1_1_unique_pointer_ae88b82298d014da1f787f7a22fedf8e0}{operator-\/$>$}} ()
+\item 
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $\ast$ \mbox{\hyperlink{classxstar_1_1_unique_pointer_a0f3350a0ea91746f2a4afd61d17fe753}{get\+Pointer}} () const
+\item 
+void \mbox{\hyperlink{classxstar_1_1_unique_pointer_a946f71fe4329baf4bff43873960b07af}{release}} ()
+\item 
+void \mbox{\hyperlink{classxstar_1_1_unique_pointer_a86a59cedf0cb513c894694be5b8e5b9a}{reset}} (\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $\ast$pointer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $\ast$ \mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}$>$\newline
+class xstar\+::\+Unique\+Pointer$<$ T $>$}
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} is using windows exception.\+You will need using operator \+\_\+\+\_\+try, \+\_\+\+\_\+except. 
+
+Definition at line \mbox{\hyperlink{smart__pointers_8hpp_source_l00037}{37}} of file \mbox{\hyperlink{smart__pointers_8hpp_source}{smart\+\_\+pointers.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_a0d9de09eb2175db7f11db024fb38ef34}\label{classxstar_1_1_unique_pointer_a0d9de09eb2175db7f11db024fb38ef34}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer()}{UniquePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Unique\+Pointer}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00027}{27}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028         : \mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}}(\textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00029     \{ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_ac566536c0565539f025d87fd8a78b925}\label{classxstar_1_1_unique_pointer_ac566536c0565539f025d87fd8a78b925}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer()}{UniquePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Unique\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $\ast$}]{pointer }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00032}{32}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033         : \mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}}(pointer)}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}} == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00036             ExRaiseAccessViolation();}
+\DoxyCodeLine{00037     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_adc4fdc6d99d39de97912830ac11e8ce4}\label{classxstar_1_1_unique_pointer_adc4fdc6d99d39de97912830ac11e8ce4}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!````~UniquePointer@{$\sim$UniquePointer}}
+\index{````~UniquePointer@{$\sim$UniquePointer}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$UniquePointer()}{~UniquePointer()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::$\sim$\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00040}{40}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041     \{}
+\DoxyCodeLine{00042         \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}}));}
+\DoxyCodeLine{00043     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_a1ff005fc2b5a913596a009fbdd4fceb4}\label{classxstar_1_1_unique_pointer_a1ff005fc2b5a913596a009fbdd4fceb4}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer()}{UniquePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Unique\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00046}{46}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047     \{}
+\DoxyCodeLine{00048         \mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{swap}}(\mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}}, other.pointer\_);}
+\DoxyCodeLine{00049     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_acf9d2a20fb3a266cd97b6a1f171576c2}\label{classxstar_1_1_unique_pointer_acf9d2a20fb3a266cd97b6a1f171576c2}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer()}{UniquePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::\+Unique\+Pointer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_a0f3350a0ea91746f2a4afd61d17fe753}\label{classxstar_1_1_unique_pointer_a0f3350a0ea91746f2a4afd61d17fe753}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!getPointer@{getPointer}}
+\index{getPointer@{getPointer}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getPointer()}{getPointer()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $\ast$ \mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::get\+Pointer}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00071}{71}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072     \{}
+\DoxyCodeLine{00073         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}};}
+\DoxyCodeLine{00074     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_a1de2d9f250fd135b8c5f962df7026f41}\label{classxstar_1_1_unique_pointer_a1de2d9f250fd135b8c5f962df7026f41}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} \& \mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::operator$\ast$}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00059}{59}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060     \{}
+\DoxyCodeLine{00061         \textcolor{keywordflow}{return} *\mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}};}
+\DoxyCodeLine{00062     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_ae88b82298d014da1f787f7a22fedf8e0}\label{classxstar_1_1_unique_pointer_ae88b82298d014da1f787f7a22fedf8e0}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $\ast$ \mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::operator-\/$>$}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00065}{65}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066     \{}
+\DoxyCodeLine{00067         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}};}
+\DoxyCodeLine{00068     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_ad98dc16e13a49800b5a85c9c6077e82b}\label{classxstar_1_1_unique_pointer_ad98dc16e13a49800b5a85c9c6077e82b}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}} \& \mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_a52960a0158fd4b079408b7d7dff360aa}\label{classxstar_1_1_unique_pointer_a52960a0158fd4b079408b7d7dff360aa}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \& \mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00052}{52}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053     \{}
+\DoxyCodeLine{00054         \mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{swap}}(\mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}}, other.pointer\_);}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{00056     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_a946f71fe4329baf4bff43873960b07af}\label{classxstar_1_1_unique_pointer_a946f71fe4329baf4bff43873960b07af}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!release@{release}}
+\index{release@{release}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+void \mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::release}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00077}{77}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078     \{}
+\DoxyCodeLine{00079         \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}}));}
+\DoxyCodeLine{00080     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_a86a59cedf0cb513c894694be5b8e5b9a}\label{classxstar_1_1_unique_pointer_a86a59cedf0cb513c894694be5b8e5b9a}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!reset@{reset}}
+\index{reset@{reset}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+void \mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $\ast$}]{pointer }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8inl_source_l00083}{83}} of file \mbox{\hyperlink{smart__pointers_8inl_source}{smart\+\_\+pointers.\+inl}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084     \{}
+\DoxyCodeLine{00085         \mbox{\hyperlink{clibrary_8cpp_a473ea057c744e96b74129c5d82cd8b44}{free}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}}));}
+\DoxyCodeLine{00086         \mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}} = pointer;}
+\DoxyCodeLine{00087         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}{pointer\_}} == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00088             ExRaiseAccessViolation();}
+\DoxyCodeLine{00089     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}\label{classxstar_1_1_unique_pointer_aa25ea6f2ffa646a483f70a8b3ce6d63c}} 
+\index{xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}!pointer\_@{pointer\_}}
+\index{pointer\_@{pointer\_}!xstar::UniquePointer$<$ T $>$@{xstar::UniquePointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pointer\_}{pointer\_}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$ \\
+\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}$\ast$ \mbox{\hyperlink{classxstar_1_1_unique_pointer}{xstar\+::\+Unique\+Pointer}}$<$ \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}} $>$\+::pointer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__pointers_8hpp_source_l00058}{58}} of file \mbox{\hyperlink{smart__pointers_8hpp_source}{smart\+\_\+pointers.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+kernel\+\_\+space/include/\mbox{\hyperlink{smart__pointers_8hpp}{smart\+\_\+pointers.\+hpp}}\item 
+kernel\+\_\+space/src/\mbox{\hyperlink{smart__pointers_8inl}{smart\+\_\+pointers.\+inl}}\end{DoxyCompactItemize}

@@ -1,0 +1,192 @@
+\hypertarget{named__pipe__test_8cpp}{}\doxysection{user\+\_\+space\+\_\+tests/named\+\_\+pipe\+\_\+test.cpp File Reference}
+\label{named__pipe__test_8cpp}\index{user\_space\_tests/named\_pipe\_test.cpp@{user\_space\_tests/named\_pipe\_test.cpp}}
+{\ttfamily \#include \char`\"{}pch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fixture/named\+\_\+pipe\+\_\+fixture.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}{TEST\+\_\+F}} (\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}, Write\+And\+Read\+String)
+\item 
+\mbox{\hyperlink{named__pipe__test_8cpp_a16ee6f5dd9b1196860bdc95138e7411d}{TEST\+\_\+F}} (\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}, Write\+And\+Read\+Wide\+String)
+\item 
+\mbox{\hyperlink{named__pipe__test_8cpp_a762b5a598e3159727678699137674b7d}{TEST\+\_\+F}} (\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}, Write\+And\+Read\+Vector\+Of\+Bytes)
+\item 
+\mbox{\hyperlink{named__pipe__test_8cpp_a939aed63d2d7b144bc76b07dcfaaf189}{TEST\+\_\+F}} (\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}, Write\+And\+Read\+Integer)
+\item 
+\mbox{\hyperlink{named__pipe__test_8cpp_ac750df48a833e7230a2ae4bdf94fd379}{TEST\+\_\+F}} (\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}, Client\+Set\+And\+Get\+Pipe\+State)
+\item 
+\mbox{\hyperlink{named__pipe__test_8cpp_a2172544f3bf1492952673d28d5885fa3}{TEST\+\_\+F}} (\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}, Servert\+Set\+And\+Get\+Pipe\+State)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{named__pipe__test_8cpp_ac750df48a833e7230a2ae4bdf94fd379}\label{named__pipe__test_8cpp_ac750df48a833e7230a2ae4bdf94fd379}} 
+\index{named\_pipe\_test.cpp@{named\_pipe\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!named\_pipe\_test.cpp@{named\_pipe\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}}]{,  }\item[{Client\+Set\+And\+Get\+Pipe\+State}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__test_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{named__pipe__test_8cpp_source}{named\+\_\+pipe\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086 \{}
+\DoxyCodeLine{00087     \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{xstar::PipeMode}} mode = \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}{xstar::PipeMode::ReadMsg}};}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     client\_-\/>setState(mode);}
+\DoxyCodeLine{00090     \mbox{\hyperlink{structxstar_1_1_pipe_state}{xstar::PipeState}} state = client\_-\/>getState();}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092     EXPECT\_EQ(state.\mbox{\hyperlink{structxstar_1_1_pipe_state_aca1c9cc5f0060ebc83074d43dcc98b7c}{mode}}, mode);}
+\DoxyCodeLine{00093     EXPECT\_NE(state.\mbox{\hyperlink{structxstar_1_1_pipe_state_ac7dee769adde219c3a5efb6fe03bda47}{curInstances}}, 0);}
+\DoxyCodeLine{00094 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{named__pipe__test_8cpp_a2172544f3bf1492952673d28d5885fa3}\label{named__pipe__test_8cpp_a2172544f3bf1492952673d28d5885fa3}} 
+\index{named\_pipe\_test.cpp@{named\_pipe\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!named\_pipe\_test.cpp@{named\_pipe\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}}]{,  }\item[{Servert\+Set\+And\+Get\+Pipe\+State}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__test_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{named__pipe__test_8cpp_source}{named\+\_\+pipe\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098 \{}
+\DoxyCodeLine{00099     \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{xstar::PipeMode}} mode = \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaaa79651554c2676976f6848a999d84aac}{xstar::PipeMode::NoWait}} | \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaac436c659ad8f88223c0342dd623bf952}{xstar::PipeMode::ReadByte}};}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101     server\_-\/>setState(mode);}
+\DoxyCodeLine{00102     \mbox{\hyperlink{structxstar_1_1_pipe_state}{xstar::PipeState}} state = server\_-\/>getState();}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104     EXPECT\_EQ(state.\mbox{\hyperlink{structxstar_1_1_pipe_state_aca1c9cc5f0060ebc83074d43dcc98b7c}{mode}}, mode);}
+\DoxyCodeLine{00105     EXPECT\_NE(state.\mbox{\hyperlink{structxstar_1_1_pipe_state_ac7dee769adde219c3a5efb6fe03bda47}{curInstances}}, 0);}
+\DoxyCodeLine{00106 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{named__pipe__test_8cpp_a939aed63d2d7b144bc76b07dcfaaf189}\label{named__pipe__test_8cpp_a939aed63d2d7b144bc76b07dcfaaf189}} 
+\index{named\_pipe\_test.cpp@{named\_pipe\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!named\_pipe\_test.cpp@{named\_pipe\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}}]{,  }\item[{Write\+And\+Read\+Integer}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__test_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{named__pipe__test_8cpp_source}{named\+\_\+pipe\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066 \{}
+\DoxyCodeLine{00067     \textcolor{keywordtype}{int} sourceServer = 1;}
+\DoxyCodeLine{00068     \textcolor{keywordtype}{int} sourceClient = 2;}
+\DoxyCodeLine{00069     \textcolor{keywordtype}{int} destinationServer;}
+\DoxyCodeLine{00070     \textcolor{keywordtype}{int} destinationClient;}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     server\_-\/>write(sourceServer);}
+\DoxyCodeLine{00074     client\_-\/>read(destinationClient);}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076     client\_-\/>write(sourceClient);}
+\DoxyCodeLine{00077     server\_-\/>read(destinationServer);}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080     EXPECT\_EQ(sourceServer, destinationClient);}
+\DoxyCodeLine{00081     EXPECT\_EQ(sourceClient, destinationServer);}
+\DoxyCodeLine{00082 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}\label{named__pipe__test_8cpp_a633044c1cc06ab13fe5f4c4f8ebc2f6d}} 
+\index{named\_pipe\_test.cpp@{named\_pipe\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!named\_pipe\_test.cpp@{named\_pipe\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}}]{,  }\item[{Write\+And\+Read\+String}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__test_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{named__pipe__test_8cpp_source}{named\+\_\+pipe\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007     std::string sourceServer = \textcolor{stringliteral}{"{}Hello from Server!"{}};}
+\DoxyCodeLine{00008     std::string sourceClient = \textcolor{stringliteral}{"{}Hello from Client!"{}};}
+\DoxyCodeLine{00009     std::string destinationServer;}
+\DoxyCodeLine{00010     std::string destinationClient;}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013     server\_-\/>write(sourceServer);}
+\DoxyCodeLine{00014     client\_-\/>read(destinationClient);}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016     client\_-\/>write(sourceClient);}
+\DoxyCodeLine{00017     server\_-\/>read(destinationServer);}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020     EXPECT\_EQ(sourceServer, destinationClient);}
+\DoxyCodeLine{00021     EXPECT\_EQ(sourceClient, destinationServer);}
+\DoxyCodeLine{00022 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{named__pipe__test_8cpp_a762b5a598e3159727678699137674b7d}\label{named__pipe__test_8cpp_a762b5a598e3159727678699137674b7d}} 
+\index{named\_pipe\_test.cpp@{named\_pipe\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!named\_pipe\_test.cpp@{named\_pipe\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}}]{,  }\item[{Write\+And\+Read\+Vector\+Of\+Bytes}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__test_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{named__pipe__test_8cpp_source}{named\+\_\+pipe\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046 \{}
+\DoxyCodeLine{00047     std::vector<char> sourceServer = \{ \textcolor{charliteral}{'S'}, \textcolor{charliteral}{'e'}, \textcolor{charliteral}{'r'}, \textcolor{charliteral}{'v'}, \textcolor{charliteral}{'e'}, \textcolor{charliteral}{'r'} \};}
+\DoxyCodeLine{00048     std::vector<char> sourceClient = \{ \textcolor{charliteral}{'C'}, \textcolor{charliteral}{'l'}, \textcolor{charliteral}{'i'}, \textcolor{charliteral}{'e'}, \textcolor{charliteral}{'n'}, \textcolor{charliteral}{'t'} \};}
+\DoxyCodeLine{00049     std::vector<char> destinationServer;}
+\DoxyCodeLine{00050     std::vector<char> destinationClient;}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053     server\_-\/>write(sourceServer);}
+\DoxyCodeLine{00054     client\_-\/>read(destinationClient);}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056     client\_-\/>write(sourceClient);}
+\DoxyCodeLine{00057     server\_-\/>read(destinationServer);}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060     EXPECT\_EQ(sourceServer, destinationClient);}
+\DoxyCodeLine{00061     EXPECT\_EQ(sourceClient, destinationServer);}
+\DoxyCodeLine{00062 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{named__pipe__test_8cpp_a16ee6f5dd9b1196860bdc95138e7411d}\label{named__pipe__test_8cpp_a16ee6f5dd9b1196860bdc95138e7411d}} 
+\index{named\_pipe\_test.cpp@{named\_pipe\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!named\_pipe\_test.cpp@{named\_pipe\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_named_pipe_test}{Named\+Pipe\+Test}}}]{,  }\item[{Write\+And\+Read\+Wide\+String}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__test_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{named__pipe__test_8cpp_source}{named\+\_\+pipe\+\_\+test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026 \{}
+\DoxyCodeLine{00027     std::wstring sourceServer = L\textcolor{stringliteral}{"{}Hello from Server!"{}};}
+\DoxyCodeLine{00028     std::wstring sourceClient = L\textcolor{stringliteral}{"{}Hello from Client!"{}};}
+\DoxyCodeLine{00029     std::wstring destinationServer;}
+\DoxyCodeLine{00030     std::wstring destinationClient;}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033     server\_-\/>write(sourceServer);}
+\DoxyCodeLine{00034     client\_-\/>read(destinationClient);}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     client\_-\/>write(sourceClient);}
+\DoxyCodeLine{00037     server\_-\/>read(destinationServer);}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     EXPECT\_EQ(sourceServer, destinationClient);}
+\DoxyCodeLine{00041     EXPECT\_EQ(sourceClient, destinationServer);}
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}

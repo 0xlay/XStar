@@ -1,0 +1,151 @@
+\hypertarget{cpplibrary_8hpp_source}{}\doxysection{cpplibrary.\+hpp}
+\label{cpplibrary_8hpp_source}\index{kernel\_space/runtime/cpplibrary.hpp@{kernel\_space/runtime/cpplibrary.hpp}}
+\mbox{\hyperlink{cpplibrary_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00014}00014 \textcolor{comment}{// File: cpplibrary.hpp}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: Kernel mode only}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00024}00024 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{clibrary_8hpp}{clibrary.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00027}00027 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00028}00028 \textcolor{comment}{// Standard operators}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00029}00029 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00031}00031 \_\_drv\_when(\textcolor{keywordflow}{return} != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00032}00032 \_Check\_return\_}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00033}00033 \_Post\_writable\_size\_(size)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00034}00034 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00035}\mbox{\hyperlink{cpplibrary_8hpp_a74fc8c4bb1baa4c871035a22fcfc8888}{00035}} void* \_\_cdecl operator new(\_In\_ \textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00037}00037 \_\_drv\_when(return != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00038}00038 \_Check\_return\_}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00039}00039 \_Post\_writable\_size\_(size)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00040}00040 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00041}\mbox{\hyperlink{cpplibrary_8hpp_a8d765a24275128f72a8a27881c16a5b3}{00041}} \textcolor{keywordtype}{void}* \_\_cdecl operator new[](\_In\_ \textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00043}00043 \textcolor{comment}{// For primitive types}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00044}00044 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00045}\mbox{\hyperlink{cpplibrary_8hpp_a5cfe6d7f2df4bc90ebf6a1b2f4ded174}{00045}} \textcolor{keywordtype}{void} \_\_cdecl operator delete(\_Inout\_ \textcolor{keywordtype}{void}* ptr) noexcept;}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00047}00047 \textcolor{comment}{// For primitive types.}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00048}00048 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00049}\mbox{\hyperlink{cpplibrary_8hpp_a6c3324226901395c056dcc047f51a89a}{00049}} \textcolor{keywordtype}{void} \_\_cdecl operator delete[](\_Inout\_ \textcolor{keywordtype}{void}* ptr) noexcept;}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00051}00051 \textcolor{comment}{// For abstract types.}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00052}00052 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00053}\mbox{\hyperlink{cpplibrary_8hpp_a21e5f6356568eb57f9755ac699efbd98}{00053}} \textcolor{keywordtype}{void} \_\_cdecl operator delete(\_Inout\_ \textcolor{keywordtype}{void}* ptr, \_In\_ \textcolor{keywordtype}{size\_t} size) noexcept;}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00055}00055 \textcolor{comment}{// For abstract types.}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00056}00056 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00057}\mbox{\hyperlink{cpplibrary_8hpp_a0f8a6217ca22a758d71011ef78b954ad}{00057}} \textcolor{keywordtype}{void} \_\_cdecl operator delete[](\_Inout\_ \textcolor{keywordtype}{void}* ptr, \_In\_ \textcolor{keywordtype}{size\_t} size) noexcept;}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00059}00059 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00062}00062 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00063}00063 \textcolor{comment}{// Placement operators}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00064}00064 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00066}00066 \_\_drv\_when(return != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00067}00067 \_Check\_return\_}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00068}00068 \_Post\_writable\_size\_(size)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00069}00069 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00070}\mbox{\hyperlink{cpplibrary_8hpp_a7a47f3a2fdd644c10de8ed3afd3646bb}{00070}} \textcolor{keywordtype}{void}* \_\_cdecl operator new(\_In\_ \textcolor{keywordtype}{size\_t} size, \_In\_ \textcolor{keywordtype}{void}* ptr);}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00072}00072 \_\_drv\_when(return != 0, \_\_drv\_allocatesMem(ptr))}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00073}00073 \_Check\_return\_}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00074}00074 \_Post\_writable\_size\_(size)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00075}00075 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00076}\mbox{\hyperlink{cpplibrary_8hpp_a454ae5acd4c703028f67e83f0e62d634}{00076}} \textcolor{keywordtype}{void}* \_\_cdecl operator new[](\_In\_ \textcolor{keywordtype}{size\_t} size, \_In\_ \textcolor{keywordtype}{void}* ptr);}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00078}00078 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00079}00079 \textcolor{keywordtype}{void} \_\_cdecl operator delete(\textcolor{keywordtype}{void}*, \textcolor{keywordtype}{void}*) noexcept;}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00081}00081 \_IRQL\_requires\_max\_(DISPATCH\_LEVEL)}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00082}00082 \textcolor{keywordtype}{void} \_\_cdecl operator delete[](\textcolor{keywordtype}{void}*, \textcolor{keywordtype}{void}*) noexcept;}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00084}00084 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00087}00087 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00088}00088 \textcolor{comment}{// Only primitive types !}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00089}00089 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00091}\mbox{\hyperlink{cpplibrary_8hpp_a240c1924416689e5700ff0d9f30539d9}{00091}} enum class \mbox{\hyperlink{cpplibrary_8hpp_a240c1924416689e5700ff0d9f30539d9}{PrimitiveType}}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00092}00092 \{}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00093}00093     \mbox{\hyperlink{class_paged_memory}{PagedMemory}},    }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00094}00094     \mbox{\hyperlink{class_non_paged_memory}{NonPagedMemory}}  }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00095}00095 \};}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00100}\mbox{\hyperlink{cpplibrary_8hpp_ab449ac9c97cdbc82c1e7a70ccb46f605}{00100}} \textcolor{keywordtype}{void}* \_\_cdecl \textcolor{keyword}{operator} \textcolor{keyword}{new}(\_In\_ \textcolor{keywordtype}{size\_t} size, \_In\_ \mbox{\hyperlink{cpplibrary_8hpp_a240c1924416689e5700ff0d9f30539d9}{PrimitiveType}} type);}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00105}\mbox{\hyperlink{cpplibrary_8hpp_a69a45f75e727def33a25ecfa362660c2}{00105}} \textcolor{keywordtype}{void}* \_\_cdecl \textcolor{keyword}{operator} \textcolor{keyword}{new}[](\_In\_ \textcolor{keywordtype}{size\_t} size, \_In\_ \mbox{\hyperlink{cpplibrary_8hpp_a240c1924416689e5700ff0d9f30539d9}{PrimitiveType}} type);}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00110}\mbox{\hyperlink{cpplibrary_8hpp_a1d6af6fe58bee033f5a2c293ba4855f8}{00110}} \textcolor{keywordtype}{void} \_\_cdecl \textcolor{keyword}{operator} \textcolor{keyword}{delete}(\_In\_ \textcolor{keywordtype}{void}* ptr, \_In\_ \mbox{\hyperlink{cpplibrary_8hpp_a240c1924416689e5700ff0d9f30539d9}{PrimitiveType}} type);}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00115}\mbox{\hyperlink{cpplibrary_8hpp_a644e7e29be67455e87c417be96f5c9c1}{00115}} \textcolor{keywordtype}{void} \_\_cdecl \textcolor{keyword}{operator} \textcolor{keyword}{delete}[](\_In\_ \textcolor{keywordtype}{void}* ptr, \mbox{\hyperlink{cpplibrary_8hpp_a240c1924416689e5700ff0d9f30539d9}{PrimitiveType}} type);}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00117}00117 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00120}00120 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00121}00121 \textcolor{comment}{// Remove reference}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00122}00122 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00124}00124 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00125}\mbox{\hyperlink{struct_remove_reference}{00125}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_remove_reference}{RemoveReference}}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00126}00126 \{}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00127}\mbox{\hyperlink{struct_remove_reference_ac250f20fc200efbd09f512a30c3367b4}{00127}}     \textcolor{keyword}{using }\mbox{\hyperlink{struct_remove_reference_ac250f20fc200efbd09f512a30c3367b4}{Type}} = \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}};}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00128}\mbox{\hyperlink{struct_remove_reference_a4df4b557566f9e39a6dc9780599ba484}{00128}}     \textcolor{keyword}{using }\mbox{\hyperlink{struct_remove_reference_a4df4b557566f9e39a6dc9780599ba484}{ConstRefType}} = \textcolor{keyword}{const} \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}};}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00129}00129 \};}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00131}00131 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00132}\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_01_4}{00132}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_remove_reference}{RemoveReference}}<\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\&>}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00133}00133 \{}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00134}\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_01_4_a2caeabdb2abd8306a7f1caeaf4acad89}{00134}}     \textcolor{keyword}{using }\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_01_4_a2caeabdb2abd8306a7f1caeaf4acad89}{Type}} = \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}};}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00135}\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_01_4_ae3fceb7510a4b4268bc7eacae98ca348}{00135}}     \textcolor{keyword}{using }\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_01_4_ae3fceb7510a4b4268bc7eacae98ca348}{ConstRefType}} = \textcolor{keyword}{const} \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\&;}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00136}00136 \};}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00138}00138 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00139}\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_6_01_4}{00139}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_remove_reference}{RemoveReference}}<\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\&\&>}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00140}00140 \{}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00141}\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_6_01_4_a45f47389104e5c7431eb5c7ac37d7736}{00141}}     \textcolor{keyword}{using }\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_6_01_4_a45f47389104e5c7431eb5c7ac37d7736}{Type}} = \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}};}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00142}\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_6_01_4_a6d7bf5eb773be884b6c5d3199fe8fc15}{00142}}     \textcolor{keyword}{using }\mbox{\hyperlink{struct_remove_reference_3_01_t_01_6_6_01_4_a6d7bf5eb773be884b6c5d3199fe8fc15}{ConstRefType}} = \textcolor{keyword}{const} \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\&\&;}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00143}00143 \};}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00145}00145 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00146}\mbox{\hyperlink{cpplibrary_8hpp_a926c48fb446067dcc2ff924f7aa608e1}{00146}} \textcolor{keyword}{using }\mbox{\hyperlink{cpplibrary_8hpp_a926c48fb446067dcc2ff924f7aa608e1}{RemoveRef}} = \textcolor{keyword}{typename} \mbox{\hyperlink{struct_remove_reference_ac250f20fc200efbd09f512a30c3367b4}{RemoveReference<T>::Type}};}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00149}00149 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00150}00150 \textcolor{comment}{// Move operator}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00151}00151 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00153}00153 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00154}\mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{00154}} [[nodiscard]] \mbox{\hyperlink{cpplibrary_8hpp_a926c48fb446067dcc2ff924f7aa608e1}{RemoveRef<T>}}\&\& \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(\mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}\&\& arg) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00155}00155 \{}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00156}00156     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{cpplibrary_8hpp_a926c48fb446067dcc2ff924f7aa608e1}{RemoveRef<T>}}\&\&\textcolor{keyword}{>}(arg);}
+\DoxyCodeLine{\Hypertarget{cpplibrary_8hpp_source_l00157}00157 \}}
+
+\end{DoxyCode}

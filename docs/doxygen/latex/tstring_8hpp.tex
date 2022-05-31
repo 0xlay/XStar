@@ -1,0 +1,102 @@
+\hypertarget{tstring_8hpp}{}\doxysection{user\+\_\+space/include/tstring.hpp File Reference}
+\label{tstring_8hpp}\index{user\_space/include/tstring.hpp@{user\_space/include/tstring.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$tchar.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacexstar}{xstar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}{T}}~\char`\"{}\char`\"{}
+\item 
+\#define \mbox{\hyperlink{tstring_8hpp_a002bdc1db6beb4a78a487e2cbd8f5df1}{Tc}}(x)~x
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacexstar_a6247e523bb4ed48ece0a265e61408990}{xstar\+::tstring}} = std\+::string
+\item 
+using \mbox{\hyperlink{namespacexstar_a952c1f2d170386424883b0e3a7f3201a}{xstar\+::tstring\+\_\+view}} = std\+::string\+\_\+view
+\item 
+using \mbox{\hyperlink{namespacexstar_ac2ebd941b2ed17ddc0b2eb56fe1d0266}{xstar\+::tchar}} = char
+\item 
+using \mbox{\hyperlink{namespacexstar_ad6f1e1804517c34b621a88f16ce4e477}{xstar\+::tstringbuf}} = std\+::stringbuf
+\item 
+using \mbox{\hyperlink{namespacexstar_a5bd15845a7fd969c173b39bff8b5e645}{xstar\+::tstringstream}} = std\+::stringstream
+\item 
+using \mbox{\hyperlink{namespacexstar_a0f727303ca282b4203cc9719223cfc82}{xstar\+::tistringstream}} = std\+::istringstream
+\item 
+using \mbox{\hyperlink{namespacexstar_a1e0b2fada83c16e7beee1ccaaea47fbd}{xstar\+::tostringstream}} = std\+::ostringstream
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tstring \mbox{\hyperlink{namespacexstar_a69c9d5841eb701420438d6078fb7f999}{xstar\+::to\+\_\+tstring}} (int val)
+\item 
+tstring \mbox{\hyperlink{namespacexstar_aebe0b80a32912794fd61e796d3c76753}{xstar\+::to\+\_\+tstring}} (float val)
+\item 
+tstring \mbox{\hyperlink{namespacexstar_a164701cbcc84069ce0c9fcbcc791c9bc}{xstar\+::to\+\_\+tstring}} (double val)
+\item 
+tstring \mbox{\hyperlink{namespacexstar_a3acf283488fae307716f45f47c665848}{xstar\+::to\+\_\+tstring}} (long long val)
+\item 
+tstring \mbox{\hyperlink{namespacexstar_a182b37a45973600fef89fe6e84585497}{xstar\+::to\+\_\+tstring}} (long val)
+\item 
+tstring \mbox{\hyperlink{namespacexstar_a09a38b7aa0e56a0499fdef5e08a696e8}{xstar\+::to\+\_\+tstring}} (unsigned long long val)
+\item 
+tstring \mbox{\hyperlink{namespacexstar_a3fc1bc625becce1fa9d7b95fa33487b7}{xstar\+::to\+\_\+tstring}} (unsigned long val)
+\item 
+tstring \mbox{\hyperlink{namespacexstar_a4f44d8a38b2e8341584b148b04ed0d2f}{xstar\+::to\+\_\+tstring}} (unsigned int val)
+\item 
+tstring \mbox{\hyperlink{namespacexstar_aad2665b2dd88520814bd8d9cdd398b4a}{xstar\+::to\+\_\+tstring}} (long double val)
+\item 
+tstring \mbox{\hyperlink{namespacexstar_a6d55f88896a784f6d60db5e45111a8fc}{xstar\+::operator\char`\"{}\char`\"{}\+\_\+ts}} (const tchar $\ast$str, const size\+\_\+t size)
+\item 
+tstring\+\_\+view \mbox{\hyperlink{namespacexstar_a30d780919a6770aa7d8650df50c2e7b8}{xstar\+::operator\char`\"{}\char`\"{}\+\_\+tsv}} (const tchar $\ast$str, const size\+\_\+t size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \& \mbox{\hyperlink{namespacexstar_a336f0abf179fe35e0ee8c3388a54a76d}{xstar\+::tcin}} = std\+::cin
+\item 
+auto \& \mbox{\hyperlink{namespacexstar_a268338361b8e6a1e2f19564436096aea}{xstar\+::tcout}} = std\+::cout
+\item 
+auto \& \mbox{\hyperlink{namespacexstar_a316daa66bdb32f82c95302500a8d1d49}{xstar\+::tcerr}} = std\+::cerr
+\item 
+auto \& \mbox{\hyperlink{namespacexstar_a7ed9722ff79f9a5111a6965a8592145d}{xstar\+::tclog}} = std\+::clog
+\item 
+auto \& \mbox{\hyperlink{namespacexstar_a737693a0cdfd5dc341cd6eb813f24cb9}{xstar\+::\+\_\+\+Ptr\+\_\+tcin}} = std\+::\+\_\+\+Ptr\+\_\+cin
+\item 
+auto \& \mbox{\hyperlink{namespacexstar_a2365eec68cb5526cab15b8c960d75d2a}{xstar\+::\+\_\+\+Ptr\+\_\+tcout}} = std\+::\+\_\+\+Ptr\+\_\+cout
+\item 
+auto \& \mbox{\hyperlink{namespacexstar_adb200635ab86e116c8887993c6de9cc1}{xstar\+::\+\_\+\+Ptr\+\_\+tcerr}} = std\+::\+\_\+\+Ptr\+\_\+cerr
+\item 
+auto \& \mbox{\hyperlink{namespacexstar_a82202399c72160c96399a3ea41a62815}{xstar\+::\+\_\+\+Ptr\+\_\+tclog}} = std\+::\+\_\+\+Ptr\+\_\+clog
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}\label{tstring_8hpp_a0acb682b8260ab1c60b918599864e2e5}} 
+\index{tstring.hpp@{tstring.hpp}!T@{T}}
+\index{T@{T}!tstring.hpp@{tstring.hpp}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily \#define T~\char`\"{}\char`\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8hpp_source_l00105}{105}} of file \mbox{\hyperlink{tstring_8hpp_source}{tstring.\+hpp}}.
+
+\mbox{\Hypertarget{tstring_8hpp_a002bdc1db6beb4a78a487e2cbd8f5df1}\label{tstring_8hpp_a002bdc1db6beb4a78a487e2cbd8f5df1}} 
+\index{tstring.hpp@{tstring.hpp}!Tc@{Tc}}
+\index{Tc@{Tc}!tstring.hpp@{tstring.hpp}}
+\doxysubsubsection{\texorpdfstring{Tc}{Tc}}
+{\footnotesize\ttfamily \#define Tc(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+
+
+Definition at line \mbox{\hyperlink{tstring_8hpp_source_l00106}{106}} of file \mbox{\hyperlink{tstring_8hpp_source}{tstring.\+hpp}}.
+

@@ -1,0 +1,68 @@
+\hypertarget{named__pipe_8hpp}{}\doxysection{user\+\_\+space/include/named\+\_\+pipe.hpp File Reference}
+\label{named__pipe_8hpp}\index{user\_space/include/named\_pipe.hpp@{user\_space/include/named\_pipe.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$Windows.\+h$>$}\newline
+{\ttfamily \#include $<$tchar.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}winapi\+\_\+exception.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}meminfo.\+hpp\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structxstar_1_1_pipe_info}{xstar\+::\+Pipe\+Info}}
+\item 
+struct \mbox{\hyperlink{structxstar_1_1_pipe_state}{xstar\+::\+Pipe\+State}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_pipe_i_o}{xstar\+::\+Pipe\+IO}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_named_pipe_server}{xstar\+::\+Named\+Pipe\+Server}}
+\item 
+class \mbox{\hyperlink{classxstar_1_1_named_pipe_client}{xstar\+::\+Named\+Pipe\+Client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacexstar}{xstar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250}{xstar\+::\+Pipe\+Direction}} \+: DWORD \{ \newline
+\mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250aefeb369cccbd560588a756610865664c}{xstar\+::\+In}} = PIPE\+\_\+\+ACCESS\+\_\+\+INBOUND
+, \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a7c147cda9e49590f6abe83d118b7353b}{xstar\+::\+Out}} = PIPE\+\_\+\+ACCESS\+\_\+\+OUTBOUND
+, \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a47a54d9da8952a3980d27488b00a21c1}{xstar\+::\+In\+Out}} = PIPE\+\_\+\+ACCESS\+\_\+\+DUPLEX
+, \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a2ef50b4c466304dc6ac77bac8a779971}{xstar\+::\+Exclusive}} = FILE\+\_\+\+FLAG\+\_\+\+FIRST\+\_\+\+PIPE\+\_\+\+INSTANCE
+, \newline
+\mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250aacb7820573f20d69befb56e41f440549}{xstar\+::\+Write\+Through}} = FILE\+\_\+\+FLAG\+\_\+\+WRITE\+\_\+\+THROUGH
+, \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a5f1b91d5ebf354ef9c15b0671c0e8b18}{xstar\+::\+Overlapped}} = FILE\+\_\+\+FLAG\+\_\+\+OVERLAPPED
+, \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250aeefa9ccbf2071c722eefe2ce44c70b02}{xstar\+::\+Write\+Owner}} = WRITE\+\_\+\+OWNER
+, \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a9a5219b3b103391c634ee2dea9cfe5a5}{xstar\+::\+Write\+ACL}} = WRITE\+\_\+\+DAC
+, \newline
+\mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250adf6e3c00e1bc5920b819a81f1b21de5c}{xstar\+::\+Write\+SACL}} = ACCESS\+\_\+\+SYSTEM\+\_\+\+SECURITY
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{xstar\+::\+Pipe\+Mode}} \+: DWORD \{ \newline
+\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa20550804a6328e3541a4414854d01017}{xstar\+::\+Write\+Byte}} = PIPE\+\_\+\+TYPE\+\_\+\+BYTE
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaac436c659ad8f88223c0342dd623bf952}{xstar\+::\+Read\+Byte}} = PIPE\+\_\+\+READMODE\+\_\+\+BYTE
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6209e6108d559885b1df4a3ebe3deb8b}{xstar\+::\+Write\+Msg}} = PIPE\+\_\+\+TYPE\+\_\+\+MESSAGE
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}{xstar\+::\+Read\+Msg}} = PIPE\+\_\+\+READMODE\+\_\+\+MESSAGE
+, \newline
+\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa0f68101772bd5397ef8eb1b632798652}{xstar\+::\+Wait}} = PIPE\+\_\+\+WAIT
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaaa79651554c2676976f6848a999d84aac}{xstar\+::\+No\+Wait}} = PIPE\+\_\+\+NOWAIT
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6ff49946bdfb33d8e4d0d306b21c58f1}{xstar\+::\+Accept\+Clients}} = PIPE\+\_\+\+ACCEPT\+\_\+\+REMOTE\+\_\+\+CLIENTS
+, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaab8085b1e63526caadc31695f6d39d316}{xstar\+::\+Reject\+Clients}} = PIPE\+\_\+\+REJECT\+\_\+\+REMOTE\+\_\+\+CLIENTS
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4b}{xstar\+::\+Pipe\+Access}} \+: DWORD \{ \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba1129c0e4d43f2d121652a7302712cff6}{xstar\+::\+Write}} = GENERIC\+\_\+\+WRITE
+, \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba7a1a5f3e79fdc91edf2f5ead9d66abb4}{xstar\+::\+Read}} = GENERIC\+\_\+\+READ
+, \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba47a54d9da8952a3980d27488b00a21c1}{xstar\+::\+In\+Out}} = GENERIC\+\_\+\+READ $\vert$ GENERIC\+\_\+\+WRITE
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Pipe\+Direction \mbox{\hyperlink{namespacexstar_a0c6fd7a26d383021190e1ea7fc485ff9}{xstar\+::operator$\vert$}} (Pipe\+Direction lhs, Pipe\+Direction rhs)
+\item 
+Pipe\+Mode \mbox{\hyperlink{namespacexstar_a17589468c2b5a7b65d9490f0bd0714cf}{xstar\+::operator$\vert$}} (Pipe\+Mode lhs, Pipe\+Mode rhs)
+\end{DoxyCompactItemize}

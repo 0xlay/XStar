@@ -1,0 +1,104 @@
+\hypertarget{struct_named_pipe_test}{}\doxysection{Named\+Pipe\+Test Struct Reference}
+\label{struct_named_pipe_test}\index{NamedPipeTest@{NamedPipeTest}}
+
+
+{\ttfamily \#include $<$named\+\_\+pipe\+\_\+fixture.\+hpp$>$}
+
+Inheritance diagram for Named\+Pipe\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_named_pipe_test}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{struct_named_pipe_test_a3fd73bb546046f11fd8e56c4c5d5c86f}{Set\+Up\+Test\+Case}} ()
+\item 
+static void \mbox{\hyperlink{struct_named_pipe_test_a9a4fea712fbddd9119b05cdbcb0167f3}{Tear\+Down\+Test\+Case}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classxstar_1_1_named_pipe_client}{xstar\+::\+Named\+Pipe\+Client}} $\ast$ \mbox{\hyperlink{struct_named_pipe_test_a46283923a7ce82de8c0df963ce9a91ae}{client\+\_\+}} = nullptr
+\item 
+static \mbox{\hyperlink{classxstar_1_1_named_pipe_server}{xstar\+::\+Named\+Pipe\+Server}} $\ast$ \mbox{\hyperlink{struct_named_pipe_test_abd181a295fc2669f9df599769e3fb1a3}{server\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{named__pipe__fixture_8hpp_source_l00006}{6}} of file \mbox{\hyperlink{named__pipe__fixture_8hpp_source}{named\+\_\+pipe\+\_\+fixture.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_named_pipe_test_a3fd73bb546046f11fd8e56c4c5d5c86f}\label{struct_named_pipe_test_a3fd73bb546046f11fd8e56c4c5d5c86f}} 
+\index{NamedPipeTest@{NamedPipeTest}!SetUpTestCase@{SetUpTestCase}}
+\index{SetUpTestCase@{SetUpTestCase}!NamedPipeTest@{NamedPipeTest}}
+\doxysubsubsection{\texorpdfstring{SetUpTestCase()}{SetUpTestCase()}}
+{\footnotesize\ttfamily static void Named\+Pipe\+Test\+::\+Set\+Up\+Test\+Case (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__fixture_8hpp_source_l00008}{8}} of file \mbox{\hyperlink{named__pipe__fixture_8hpp_source}{named\+\_\+pipe\+\_\+fixture.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009     \{}
+\DoxyCodeLine{00010         \mbox{\hyperlink{struct_named_pipe_test_abd181a295fc2669f9df599769e3fb1a3}{server\_}} = \textcolor{keyword}{new} \mbox{\hyperlink{classxstar_1_1_named_pipe_server}{xstar::NamedPipeServer}}(L\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\).\(\backslash\)\(\backslash\)pipe\(\backslash\)\(\backslash\)XStarTestPipe"{}}, \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a47a54d9da8952a3980d27488b00a21c1}{xstar::PipeDirection::InOut}});}
+\DoxyCodeLine{00011         \mbox{\hyperlink{struct_named_pipe_test_a46283923a7ce82de8c0df963ce9a91ae}{client\_}} = \textcolor{keyword}{new} \mbox{\hyperlink{classxstar_1_1_named_pipe_client}{xstar::NamedPipeClient}}(L\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\).\(\backslash\)\(\backslash\)pipe\(\backslash\)\(\backslash\)XStarTestPipe"{}}, \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba47a54d9da8952a3980d27488b00a21c1}{xstar::PipeAccess::InOut}});}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013         \mbox{\hyperlink{struct_named_pipe_test_a46283923a7ce82de8c0df963ce9a91ae}{client\_}}-\/>\mbox{\hyperlink{classxstar_1_1_named_pipe_client_ad002d5221c5ca546e7fa638f9bc79f1a}{connect}}();}
+\DoxyCodeLine{00014     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{struct_named_pipe_test_a9a4fea712fbddd9119b05cdbcb0167f3}\label{struct_named_pipe_test_a9a4fea712fbddd9119b05cdbcb0167f3}} 
+\index{NamedPipeTest@{NamedPipeTest}!TearDownTestCase@{TearDownTestCase}}
+\index{TearDownTestCase@{TearDownTestCase}!NamedPipeTest@{NamedPipeTest}}
+\doxysubsubsection{\texorpdfstring{TearDownTestCase()}{TearDownTestCase()}}
+{\footnotesize\ttfamily static void Named\+Pipe\+Test\+::\+Tear\+Down\+Test\+Case (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__fixture_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{named__pipe__fixture_8hpp_source}{named\+\_\+pipe\+\_\+fixture.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017     \{}
+\DoxyCodeLine{00018         \mbox{\hyperlink{struct_named_pipe_test_a46283923a7ce82de8c0df963ce9a91ae}{client\_}}-\/>\mbox{\hyperlink{classxstar_1_1_named_pipe_client_a1fa7e52870aa6b187fa35e58248ba070}{disconnect}}();}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020         \textcolor{keyword}{delete} \mbox{\hyperlink{struct_named_pipe_test_a46283923a7ce82de8c0df963ce9a91ae}{client\_}};}
+\DoxyCodeLine{00021         \textcolor{keyword}{delete} \mbox{\hyperlink{struct_named_pipe_test_abd181a295fc2669f9df599769e3fb1a3}{server\_}};}
+\DoxyCodeLine{00022     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_named_pipe_test_a46283923a7ce82de8c0df963ce9a91ae}\label{struct_named_pipe_test_a46283923a7ce82de8c0df963ce9a91ae}} 
+\index{NamedPipeTest@{NamedPipeTest}!client\_@{client\_}}
+\index{client\_@{client\_}!NamedPipeTest@{NamedPipeTest}}
+\doxysubsubsection{\texorpdfstring{client\_}{client\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxstar_1_1_named_pipe_client}{xstar\+::\+Named\+Pipe\+Client}}$\ast$ Named\+Pipe\+Test\+::client\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__fixture_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{named__pipe__fixture_8hpp_source}{named\+\_\+pipe\+\_\+fixture.\+hpp}}.
+
+\mbox{\Hypertarget{struct_named_pipe_test_abd181a295fc2669f9df599769e3fb1a3}\label{struct_named_pipe_test_abd181a295fc2669f9df599769e3fb1a3}} 
+\index{NamedPipeTest@{NamedPipeTest}!server\_@{server\_}}
+\index{server\_@{server\_}!NamedPipeTest@{NamedPipeTest}}
+\doxysubsubsection{\texorpdfstring{server\_}{server\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxstar_1_1_named_pipe_server}{xstar\+::\+Named\+Pipe\+Server}}$\ast$ Named\+Pipe\+Test\+::server\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{named__pipe__fixture_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{named__pipe__fixture_8hpp_source}{named\+\_\+pipe\+\_\+fixture.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+user\+\_\+space\+\_\+tests/fixture/\mbox{\hyperlink{named__pipe__fixture_8hpp}{named\+\_\+pipe\+\_\+fixture.\+hpp}}\end{DoxyCompactItemize}

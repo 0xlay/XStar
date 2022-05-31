@@ -1,0 +1,313 @@
+\hypertarget{string__test_8hpp}{}\doxysection{kernel\+\_\+space\+\_\+test/string\+\_\+test.hpp File Reference}
+\label{string__test_8hpp}\index{kernel\_space\_test/string\_test.hpp@{kernel\_space\_test/string\_test.hpp}}
+{\ttfamily \#include \char`\"{}kernel\+\_\+test.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}{XSTAR\+\_\+\+KTEST}} (String\+Test, Move)
+\item 
+\mbox{\hyperlink{string__test_8hpp_a7bd85a1a805705089e478f9355e6233f}{XSTAR\+\_\+\+KTEST}} (String\+Test, Copy)
+\item 
+\mbox{\hyperlink{string__test_8hpp_a73198ed6e2f5d20d36875b7bb06f73ad}{XSTAR\+\_\+\+KTEST}} (String\+Test, Iterators)
+\item 
+\mbox{\hyperlink{string__test_8hpp_ac36de51d745f678407d1f6109515fac2}{XSTAR\+\_\+\+KTEST}} (String\+Test, Const\+Iterators)
+\item 
+\mbox{\hyperlink{string__test_8hpp_aac946902c246bb7d8e9b1667ec012a91}{XSTAR\+\_\+\+KTEST}} (String\+Test, Equal)
+\item 
+\mbox{\hyperlink{string__test_8hpp_ac942ccaba41959b9ea39ea9efae41c03}{XSTAR\+\_\+\+KTEST}} (String\+Test, Not\+Equal)
+\item 
+\mbox{\hyperlink{string__test_8hpp_a0b9a73b967c0b5e99d38bf4d15e9764d}{XSTAR\+\_\+\+KTEST}} (String\+Test, Greater)
+\item 
+\mbox{\hyperlink{string__test_8hpp_a0f1723465347aac77ca11bf37d0da34f}{XSTAR\+\_\+\+KTEST}} (String\+Test, Greater\+Or\+Equal)
+\item 
+\mbox{\hyperlink{string__test_8hpp_abeed4ddd91cb189ef9d7ced65decd6ad}{XSTAR\+\_\+\+KTEST}} (String\+Test, Less)
+\item 
+\mbox{\hyperlink{string__test_8hpp_a62eac4b4456c348165bff42c0d7c3d20}{XSTAR\+\_\+\+KTEST}} (String\+Test, Less\+Or\+Equal)
+\item 
+\mbox{\hyperlink{string__test_8hpp_a5e6cf91ce30ec8416cf96b3c194cfb2c}{XSTAR\+\_\+\+KTEST}} (String\+Test, Square\+Bracket)
+\item 
+\mbox{\hyperlink{string__test_8hpp_a643647e18ae0ab7d4c2309147f103d8c}{XSTAR\+\_\+\+KTEST}} (String\+Test, Concatenation)
+\item 
+\mbox{\hyperlink{string__test_8hpp_acaf1ba439d47118e7ced8d23a72501aa}{XSTAR\+\_\+\+KTEST\+\_\+\+SUITE}} (String\+Test)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{string__test_8hpp_a643647e18ae0ab7d4c2309147f103d8c}\label{string__test_8hpp_a643647e18ae0ab7d4c2309147f103d8c}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Concatenation}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00098}{98}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099 \{}
+\DoxyCodeLine{00100     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} str(\textcolor{stringliteral}{"{}Hello, "{}});}
+\DoxyCodeLine{00101     str += \textcolor{stringliteral}{"{}0xlay!"{}};}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(str, \textcolor{stringliteral}{"{}Hello, 0xlay!"{}});}
+\DoxyCodeLine{00104 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_ac36de51d745f678407d1f6109515fac2}\label{string__test_8hpp_ac36de51d745f678407d1f6109515fac2}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Const\+Iterators}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031 \{}
+\DoxyCodeLine{00032     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src(\textcolor{stringliteral}{"{}Hello"{}});}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(*src.cbegin(), \textcolor{charliteral}{'H'});}
+\DoxyCodeLine{00035     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(*(src.cend() -\/ 1), \textcolor{charliteral}{'o'});}
+\DoxyCodeLine{00036 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_a7bd85a1a805705089e478f9355e6233f}\label{string__test_8hpp_a7bd85a1a805705089e478f9355e6233f}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Copy}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src(\textcolor{stringliteral}{"{}Hello World!"{}});}
+\DoxyCodeLine{00018     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} dest = src;}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(src, dest);}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_aac946902c246bb7d8e9b1667ec012a91}\label{string__test_8hpp_aac946902c246bb7d8e9b1667ec012a91}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Equal}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039 \{}
+\DoxyCodeLine{00040     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Hello World!"{}});}
+\DoxyCodeLine{00041     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Hello World!"{}});}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(src1, src2);}
+\DoxyCodeLine{00044 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_a0b9a73b967c0b5e99d38bf4d15e9764d}\label{string__test_8hpp_a0b9a73b967c0b5e99d38bf4d15e9764d}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Greater}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00054}{54}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055 \{}
+\DoxyCodeLine{00056     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{00057     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059     \mbox{\hyperlink{kernel__test_8hpp_a8a86a06b2e6db005a8f8443f16247149}{XSTAR\_KTEST\_ASSERT\_GT}}(src1, src2);}
+\DoxyCodeLine{00060 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_a0f1723465347aac77ca11bf37d0da34f}\label{string__test_8hpp_a0f1723465347aac77ca11bf37d0da34f}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Greater\+Or\+Equal}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00062}{62}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063 \{}
+\DoxyCodeLine{00064     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{00065     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{00066     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src3(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068     \mbox{\hyperlink{kernel__test_8hpp_a8bf4336918ed8119bfde50d75cbfb93f}{XSTAR\_KTEST\_ASSERT\_GE}}(src1, src2);}
+\DoxyCodeLine{00069     \mbox{\hyperlink{kernel__test_8hpp_a8bf4336918ed8119bfde50d75cbfb93f}{XSTAR\_KTEST\_ASSERT\_GE}}(src2, src3);}
+\DoxyCodeLine{00070 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_a73198ed6e2f5d20d36875b7bb06f73ad}\label{string__test_8hpp_a73198ed6e2f5d20d36875b7bb06f73ad}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Iterators}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src(\textcolor{stringliteral}{"{}Hello"{}});}
+\DoxyCodeLine{00026     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(*src.begin(), \textcolor{charliteral}{'H'});}
+\DoxyCodeLine{00027     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(*(src.end() -\/ 1), \textcolor{charliteral}{'o'});}
+\DoxyCodeLine{00028 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_abeed4ddd91cb189ef9d7ced65decd6ad}\label{string__test_8hpp_abeed4ddd91cb189ef9d7ced65decd6ad}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Less}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00072}{72}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073 \{}
+\DoxyCodeLine{00074     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{00075     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     \mbox{\hyperlink{kernel__test_8hpp_a39c0426ea0a526ffe425672ebec52d5c}{XSTAR\_KTEST\_ASSERT\_LT}}(src1, src2);}
+\DoxyCodeLine{00078 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_a62eac4b4456c348165bff42c0d7c3d20}\label{string__test_8hpp_a62eac4b4456c348165bff42c0d7c3d20}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Less\+Or\+Equal}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00080}{80}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081 \{}
+\DoxyCodeLine{00082     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Apple"{}});}
+\DoxyCodeLine{00083     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{00084     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src3(\textcolor{stringliteral}{"{}Banana"{}});}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \mbox{\hyperlink{kernel__test_8hpp_aa62b58b8067ea75e13ef4202abe7a17b}{XSTAR\_KTEST\_ASSERT\_LE}}(src1, src2);}
+\DoxyCodeLine{00087     \mbox{\hyperlink{kernel__test_8hpp_aa62b58b8067ea75e13ef4202abe7a17b}{XSTAR\_KTEST\_ASSERT\_LE}}(src2, src3);}
+\DoxyCodeLine{00088 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}\label{string__test_8hpp_ac7ae34d0dad7a2a81fe580c9570621fd}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Move}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00006}{6}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} dest(\mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}}(\textcolor{stringliteral}{"{}Hello World!"{}}));}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010     dest = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(\textcolor{stringliteral}{"{}My Friend"{}});}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(dest, \textcolor{stringliteral}{"{}My Friend"{}});}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_ac942ccaba41959b9ea39ea9efae41c03}\label{string__test_8hpp_ac942ccaba41959b9ea39ea9efae41c03}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Not\+Equal}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00046}{46}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047 \{}
+\DoxyCodeLine{00048     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src1(\textcolor{stringliteral}{"{}Hello World!"{}});}
+\DoxyCodeLine{00049     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} src2(\textcolor{stringliteral}{"{}Hi World!"{}});}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051     \mbox{\hyperlink{kernel__test_8hpp_a7bf9c9ee2add11b26be102c1f45caba1}{XSTAR\_KTEST\_ASSERT\_NE}}(src1, src2);}
+\DoxyCodeLine{00052 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_a5e6cf91ce30ec8416cf96b3c194cfb2c}\label{string__test_8hpp_a5e6cf91ce30ec8416cf96b3c194cfb2c}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST@{XSTAR\_KTEST}}
+\index{XSTAR\_KTEST@{XSTAR\_KTEST}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST()}{XSTAR\_KTEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST (\begin{DoxyParamCaption}\item[{String\+Test}]{,  }\item[{Square\+Bracket}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00090}{90}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091 \{}
+\DoxyCodeLine{00092     \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar::String<PagedPool>}} str(\textcolor{stringliteral}{"{}Hello"{}});}
+\DoxyCodeLine{00093     str[0] = \textcolor{charliteral}{'h'};}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095     \mbox{\hyperlink{kernel__test_8hpp_a3eba3ea4dce316514d54fcbf7fbc6573}{XSTAR\_KTEST\_ASSERT\_EQ}}(str, \textcolor{stringliteral}{"{}hello"{}});}
+\DoxyCodeLine{00096 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{string__test_8hpp_acaf1ba439d47118e7ced8d23a72501aa}\label{string__test_8hpp_acaf1ba439d47118e7ced8d23a72501aa}} 
+\index{string\_test.hpp@{string\_test.hpp}!XSTAR\_KTEST\_SUITE@{XSTAR\_KTEST\_SUITE}}
+\index{XSTAR\_KTEST\_SUITE@{XSTAR\_KTEST\_SUITE}!string\_test.hpp@{string\_test.hpp}}
+\doxysubsubsection{\texorpdfstring{XSTAR\_KTEST\_SUITE()}{XSTAR\_KTEST\_SUITE()}}
+{\footnotesize\ttfamily XSTAR\+\_\+\+KTEST\+\_\+\+SUITE (\begin{DoxyParamCaption}\item[{String\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{string__test_8hpp_source_l00106}{106}} of file \mbox{\hyperlink{string__test_8hpp_source}{string\+\_\+test.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107 \{}
+\DoxyCodeLine{00108     KdPrint((\textcolor{stringliteral}{"{}StringTest START!\(\backslash\)n"{}}));}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Move), \textcolor{stringliteral}{"{}StringTest::Move()"{}});}
+\DoxyCodeLine{00111     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Copy), \textcolor{stringliteral}{"{}StringTest::Copy()"{}});}
+\DoxyCodeLine{00112     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Iterators), \textcolor{stringliteral}{"{}StringTest::Iterators()"{}});}
+\DoxyCodeLine{00113     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, ConstIterators), \textcolor{stringliteral}{"{}StringTest::ConstIterators()"{}});}
+\DoxyCodeLine{00114     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Equal), \textcolor{stringliteral}{"{}StringTest::Equal()"{}});}
+\DoxyCodeLine{00115     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, NotEqual), \textcolor{stringliteral}{"{}StringTest::NotEqual()"{}});}
+\DoxyCodeLine{00116     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Greater), \textcolor{stringliteral}{"{}StringTest::Greater()"{}});}
+\DoxyCodeLine{00117     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, GreaterOrEqual), \textcolor{stringliteral}{"{}StringTest::GreaterOrEqual()"{}});}
+\DoxyCodeLine{00118     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Less), \textcolor{stringliteral}{"{}StringTest::Less()"{}});}
+\DoxyCodeLine{00119     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, LessOrEqual), \textcolor{stringliteral}{"{}StringTest::LessOrEqual()"{}});}
+\DoxyCodeLine{00120     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, SquareBracket), \textcolor{stringliteral}{"{}StringTest::SquareBracketl()"{}});}
+\DoxyCodeLine{00121     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, LessOrEqual), \textcolor{stringliteral}{"{}StringTest::LessOrEqual()"{}});}
+\DoxyCodeLine{00122     \mbox{\hyperlink{kernel__test_8hpp_aa490241ea2d40fec4c6c4b151468f84c}{XSTAR\_KTEST\_RUN\_TEST}}(\mbox{\hyperlink{kernel__test_8hpp_aa3ea6869e55fd197efa274647aae3ff4}{XSTAR\_CALL\_KTEST}}(StringTest, Concatenation), \textcolor{stringliteral}{"{}StringTest::Concatenation()"{}});}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124     KdPrint((\textcolor{stringliteral}{"{}StringTest FINISH!\(\backslash\)n"{}}));}
+\DoxyCodeLine{00125 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,72 @@
+\hypertarget{winapi__excepion_8cpp_source}{}\doxysection{winapi\+\_\+excepion.\+cpp}
+\label{winapi__excepion_8cpp_source}\index{user\_space/src/winapi\_excepion.cpp@{user\_space/src/winapi\_excepion.cpp}}
+\mbox{\hyperlink{winapi__excepion_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00014}00014 \textcolor{comment}{// File: winapi\_exception.cpp}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00018}00018 \textcolor{comment}{// Environment: User mode only}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00022}00022 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{winapi__exception_8hpp}{winapi\_exception.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00025}00025 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00028}\mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a016573cc926e7811640b44d9f7611797}{00028}}     \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a016573cc926e7811640b44d9f7611797}{WinAPIException::WinAPIException}}()}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00029}00029         : msg\_(\mbox{\hyperlink{namespacexstar_a2f2f11cd766129e29f47dc9713f5c192}{getLastErrorStr}}()) \{ \}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00031}\mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_add0ac4bd551625dfc7c48038837d3b27}{00031}}     \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a016573cc926e7811640b44d9f7611797}{WinAPIException::WinAPIException}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg, uint32\_t lastError)}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00032}00032         : msg\_(std::string(msg) + \textcolor{stringliteral}{"{} Error code: "{}} + std::to\_string(lastError))}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00033}00033     \{ \}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00035}\mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a48d30b4209175699080ca9bb41b4e529}{00035}}     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_a48d30b4209175699080ca9bb41b4e529}{WinAPIException::what}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00036}00036 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00037}00037         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_win_a_p_i_exception_aa400308cdac83269c0956d94722b92bd}{msg\_}}.c\_str();}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00042}\mbox{\hyperlink{namespacexstar_a2f2f11cd766129e29f47dc9713f5c192}{00042}}     std::string \mbox{\hyperlink{namespacexstar_a2f2f11cd766129e29f47dc9713f5c192}{getLastErrorStr}}()}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00043}00043     \{}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00044}00044         \textcolor{keywordtype}{char} msg\_buf[256]\{ 0 \};}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00046}00046         uint32\_t lastError = GetLastError();}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00047}00047         \textcolor{keywordflow}{if} (!lastError)}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00048}00048             \textcolor{keywordflow}{return} msg\_buf;}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00050}00050         \textcolor{keywordtype}{size\_t} size = FormatMessageA(}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00051}00051             FORMAT\_MESSAGE\_FROM\_SYSTEM |}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00052}00052             FORMAT\_MESSAGE\_IGNORE\_INSERTS,}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00053}00053             \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00054}00054             lastError,}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00055}00055             MAKELANGID(LANG\_ENGLISH, SUBLANG\_ENGLISH\_US),}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00056}00056             msg\_buf,}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00057}00057             256,}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00058}00058             \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00059}00059         );}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00060}00060         \textcolor{keywordflow}{if} (!size)}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00061}00061             \textcolor{keywordflow}{throw} std::exception();}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00063}00063         \textcolor{keywordflow}{return} std::string(msg\_buf, 256);}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00064}00064     \}}
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{winapi__excepion_8cpp_source_l00066}00066 \} \textcolor{comment}{// xstar}}
+
+\end{DoxyCode}

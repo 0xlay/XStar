@@ -1,0 +1,719 @@
+\hypertarget{classxstar_1_1_basic_string}{}\doxysection{xstar\+::Basic\+String\texorpdfstring{$<$}{<} CharT, Traits, Allocator \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classxstar_1_1_basic_string}\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+
+
+{\ttfamily \#include $<$string.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_a6748827ac8001ca7ba9e2e4158f95c9c}{Char\+Traits}} = Traits
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_a6e84d7bd2a71397b84b8e61dc7cadb7d}{Char\+Type}} = typename \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Traits\+::\+Char\+Type}}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_ad2ec6c04bd59444f26c984443c17c239}{Arg\+Type}} = typename \mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Char\+Traits\+::\+Arg\+Type}}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_a4f5bf661db8cb1f35ad2532746763014}{Reference}} = typename \mbox{\hyperlink{structxstar_1_1_char_traits_a1325210f70ab59fd3c553a8041c3212e}{Char\+Traits\+::\+Reference}}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_a039542233efeb48abcde477f30d84834}{Const\+Reference}} = typename \mbox{\hyperlink{structxstar_1_1_char_traits_addf45723cf5acee3ff132c1eccf704f7}{Char\+Traits\+::\+Const\+Reference}}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_af613af6efb25a85cd842162fbdf2c0dc}{Pointer}} = typename \mbox{\hyperlink{structxstar_1_1_char_traits_a7edc2a4819f998ad5bcf360987e43dc2}{Char\+Traits\+::\+Pointer}}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_ab8072dfc55e2bc0e09f4a9c496eb6404}{Const\+Pointer}} = typename \mbox{\hyperlink{structxstar_1_1_char_traits_aba325069b79dd03a61d94c2c0887a79f}{Char\+Traits\+::\+Const\+Pointer}}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_aa1be79fa68087832dee70044e873f34b}{Iterator}} = typename \mbox{\hyperlink{structxstar_1_1_char_traits_a07e78a14d3887900a58deafbe0468608}{Char\+Traits\+::\+Iterator}}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_a6b694c5d8d79376ab9414fad6b81f74c}{Const\+Iterator}} = typename \mbox{\hyperlink{structxstar_1_1_char_traits_aa041514dbae595fb2c0cd33074c66153}{Char\+Traits\+::\+Const\+Iterator}}
+\item 
+using \mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}} = typename \mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{Char\+Traits\+::\+Size\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_abf90eaf9d5a22d6f995cf3279a373baa}{Basic\+String}} ()
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_ad2f4bf813c595d4b8bfc266cb9bbd785}{Basic\+String}} (size\+\_\+t \mbox{\hyperlink{classxstar_1_1_basic_string_a8f74bfb0636d47f7477a9fe8ebad5851}{size}})
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_abf2578786d9077f8ccee63bceb448d7b}{Basic\+String}} (\mbox{\hyperlink{classxstar_1_1_basic_string_ad2ec6c04bd59444f26c984443c17c239}{Arg\+Type}} arg)
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_ad9edbd0c2edb87e4e4b81c6593b9d7bd}{Basic\+String}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&other)
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_a8cdd943c6960edcce691113d4306441a}{Basic\+String}} (\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_a42a0949a7c87d067b2d6f0443a695885}{$\sim$\+Basic\+String}} ()
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \& \mbox{\hyperlink{classxstar_1_1_basic_string_a21769251e3c59f9bda659598af876046}{operator=}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&other)
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \& \mbox{\hyperlink{classxstar_1_1_basic_string_a475f6f12fbc2d7086365538e9fffed6c}{operator=}} (\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_a4f5bf661db8cb1f35ad2532746763014}{Reference}} \mbox{\hyperlink{classxstar_1_1_basic_string_a385228930cc6bda789e538106f4eaa70}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}} i) noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_a4f5bf661db8cb1f35ad2532746763014}{Reference}} \mbox{\hyperlink{classxstar_1_1_basic_string_a2849696bad1ad609227b564626f95eae}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}} i) const noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \& \mbox{\hyperlink{classxstar_1_1_basic_string_af5fdeee0ddcd4e8aa21e97a06c7bed79}{operator+}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&rhs)
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \& \mbox{\hyperlink{classxstar_1_1_basic_string_ae3d0da08aceaa3089da24742304275e7}{operator+=}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&rhs)
+\item 
+bool \mbox{\hyperlink{classxstar_1_1_basic_string_a25928a9c656cf58805a292f1c71501fa}{operator==}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&rhs) const noexcept
+\item 
+bool \mbox{\hyperlink{classxstar_1_1_basic_string_a5e3aa2b7001701a4aa66cc097509179f}{operator!=}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&rhs) const noexcept
+\item 
+bool \mbox{\hyperlink{classxstar_1_1_basic_string_a4da425684a1e49d8c0751ca1bde6cd96}{operator$<$}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&rhs) const noexcept
+\item 
+bool \mbox{\hyperlink{classxstar_1_1_basic_string_a17127b8a9d2afbb36fe3c7ee024574a8}{operator$>$}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&rhs) const noexcept
+\item 
+bool \mbox{\hyperlink{classxstar_1_1_basic_string_a530aa94f9dd52c9e1afd5846e19bb68b}{operator$<$=}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&rhs) const noexcept
+\item 
+bool \mbox{\hyperlink{classxstar_1_1_basic_string_a693b2a77527b180acbba7819e4706245}{operator$>$=}} (const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \&rhs) const noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}} \mbox{\hyperlink{classxstar_1_1_basic_string_a550c3ffa4322ac5df238b96e1b66042b}{capacity}} () const noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}} \mbox{\hyperlink{classxstar_1_1_basic_string_a8f74bfb0636d47f7477a9fe8ebad5851}{size}} () const noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_aa1be79fa68087832dee70044e873f34b}{Iterator}} \mbox{\hyperlink{classxstar_1_1_basic_string_a3bbda2c9fd2dfa8b3451509018655d37}{begin}} () noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_aa1be79fa68087832dee70044e873f34b}{Iterator}} \mbox{\hyperlink{classxstar_1_1_basic_string_ab9856a001ef895fa8e8d3b07c18ce08a}{end}} () noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_a6b694c5d8d79376ab9414fad6b81f74c}{Const\+Iterator}} \mbox{\hyperlink{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}{cbegin}} () const noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_a6b694c5d8d79376ab9414fad6b81f74c}{Const\+Iterator}} \mbox{\hyperlink{classxstar_1_1_basic_string_af6d50be4306e543f2c843477be9702b3}{cend}} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}} \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\+\_\+}}
+\item 
+Allocator \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class CharT, class Traits, class Allocator$>$\newline
+class xstar\+::\+Basic\+String$<$ Char\+T, Traits, Allocator $>$}
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00100}{100}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_ad2ec6c04bd59444f26c984443c17c239}\label{classxstar_1_1_basic_string_ad2ec6c04bd59444f26c984443c17c239}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!ArgType@{ArgType}}
+\index{ArgType@{ArgType}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{ArgType}{ArgType}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Arg\+Type =  typename \mbox{\hyperlink{structxstar_1_1_char_traits_a3cb542a57642176e61d9a0c16d78f002}{Char\+Traits\+::\+Arg\+Type}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00105}{105}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a6748827ac8001ca7ba9e2e4158f95c9c}\label{classxstar_1_1_basic_string_a6748827ac8001ca7ba9e2e4158f95c9c}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!CharTraits@{CharTraits}}
+\index{CharTraits@{CharTraits}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{CharTraits}{CharTraits}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Char\+Traits =  Traits}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00103}{103}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a6e84d7bd2a71397b84b8e61dc7cadb7d}\label{classxstar_1_1_basic_string_a6e84d7bd2a71397b84b8e61dc7cadb7d}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!CharType@{CharType}}
+\index{CharType@{CharType}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{CharType}{CharType}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Char\+Type =  typename \mbox{\hyperlink{structxstar_1_1_char_traits_aa8c6f414a9a18ed9fec7ae7f7caf1b74}{Char\+Traits\+::\+Char\+Type}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00104}{104}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a6b694c5d8d79376ab9414fad6b81f74c}\label{classxstar_1_1_basic_string_a6b694c5d8d79376ab9414fad6b81f74c}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!ConstIterator@{ConstIterator}}
+\index{ConstIterator@{ConstIterator}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{ConstIterator}{ConstIterator}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Const\+Iterator =  typename \mbox{\hyperlink{structxstar_1_1_char_traits_aa041514dbae595fb2c0cd33074c66153}{Char\+Traits\+::\+Const\+Iterator}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00111}{111}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_ab8072dfc55e2bc0e09f4a9c496eb6404}\label{classxstar_1_1_basic_string_ab8072dfc55e2bc0e09f4a9c496eb6404}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!ConstPointer@{ConstPointer}}
+\index{ConstPointer@{ConstPointer}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{ConstPointer}{ConstPointer}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Const\+Pointer =  typename \mbox{\hyperlink{structxstar_1_1_char_traits_aba325069b79dd03a61d94c2c0887a79f}{Char\+Traits\+::\+Const\+Pointer}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00109}{109}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a039542233efeb48abcde477f30d84834}\label{classxstar_1_1_basic_string_a039542233efeb48abcde477f30d84834}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!ConstReference@{ConstReference}}
+\index{ConstReference@{ConstReference}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{ConstReference}{ConstReference}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Const\+Reference =  typename \mbox{\hyperlink{structxstar_1_1_char_traits_addf45723cf5acee3ff132c1eccf704f7}{Char\+Traits\+::\+Const\+Reference}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00107}{107}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_aa1be79fa68087832dee70044e873f34b}\label{classxstar_1_1_basic_string_aa1be79fa68087832dee70044e873f34b}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Iterator =  typename \mbox{\hyperlink{structxstar_1_1_char_traits_a07e78a14d3887900a58deafbe0468608}{Char\+Traits\+::\+Iterator}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00110}{110}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_af613af6efb25a85cd842162fbdf2c0dc}\label{classxstar_1_1_basic_string_af613af6efb25a85cd842162fbdf2c0dc}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!Pointer@{Pointer}}
+\index{Pointer@{Pointer}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Pointer}{Pointer}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Pointer =  typename \mbox{\hyperlink{structxstar_1_1_char_traits_a7edc2a4819f998ad5bcf360987e43dc2}{Char\+Traits\+::\+Pointer}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00108}{108}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a4f5bf661db8cb1f35ad2532746763014}\label{classxstar_1_1_basic_string_a4f5bf661db8cb1f35ad2532746763014}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!Reference@{Reference}}
+\index{Reference@{Reference}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Reference}{Reference}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Reference =  typename \mbox{\hyperlink{structxstar_1_1_char_traits_a1325210f70ab59fd3c553a8041c3212e}{Char\+Traits\+::\+Reference}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00106}{106}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}\label{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!SizeType@{SizeType}}
+\index{SizeType@{SizeType}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{SizeType}{SizeType}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+using \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Size\+Type =  typename \mbox{\hyperlink{structxstar_1_1_char_traits_add299f1c8a0fb78ab9122cff31e4ffa0}{Char\+Traits\+::\+Size\+Type}}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00112}{112}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_abf90eaf9d5a22d6f995cf3279a373baa}\label{classxstar_1_1_basic_string_abf90eaf9d5a22d6f995cf3279a373baa}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!BasicString@{BasicString}}
+\index{BasicString@{BasicString}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{BasicString()}{BasicString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Basic\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00118}{118}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119             : \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}}(0)}
+\DoxyCodeLine{00120         \{ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_ad2f4bf813c595d4b8bfc266cb9bbd785}\label{classxstar_1_1_basic_string_ad2f4bf813c595d4b8bfc266cb9bbd785}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!BasicString@{BasicString}}
+\index{BasicString@{BasicString}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{BasicString()}{BasicString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Basic\+String (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00122}{122}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123             : \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}}(\mbox{\hyperlink{classxstar_1_1_basic_string_a8f74bfb0636d47f7477a9fe8ebad5851}{size}})}
+\DoxyCodeLine{00124         \{}
+\DoxyCodeLine{00125             \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.allocate(\mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}});}
+\DoxyCodeLine{00126         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_abf2578786d9077f8ccee63bceb448d7b}\label{classxstar_1_1_basic_string_abf2578786d9077f8ccee63bceb448d7b}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!BasicString@{BasicString}}
+\index{BasicString@{BasicString}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{BasicString()}{BasicString()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Basic\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_basic_string_ad2ec6c04bd59444f26c984443c17c239}{Arg\+Type}}}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00128}{128}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129             : \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}}(\mbox{\hyperlink{structxstar_1_1_char_traits_a98f8d54bbc3f0052a15e2d01fb83b785}{CharTraits::length}}(arg) + 1)}
+\DoxyCodeLine{00130         \{}
+\DoxyCodeLine{00131             \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.allocate(\mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}});}
+\DoxyCodeLine{00132             \mbox{\hyperlink{structxstar_1_1_char_traits_acc409dbeb06ef8bce6459c7d0706b23e}{CharTraits::copy}}(\mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.get(), arg, \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}});}
+\DoxyCodeLine{00133         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_ad9edbd0c2edb87e4e4b81c6593b9d7bd}\label{classxstar_1_1_basic_string_ad9edbd0c2edb87e4e4b81c6593b9d7bd}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!BasicString@{BasicString}}
+\index{BasicString@{BasicString}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{BasicString()}{BasicString()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Basic\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00135}{135}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136         \{}
+\DoxyCodeLine{00137             \textcolor{keywordflow}{if} (other != *\textcolor{keyword}{this})}
+\DoxyCodeLine{00138             \{}
+\DoxyCodeLine{00139                 \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}} = other.size\_;}
+\DoxyCodeLine{00140                 \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}} = other.allocator\_;}
+\DoxyCodeLine{00141             \}}
+\DoxyCodeLine{00142         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a8cdd943c6960edcce691113d4306441a}\label{classxstar_1_1_basic_string_a8cdd943c6960edcce691113d4306441a}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!BasicString@{BasicString}}
+\index{BasicString@{BasicString}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{BasicString()}{BasicString()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::\+Basic\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00144}{144}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145         \{}
+\DoxyCodeLine{00146             \textcolor{keywordflow}{if} (other != *\textcolor{keyword}{this})}
+\DoxyCodeLine{00147             \{}
+\DoxyCodeLine{00148                 \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}} = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(other.size\_);}
+\DoxyCodeLine{00149                 \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}} = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(other.allocator\_);}
+\DoxyCodeLine{00150             \}}
+\DoxyCodeLine{00151         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a42a0949a7c87d067b2d6f0443a695885}\label{classxstar_1_1_basic_string_a42a0949a7c87d067b2d6f0443a695885}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!````~BasicString@{$\sim$BasicString}}
+\index{````~BasicString@{$\sim$BasicString}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BasicString()}{~BasicString()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::$\sim$\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00157}{157}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158         \{}
+\DoxyCodeLine{00159             \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.deallocate();}
+\DoxyCodeLine{00160         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a3bbda2c9fd2dfa8b3451509018655d37}\label{classxstar_1_1_basic_string_a3bbda2c9fd2dfa8b3451509018655d37}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!begin@{begin}}
+\index{begin@{begin}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string_aa1be79fa68087832dee70044e873f34b}{Iterator}} \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00276}{276}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00277         \{}
+\DoxyCodeLine{00278             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.get();}
+\DoxyCodeLine{00279         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a550c3ffa4322ac5df238b96e1b66042b}\label{classxstar_1_1_basic_string_a550c3ffa4322ac5df238b96e1b66042b}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}} \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00262}{262}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00263         \{}
+\DoxyCodeLine{00264             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.size();}
+\DoxyCodeLine{00265         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}\label{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string_a6b694c5d8d79376ab9414fad6b81f74c}{Const\+Iterator}} \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00286}{286}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00287         \{}
+\DoxyCodeLine{00288             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.get();}
+\DoxyCodeLine{00289         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_af6d50be4306e543f2c843477be9702b3}\label{classxstar_1_1_basic_string_af6d50be4306e543f2c843477be9702b3}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!cend@{cend}}
+\index{cend@{cend}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string_a6b694c5d8d79376ab9414fad6b81f74c}{Const\+Iterator}} \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00291}{291}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00292         \{}
+\DoxyCodeLine{00293             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.get() + \mbox{\hyperlink{classxstar_1_1_basic_string_a8f74bfb0636d47f7477a9fe8ebad5851}{size}}();}
+\DoxyCodeLine{00294         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_ab9856a001ef895fa8e8d3b07c18ce08a}\label{classxstar_1_1_basic_string_ab9856a001ef895fa8e8d3b07c18ce08a}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!end@{end}}
+\index{end@{end}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string_aa1be79fa68087832dee70044e873f34b}{Iterator}} \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00281}{281}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00282         \{}
+\DoxyCodeLine{00283             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.get() + \mbox{\hyperlink{classxstar_1_1_basic_string_a8f74bfb0636d47f7477a9fe8ebad5851}{size}}();}
+\DoxyCodeLine{00284         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a5e3aa2b7001701a4aa66cc097509179f}\label{classxstar_1_1_basic_string_a5e3aa2b7001701a4aa66cc097509179f}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+bool \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00233}{233}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00234         \{}
+\DoxyCodeLine{00235             \textcolor{keywordflow}{return} !(\mbox{\hyperlink{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}{cbegin}}() == rhs.cbegin());}
+\DoxyCodeLine{00236         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_af5fdeee0ddcd4e8aa21e97a06c7bed79}\label{classxstar_1_1_basic_string_af5fdeee0ddcd4e8aa21e97a06c7bed79}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \& \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00196}{196}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00197         \{}
+\DoxyCodeLine{00198             \mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{SizeType}} curSize = \mbox{\hyperlink{classxstar_1_1_basic_string_a8f74bfb0636d47f7477a9fe8ebad5851}{size}}();}
+\DoxyCodeLine{00199             \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}} += rhs.size();}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}} <= \mbox{\hyperlink{classxstar_1_1_basic_string_a550c3ffa4322ac5df238b96e1b66042b}{capacity}}())}
+\DoxyCodeLine{00202             \{}
+\DoxyCodeLine{00203                 \mbox{\hyperlink{structxstar_1_1_char_traits_acc409dbeb06ef8bce6459c7d0706b23e}{CharTraits::copy}}(\mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.get() + curSize,}
+\DoxyCodeLine{00204                                  rhs.allocator\_.get(),}
+\DoxyCodeLine{00205                                  rhs.size() + 1);}
+\DoxyCodeLine{00206             \}}
+\DoxyCodeLine{00207             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00208             \{}
+\DoxyCodeLine{00209                 Allocator tmpAllocator;}
+\DoxyCodeLine{00210                 tmpAllocator.allocate(\mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}});}
+\DoxyCodeLine{00211                 \mbox{\hyperlink{structxstar_1_1_char_traits_acc409dbeb06ef8bce6459c7d0706b23e}{CharTraits::copy}}(tmpAllocator.get(),}
+\DoxyCodeLine{00212                                  \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.get(),}
+\DoxyCodeLine{00213                                  curSize);}
+\DoxyCodeLine{00214                 \mbox{\hyperlink{structxstar_1_1_char_traits_acc409dbeb06ef8bce6459c7d0706b23e}{CharTraits::copy}}(tmpAllocator.get() + curSize,}
+\DoxyCodeLine{00215                                  rhs.allocator\_.get(),}
+\DoxyCodeLine{00216                                  rhs.size() + 1);}
+\DoxyCodeLine{00217                 \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}} = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(tmpAllocator);}
+\DoxyCodeLine{00218             \}}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{00221         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_ae3d0da08aceaa3089da24742304275e7}\label{classxstar_1_1_basic_string_ae3d0da08aceaa3089da24742304275e7}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \& \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00223}{223}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00224         \{}
+\DoxyCodeLine{00225             \textcolor{keywordflow}{return} (*\textcolor{keyword}{this} + rhs);}
+\DoxyCodeLine{00226         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a4da425684a1e49d8c0751ca1bde6cd96}\label{classxstar_1_1_basic_string_a4da425684a1e49d8c0751ca1bde6cd96}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+bool \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00238}{238}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00239         \{}
+\DoxyCodeLine{00240             \textcolor{keywordflow}{return} (\mbox{\hyperlink{structxstar_1_1_char_traits_a04762bb3611fa79730de072860a87f02}{CharTraits::compare}}(\mbox{\hyperlink{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}{cbegin}}(), rhs.cbegin()) < 0);}
+\DoxyCodeLine{00241         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a530aa94f9dd52c9e1afd5846e19bb68b}\label{classxstar_1_1_basic_string_a530aa94f9dd52c9e1afd5846e19bb68b}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+bool \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00248}{248}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00249         \{}
+\DoxyCodeLine{00250             \textcolor{keywordflow}{return} (\mbox{\hyperlink{structxstar_1_1_char_traits_a04762bb3611fa79730de072860a87f02}{CharTraits::compare}}(\mbox{\hyperlink{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}{cbegin}}(), rhs.cbegin()) <= 0);}
+\DoxyCodeLine{00251         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a475f6f12fbc2d7086365538e9fffed6c}\label{classxstar_1_1_basic_string_a475f6f12fbc2d7086365538e9fffed6c}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \& \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00176}{176}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177         \{}
+\DoxyCodeLine{00178             \textcolor{keywordflow}{if} (other != *\textcolor{keyword}{this})}
+\DoxyCodeLine{00179             \{}
+\DoxyCodeLine{00180                 \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}} = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(other.size\_);}
+\DoxyCodeLine{00181                 \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}} = \mbox{\hyperlink{cpplibrary_8hpp_a7055ed3771468796d900ead79b77bea3}{move}}(other.allocator\_);}
+\DoxyCodeLine{00182             \}}
+\DoxyCodeLine{00183             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{00184         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a21769251e3c59f9bda659598af876046}\label{classxstar_1_1_basic_string_a21769251e3c59f9bda659598af876046}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}} \& \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00166}{166}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00167         \{}
+\DoxyCodeLine{00168             \textcolor{keywordflow}{if} (other != *\textcolor{keyword}{this})}
+\DoxyCodeLine{00169             \{}
+\DoxyCodeLine{00170                 \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}} = other.size\_;}
+\DoxyCodeLine{00171                 \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}} = other.allocator\_;}
+\DoxyCodeLine{00172             \}}
+\DoxyCodeLine{00173             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{00174         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a25928a9c656cf58805a292f1c71501fa}\label{classxstar_1_1_basic_string_a25928a9c656cf58805a292f1c71501fa}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+bool \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00228}{228}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00229         \{}
+\DoxyCodeLine{00230             \textcolor{keywordflow}{return} (\mbox{\hyperlink{structxstar_1_1_char_traits_a04762bb3611fa79730de072860a87f02}{CharTraits::compare}}(\mbox{\hyperlink{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}{cbegin}}(), rhs.cbegin()) == 0);}
+\DoxyCodeLine{00231         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a17127b8a9d2afbb36fe3c7ee024574a8}\label{classxstar_1_1_basic_string_a17127b8a9d2afbb36fe3c7ee024574a8}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+bool \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00243}{243}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00244         \{}
+\DoxyCodeLine{00245             \textcolor{keywordflow}{return} (\mbox{\hyperlink{structxstar_1_1_char_traits_a04762bb3611fa79730de072860a87f02}{CharTraits::compare}}(\mbox{\hyperlink{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}{cbegin}}(), rhs.cbegin()) > 0);}
+\DoxyCodeLine{00246         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a693b2a77527b180acbba7819e4706245}\label{classxstar_1_1_basic_string_a693b2a77527b180acbba7819e4706245}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+bool \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_basic_string}{Basic\+String}}$<$ CharT, Traits, Allocator $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00253}{253}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00254         \{}
+\DoxyCodeLine{00255             \textcolor{keywordflow}{return} (\mbox{\hyperlink{structxstar_1_1_char_traits_a04762bb3611fa79730de072860a87f02}{CharTraits::compare}}(\mbox{\hyperlink{classxstar_1_1_basic_string_ae4436f98e8f4cc059123968944955616}{cbegin}}(), rhs.cbegin()) >= 0);}
+\DoxyCodeLine{00256         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a2849696bad1ad609227b564626f95eae}\label{classxstar_1_1_basic_string_a2849696bad1ad609227b564626f95eae}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string_a4f5bf661db8cb1f35ad2532746763014}{Reference}} \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00191}{191}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00192         \{}
+\DoxyCodeLine{00193             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.get()[i];}
+\DoxyCodeLine{00194         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a385228930cc6bda789e538106f4eaa70}\label{classxstar_1_1_basic_string_a385228930cc6bda789e538106f4eaa70}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string_a4f5bf661db8cb1f35ad2532746763014}{Reference}} \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00186}{186}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00187         \{}
+\DoxyCodeLine{00188             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}{allocator\_}}.get()[i];}
+\DoxyCodeLine{00189         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a8f74bfb0636d47f7477a9fe8ebad5851}\label{classxstar_1_1_basic_string_a8f74bfb0636d47f7477a9fe8ebad5851}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!size@{size}}
+\index{size@{size}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}} \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00267}{267}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00268         \{}
+\DoxyCodeLine{00269             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}{size\_}} -\/ 1; \textcolor{comment}{/* without '\(\backslash\)0' */}}
+\DoxyCodeLine{00270         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}\label{classxstar_1_1_basic_string_a257db369d44434efaeb750896d39dc8e}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!allocator\_@{allocator\_}}
+\index{allocator\_@{allocator\_}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{allocator\_}{allocator\_}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+Allocator \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::allocator\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00302}{302}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+\mbox{\Hypertarget{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}\label{classxstar_1_1_basic_string_a6a370af0aee64eb9b102c6fbd43ffdb2}} 
+\index{xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}!size\_@{size\_}}
+\index{size\_@{size\_}!xstar::BasicString$<$ CharT, Traits, Allocator $>$@{xstar::BasicString$<$ CharT, Traits, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily template$<$class CharT , class Traits , class Allocator $>$ \\
+\mbox{\hyperlink{classxstar_1_1_basic_string_ad0629f43dfd334bf88a756c665aa778b}{Size\+Type}} \mbox{\hyperlink{classxstar_1_1_basic_string}{xstar\+::\+Basic\+String}}$<$ CharT, Traits, Allocator $>$\+::size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{string_8hpp_source_l00301}{301}} of file \mbox{\hyperlink{string_8hpp_source}{string.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel\+\_\+space/include/\mbox{\hyperlink{string_8hpp}{string.\+hpp}}\end{DoxyCompactItemize}

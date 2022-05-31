@@ -1,0 +1,221 @@
+\hypertarget{named__pipe_8hpp_source}{}\doxysection{named\+\_\+pipe.\+hpp}
+\label{named__pipe_8hpp_source}\index{user\_space/include/named\_pipe.hpp@{user\_space/include/named\_pipe.hpp}}
+\mbox{\hyperlink{named__pipe_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00014}00014 \textcolor{comment}{// File: named\_pipe.hpp}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: User mode only}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#ifndef \_XSTAR\_USER\_NAMED\_PIPE\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00023}00023 \textcolor{preprocessor}{\#define \_XSTAR\_USER\_NAMED\_PIPE\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00025}00025 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00026}00026 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00027}00027 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00029}00029 \textcolor{preprocessor}{\#include <Windows.h>}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00030}00030 \textcolor{preprocessor}{\#include <tchar.h>}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00032}00032 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{winapi__exception_8hpp}{winapi\_exception.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00033}00033 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{meminfo_8hpp}{meminfo.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00036}00036 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00037}00037 \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00040}00040     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00041}00041     \textcolor{comment}{// The PipeDirection}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00042}00042     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00044}00044 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00045}\mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250}{00045}}     \textcolor{keyword}{enum class} \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250}{PipeDirection}} : DWORD}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00046}00046     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00047}00047         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250aefeb369cccbd560588a756610865664c}{In}}           = PIPE\_ACCESS\_INBOUND,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00048}00048         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a7c147cda9e49590f6abe83d118b7353b}{Out}}          = PIPE\_ACCESS\_OUTBOUND,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00049}00049         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a47a54d9da8952a3980d27488b00a21c1}{InOut}}        = PIPE\_ACCESS\_DUPLEX,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00051}00051         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a2ef50b4c466304dc6ac77bac8a779971}{Exclusive}}    = FILE\_FLAG\_FIRST\_PIPE\_INSTANCE,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00053}00053         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250aacb7820573f20d69befb56e41f440549}{WriteThrough}} = FILE\_FLAG\_WRITE\_THROUGH,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00054}00054         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a5f1b91d5ebf354ef9c15b0671c0e8b18}{Overlapped}}   = FILE\_FLAG\_OVERLAPPED,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00056}00056         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250aeefa9ccbf2071c722eefe2ce44c70b02}{WriteOwner}}   = WRITE\_OWNER,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00057}00057         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a9a5219b3b103391c634ee2dea9cfe5a5}{WriteACL}}     = WRITE\_DAC,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00058}00058         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250adf6e3c00e1bc5920b819a81f1b21de5c}{WriteSACL}}    = ACCESS\_SYSTEM\_SECURITY}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00059}00059     \};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00061}\mbox{\hyperlink{namespacexstar_a0c6fd7a26d383021190e1ea7fc485ff9}{00061}}     \textcolor{keyword}{inline} \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250}{PipeDirection}} \mbox{\hyperlink{namespacexstar_a0c6fd7a26d383021190e1ea7fc485ff9}{operator | }}(\mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250}{PipeDirection}} lhs, \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250}{PipeDirection}} rhs)}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00062}00062     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00063}00063         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250}{PipeDirection}}\textcolor{keyword}{>}((DWORD)lhs | (DWORD)rhs);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00064}00064     \}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00069}00069     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00070}00070     \textcolor{comment}{// The PipeMode}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00071}00071     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00073}00073 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00074}\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{00074}}     \textcolor{keyword}{enum class} \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{PipeMode}} : DWORD}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00075}00075     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00076}00076         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa20550804a6328e3541a4414854d01017}{WriteByte}}     = PIPE\_TYPE\_BYTE,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00077}00077         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaac436c659ad8f88223c0342dd623bf952}{ReadByte}}      = PIPE\_READMODE\_BYTE,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00079}00079         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6209e6108d559885b1df4a3ebe3deb8b}{WriteMsg}}      = PIPE\_TYPE\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00080}00080         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}{ReadMsg}}       = PIPE\_READMODE\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00082}00082         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa0f68101772bd5397ef8eb1b632798652}{Wait}}          = PIPE\_WAIT,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00083}00083         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaaa79651554c2676976f6848a999d84aac}{NoWait}}        = PIPE\_NOWAIT,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00085}00085         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6ff49946bdfb33d8e4d0d306b21c58f1}{AcceptClients}} = PIPE\_ACCEPT\_REMOTE\_CLIENTS,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00086}00086         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaab8085b1e63526caadc31695f6d39d316}{RejectClients}} = PIPE\_REJECT\_REMOTE\_CLIENTS}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00087}00087     \};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00089}\mbox{\hyperlink{namespacexstar_a17589468c2b5a7b65d9490f0bd0714cf}{00089}}     \textcolor{keyword}{inline} \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{PipeMode}} \mbox{\hyperlink{namespacexstar_a0c6fd7a26d383021190e1ea7fc485ff9}{operator | }}(\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{PipeMode}} lhs, \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{PipeMode}} rhs)}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00090}00090     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00091}00091         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{PipeMode}}\textcolor{keyword}{>}((DWORD)lhs | (DWORD)rhs);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00092}00092     \}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00097}00097     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00098}00098     \textcolor{comment}{// The PipeAccess}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00099}00099     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00101}00101 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00102}\mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4b}{00102}}     \textcolor{keyword}{enum class} \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4b}{PipeAccess}} : DWORD}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00103}00103     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00104}00104         \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba1129c0e4d43f2d121652a7302712cff6}{Write}} = GENERIC\_WRITE,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00105}00105         \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4ba7a1a5f3e79fdc91edf2f5ead9d66abb4}{Read}}  = GENERIC\_READ,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00106}00106         \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250a47a54d9da8952a3980d27488b00a21c1}{InOut}} = GENERIC\_READ | GENERIC\_WRITE}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00107}00107     \};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00109}\mbox{\hyperlink{structxstar_1_1_pipe_info}{00109}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structxstar_1_1_pipe_info}{PipeInfo}}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00110}00110     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00111}\mbox{\hyperlink{structxstar_1_1_pipe_info_a070176fbd926eee396f5f3f981fc44d5}{00111}}         DWORD \mbox{\hyperlink{structxstar_1_1_pipe_info_a070176fbd926eee396f5f3f981fc44d5}{flags}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00112}\mbox{\hyperlink{structxstar_1_1_pipe_info_a76cbd3d341efcbe9b72b57c8e31d905d}{00112}}         DWORD \mbox{\hyperlink{structxstar_1_1_pipe_info_a76cbd3d341efcbe9b72b57c8e31d905d}{outBufSize}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00113}\mbox{\hyperlink{structxstar_1_1_pipe_info_abadce40f6dbe47ea94bc689b5c818eee}{00113}}         DWORD \mbox{\hyperlink{structxstar_1_1_pipe_info_abadce40f6dbe47ea94bc689b5c818eee}{inBufSize}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00114}\mbox{\hyperlink{structxstar_1_1_pipe_info_a710b3125440ae69dbe9e2070afe580c3}{00114}}         DWORD \mbox{\hyperlink{structxstar_1_1_pipe_info_a710b3125440ae69dbe9e2070afe580c3}{maxInstances}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00115}00115     \};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00117}\mbox{\hyperlink{structxstar_1_1_pipe_state}{00117}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structxstar_1_1_pipe_state}{PipeState}}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00118}00118     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00119}\mbox{\hyperlink{structxstar_1_1_pipe_state_aca1c9cc5f0060ebc83074d43dcc98b7c}{00119}}         \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{PipeMode}} \mbox{\hyperlink{structxstar_1_1_pipe_state_aca1c9cc5f0060ebc83074d43dcc98b7c}{mode}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00120}\mbox{\hyperlink{structxstar_1_1_pipe_state_ac7dee769adde219c3a5efb6fe03bda47}{00120}}         DWORD \mbox{\hyperlink{structxstar_1_1_pipe_state_ac7dee769adde219c3a5efb6fe03bda47}{curInstances}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00121}00121     \};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00126}00126     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00127}00127     \textcolor{comment}{// The PipeIO}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00128}00128     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00130}00130 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00131}\mbox{\hyperlink{classxstar_1_1_pipe_i_o}{00131}}     \textcolor{keyword}{class }\mbox{\hyperlink{classxstar_1_1_pipe_i_o}{PipeIO}}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00132}00132     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00133}00133     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00134}00134         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_aa271cdaeff6c15e67a259d99ac704a0b}{connectToPipe}}(HANDLE pipe, DWORD maxNumOfChar = \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{SmallPage\_4KB}});}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00135}\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a060dd3447ac3ee3657dd752dc1b57285}{00135}}         \textcolor{keyword}{virtual} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a060dd3447ac3ee3657dd752dc1b57285}{\string~PipeIO}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00137}00137         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a2884f1143d1a9a5b2bcde5c8f42a147d}{write}}(\textcolor{keyword}{const} std::string\& msg);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00138}00138         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a2884f1143d1a9a5b2bcde5c8f42a147d}{write}}(\textcolor{keyword}{const} std::wstring\& msg);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00139}00139         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a2884f1143d1a9a5b2bcde5c8f42a147d}{write}}(\textcolor{keyword}{const} std::vector<char>\& msg);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00140}00140         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a2884f1143d1a9a5b2bcde5c8f42a147d}{write}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00142}00142         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_aa73f5068cf254ae86f82bb2e9e27cdb6}{read}}(std::string\& msg);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00143}00143         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_aa73f5068cf254ae86f82bb2e9e27cdb6}{read}}(std::wstring\& msg);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00144}00144         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_aa73f5068cf254ae86f82bb2e9e27cdb6}{read}}(std::vector<char>\& vector);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00145}00145         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_aa73f5068cf254ae86f82bb2e9e27cdb6}{read}}(\textcolor{keywordtype}{int}\& value);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00147}00147         [[nodiscard]] \mbox{\hyperlink{structxstar_1_1_pipe_info}{PipeInfo}} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a4420600b1b569e6695d315993b151bbb}{getInfo}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00149}00149         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00150}00150 \textcolor{comment}{         * @brief The setState method must set only PipeMode::ReadMsg,}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00151}00151 \textcolor{comment}{         * PipeMode::ReadByte, PipeMode::Wait, PipeMode::NoWait.}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00152}00152 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00153}00153         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a01ac81d225b27e68a7200d8479988f9f}{setState}}(\mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{PipeMode}} mode);}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00154}00154         [[nodiscard]] \mbox{\hyperlink{structxstar_1_1_pipe_state}{PipeState}} \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a9a9525eef147a540285d3ad11cc6c063}{getState}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00156}00156     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00157}\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{00157}}         HANDLE \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a149fe5edebf7d5b4498dd79cb9e3e1fa}{pipe\_}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00158}\mbox{\hyperlink{classxstar_1_1_pipe_i_o_a625fb15e344b73528d6f38757de21e47}{00158}}         DWORD \mbox{\hyperlink{classxstar_1_1_pipe_i_o_a625fb15e344b73528d6f38757de21e47}{maxNumOfChar\_}} = 0;}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00159}00159     \};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00164}00164     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00165}00165     \textcolor{comment}{// The NamedPipeServer}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00166}00166     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00168}00168 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00169}\mbox{\hyperlink{classxstar_1_1_named_pipe_server}{00169}}     \textcolor{keyword}{class }\mbox{\hyperlink{classxstar_1_1_named_pipe_server}{NamedPipeServer}} final : \textcolor{keyword}{public} \mbox{\hyperlink{classxstar_1_1_pipe_i_o}{PipeIO}}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00170}00170     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00171}00171     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00172}00172         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_afa07f815edfa5d34f31977810eb0689d}{NamedPipeServer}}(}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00173}00173             std::wstring\_view name,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00174}00174             \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250}{PipeDirection}} direct,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00175}00175             DWORD bufSize}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00176}00176         );}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00178}00178         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_afa07f815edfa5d34f31977810eb0689d}{NamedPipeServer}}(}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00179}00179             std::wstring\_view name,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00180}00180             \mbox{\hyperlink{namespacexstar_ab94cb0ca145b9803fe75d1ec876fd250}{PipeDirection}} direct,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00181}00181             \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3ea}{PipeMode}} mode = \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa63ecf8c28b63acb8f3a26881dc4d80be}{PipeMode::ReadMsg}} | \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa6209e6108d559885b1df4a3ebe3deb8b}{PipeMode::WriteMsg}} | \mbox{\hyperlink{namespacexstar_acf054f95f0f9f00660e32b968126b3eaa0f68101772bd5397ef8eb1b632798652}{PipeMode::Wait}},}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00182}00182             DWORD bufSize = \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{SmallPage\_4KB}},}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00183}00183             DWORD maxInstances = PIPE\_UNLIMITED\_INSTANCES,}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00184}00184             DWORD timeOut = 0 \textcolor{comment}{/*default time-\/out 50ms*/},}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00185}00185             LPSECURITY\_ATTRIBUTES security = \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00186}00186         );}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00188}00188         \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ade97956b1c0e1a16083eaaf9228cd343}{\string~NamedPipeServer}}() \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00190}00190         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ae0247fc2770e6bcb36bb2aa4f99b298c}{wait}}();}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00191}00191         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_named_pipe_server_aa35215f81a2cadb7cdbf9fe326bd14f2}{stopWait}}() \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00193}00193     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00194}\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ae1f2b09ae8d1b63f7c02bb6ba2960d79}{00194}}         std::wstring \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ae1f2b09ae8d1b63f7c02bb6ba2960d79}{name\_}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00195}\mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{00195}}         HANDLE \mbox{\hyperlink{classxstar_1_1_named_pipe_server_ac5495c985900809b1c73da87ef00aa3e}{pipe\_}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00196}00196     \};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00201}00201     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00202}00202     \textcolor{comment}{// The NamedPipeClient}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00203}00203     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00205}00205 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00206}\mbox{\hyperlink{classxstar_1_1_named_pipe_client}{00206}}     \textcolor{keyword}{class }\mbox{\hyperlink{classxstar_1_1_named_pipe_client}{NamedPipeClient}} final : \textcolor{keyword}{public} \mbox{\hyperlink{classxstar_1_1_pipe_i_o}{PipeIO}}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00207}00207     \{}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00208}00208     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00209}00209         \mbox{\hyperlink{classxstar_1_1_named_pipe_client_ac635480b810baa29351fdad7fcb7f4f5}{NamedPipeClient}}(}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00210}00210             std::wstring\_view name, }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00211}00211             \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4b}{PipeAccess}} access, }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00212}00212             DWORD bufSize = \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{SmallPage\_4KB}}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00213}00213         );}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00214}00214         \mbox{\hyperlink{classxstar_1_1_named_pipe_client_a07c5009499954aaafae5fab842075aed}{\string~NamedPipeClient}}() \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00215}00215         }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00216}00216         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_named_pipe_client_ad002d5221c5ca546e7fa638f9bc79f1a}{connect}}();}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00217}00217         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_named_pipe_client_a1fa7e52870aa6b187fa35e58248ba070}{disconnect}}() \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00218}00218 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00219}00219     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00220}\mbox{\hyperlink{classxstar_1_1_named_pipe_client_a9be7c4dab140abcfe0d000a9313f78c5}{00220}}         std::wstring \mbox{\hyperlink{classxstar_1_1_named_pipe_client_a9be7c4dab140abcfe0d000a9313f78c5}{name\_}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00221}\mbox{\hyperlink{classxstar_1_1_named_pipe_client_a04bfc2810234b7f675c69126352cb832}{00221}}         HANDLE \mbox{\hyperlink{classxstar_1_1_named_pipe_client_a04bfc2810234b7f675c69126352cb832}{pipe\_}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00222}\mbox{\hyperlink{classxstar_1_1_named_pipe_client_a3df79a8fbb7c5d82302b8e841ea724e2}{00222}}         \mbox{\hyperlink{namespacexstar_a938a6d971870cc592a53875175302e4b}{PipeAccess}} \mbox{\hyperlink{classxstar_1_1_named_pipe_client_a3df79a8fbb7c5d82302b8e841ea724e2}{access\_}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00223}\mbox{\hyperlink{classxstar_1_1_named_pipe_client_a8945d1d8a6e2db76fcced3c36c2d7138}{00223}}         DWORD \mbox{\hyperlink{classxstar_1_1_named_pipe_client_a8945d1d8a6e2db76fcced3c36c2d7138}{bufSize\_}};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00224}00224     \};}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00225}00225 }
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00226}00226 \} \textcolor{comment}{// xstar}}
+\DoxyCodeLine{\Hypertarget{named__pipe_8hpp_source_l00227}00227 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_XSTAR\_USER\_NAMED\_PIPE\_HPP\_}}
+
+\end{DoxyCode}

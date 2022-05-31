@@ -1,0 +1,217 @@
+\hypertarget{classxstar_1_1_smart_handle}{}\doxysection{xstar\+::Smart\+Handle\texorpdfstring{$<$}{<} Handle \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classxstar_1_1_smart_handle}\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+
+
+The \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} is a wrapper above handle which use idiom RAII.  
+
+
+
+
+{\ttfamily \#include $<$smart\+\_\+handle.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_handle_acbb7b26c8011166f1dcd145824897507}{Smart\+Handle}} () noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_handle_a2d1c3356289090360b1dfae6508d41fc}{Smart\+Handle}} (Handle object) noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_handle_ab1faa07ff7f29bc59cc2154ec430bee1}{$\sim$\+Smart\+Handle}} () noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_handle_a07bfbe07e36fb8d16b9510de18f0ed85}{Smart\+Handle}} (\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} \& \mbox{\hyperlink{classxstar_1_1_smart_handle_a9ce2cb2024bc70a83b131b437ee88bba}{operator=}} (\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_handle_a1c69865a71287353ce13b3c6fb24df6b}{Smart\+Handle}} (const \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} \&)=delete
+\item 
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} \& \mbox{\hyperlink{classxstar_1_1_smart_handle_aab11beba50d732358632f632aad7ac25}{operator=}} (const \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} \&)=delete
+\item 
+Handle \mbox{\hyperlink{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}{get\+Handle}} () const noexcept
+\item 
+Handle \mbox{\hyperlink{classxstar_1_1_smart_handle_a0aada12fb3c11e9129aca6ddd85b0a73}{operator$\ast$}} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Handle \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Handle$>$\newline
+class xstar\+::\+Smart\+Handle$<$ Handle $>$}
+The \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} is a wrapper above handle which use idiom RAII. 
+
+\begin{DoxyWarning}{Warning}
+The \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} supports HWND, HANDLE, SC\+\_\+\+HANDLE 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_acbb7b26c8011166f1dcd145824897507}\label{classxstar_1_1_smart_handle_acbb7b26c8011166f1dcd145824897507}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!SmartHandle@{SmartHandle}}
+\index{SmartHandle@{SmartHandle}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{SmartHandle()}{SmartHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::\+Smart\+Handle\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00094}{94}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095         : \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}}(\textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00096     \{ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_a2d1c3356289090360b1dfae6508d41fc}\label{classxstar_1_1_smart_handle_a2d1c3356289090360b1dfae6508d41fc}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!SmartHandle@{SmartHandle}}
+\index{SmartHandle@{SmartHandle}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{SmartHandle()}{SmartHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::\+Smart\+Handle (\begin{DoxyParamCaption}\item[{Handle}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00099}{99}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100         : \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}}(\textcolor{keywordtype}{object})}
+\DoxyCodeLine{00101     \{ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_ab1faa07ff7f29bc59cc2154ec430bee1}\label{classxstar_1_1_smart_handle_ab1faa07ff7f29bc59cc2154ec430bee1}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!````~SmartHandle@{$\sim$SmartHandle}}
+\index{````~SmartHandle@{$\sim$SmartHandle}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SmartHandle()}{~SmartHandle()}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::$\sim$\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00111}{111}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112     \{}
+\DoxyCodeLine{00113         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}})}
+\DoxyCodeLine{00114             \mbox{\hyperlink{namespacexstar_1_1__internal_aa4cf1e34d64a616e2a04a3a4b9e0fe5a}{\_internal::CloseSmartHandle}}(\mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}});}
+\DoxyCodeLine{00115     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_a07bfbe07e36fb8d16b9510de18f0ed85}\label{classxstar_1_1_smart_handle_a07bfbe07e36fb8d16b9510de18f0ed85}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!SmartHandle@{SmartHandle}}
+\index{SmartHandle@{SmartHandle}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{SmartHandle()}{SmartHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::\+Smart\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}$<$ Handle $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00104}{104}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105     \{}
+\DoxyCodeLine{00106         \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}} = other.hObject\_;}
+\DoxyCodeLine{00107         other.object\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00108     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_a1c69865a71287353ce13b3c6fb24df6b}\label{classxstar_1_1_smart_handle_a1c69865a71287353ce13b3c6fb24df6b}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!SmartHandle@{SmartHandle}}
+\index{SmartHandle@{SmartHandle}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{SmartHandle()}{SmartHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::\+Smart\+Handle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}$<$ Handle $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}\label{classxstar_1_1_smart_handle_acb59f4f0a4245b8b8a844738b108f316}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!getHandle@{getHandle}}
+\index{getHandle@{getHandle}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{getHandle()}{getHandle()}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+Handle \mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::get\+Handle\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00125}{125}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00126     \{}
+\DoxyCodeLine{00127         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}};}
+\DoxyCodeLine{00128     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_a0aada12fb3c11e9129aca6ddd85b0a73}\label{classxstar_1_1_smart_handle_a0aada12fb3c11e9129aca6ddd85b0a73}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+Handle \mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::operator$\ast$\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00131}{131}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132     \{}
+\DoxyCodeLine{00133         \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}};}
+\DoxyCodeLine{00134     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_aab11beba50d732358632f632aad7ac25}\label{classxstar_1_1_smart_handle_aab11beba50d732358632f632aad7ac25}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}} \& \mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}$<$ Handle $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_a9ce2cb2024bc70a83b131b437ee88bba}\label{classxstar_1_1_smart_handle_a9ce2cb2024bc70a83b131b437ee88bba}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}$<$ Handle $>$ \& \mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxstar_1_1_smart_handle}{Smart\+Handle}}$<$ Handle $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00118}{118}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119     \{}
+\DoxyCodeLine{00120         \mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{std::swap}}(\mbox{\hyperlink{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}{object\_}}, other.object\_);}
+\DoxyCodeLine{00121         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{00122     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}\label{classxstar_1_1_smart_handle_a32d2ab38ea5400a322581cbfaf219843}} 
+\index{xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}!object\_@{object\_}}
+\index{object\_@{object\_}!xstar::SmartHandle$<$ Handle $>$@{xstar::SmartHandle$<$ Handle $>$}}
+\doxysubsubsection{\texorpdfstring{object\_}{object\_}}
+{\footnotesize\ttfamily template$<$class Handle $>$ \\
+Handle \mbox{\hyperlink{classxstar_1_1_smart_handle}{xstar\+::\+Smart\+Handle}}$<$ Handle $>$\+::object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{smart__handle_8hpp_source_l00090}{90}} of file \mbox{\hyperlink{smart__handle_8hpp_source}{smart\+\_\+handle.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+user\+\_\+space/include/\mbox{\hyperlink{smart__handle_8hpp}{smart\+\_\+handle.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,218 @@
+\hypertarget{allocator_8hpp_source}{}\doxysection{allocator.\+hpp}
+\label{allocator_8hpp_source}\index{kernel\_space/runtime/allocator.hpp@{kernel\_space/runtime/allocator.hpp}}
+\mbox{\hyperlink{allocator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00001}00001 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00002}00002 \textcolor{comment}{// ╔═╗╔═╗╔═══╗╔════╗╔═══╗╔═══╗}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00003}00003 \textcolor{comment}{// ╚╗╚╝╔╝║╔═╗║║╔╗╔╗║║╔═╗║║╔═╗║}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00004}00004 \textcolor{comment}{//  ╚╗╔╝ ║╚══╗╚╝║║╚╝║║ ║║║╚═╝║}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00005}00005 \textcolor{comment}{//  ╔╝╚╗ ╚══╗║  ║║  ║╚═╝║║╔╗╔╝}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00006}00006 \textcolor{comment}{// ╔╝╔╗╚╗║╚═╝║  ║║  ║╔═╗║║║║╚╗}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00007}00007 \textcolor{comment}{// ╚═╝╚═╝╚═══╝  ╚╝  ╚╝ ╚╝╚╝╚═╝}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00008}00008 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00009}00009 \textcolor{comment}{// Copyright Ⓒ 0xlay. All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00010}00010 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00011}00011 \textcolor{comment}{// This source file is licensed under the terms of MIT license.}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00012}00012 \textcolor{comment}{// For details, please read the LICENSE file.}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00013}00013 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00014}00014 \textcolor{comment}{// File: allocator.hpp}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00015}00015 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00016}00016 \textcolor{comment}{// Creator: 0xlay}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00017}00017 \textcolor{comment}{// }}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00018}00018 \textcolor{comment}{// Environment: Kernel mode only}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00019}00019 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00024}00024 \textcolor{preprocessor}{\#include <wdm.h>}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00025}00025 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{meminfo_8hpp}{meminfo.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00026}00026 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{algorithms_8hpp}{algorithms.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00029}00029 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacexstar}{xstar}}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00032}00032     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00033}00033 \textcolor{comment}{     *}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00034}00034 \textcolor{comment}{     * @brief The AllocTraits is class which describes properties for allocator}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00035}00035 \textcolor{comment}{     *}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00036}00036 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00037}00037     \textcolor{keyword}{template} <\textcolor{keyword}{class} DataType, POOL\_TYPE type>}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00038}\mbox{\hyperlink{structxstar_1_1_alloc_traits}{00038}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structxstar_1_1_alloc_traits}{AllocTraits}}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00039}00039     \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00040}\mbox{\hyperlink{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}{00040}}         \textcolor{keyword}{using }\mbox{\hyperlink{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}{ValueType}} = DataType;}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00041}\mbox{\hyperlink{structxstar_1_1_alloc_traits_a8752ea722615626c0b32917f1d1a45a8}{00041}}         \textcolor{keyword}{using }\mbox{\hyperlink{structxstar_1_1_alloc_traits_a8752ea722615626c0b32917f1d1a45a8}{Pointer}} = \mbox{\hyperlink{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}{ValueType}}*;}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00042}\mbox{\hyperlink{structxstar_1_1_alloc_traits_af6a3de69f3f530a999655f59b538ea44}{00042}}         \textcolor{keyword}{using }\mbox{\hyperlink{structxstar_1_1_alloc_traits_af6a3de69f3f530a999655f59b538ea44}{ConstPointer}} = \textcolor{keyword}{const} \mbox{\hyperlink{structxstar_1_1_alloc_traits_a8752ea722615626c0b32917f1d1a45a8}{Pointer}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00043}\mbox{\hyperlink{structxstar_1_1_alloc_traits_a65e32b43f2be1d9f2223a61f49e7c867}{00043}}         \textcolor{keyword}{using }\mbox{\hyperlink{structxstar_1_1_alloc_traits_a65e32b43f2be1d9f2223a61f49e7c867}{SizeType}} = size\_t;}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00045}\mbox{\hyperlink{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}{00045}}         \textcolor{keyword}{enum} \{\mbox{\hyperlink{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}{Size}} = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}{ValueType}})\};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00046}\mbox{\hyperlink{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401daa75565d3d5645d97d3c4ab31a32423d57}{00046}}         \textcolor{keyword}{enum} \{\mbox{\hyperlink{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401daa75565d3d5645d97d3c4ab31a32423d57}{PoolTag}} = \mbox{\hyperlink{meminfo_8hpp_a45e4ad6094e82ff6fed2383ff09a8ade}{\_XSTAR\_LIBRARY\_TAG\_}}\};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00047}\mbox{\hyperlink{structxstar_1_1_alloc_traits_a53e648bec747305e3c25c9a556f82cdeafd5020cbd582c4bc1b2e83f554b21c4f}{00047}}         \textcolor{keyword}{enum} \{\mbox{\hyperlink{structxstar_1_1_alloc_traits_a53e648bec747305e3c25c9a556f82cdeafd5020cbd582c4bc1b2e83f554b21c4f}{PoolType}} = type | 16 \textcolor{comment}{/*throw exception if allocate was failed */} \};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00048}00048     \};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00050}00050     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00051}00051 \textcolor{comment}{     *}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00052}00052 \textcolor{comment}{     * @brief The DefaultAllocator is class which implements simple allocator for}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00053}00053 \textcolor{comment}{     * kernel-\/mode}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00054}00054 \textcolor{comment}{     *}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00055}00055 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00056}00056     \textcolor{keyword}{template} <\textcolor{keyword}{class} DataType, \textcolor{keyword}{class} Traits>}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00057}\mbox{\hyperlink{classxstar_1_1_default_allocator}{00057}}     \textcolor{keyword}{class }\mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator}} final}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00058}00058     \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00059}00059     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00060}\mbox{\hyperlink{classxstar_1_1_default_allocator_ac7abe7397ff72532bf292c48fccd332c}{00060}}         \textcolor{keyword}{using }\mbox{\hyperlink{classxstar_1_1_default_allocator_ac7abe7397ff72532bf292c48fccd332c}{AllocTraits}} = Traits;}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00061}\mbox{\hyperlink{classxstar_1_1_default_allocator_a77fa60838739349d4610e55b47cf4136}{00061}}         \textcolor{keyword}{using }\mbox{\hyperlink{classxstar_1_1_default_allocator_a77fa60838739349d4610e55b47cf4136}{ValueType}} = \textcolor{keyword}{typename} \mbox{\hyperlink{structxstar_1_1_alloc_traits_a0be320ee3c235714c58bcdf84ce89d27}{AllocTraits::ValueType}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00062}\mbox{\hyperlink{classxstar_1_1_default_allocator_a88e58f0988e87e887685ecd8c817fdd9}{00062}}         \textcolor{keyword}{using }\mbox{\hyperlink{classxstar_1_1_default_allocator_a88e58f0988e87e887685ecd8c817fdd9}{Pointer}} = \textcolor{keyword}{typename} \mbox{\hyperlink{structxstar_1_1_alloc_traits_a8752ea722615626c0b32917f1d1a45a8}{AllocTraits::Pointer}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00063}\mbox{\hyperlink{classxstar_1_1_default_allocator_a111e8fc81ef22ddb9655c6a58fb55e7f}{00063}}         \textcolor{keyword}{using }\mbox{\hyperlink{classxstar_1_1_default_allocator_a111e8fc81ef22ddb9655c6a58fb55e7f}{ConstPointer}} = \textcolor{keyword}{typename} \mbox{\hyperlink{structxstar_1_1_alloc_traits_af6a3de69f3f530a999655f59b538ea44}{AllocTraits::ConstPointer}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00064}\mbox{\hyperlink{classxstar_1_1_default_allocator_a2e8e77b5d58fc814d70361cee4a00aa5}{00064}}         \textcolor{keyword}{using }\mbox{\hyperlink{classxstar_1_1_default_allocator_a2e8e77b5d58fc814d70361cee4a00aa5}{SizeType}} = \textcolor{keyword}{typename} \mbox{\hyperlink{structxstar_1_1_alloc_traits_a65e32b43f2be1d9f2223a61f49e7c867}{AllocTraits::SizeType}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00066}00066         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00067}00067         \textcolor{comment}{// Constructors}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00068}00068         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00070}\mbox{\hyperlink{classxstar_1_1_default_allocator_a3f51d6372394976c86af84c8c83c6a3a}{00070}}         \mbox{\hyperlink{classxstar_1_1_default_allocator_a3f51d6372394976c86af84c8c83c6a3a}{DefaultAllocator}}() noexcept}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00071}00071             : \mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}}(0), \mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}}(\textcolor{keywordtype}{nullptr})}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00072}00072         \{\}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00074}\mbox{\hyperlink{classxstar_1_1_default_allocator_adf4a33611f7e148b9d1fa0cfdf224659}{00074}}         \mbox{\hyperlink{classxstar_1_1_default_allocator_adf4a33611f7e148b9d1fa0cfdf224659}{DefaultAllocator}}(\textcolor{keyword}{const} \mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator}}\& allocator)}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00075}00075         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00076}00076             \textcolor{keywordflow}{if} (allocator != *\textcolor{keyword}{this})}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00077}00077             \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00078}00078                 \mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}} = allocator.\mbox{\hyperlink{classxstar_1_1_default_allocator_ae9899c0ee5e20cbeaeaac502004a960c}{size}}();}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00079}00079                 \mbox{\hyperlink{classxstar_1_1_default_allocator_a6089e5c5096b64aa82848bb8a1ebd539}{allocate}}(\mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}});}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00080}00080                 memcpy(\mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}}, allocator.\mbox{\hyperlink{classxstar_1_1_default_allocator_a1f930c0d6fb66cd5d437c56cf64b6e53}{get}}(), \mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}} * \mbox{\hyperlink{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}{AllocTraits::Size}});}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00081}00081             \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00082}00082         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00084}\mbox{\hyperlink{classxstar_1_1_default_allocator_a3ec90de52d2c5a73ffaf309d906bb5d5}{00084}}         \mbox{\hyperlink{classxstar_1_1_default_allocator_a3ec90de52d2c5a73ffaf309d906bb5d5}{DefaultAllocator}}(\mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator}}\&\& allocator) noexcept}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00085}00085             : \mbox{\hyperlink{classxstar_1_1_default_allocator_a3f51d6372394976c86af84c8c83c6a3a}{DefaultAllocator}}()}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00086}00086         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00087}00087             \textcolor{keywordflow}{if} (allocator != *\textcolor{keyword}{this})}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00088}00088             \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00089}00089                 \mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{swap}}(\mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}}, allocator.data\_);}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00090}00090                 \mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{swap}}(\mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}}, allocator.size\_);}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00091}00091             \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00092}00092         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00094}00094         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00095}00095         \textcolor{comment}{// Destructor}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00096}00096         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00098}\mbox{\hyperlink{classxstar_1_1_default_allocator_a9cba8442ab92f1306d81442fb189e1e2}{00098}}         \mbox{\hyperlink{classxstar_1_1_default_allocator_a9cba8442ab92f1306d81442fb189e1e2}{\string~DefaultAllocator}}() noexcept}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00099}00099         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00100}00100             \mbox{\hyperlink{classxstar_1_1_default_allocator_ab078cfb48e488a76c043737148a75e96}{deallocate}}();}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00101}00101         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00103}00103         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00104}00104         \textcolor{comment}{// Public operators}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00105}00105         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00107}\mbox{\hyperlink{classxstar_1_1_default_allocator_ab0c0790060d852e4f027610d93d9f326}{00107}}         \mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator}}\& \mbox{\hyperlink{classxstar_1_1_default_allocator_ab0c0790060d852e4f027610d93d9f326}{operator=}}(\mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator}}\&\& allocator) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00108}00108         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00109}00109             \textcolor{keywordflow}{if} (allocator != *\textcolor{keyword}{this})}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00110}00110             \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00111}00111                 \mbox{\hyperlink{classxstar_1_1_default_allocator_ab078cfb48e488a76c043737148a75e96}{deallocate}}();}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00113}00113                 \mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{swap}}(\mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}}, allocator.data\_);}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00114}00114                 \mbox{\hyperlink{namespacexstar_a69c0f29fce9b29632bc4974c048907e7}{swap}}(\mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}}, allocator.size\_);}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00115}00115             \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00116}00116             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00117}00117         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00119}\mbox{\hyperlink{classxstar_1_1_default_allocator_ab1ba66f932f196ab7eb5ab0d1ece413e}{00119}}         \mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator}}\& \mbox{\hyperlink{classxstar_1_1_default_allocator_ab1ba66f932f196ab7eb5ab0d1ece413e}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator}}\& allocator)}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00120}00120         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00121}00121             \textcolor{keywordflow}{if} (allocator != *\textcolor{keyword}{this})}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00122}00122             \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00123}00123                 \mbox{\hyperlink{classxstar_1_1_default_allocator_ab078cfb48e488a76c043737148a75e96}{deallocate}}();}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00124}00124                 \mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}} = allocator.\mbox{\hyperlink{classxstar_1_1_default_allocator_ae9899c0ee5e20cbeaeaac502004a960c}{size}}();}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00125}00125                 \mbox{\hyperlink{classxstar_1_1_default_allocator_a6089e5c5096b64aa82848bb8a1ebd539}{allocate}}(\mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}});}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00126}00126                 memcpy(\mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}}, allocator.\mbox{\hyperlink{classxstar_1_1_default_allocator_a1f930c0d6fb66cd5d437c56cf64b6e53}{get}}(), \mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}} * \mbox{\hyperlink{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}{AllocTraits::Size}});}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00127}00127             \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00128}00128             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00129}00129         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00131}00131         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00132}00132         \textcolor{comment}{// Public methods}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00133}00133         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00135}\mbox{\hyperlink{classxstar_1_1_default_allocator_a6089e5c5096b64aa82848bb8a1ebd539}{00135}}         \mbox{\hyperlink{classxstar_1_1_default_allocator_a88e58f0988e87e887685ecd8c817fdd9}{Pointer}} \mbox{\hyperlink{classxstar_1_1_default_allocator_a6089e5c5096b64aa82848bb8a1ebd539}{allocate}}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classxstar_1_1_default_allocator_ae9899c0ee5e20cbeaeaac502004a960c}{size}})}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00136}00136         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00137}00137             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}})}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00138}00138             \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00139}00139                 \mbox{\hyperlink{classxstar_1_1_default_allocator_ab078cfb48e488a76c043737148a75e96}{deallocate}}();}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00140}00140             \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00142}00142             \textcolor{keywordtype}{size\_t} pageSize = 0;}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00143}00143             \textcolor{keywordtype}{size\_t} sizeInBytes = \mbox{\hyperlink{classxstar_1_1_default_allocator_ae9899c0ee5e20cbeaeaac502004a960c}{size}} * \mbox{\hyperlink{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}{AllocTraits::Size}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00144}00144             \textcolor{keywordflow}{while} (pageSize < sizeInBytes)}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00145}00145             \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00146}00146                 pageSize += \mbox{\hyperlink{namespacexstar_ad79459a330b8d151f6bdd6425c34c870a5d8a49f3f7b1c9b4c2207df56f88e300}{SmallPage\_4KB}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00147}00147             \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00148}00148             sizeInBytes = pageSize;}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00150}00150             \mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}} = sizeInBytes / \mbox{\hyperlink{structxstar_1_1_alloc_traits_a2083b84b3b82f949f657b5afb2dfe586a7d605e8bacb05566600b8fae97a79440}{AllocTraits::Size}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00151}00151             \mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}} = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classxstar_1_1_default_allocator_a88e58f0988e87e887685ecd8c817fdd9}{Pointer}}\textcolor{keyword}{>}(}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00152}00152                 ExAllocatePoolWithTag(\textcolor{keyword}{static\_cast<}POOL\_TYPE\textcolor{keyword}{>}(\mbox{\hyperlink{structxstar_1_1_alloc_traits_a53e648bec747305e3c25c9a556f82cdeafd5020cbd582c4bc1b2e83f554b21c4f}{AllocTraits::PoolType}}),}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00153}00153                                       sizeInBytes,}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00154}00154                                       \mbox{\hyperlink{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401daa75565d3d5645d97d3c4ab31a32423d57}{AllocTraits::PoolTag}})}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00155}00155             );}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00157}00157             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00158}00158         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00160}\mbox{\hyperlink{classxstar_1_1_default_allocator_ab078cfb48e488a76c043737148a75e96}{00160}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classxstar_1_1_default_allocator_ab078cfb48e488a76c043737148a75e96}{deallocate}}() noexcept}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00161}00161         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00162}00162             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}})}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00163}00163             \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00164}00164                 ExFreePoolWithTag(\mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}}, \mbox{\hyperlink{structxstar_1_1_alloc_traits_a5487852bfb347d65ef9c646bed5401daa75565d3d5645d97d3c4ab31a32423d57}{AllocTraits::PoolTag}});}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00165}00165                 \mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}} = 0;}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00166}00166                 \mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00167}00167             \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00168}00168         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00170}\mbox{\hyperlink{classxstar_1_1_default_allocator_ae9899c0ee5e20cbeaeaac502004a960c}{00170}}         [[nodiscard]] \mbox{\hyperlink{classxstar_1_1_default_allocator_a2e8e77b5d58fc814d70361cee4a00aa5}{SizeType}} \mbox{\hyperlink{classxstar_1_1_default_allocator_ae9899c0ee5e20cbeaeaac502004a960c}{size}}() const noexcept}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00171}00171         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00172}00172             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00173}00173         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00175}\mbox{\hyperlink{classxstar_1_1_default_allocator_a1f930c0d6fb66cd5d437c56cf64b6e53}{00175}}         [[nodiscard]] \mbox{\hyperlink{classxstar_1_1_default_allocator_a111e8fc81ef22ddb9655c6a58fb55e7f}{ConstPointer}} \mbox{\hyperlink{classxstar_1_1_default_allocator_a1f930c0d6fb66cd5d437c56cf64b6e53}{get}}() const noexcept}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00176}00176         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00177}00177             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00178}00178         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00180}\mbox{\hyperlink{classxstar_1_1_default_allocator_a65376f055e667aeacb09d3918f32c472}{00180}}         [[nodiscard]] \mbox{\hyperlink{classxstar_1_1_default_allocator_a88e58f0988e87e887685ecd8c817fdd9}{Pointer}} \mbox{\hyperlink{classxstar_1_1_default_allocator_a65376f055e667aeacb09d3918f32c472}{get}}() noexcept}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00181}00181         \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00182}00182             \textcolor{keywordflow}{return} \mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00183}00183         \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00185}00185     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00186}00186     \textcolor{comment}{// Private data}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00187}00187     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00189}00189     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00190}\mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{00190}}         \mbox{\hyperlink{classxstar_1_1_default_allocator_a2e8e77b5d58fc814d70361cee4a00aa5}{SizeType}} \mbox{\hyperlink{classxstar_1_1_default_allocator_af166dd83e34f3bc4d0cb29daea6beb5b}{size\_}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00191}\mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{00191}}         \mbox{\hyperlink{classxstar_1_1_default_allocator_a88e58f0988e87e887685ecd8c817fdd9}{Pointer}} \mbox{\hyperlink{classxstar_1_1_default_allocator_a91f0bf7671388814084051f0530a67c2}{data\_}};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00192}00192     \};}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00193}00193     }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00194}00194     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00195}00195     \textcolor{comment}{// Equal and non-\/equal operators}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00196}00196     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00198}00198     \textcolor{keyword}{template} <\textcolor{keyword}{class} DataType, \textcolor{keyword}{class} Traits>}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00199}\mbox{\hyperlink{namespacexstar_ab1dedb6cbe4148d8cc481fbcd573571a}{00199}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacexstar_ab1dedb6cbe4148d8cc481fbcd573571a}{operator== }}(\textcolor{keyword}{const} \mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator<DataType, Traits>}}\& lhs,}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00200}00200         \textcolor{keyword}{const} \mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator<DataType, Traits>}}\& rhs)}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00201}00201     \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00202}00202         \textcolor{keywordflow}{return} lhs.\mbox{\hyperlink{classxstar_1_1_default_allocator_a1f930c0d6fb66cd5d437c56cf64b6e53}{get}}() == rhs.\mbox{\hyperlink{classxstar_1_1_default_allocator_a1f930c0d6fb66cd5d437c56cf64b6e53}{get}}();}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00203}00203     \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00205}00205     \textcolor{keyword}{template} <\textcolor{keyword}{class} DataType, \textcolor{keyword}{class} Traits>}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00206}\mbox{\hyperlink{namespacexstar_af373c94c0f1c1ff5839e8704a93ff1af}{00206}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacexstar_af373c94c0f1c1ff5839e8704a93ff1af}{operator!= }}(\textcolor{keyword}{const} \mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator<DataType, Traits>}}\& lhs,}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00207}00207         \textcolor{keyword}{const} \mbox{\hyperlink{classxstar_1_1_default_allocator}{DefaultAllocator<DataType, Traits>}}\& rhs)}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00208}00208     \{}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00209}00209         \textcolor{keywordflow}{return} lhs.\mbox{\hyperlink{classxstar_1_1_default_allocator_a1f930c0d6fb66cd5d437c56cf64b6e53}{get}}() != rhs.\mbox{\hyperlink{classxstar_1_1_default_allocator_a1f930c0d6fb66cd5d437c56cf64b6e53}{get}}();}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00210}00210     \}}
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00211}00211 }
+\DoxyCodeLine{\Hypertarget{allocator_8hpp_source_l00212}00212 \} \textcolor{comment}{// xstar}}
+
+\end{DoxyCode}
