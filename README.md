@@ -7,7 +7,7 @@
 * Generate documentation: change `OUTPUT_DIRECTORY = D:/Projects/XStar/docs/doxygen` in the Doxyfile to your path, and run [**doxywizard**](https://www.doxygen.nl/download.html).
 
 ## For contributors
-[**Code style**](docs/other/codestyle)
+[**Code style**](docs/other/codestyle.md)
 
 ## License
 [**MIT License**](LICENSE.md)
