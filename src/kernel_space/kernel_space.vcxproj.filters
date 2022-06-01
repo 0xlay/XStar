@@ -19,13 +19,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="runtime\cpplibrary.hpp">
+    <ClInclude Include="include\cpplibrary.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="runtime\clibrary.hpp">
+    <ClInclude Include="include\clibrary.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="runtime\runtime.hpp">
+    <ClInclude Include="include\runtime.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\fast_mutex.hpp">
@@ -37,10 +37,10 @@
     <ClInclude Include="include\smart_pointers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="runtime\nonpaged_memory.hpp">
+    <ClInclude Include="include\nonpaged_memory.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="runtime\paged_memory.hpp">
+    <ClInclude Include="include\paged_memory.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\algorithms.hpp">
@@ -49,7 +49,7 @@
     <ClInclude Include="src\smart_pointers.inl">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="runtime\allocator.hpp">
+    <ClInclude Include="include\allocator.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\string.hpp">
@@ -57,10 +57,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="runtime\cpplibrary.cpp">
+    <ClCompile Include="src\cpplibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="runtime\clibrary.cpp">
+    <ClCompile Include="src\clibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
