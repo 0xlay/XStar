@@ -23,6 +23,7 @@
 #define _XSTAR_KERNEL_ALGORITHMS_HPP_
 
 #include "runtime.hpp"
+#include "type_traits.hpp"
 
 namespace xstar
 {
@@ -30,9 +31,9 @@ namespace xstar
     template <typename T>
     void swap(T& firstValue, T& secondValue) noexcept
     {
-        T tempValue = move(firstValue);
-        firstValue = move(secondValue);
-        secondValue = move(tempValue);
+        T tempValue = xstar::move(firstValue);
+        firstValue = xstar::move(secondValue);
+        secondValue = xstar::move(tempValue);
     }
 
 } // xstar

@@ -145,8 +145,8 @@ namespace xstar
         {
             if (other != *this)
             {
-                size_ = move(other.size_);
-                allocator_ = move(other.allocator_);
+                size_ = xstar::move(other.size_);
+                allocator_ = xstar::move(other.allocator_);
             }
         }
 
@@ -177,8 +177,8 @@ namespace xstar
         {
             if (other != *this)
             {
-                size_ = move(other.size_);
-                allocator_ = move(other.allocator_);
+                size_ = xstar::move(other.size_);
+                allocator_ = xstar::move(other.allocator_);
             }
             return *this;
         }
@@ -214,7 +214,7 @@ namespace xstar
                 CharTraits::copy(tmpAllocator.get() + curSize,
                                  rhs.allocator_.get(),
                                  rhs.size() + 1);
-                allocator_ = move(tmpAllocator);
+                allocator_ = xstar::move(tmpAllocator);
             }
 
             return *this;
