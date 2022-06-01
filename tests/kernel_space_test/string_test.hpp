@@ -8,7 +8,7 @@ XSTAR_KTEST(StringTest, Move)
 {
     xstar::String<PagedPool> dest(xstar::String<PagedPool>("Hello World!"));
 
-    dest = move("My Friend");
+    dest = xstar::move("My Friend");
 
     XSTAR_KTEST_ASSERT_EQ(dest, "My Friend");
 }
