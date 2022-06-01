@@ -210,7 +210,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\algorithms.hpp" />
-    <ClInclude Include="include\Result.hpp" />
+    <ClInclude Include="include\result.hpp" />
     <ClInclude Include="include\string.hpp" />
     <ClInclude Include="include\allocator.hpp" />
     <ClInclude Include="include\fast_mutex.hpp" />

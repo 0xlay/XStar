@@ -55,7 +55,7 @@
     <ClInclude Include="include\string.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Result.hpp">
+    <ClInclude Include="include\result.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\type_traits.hpp">

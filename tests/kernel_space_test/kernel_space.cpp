@@ -1,5 +1,6 @@
 #include "kernel_space.hpp"
 #include "string_test.hpp"
+#include "result_test.hpp"
 
 #pragma comment(lib, "kernel_space.lib")
 
@@ -20,6 +21,7 @@ NTSTATUS DriverEntry([[maybe_unused]] PDRIVER_OBJECT DriverObject,
     //
 
     XSTAR_KTEST_RUN_SUITE(StringTest);
-    
+    XSTAR_KTEST_RUN_SUITE(ResultTest);
+
     return STATUS_FAILED_DRIVER_ENTRY;
 }

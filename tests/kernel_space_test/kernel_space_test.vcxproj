@@ -250,6 +250,7 @@
   <ItemGroup>
     <ClInclude Include="kernel_space.hpp" />
     <ClInclude Include="kernel_test.hpp" />
+    <ClInclude Include="result_test.hpp" />
     <ClInclude Include="string_test.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
