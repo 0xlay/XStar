@@ -28,9 +28,6 @@
     <ClInclude Include="include\runtime.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\fast_mutex.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\smart_lock.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -61,12 +58,18 @@
     <ClInclude Include="include\type_traits.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\mutex.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cpplibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\clibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mutex.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

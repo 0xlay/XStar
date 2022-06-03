@@ -210,10 +210,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\algorithms.hpp" />
+    <ClInclude Include="include\mutex.hpp" />
     <ClInclude Include="include\result.hpp" />
     <ClInclude Include="include\string.hpp" />
     <ClInclude Include="include\allocator.hpp" />
-    <ClInclude Include="include\fast_mutex.hpp" />
     <ClInclude Include="include\smart_lock.hpp" />
     <ClInclude Include="include\smart_pointers.hpp" />
     <ClInclude Include="include\clibrary.hpp" />
@@ -225,6 +225,7 @@
   <ItemGroup>
     <ClCompile Include="src\clibrary.cpp" />
     <ClCompile Include="src\cpplibrary.cpp" />
+    <ClCompile Include="src\mutex.cpp" />
     <ClInclude Include="include\type_traits.hpp" />
     <ClInclude Include="src\smart_pointers.inl">
       <FileType>Document</FileType>
