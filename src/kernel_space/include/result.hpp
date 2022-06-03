@@ -23,36 +23,120 @@
 #define _XSTAR_KERNEL_RESULT_HPP_
 
 #include <ntddk.h>
+#include "cpplibrary.hpp"
 
 namespace xstar
 {
+    /*
+    * @brief The ResultError<Error> is the proxy object, that represents an error, if there is one.
+    */
+    template <class Error>
+    class ResultError
+    {
+    public:
+        ResultError(bool isError, const Error& e) 
+            : isError_(isError), error(e)
+        {}
+        operator bool() { return isError_; }
+    private:
+        bool isError_;
+    public:
+        const Error& error;
+    };
 
+    /*
+    * @brief The Result<Some, Error> is the type implements error handling.
+    */
     template <class Some, class Error>
     class Result final
     {
     public:
-        Result() : isError_(false)
-        { }
-
-        bool isError() const
+        Result(const Some& some) : isError_(false)
         {
-            return isError_;
+            new (&some_) Some(some);
         }
 
-        Result& some(Some&& some)
+        Result(Some&& some) : isError_(false)
         {
-            isError_ = false;
-            u.some_ = xstar::forward<Some>(some);
+            new (&some_) Some(xstar::move(some));
+        }
+
+        Result(const Error& error) : isError_(true)
+        { 
+            new (&error_) Error(error);
+        }
+
+        Result(Error&& error) : isError_(true)
+        {
+            new (&error_) Error(xstar::move(error));
+        }
+
+        Result(const Result& rhs)
+        {
+            if (&rhs != this)
+            {
+                new (&some_) Some(rhs.some_);
+                new (&error_) Error(rhs.error_);
+            }
+        }
+
+        Result(Result&& rhs)
+        {
+            if (&rhs != this)
+            {
+                new (&some_) Some(xstar::move(rhs.some_));
+                new (&error_) Error(xstar::move(rhs.error_));
+            }
+        }
+
+        Result& operator=(const Result& rhs)
+        {
+            if (&rhs != this)
+            {
+                new (&some_) Some(rhs.some_);
+                new (&error_) Error(rhs.error_);
+            }
+
             return *this;
         }
 
-        Result& error(Error&& error)
+        Result& operator=(Result&& rhs)
         {
-            isError_ = true;
-            u.error_ = xstar::forward<Error>(error);
+            if (&rhs != this)
+            {
+                new (&some_) Some(xstar::move(rhs.some_));
+                new (&error_) Error(xstar::move(rhs.error_));
+            }
+
             return *this;
         }
 
+        ~Result() noexcept
+        {
+            if (isError_)
+            {
+                error_.~Error();
+            }
+            else
+            {
+                some_.~Some();
+            }
+        }
+        
+        /*
+        * @brief Returns error as ResultError<Error> type
+        * @return ResultError<Error> type, which is a proxy object, that represents an error, if there is one.
+        */
+        ResultError<Error> isError()
+        {
+            return ResultError(isError_, error_);
+        }
+
+        /*
+        * @brief If success then unwrapping Some, otherwise throw KeBugCheckEx().
+        * @param[in] code(optional) - bug check code, which pass in the KeBugCheckEx function.
+        * @return "Some" type, which moved from the Result<Some, Error>.
+        */
         Some unwrap([[maybe_unused]] ULONG code = NO_EXCEPTION_HANDLING_SUPPORT)
         {
             if (isError_)
@@ -62,7 +146,7 @@ namespace xstar
             }
             else
             {
-                return xstar::move(u.some_);
+                return xstar::move(some_);
             }
         }
 
@@ -72,7 +156,7 @@ namespace xstar
         {
             Some some_;
             Error error_;
-        } u;
+        };
     };
 
 } // xstar

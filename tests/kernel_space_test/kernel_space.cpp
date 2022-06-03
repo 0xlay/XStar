@@ -2,8 +2,6 @@
 #include "string_test.hpp"
 #include "result_test.hpp"
 
-#pragma comment(lib, "kernel_space.lib")
-
 #ifdef ALLOC_PRAGMA
 
     #pragma alloc_text(PAGE, DriverEntry)
