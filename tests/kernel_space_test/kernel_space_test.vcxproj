@@ -248,6 +248,7 @@
     <ClCompile Include="kernel_space.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="array_test.hpp" />
     <ClInclude Include="kernel_space.hpp" />
     <ClInclude Include="kernel_test.hpp" />
     <ClInclude Include="result_test.hpp" />

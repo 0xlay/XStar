@@ -36,5 +36,8 @@
     <ClInclude Include="result_test.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="array_test.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

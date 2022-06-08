@@ -1,6 +1,7 @@
 #include "kernel_space.hpp"
 #include "string_test.hpp"
 #include "result_test.hpp"
+#include "array_test.hpp"
 
 #ifdef ALLOC_PRAGMA
 
@@ -18,8 +19,9 @@ NTSTATUS DriverEntry([[maybe_unused]] PDRIVER_OBJECT DriverObject,
     // Run all tests
     //
 
-    XSTAR_KTEST_RUN_SUITE(StringTest);
     XSTAR_KTEST_RUN_SUITE(ResultTest);
+    XSTAR_KTEST_RUN_SUITE(ArrayTest);
+    XSTAR_KTEST_RUN_SUITE(StringTest);
 
     return STATUS_FAILED_DRIVER_ENTRY;
 }
