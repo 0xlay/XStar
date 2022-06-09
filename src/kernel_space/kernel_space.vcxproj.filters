@@ -28,7 +28,7 @@
     <ClInclude Include="include\runtime.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\smart_lock.hpp">
+    <ClInclude Include="include\mutex_guard.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\smart_pointers.hpp">

@@ -216,7 +216,7 @@
     <ClInclude Include="include\result.hpp" />
     <ClInclude Include="include\string.hpp" />
     <ClInclude Include="include\allocator.hpp" />
-    <ClInclude Include="include\smart_lock.hpp" />
+    <ClInclude Include="include\mutex_guard.hpp" />
     <ClInclude Include="include\smart_pointers.hpp" />
     <ClInclude Include="include\clibrary.hpp" />
     <ClInclude Include="include\cpplibrary.hpp" />
