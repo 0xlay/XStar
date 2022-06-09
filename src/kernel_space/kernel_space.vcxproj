@@ -228,6 +228,7 @@
     <ClCompile Include="src\clibrary.cpp" />
     <ClCompile Include="src\cpplibrary.cpp" />
     <ClCompile Include="src\mutex.cpp" />
+    <ClInclude Include="include\symbolic_link.hpp" />
     <ClInclude Include="include\type_traits.hpp" />
     <ClInclude Include="src\smart_pointers.inl">
       <FileType>Document</FileType>
