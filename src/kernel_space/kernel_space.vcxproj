@@ -209,6 +209,7 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cruntime\crt.hpp" />
     <ClInclude Include="include\algorithms.hpp" />
     <ClInclude Include="include\array.hpp" />
     <ClInclude Include="include\initializer_list.hpp" />
@@ -225,6 +226,7 @@
     <ClInclude Include="include\runtime.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cruntime\crt.cpp" />
     <ClCompile Include="src\clibrary.cpp" />
     <ClCompile Include="src\cpplibrary.cpp" />
     <ClCompile Include="src\mutex.cpp" />

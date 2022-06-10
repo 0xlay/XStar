@@ -70,6 +70,9 @@
     <ClInclude Include="include\symbolic_link.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="cruntime\crt.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cpplibrary.cpp">
@@ -79,6 +82,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\mutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cruntime\crt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
