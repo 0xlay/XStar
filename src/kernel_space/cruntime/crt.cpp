@@ -38,6 +38,49 @@ _CRT_ALLOC(".CRT$XPZ") _PVFV __xp_z[] = { nullptr };
 _CRT_ALLOC(".CRT$XTA") _PVFV __xt_a[] = { nullptr };
 _CRT_ALLOC(".CRT$XTZ") _PVFV __xt_z[] = { nullptr };
 
+class ExitTable final
+{
+    // TODO: We will should think about of the optimal algorithm, for allocating table! 
+public:
+    void create(size_t exitTableSize)
+    {
+        table_ = static_cast<_PVFV*>(ExAllocatePoolWithTag(
+            static_cast<POOL_TYPE>(NonPagedPool | POOL_RAISE_IF_ALLOCATION_FAILURE),
+            exitTableSize,
+            _CRT_POOL_TAG
+        ));
+        RtlZeroMemory(table_, exitTableSize);
+    }
+
+    void registerFunction(_PVFV function)
+    {
+        // If i >= exitTableSize than call BSOD
+        table_[i] = function;
+        ++i;
+    }
+
+    void destruct() noexcept
+    {
+        if (i > 0)
+        {
+            --i;
+            while (true)
+            {
+                (*table_[i])();
+                if (!i) break;
+                --i;
+            }
+        }
+        ExFreePoolWithTag(table_, _CRT_POOL_TAG);
+    }
+
+private:
+    _PVFV* table_ = nullptr;
+    size_t i = 0;
+};
+
+ExitTable g_ExitTable;
+
 
 //
 // Call C++ constructors
@@ -80,12 +123,12 @@ CRTAPI static int _initterm_e(_PIFV* begin, _PIFV* end)
     return result;
 }
 
-
 //
 // Call CRT initializations
 //
-CRTAPI int _crt_init()
+CRTAPI int _crt_init(size_t exitTableSize)
 {
+    g_ExitTable.create(exitTableSize);
 
     //
     // Call C initializations
@@ -110,6 +153,7 @@ CRTAPI int _crt_init()
 //
 CRTAPI void _crt_deinit()
 {
+    g_ExitTable.destruct();
     _initterm(__xp_a, __xp_z);
     _initterm(__xt_a, __xt_z);
 }
@@ -124,5 +168,14 @@ CRTAPI int __cdecl _purecall()
 #else
     ::KeBugCheckEx(NO_EXCEPTION_HANDLING_SUPPORT, 0, 0, 0, 0);
 #endif
+    return 0;
+}
+
+//
+// Init table
+//
+CRTAPI int __cdecl atexit(_PVFV function)
+{
+    g_ExitTable.registerFunction(function);
     return 0;
 }

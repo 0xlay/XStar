@@ -19,19 +19,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\cpplibrary.hpp">
+    <ClInclude Include="cruntime\cpplibrary.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\clibrary.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\runtime.hpp">
+    <ClInclude Include="cruntime\clibrary.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\mutex_guard.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\smart_pointers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\nonpaged_memory.hpp">
@@ -42,9 +36,6 @@
     </ClInclude>
     <ClInclude Include="include\algorithms.hpp">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\smart_pointers.inl">
-      <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="include\allocator.hpp">
       <Filter>Header Files</Filter>
@@ -75,10 +66,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\cpplibrary.cpp">
+    <ClCompile Include="cruntime\cpplibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\clibrary.cpp">
+    <ClCompile Include="cruntime\clibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\mutex.cpp">

@@ -160,24 +160,24 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\kernel_space\include;$(SolutionDir)src\kernel_space\src;$(SolutionDir)src\common</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\kernel_space;$(SolutionDir)src\common</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\kernel_space\include;$(SolutionDir)src\kernel_space\src;$(SolutionDir)src\common</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\kernel_space;$(SolutionDir)src\common</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\kernel_space\include;$(SolutionDir)src\kernel_space\src;$(SolutionDir)src\common</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\kernel_space;$(SolutionDir)src\common</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\kernel_space\include;$(SolutionDir)src\kernel_space\src;$(SolutionDir)src\common</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\kernel_space;$(SolutionDir)src\common</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -218,23 +218,18 @@
     <ClInclude Include="include\string.hpp" />
     <ClInclude Include="include\allocator.hpp" />
     <ClInclude Include="include\mutex_guard.hpp" />
-    <ClInclude Include="include\smart_pointers.hpp" />
-    <ClInclude Include="include\clibrary.hpp" />
-    <ClInclude Include="include\cpplibrary.hpp" />
+    <ClInclude Include="cruntime\clibrary.hpp" />
+    <ClInclude Include="cruntime\cpplibrary.hpp" />
     <ClInclude Include="include\nonpaged_memory.hpp" />
     <ClInclude Include="include\paged_memory.hpp" />
-    <ClInclude Include="include\runtime.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cruntime\crt.cpp" />
-    <ClCompile Include="src\clibrary.cpp" />
-    <ClCompile Include="src\cpplibrary.cpp" />
+    <ClCompile Include="cruntime\clibrary.cpp" />
+    <ClCompile Include="cruntime\cpplibrary.cpp" />
     <ClCompile Include="src\mutex.cpp" />
     <ClInclude Include="include\symbolic_link.hpp" />
     <ClInclude Include="include\type_traits.hpp" />
-    <ClInclude Include="src\smart_pointers.inl">
-      <FileType>Document</FileType>
-    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
