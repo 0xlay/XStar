@@ -22,7 +22,6 @@
 #ifndef _XSTAR_KERNEL_ALGORITHMS_HPP_
 #define _XSTAR_KERNEL_ALGORITHMS_HPP_
 
-#include "runtime.hpp"
 #include "type_traits.hpp"
 
 namespace xstar

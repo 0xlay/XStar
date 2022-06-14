@@ -1,6 +1,6 @@
 #pragma once
 #include "kernel_test.hpp"
-#include "array.hpp"
+#include "include/array.hpp"
 
 
 XSTAR_KTEST(ArrayTest, Empty)

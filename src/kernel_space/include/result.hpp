@@ -23,7 +23,7 @@
 #define _XSTAR_KERNEL_RESULT_HPP_
 
 #include <ntddk.h>
-#include "cpplibrary.hpp"
+#include "cruntime/cpplibrary.hpp"
 
 namespace xstar
 {

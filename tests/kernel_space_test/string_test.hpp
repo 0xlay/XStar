@@ -1,7 +1,7 @@
 #pragma once
 #include "kernel_test.hpp"
-#include "type_traits.hpp"
-#include "string.hpp"
+#include "include/type_traits.hpp"
+#include "include/string.hpp"
 
 
 XSTAR_KTEST(StringTest, Move)

@@ -25,7 +25,7 @@
 #include <ntddk.h>
 #include  <ntstrsafe.h>
 #include "algorithms.hpp"
-#include "cpplibrary.hpp"
+#include "cruntime/cpplibrary.hpp"
 #include "meminfo.hpp"
 
 namespace xstar
