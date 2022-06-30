@@ -23,7 +23,7 @@
 
 #include "cruntime/clibrary.hpp"
 
-namespace xstar
+namespace xstar::ks
 {
 
     /**
@@ -101,4 +101,4 @@ namespace xstar
         free(ptr);
     }
 
-} // xstar
+} // xstar::ks

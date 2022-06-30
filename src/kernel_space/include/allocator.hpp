@@ -26,7 +26,7 @@
 #include "algorithms.hpp"
 
 
-namespace xstar
+namespace xstar::ks
 {
 
     /*
@@ -211,4 +211,4 @@ namespace xstar
         return lhs.get() != rhs.get();
     }
 
-} // xstar
+} // xstar::ks

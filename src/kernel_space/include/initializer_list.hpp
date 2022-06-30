@@ -22,7 +22,7 @@
 #ifndef _XSTAR_KERNEL_INITIALIZER_LIST_HPP_
 #define _XSTAR_KERNEL_INITIALIZER_LIST_HPP_
 
-namespace xstar
+namespace xstar::ks
 {
 
     template <class T>
@@ -76,6 +76,6 @@ namespace xstar
         ConstIterator end_;
     };
 
-} // xstar
+} // xstar::ks
 
 #endif // _XSTAR_KERNEL_INITIALIZER_LIST_HPP_

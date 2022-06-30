@@ -25,7 +25,7 @@
 #include <ntddk.h>
 #include "cruntime/cpplibrary.hpp"
 
-namespace xstar
+namespace xstar::ks
 {
     /*
     * @brief The ResultError<Error> is the proxy object, that represents an error, if there is one.
@@ -58,7 +58,7 @@ namespace xstar
 
         Result(Some&& some) : isError_(false)
         {
-            new (&some_) Some(xstar::move(some));
+            new (&some_) Some(move(some));
         }
 
         Result(const Error& error) : isError_(true)
@@ -68,7 +68,7 @@ namespace xstar
 
         Result(Error&& error) : isError_(true)
         {
-            new (&error_) Error(xstar::move(error));
+            new (&error_) Error(move(error));
         }
 
         Result(const Result& rhs)
@@ -84,8 +84,8 @@ namespace xstar
         {
             if (&rhs != this)
             {
-                new (&some_) Some(xstar::move(rhs.some_));
-                new (&error_) Error(xstar::move(rhs.error_));
+                new (&some_) Some(move(rhs.some_));
+                new (&error_) Error(move(rhs.error_));
             }
         }
 
@@ -104,8 +104,8 @@ namespace xstar
         {
             if (&rhs != this)
             {
-                new (&some_) Some(xstar::move(rhs.some_));
-                new (&error_) Error(xstar::move(rhs.error_));
+                new (&some_) Some(move(rhs.some_));
+                new (&error_) Error(move(rhs.error_));
             }
 
             return *this;
@@ -146,7 +146,7 @@ namespace xstar
             }
             else
             {
-                return xstar::move(some_);
+                return move(some_);
             }
         }
 
@@ -176,7 +176,7 @@ namespace xstar
 
         Result(Error&& error) : isError_(true)
         {
-            new (&error_) Error(xstar::move(error));
+            new (&error_) Error(move(error));
         }
 
         Result(const Result& rhs)
@@ -192,8 +192,8 @@ namespace xstar
         {
             if (&rhs != this)
             {
-                some_ = xstar::move(rhs.some_);
-                new (&error_) Error(xstar::move(rhs.error_));
+                some_ = move(rhs.some_);
+                new (&error_) Error(move(rhs.error_));
             }
         }
 
@@ -212,8 +212,8 @@ namespace xstar
         {
             if (&rhs != this)
             {
-                some_ = xstar::move(rhs.some_);
-                new (&error_) Error(xstar::move(rhs.error_));
+                some_ = move(rhs.some_);
+                new (&error_) Error(move(rhs.error_));
             }
 
             return *this;
@@ -277,7 +277,7 @@ namespace xstar
 
         Result(Error&& error) : isError_(true)
         {
-            new (&error_) Error(xstar::move(error));
+            new (&error_) Error(move(error));
         }
 
         Result(const Result& rhs)
@@ -293,8 +293,8 @@ namespace xstar
         {
             if (&rhs != this)
             {
-                some_ = xstar::move(rhs.some_);
-                new (&error_) Error(xstar::move(rhs.error_));
+                some_ = move(rhs.some_);
+                new (&error_) Error(move(rhs.error_));
             }
         }
 
@@ -313,8 +313,8 @@ namespace xstar
         {
             if (&rhs != this)
             {
-                some_ = xstar::move(rhs.some_);
-                new (&error_) Error(xstar::move(rhs.error_));
+                some_ = move(rhs.some_);
+                new (&error_) Error(move(rhs.error_));
             }
 
             return *this;
@@ -361,6 +361,6 @@ namespace xstar
         };
     };
 
-} // xstar
+} // xstar::ks
 
 #endif // _XSTAR_KERNEL_RESULT_HPP_

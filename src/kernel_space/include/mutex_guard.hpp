@@ -22,7 +22,7 @@
 #ifndef _XSTAR_KERNEL_SMART_LOCK_UNLOCK_HPP_
 #define _XSTAR_KERNEL_SMART_LOCK_UNLOCK_HPP_
 
-namespace xstar
+namespace xstar::ks
 {
     /**
     * @brief This class is equivalent to std::lock_guard from STL
@@ -98,6 +98,6 @@ namespace xstar
         MutextType& object_;
     };
 
-} // xstar
+} // xstar::ks
 
 #endif // _XSTAR_KERNEL_SMART_LOCK_UNLOCK_HPP_

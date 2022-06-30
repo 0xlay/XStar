@@ -24,17 +24,17 @@
 
 #include "type_traits.hpp"
 
-namespace xstar
+namespace xstar::ks
 {
 
     template <typename T>
     void swap(T& firstValue, T& secondValue) noexcept
     {
-        T tempValue = xstar::move(firstValue);
-        firstValue = xstar::move(secondValue);
-        secondValue = xstar::move(tempValue);
+        T tempValue = move(firstValue);
+        firstValue = move(secondValue);
+        secondValue = move(tempValue);
     }
 
-} // xstar
+} // xstar::ks
 
 #endif // _XSTAR_KERNEL_ALGORITHMS_HPP_

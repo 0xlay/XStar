@@ -28,7 +28,7 @@
 #include "cruntime/cpplibrary.hpp"
 #include "meminfo.hpp"
 
-namespace xstar
+namespace xstar::ks
 {
 
     /*
@@ -159,8 +159,8 @@ namespace xstar
     private:
         void swap(SymbolicLink& other) noexcept
         {
-            xstar::swap(symbolicName_, other.symbolicName_);
-            xstar::swap(deviceName_, other.deviceName_);
+            swap(symbolicName_, other.symbolicName_);
+            swap(deviceName_, other.deviceName_);
         }
 
     private:
@@ -168,6 +168,6 @@ namespace xstar
         UNICODE_STRING deviceName_{};
     };
 
-} // xstar
+} // xstar::ks
 
 #endif // _XSTAR_KERNEL_SYMBOLIC_LINK_HPP_

@@ -21,7 +21,7 @@
 
 #include "include/mutex.hpp"
 
-namespace xstar
+namespace xstar::ks
 {
 
     //--------------------------------------------------------------------------
@@ -90,4 +90,4 @@ namespace xstar
         ExReleaseFastMutex(&mutex_);
     }
 
-} // xstar
+} // xstar::ks

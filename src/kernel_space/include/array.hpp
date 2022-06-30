@@ -63,7 +63,7 @@ namespace xstar::ks
 
         constexpr void swap(Array& other) noexcept
         {
-            xstar::swap(*this, other);
+            xstar::ks::swap(*this, other);
         }
 
         constexpr void fill(const ValueType& value) noexcept
@@ -403,6 +403,6 @@ namespace xstar::ks
         return !(lhs == rhs);
     }
 
-} // xstar
+} // xstar::ks
 
 #endif // _XSTAR_KERNEL_ARRAY_HPP_

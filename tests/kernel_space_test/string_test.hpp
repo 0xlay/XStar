@@ -6,31 +6,40 @@
 
 XSTAR_KTEST(StringTest, Move)
 {
-    xstar::ks::String<PagedPool> dest(xstar::ks::String<PagedPool>("Hello World!"));
+    using namespace xstar::ks;
 
-    dest = xstar::move("My Friend");
+    String<PagedPool> dest(xstar::ks::String<PagedPool>("Hello World!"));
+
+    dest = move("My Friend");
 
     XSTAR_KTEST_ASSERT_EQ(dest, "My Friend");
 }
 
 XSTAR_KTEST(StringTest, Copy)
 {
-    xstar::ks::String<PagedPool> src("Hello World!");
-    xstar::ks::String<PagedPool> dest = src;
+    using namespace xstar::ks;
+
+    String<PagedPool> src("Hello World!");
+    String<PagedPool> dest = src;
 
     XSTAR_KTEST_ASSERT_EQ(src, dest);
 }
 
 XSTAR_KTEST(StringTest, Iterators)
 {
-    xstar::ks::String<PagedPool> src("Hello");
+    using namespace xstar::ks;
+
+    String<PagedPool> src("Hello");
+
     XSTAR_KTEST_ASSERT_EQ(*src.begin(), 'H');
     XSTAR_KTEST_ASSERT_EQ(*(--src.end()), 'o');
 }
 
 XSTAR_KTEST(StringTest, ConstIterators)
 {
-    const xstar::ks::String<PagedPool> src("Hello");
+    using namespace xstar::ks;
+
+    const String<PagedPool> src("Hello");
 
     XSTAR_KTEST_ASSERT_EQ(*src.cbegin(), 'H');
     XSTAR_KTEST_ASSERT_EQ(*(--src.cend()), 'o');
@@ -38,7 +47,9 @@ XSTAR_KTEST(StringTest, ConstIterators)
 
 XSTAR_KTEST(StringTest, ReverseIterators)
 {
-    xstar::ks::String<PagedPool> src("Hello");
+    using namespace xstar::ks;
+
+    String<PagedPool> src("Hello");
 
     XSTAR_KTEST_ASSERT_EQ(*src.rbegin(), 'o');
     XSTAR_KTEST_ASSERT_EQ(*(--src.rend()), 'H');
@@ -46,7 +57,9 @@ XSTAR_KTEST(StringTest, ReverseIterators)
 
 XSTAR_KTEST(StringTest, ConstReverseIterators)
 {
-    const xstar::ks::String<PagedPool> src("Hello");
+    using namespace xstar::ks;
+
+    const String<PagedPool> src("Hello");
 
     XSTAR_KTEST_ASSERT_EQ(*src.crbegin(), 'o');
     XSTAR_KTEST_ASSERT_EQ(*(--src.crend()), 'H');
@@ -54,33 +67,41 @@ XSTAR_KTEST(StringTest, ConstReverseIterators)
 
 XSTAR_KTEST(StringTest, Equal)
 {
-    xstar::ks::String<PagedPool> src1("Hello World!");
-    xstar::ks::String<PagedPool> src2("Hello World!");
+    using namespace xstar::ks;
+
+    String<PagedPool> src1("Hello World!");
+    String<PagedPool> src2("Hello World!");
 
     XSTAR_KTEST_ASSERT_EQ(src1, src2);
 }
 
 XSTAR_KTEST(StringTest, NotEqual)
 {
-    xstar::ks::String<PagedPool> src1("Hello World!");
-    xstar::ks::String<PagedPool> src2("Hi World!");
+    using namespace xstar::ks;
+
+    String<PagedPool> src1("Hello World!");
+    String<PagedPool> src2("Hi World!");
 
     XSTAR_KTEST_ASSERT_NE(src1, src2);
 }
 
 XSTAR_KTEST(StringTest, Greater)
 {
-    xstar::ks::String<PagedPool> src1("Banana");
-    xstar::ks::String<PagedPool> src2("Apple");
+    using namespace xstar::ks;
+
+    String<PagedPool> src1("Banana");
+    String<PagedPool> src2("Apple");
 
     XSTAR_KTEST_ASSERT_GT(src1, src2);
 }
 
 XSTAR_KTEST(StringTest, GreaterOrEqual)
 {
-    xstar::ks::String<PagedPool> src1("Banana");
-    xstar::ks::String<PagedPool> src2("Apple");
-    xstar::ks::String<PagedPool> src3("Apple");
+    using namespace xstar::ks;
+
+    String<PagedPool> src1("Banana");
+    String<PagedPool> src2("Apple");
+    String<PagedPool> src3("Apple");
 
     XSTAR_KTEST_ASSERT_GE(src1, src2);
     XSTAR_KTEST_ASSERT_GE(src2, src3);
@@ -88,17 +109,21 @@ XSTAR_KTEST(StringTest, GreaterOrEqual)
 
 XSTAR_KTEST(StringTest, Less)
 {
-    xstar::ks::String<PagedPool> src1("Apple");
-    xstar::ks::String<PagedPool> src2("Banana");
+    using namespace xstar::ks;
+
+    String<PagedPool> src1("Apple");
+    String<PagedPool> src2("Banana");
 
     XSTAR_KTEST_ASSERT_LT(src1, src2);
 }
 
 XSTAR_KTEST(StringTest, LessOrEqual)
 {
-    xstar::ks::String<PagedPool> src1("Apple");
-    xstar::ks::String<PagedPool> src2("Banana");
-    xstar::ks::String<PagedPool> src3("Banana");
+    using namespace xstar::ks;
+
+    String<PagedPool> src1("Apple");
+    String<PagedPool> src2("Banana");
+    String<PagedPool> src3("Banana");
 
     XSTAR_KTEST_ASSERT_LE(src1, src2);
     XSTAR_KTEST_ASSERT_LE(src2, src3);
@@ -106,7 +131,9 @@ XSTAR_KTEST(StringTest, LessOrEqual)
 
 XSTAR_KTEST(StringTest, SquareBracket)
 {
-    xstar::ks::String<PagedPool> str("Hello");
+    using namespace xstar::ks;
+
+    String<PagedPool> str("Hello");
     str[0] = 'h';
 
     XSTAR_KTEST_ASSERT_EQ(str, "hello");
@@ -114,7 +141,9 @@ XSTAR_KTEST(StringTest, SquareBracket)
 
 XSTAR_KTEST(StringTest, Concatenation)
 {
-    xstar::ks::String<PagedPool> str("Hello, ");
+    using namespace xstar::ks;
+
+    String<PagedPool> str("Hello, ");
     str += "0xlay!";
 
     XSTAR_KTEST_ASSERT_EQ(str, "Hello, 0xlay!");

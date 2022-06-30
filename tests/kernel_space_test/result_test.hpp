@@ -10,7 +10,9 @@
 
 XSTAR_KTEST(ResultTest, PrimitiveIsError)
 {
-    xstar::Result<char, int> res(-1);
+    using namespace xstar::ks;
+
+    Result<char, int> res(-1);
 
     XSTAR_KTEST_ASSERT_TRUE(res.isError());
     XSTAR_KTEST_ASSERT_EQ(res.isError().error, -1);
@@ -18,7 +20,9 @@ XSTAR_KTEST(ResultTest, PrimitiveIsError)
 
 XSTAR_KTEST(ResultTest, PrimitiveUnwrapWithoutError)
 {
-    xstar::Result<char, int> res('a');
+    using namespace xstar::ks;
+
+    Result<char, int> res('a');
 
     XSTAR_KTEST_ASSERT_FALSE(res.isError());
     XSTAR_KTEST_ASSERT_EQ(res.unwrap(), 'a');
@@ -26,7 +30,9 @@ XSTAR_KTEST(ResultTest, PrimitiveUnwrapWithoutError)
 
 XSTAR_KTEST(ResultTest, PrimitiveUnwrapWithError)
 {
-    xstar::Result<char, int> res(-1);
+    using namespace xstar::ks;
+
+    Result<char, int> res(-1);
 
     res.unwrap();
 }
@@ -39,6 +45,8 @@ XSTAR_KTEST(ResultTest, PrimitiveUnwrapWithError)
 
 XSTAR_KTEST(ResultTest, AbstractIsError)
 {
+    using namespace xstar::ks;
+
     struct A {};
     class B
     {
@@ -49,7 +57,7 @@ XSTAR_KTEST(ResultTest, AbstractIsError)
         int b_;
     };
 
-    xstar::Result<A, B> res(B(-1));
+    Result<A, B> res(B(-1));
     
     XSTAR_KTEST_ASSERT_TRUE(res.isError());
     XSTAR_KTEST_ASSERT_EQ(res.isError().error.get(), -1);
@@ -57,6 +65,8 @@ XSTAR_KTEST(ResultTest, AbstractIsError)
 
 XSTAR_KTEST(ResultTest, AbstractUnwrapWithoutError)
 {
+    using namespace xstar::ks;
+
     class A
     {
     public:
@@ -67,7 +77,7 @@ XSTAR_KTEST(ResultTest, AbstractUnwrapWithoutError)
     };
     struct B {};
 
-    xstar::Result<A, B> res(A(10));
+    Result<A, B> res(A(10));
 
     XSTAR_KTEST_ASSERT_FALSE(res.isError());
     XSTAR_KTEST_ASSERT_EQ(res.unwrap().get(), 10);
@@ -75,6 +85,8 @@ XSTAR_KTEST(ResultTest, AbstractUnwrapWithoutError)
 
 XSTAR_KTEST(ResultTest, AbstractUnwrapWithError)
 {
+    using namespace xstar::ks;
+
     struct A {};
     class B
     {
@@ -85,7 +97,7 @@ XSTAR_KTEST(ResultTest, AbstractUnwrapWithError)
         int b_;
     };
 
-    xstar::Result<A, B> res(B(-1));
+    Result<A, B> res(B(-1));
 
     res.unwrap();
 }

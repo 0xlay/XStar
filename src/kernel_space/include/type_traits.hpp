@@ -22,7 +22,7 @@
 #ifndef _XSTAR_KERNEL_TYPE_TRAITS_HPP_
 #define _XSTAR_KERNEL_TYPE_TRAITS_HPP_
 
-namespace xstar
+namespace xstar::ks
 {
     //--------------------------------------------------------------------------
     //
@@ -111,6 +111,6 @@ namespace xstar
         return static_cast<T&&>(arg);
     }
 
-} // xstar
+} // xstar::ks
 
 #endif // _XSTAR_KERNEL_TYPE_TRAITS_HPP_

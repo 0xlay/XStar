@@ -24,7 +24,7 @@
 
 #include <ntddk.h>
 
-namespace xstar
+namespace xstar::ks
 {
     
     /*
@@ -81,6 +81,6 @@ namespace xstar
         FAST_MUTEX mutex_;
     };
 
-} // xstar
+} // xstar::ks
 
 #endif // _XSTAR_KERNEL_MUTEX_HPP_
