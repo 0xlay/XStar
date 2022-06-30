@@ -2,7 +2,9 @@
 
 TEST(SmartHandleTests, SmartHadnle__HWND__Test) 
 {
-    xstar::SmartHandle<HWND> hwnd = CreateWindowEx(
+    using namespace xstar::us;
+
+    SmartHandle<HWND> hwnd = CreateWindowEx(
         WS_EX_APPWINDOW,
         $T"#32769", /*The class for the desktop window*/
         nullptr, 
@@ -22,21 +24,27 @@ TEST(SmartHandleTests, SmartHadnle__HWND__Test)
 
 TEST(SmartHandleTests, SmartHadnle__HANDLE__Test)
 {
-    xstar::SmartHandle<HANDLE> handle = CreateEvent(nullptr, true, true, nullptr);
+    using namespace xstar::us;
+
+    SmartHandle<HANDLE> handle = CreateEvent(nullptr, true, true, nullptr);
     EXPECT_NE(handle.getHandle(), nullptr);
     EXPECT_NE(*handle, nullptr);
 }
 
 TEST(SmartHandleTests, SmartHandle__SC_HADNLE__Test)
 {
-    xstar::SmartHandle<SC_HANDLE> serviceHandle = OpenSCManager(nullptr, nullptr, SC_MANAGER_CONNECT);
+    using namespace xstar::us;
+
+    SmartHandle<SC_HANDLE> serviceHandle = OpenSCManager(nullptr, nullptr, SC_MANAGER_CONNECT);
     EXPECT_NE(serviceHandle.getHandle(), nullptr);
     EXPECT_NE(*serviceHandle, nullptr);
 }
 
 TEST(SmartHandleTests, SmartHandle__HMODULE__Test)
 {
-    xstar::SmartHandle<HMODULE> moduleHandle = LoadLibrary($T"kernel32.dll");
+    using namespace xstar::us;
+
+    SmartHandle<HMODULE> moduleHandle = LoadLibrary($T"kernel32.dll");
     EXPECT_NE(moduleHandle.getHandle(), nullptr);
     EXPECT_NE(*moduleHandle, nullptr);
 }

@@ -33,7 +33,7 @@
 #include "winapi_exception.hpp"
 
 
-namespace xstar
+namespace xstar::us
 {
 
     class StartWinDriver final
@@ -76,7 +76,5 @@ namespace xstar
         bool serviceCreated_ = false;
     };
 
-
-
-} // xstar
+} // xstar::us
 #endif // _XSTAR_USER_START_WIN_DRIVER_HPP_

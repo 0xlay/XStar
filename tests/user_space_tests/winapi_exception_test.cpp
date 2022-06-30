@@ -2,7 +2,7 @@
 
 TEST(WinAPIExceptionTests, WinAPIException__WithoutArguments__Test)
 {
-    using namespace xstar;
+    using namespace xstar::us;
 
     auto invalidHandle = CreateFile($T"", 0, 0, nullptr, OPEN_EXISTING, 0, nullptr);
 
@@ -18,7 +18,7 @@ TEST(WinAPIExceptionTests, WinAPIException__WithoutArguments__Test)
 
 TEST(WinAPIExceptionTests, WinAPIException__WithArguments__Test)
 {
-    using namespace xstar;
+    using namespace xstar::us;
 
     const char* msg = "Test error. Error code: 1";
 

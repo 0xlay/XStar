@@ -9,7 +9,7 @@
 #include <Windows.h>
 #include <memory>
 
-#include "named_pipe.hpp"
-#include "smart_handle.hpp"
-#include "tstring.hpp"
-#include "winapi_exception.hpp"
+#include "include/named_pipe.hpp"
+#include "include/smart_handle.hpp"
+#include "include/tstring.hpp"
+#include "include/winapi_exception.hpp"

@@ -3,7 +3,7 @@
 template <typename Type>
 void CheckTStringBuffers(Type&& object)
 {
-    using namespace xstar;
+    using namespace xstar::us;
     
     tstring bufForIstream;
 
@@ -19,7 +19,8 @@ void CheckTStringBuffers(Type&& object)
 
 TEST(TStringTests, TString__Test)
 {
-    using namespace xstar;
+    using namespace xstar::us;
+
 
 #pragma warning(push)
 #pragma warning(disable : 26444)
@@ -38,7 +39,7 @@ TEST(TStringTests, TString__Test)
 
 TEST(TStringTests, TStringView__Test)
 {
-    using namespace xstar;
+    using namespace xstar::us;
     
     tstring_view($T"Hello world");
     auto tStrView = $T"Hello world"_tsv;
@@ -50,7 +51,7 @@ TEST(TStringTests, TStringView__Test)
 
 TEST(TStringTests, TChar__Test)
 {
-    using namespace xstar;
+    using namespace xstar::us;
  
     auto symbol = $Tc('x');
     
@@ -61,7 +62,7 @@ TEST(TStringTests, TChar__Test)
 
 TEST(TStringTests, ToTString_Test)
 {
-    using namespace xstar;
+    using namespace xstar::us;
 
     tstring result = to_tstring(2021);
 

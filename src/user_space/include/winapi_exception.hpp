@@ -27,7 +27,7 @@
 #include <exception>
 #include <cstdint>
 
-namespace xstar
+namespace xstar::us
 {
 
     class WinAPIException : public std::exception
@@ -49,5 +49,5 @@ namespace xstar
     */
     std::string getLastErrorStr();
 
-} // xstar
+} // xstar::us
 #endif // _XSTAR_USER_EXCEPTION_HPP_

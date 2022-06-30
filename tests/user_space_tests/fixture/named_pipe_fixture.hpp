@@ -1,14 +1,14 @@
 #pragma once
 #include "../pch.h"
-#include "named_pipe.hpp"
+#include "include/named_pipe.hpp"
 
 
 struct NamedPipeTest : public testing::Test
 {
     static void SetUpTestCase()
     {
-        server_ = new xstar::NamedPipeServer(L"\\\\.\\pipe\\XStarTestPipe", xstar::PipeDirection::InOut);
-        client_ = new xstar::NamedPipeClient(L"\\\\.\\pipe\\XStarTestPipe", xstar::PipeAccess::InOut);
+        server_ = new xstar::us::NamedPipeServer(L"\\\\.\\pipe\\XStarTestPipe", xstar::us::PipeDirection::InOut);
+        client_ = new xstar::us::NamedPipeClient(L"\\\\.\\pipe\\XStarTestPipe", xstar::us::PipeAccess::InOut);
 
         client_->connect();
     }
@@ -21,6 +21,6 @@ struct NamedPipeTest : public testing::Test
         delete server_;
     }
 
-    inline static xstar::NamedPipeClient* client_ = nullptr;
-    inline static xstar::NamedPipeServer* server_ = nullptr;
+    inline static xstar::us::NamedPipeClient* client_ = nullptr;
+    inline static xstar::us::NamedPipeServer* server_ = nullptr;
 };

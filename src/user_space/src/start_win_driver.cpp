@@ -19,10 +19,10 @@
 //
 //------------------------------------------------------------------------------
 
-#include "start_win_driver.hpp"
+#include "include/start_win_driver.hpp"
 
 
-namespace xstar
+namespace xstar::us
 {
     //-------------------------------------------------------------
     // Complexity: O(1)
@@ -128,6 +128,4 @@ namespace xstar
         return fullServicePath_.c_str();
     }
 
-
-
-} // xstar
+} // xstar::us

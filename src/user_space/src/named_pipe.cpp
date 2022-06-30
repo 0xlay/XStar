@@ -19,9 +19,9 @@
 //
 //------------------------------------------------------------------------------
 
-#include "named_pipe.hpp"
+#include "include/named_pipe.hpp"
 
-using namespace xstar;
+using namespace xstar::us;
 
 
 

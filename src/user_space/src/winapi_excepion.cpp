@@ -19,10 +19,10 @@
 //
 //------------------------------------------------------------------------------
 
-#include "winapi_exception.hpp"
+#include "include/winapi_exception.hpp"
 
 
-namespace xstar
+namespace xstar::us
 {
 
     WinAPIException::WinAPIException()
@@ -63,4 +63,4 @@ namespace xstar
         return std::string(msg_buf, 256);
     }
 
-} // xstar
+} // xstar::us

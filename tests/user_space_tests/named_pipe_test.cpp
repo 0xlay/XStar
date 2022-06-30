@@ -84,10 +84,12 @@ TEST_F(NamedPipeTest, WriteAndReadInteger)
 
 TEST_F(NamedPipeTest, ClientSetAndGetPipeState)
 {
-    xstar::PipeMode mode = xstar::PipeMode::ReadMsg;
+    using namespace xstar::us;
+
+    PipeMode mode = PipeMode::ReadMsg;
 
     client_->setState(mode);
-    xstar::PipeState state = client_->getState();
+    PipeState state = client_->getState();
 
     EXPECT_EQ(state.mode, mode);
     EXPECT_NE(state.curInstances, 0);
@@ -96,10 +98,12 @@ TEST_F(NamedPipeTest, ClientSetAndGetPipeState)
 
 TEST_F(NamedPipeTest, ServertSetAndGetPipeState)
 {
-    xstar::PipeMode mode = xstar::PipeMode::NoWait | xstar::PipeMode::ReadByte;
+    using namespace xstar::us;
+
+    PipeMode mode = PipeMode::NoWait | PipeMode::ReadByte;
 
     server_->setState(mode);
-    xstar::PipeState state = server_->getState();
+    PipeState state = server_->getState();
 
     EXPECT_EQ(state.mode, mode);
     EXPECT_NE(state.curInstances, 0);

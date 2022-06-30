@@ -33,7 +33,7 @@
 #include "meminfo.hpp"
 
 
-namespace xstar
+namespace xstar::us
 {
 
     ////////////////////////////////////////////////////////////////////////////
@@ -223,5 +223,5 @@ namespace xstar
         DWORD bufSize_;
     };
 
-} // xstar
+} // xstar::us
 #endif // _XSTAR_USER_NAMED_PIPE_HPP_

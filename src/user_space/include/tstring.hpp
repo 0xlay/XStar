@@ -27,7 +27,7 @@
 #include <sstream>
 #include <tchar.h>
 
-namespace xstar
+namespace xstar::us
 {
 
 #ifdef _UNICODE
@@ -85,20 +85,20 @@ namespace xstar
         return std::to_wstring(val);
     }
 
-	inline tstring to_tstring(unsigned long val)
-	{
-		return std::to_wstring(val);
-	}
+    inline tstring to_tstring(unsigned long val)
+    {
+        return std::to_wstring(val);
+    }
 
-	inline tstring to_tstring(unsigned int val)
-	{
-		return std::to_wstring(val);
-	}
+    inline tstring to_tstring(unsigned int val)
+    {
+        return std::to_wstring(val);
+    }
 
-	inline tstring to_tstring(long double val)
-	{
-		return std::to_wstring(val);
-	}
+    inline tstring to_tstring(long double val)
+    {
+        return std::to_wstring(val);
+    }
 
 #else
 
@@ -125,50 +125,50 @@ namespace xstar
 
 
 
-	inline tstring to_tstring(int val)
-	{
-		return std::to_string(val);
-	}
+    inline tstring to_tstring(int val)
+    {
+        return std::to_string(val);
+    }
 
-	inline tstring to_tstring(float val)
-	{
-		return std::to_string(val);
-	}
+    inline tstring to_tstring(float val)
+    {
+        return std::to_string(val);
+    }
 
-	inline tstring to_tstring(double val)
-	{
-		return std::to_string(val);
-	}
+    inline tstring to_tstring(double val)
+    {
+        return std::to_string(val);
+    }
 
-	inline tstring to_tstring(long long val)
-	{
-		return std::to_string(val);
-	}
+    inline tstring to_tstring(long long val)
+    {
+        return std::to_string(val);
+    }
 
-	inline tstring to_tstring(long val)
-	{
-		return std::to_string(val);
-	}
+    inline tstring to_tstring(long val)
+    {
+        return std::to_string(val);
+    }
 
-	inline tstring to_tstring(unsigned long long val)
-	{
-		return std::to_string(val);
-	}
+    inline tstring to_tstring(unsigned long long val)
+    {
+        return std::to_string(val);
+    }
 
-	inline tstring to_tstring(unsigned long val)
-	{
-		return std::to_string(val);
-	}
+    inline tstring to_tstring(unsigned long val)
+    {
+        return std::to_string(val);
+    }
 
-	inline tstring to_tstring(unsigned int val)
-	{
-		return std::to_string(val);
-	}
+    inline tstring to_tstring(unsigned int val)
+    {
+        return std::to_string(val);
+    }
 
-	inline tstring to_tstring(long double val)
-	{
-		return std::to_string(val);
-	}
+    inline tstring to_tstring(long double val)
+    {
+        return std::to_string(val);
+    }
 
 #endif
 
@@ -188,6 +188,6 @@ namespace xstar
         return tstring_view(str, size);
     }
 
-}
+} // xstar::us
 
 #endif // _XSTAR_USER_TSTRING_HPP_
