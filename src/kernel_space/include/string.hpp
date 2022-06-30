@@ -11,7 +11,7 @@
 // This source file is licensed under the terms of MIT license.
 // For details, please read the LICENSE file.
 // 
-// File: smart_pointers.hpp
+// File: string.hpp
 // 
 // Creator: 0xlay
 // 
@@ -23,8 +23,9 @@
 #define _XSTAR_KERNEL_STRING_HPP_
 
 #include "allocator.hpp"
+#include "iterators.hpp"
 
-namespace xstar
+namespace xstar::ks
 {
 
     /*
@@ -41,8 +42,8 @@ namespace xstar
         using ConstReference = const CharType&;
         using Pointer = CharType*;
         using ConstPointer = const CharType*;
-        using Iterator = CharType*;
-        using ConstIterator = const CharType*;
+        using Iterator = ContiguousIterator<T>;
+        using ConstIterator = const ContiguousIterator<T>;
         using SizeType = size_t;
 
         static constexpr SizeType size = sizeof(CharType);
@@ -227,32 +228,32 @@ namespace xstar
 
         bool operator==(const BasicString& rhs) const noexcept
         {
-            return (CharTraits::compare(cbegin(), rhs.cbegin()) == 0);
+            return (CharTraits::compare(allocator_.get(), rhs.allocator_.get()) == 0);
         }
 
         bool operator!=(const BasicString& rhs) const noexcept
         {
-            return !(cbegin() == rhs.cbegin());
+            return !(allocator_.get() == rhs.allocator_.get());
         }
 
         bool operator<(const BasicString& rhs) const noexcept
         {
-            return (CharTraits::compare(cbegin(), rhs.cbegin()) < 0);
+            return (CharTraits::compare(allocator_.get(), rhs.allocator_.get()) < 0);
         }
 
         bool operator>(const BasicString& rhs) const noexcept
         {
-            return (CharTraits::compare(cbegin(), rhs.cbegin()) > 0);
+            return (CharTraits::compare(allocator_.get(), rhs.allocator_.get()) > 0);
         }
 
         bool operator<=(const BasicString& rhs) const noexcept
         {
-            return (CharTraits::compare(cbegin(), rhs.cbegin()) <= 0);
+            return (CharTraits::compare(allocator_.get(), rhs.allocator_.get()) <= 0);
         }
 
         bool operator>=(const BasicString& rhs) const noexcept
         {
-            return (CharTraits::compare(cbegin(), rhs.cbegin()) >= 0);
+            return (CharTraits::compare(allocator_.get(), rhs.allocator_.get()) >= 0);
         }
 
         //
@@ -273,24 +274,52 @@ namespace xstar
         // Iterators
         //
 
-        [[nodiscard]] Iterator begin() noexcept
+        [[nodiscard]]
+        Iterator begin() noexcept
         {
             return allocator_.get();
         }
 
-        [[nodiscard]] Iterator end() noexcept
+        [[nodiscard]]
+        Iterator end() noexcept
         {
             return allocator_.get() + size();
         }
 
-        [[nodiscard]] ConstIterator cbegin() const noexcept
+        [[nodiscard]]
+        ConstIterator cbegin() const noexcept
         {
             return allocator_.get();
         }
 
-        [[nodiscard]] ConstIterator cend() const noexcept
+        [[nodiscard]]
+        ConstIterator cend() const noexcept
         {
             return allocator_.get() + size();
+        }
+
+        [[nodiscard]]
+        ReverseIterator<Iterator> rbegin() noexcept
+        {
+            return Iterator(allocator_.get() + size() - 1);
+        }
+
+        [[nodiscard]]
+        ReverseIterator<Iterator> rend() noexcept
+        {
+            return Iterator(allocator_.get() - 1);
+        }
+
+        [[nodiscard]]
+        const ReverseIterator<Iterator> crbegin() const noexcept
+        {
+            return Iterator(allocator_.get() + size() - 1);
+        }
+
+        [[nodiscard]]
+        const ReverseIterator<Iterator> crend() const noexcept
+        {
+            return Iterator(allocator_.get() - 1);
         }
 
     //

@@ -213,6 +213,7 @@
     <ClInclude Include="include\algorithms.hpp" />
     <ClInclude Include="include\array.hpp" />
     <ClInclude Include="include\initializer_list.hpp" />
+    <ClInclude Include="include\iterators.hpp" />
     <ClInclude Include="include\mutex.hpp" />
     <ClInclude Include="include\result.hpp" />
     <ClInclude Include="include\string.hpp" />

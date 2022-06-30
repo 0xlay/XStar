@@ -5,14 +5,14 @@
 
 XSTAR_KTEST(ArrayTest, Empty)
 {
-    xstar::Array<int, 0> arr;
+    xstar::ks::Array<int, 0> arr;
 
     XSTAR_KTEST_ASSERT_TRUE(arr.empty());
 }
 
 XSTAR_KTEST(ArrayTest, WithPrimitiveTypes)
 {
-    xstar::Array<int, 3> arr = { 1, 2, 3};
+    xstar::ks::Array<int, 3> arr = { 1, 2, 3};
 
     XSTAR_KTEST_ASSERT_FALSE(arr.empty());
     XSTAR_KTEST_ASSERT_EQ(arr.size(), 3);
@@ -29,7 +29,7 @@ XSTAR_KTEST(ArrayTest, WithAbstractTypes)
         int a_;
     };
 
-    xstar::Array<A, 3> arr = { A(1), A(2), A(3) };
+    xstar::ks::Array<A, 3> arr = {A(1), A(2), A(3)};
 
     XSTAR_KTEST_ASSERT_FALSE(arr.empty());
     XSTAR_KTEST_ASSERT_EQ(arr.size(), 3);
@@ -37,10 +37,10 @@ XSTAR_KTEST(ArrayTest, WithAbstractTypes)
 
 XSTAR_KTEST(ArrayTest, Swap)
 {
-    const xstar::Array<int, 3> firstSource = { 1, 2, 3 };
-    const xstar::Array<int, 3> secondSource = { 4, 5, 6 };
-    xstar::Array<int, 3> first = { 1, 2, 3 };
-    xstar::Array<int, 3> second = { 4, 5, 6 };
+    const xstar::ks::Array<int, 3> firstSource = { 1, 2, 3 };
+    const xstar::ks::Array<int, 3> secondSource = { 4, 5, 6 };
+    xstar::ks::Array<int, 3> first = { 1, 2, 3 };
+    xstar::ks::Array<int, 3> second = { 4, 5, 6 };
 
     first.swap(second);
 
@@ -50,8 +50,9 @@ XSTAR_KTEST(ArrayTest, Swap)
 
 XSTAR_KTEST(ArrayTest, Fill)
 {
-    const xstar::Array<int, 3> arrSource = { 7, 7, 7 };
-    xstar::Array<int, 3> arr{};
+    const xstar::ks::Array<int, 3> arrSource = {7, 7, 7};
+    xstar::ks::Array<int, 3> arr{};
+
     arr.fill(7);
 
     XSTAR_KTEST_ASSERT_EQ(arr, arrSource);
@@ -59,15 +60,55 @@ XSTAR_KTEST(ArrayTest, Fill)
 
 XSTAR_KTEST(ArrayTest, At)
 {
-    xstar::Array<int, 3> arr = { 7, 8, 9 };
+    xstar::ks::Array<int, 3> arr = { 7, 8, 9 };
+
     arr.at(0).unwrap() = 12;
+
     XSTAR_KTEST_ASSERT_EQ(arr.at(0).unwrap(), 12);
 }
 
 XSTAR_KTEST(ArrayTest, ConstAt)
 {
-    const xstar::Array<int, 3> arr = { 7, 8, 9 };
+    const xstar::ks::Array<int, 3> arr = { 7, 8, 9 };
+
     XSTAR_KTEST_ASSERT_EQ(arr.at(1).unwrap(), 8);
+}
+
+//
+// Iterators
+//
+
+XSTAR_KTEST(ArrayTest, ConstIterator)
+{
+    const xstar::ks::Array<int, 3> arr = { 7, 8, 9 };
+
+    XSTAR_KTEST_ASSERT_EQ(*(arr.cbegin()), 7);
+    XSTAR_KTEST_ASSERT_EQ(*(--arr.cend()), 9);
+}
+
+XSTAR_KTEST(ArrayTest, Iterator)
+{
+    xstar::ks::Array<int, 3> arr = { 7, 8, 9 };
+
+    XSTAR_KTEST_ASSERT_EQ(*(arr.begin()), 7);
+    XSTAR_KTEST_ASSERT_EQ(*(--arr.end()), 9);
+}
+
+
+XSTAR_KTEST(ArrayTest, ConstReverseIterator)
+{
+    const xstar::ks::Array<int, 3> arr = { 7, 8, 9 };
+
+    XSTAR_KTEST_ASSERT_EQ(*(arr.crbegin()), 9);
+    XSTAR_KTEST_ASSERT_EQ(*(--arr.crend()), 7);
+}
+
+XSTAR_KTEST(ArrayTest, ReverseIterator)
+{
+    xstar::ks::Array<int, 3> arr = { 7, 8, 9 };
+
+    XSTAR_KTEST_ASSERT_EQ(*(arr.rbegin()), 9);
+    XSTAR_KTEST_ASSERT_EQ(*(--arr.rend()), 7);
 }
 
 XSTAR_KTEST_SUITE(ArrayTest)
@@ -81,6 +122,10 @@ XSTAR_KTEST_SUITE(ArrayTest)
     XSTAR_KTEST_RUN_TEST(XSTAR_CALL_KTEST(ArrayTest, Fill), "ArrayTest::Fill()");
     XSTAR_KTEST_RUN_TEST(XSTAR_CALL_KTEST(ArrayTest, At), "ArrayTest::At()");
     XSTAR_KTEST_RUN_TEST(XSTAR_CALL_KTEST(ArrayTest, ConstAt), "ArrayTest::ConstAt()");
+    XSTAR_KTEST_RUN_TEST(XSTAR_CALL_KTEST(ArrayTest, ConstIterator), "ArrayTest::ConstIterator()");
+    XSTAR_KTEST_RUN_TEST(XSTAR_CALL_KTEST(ArrayTest, Iterator), "ArrayTest::Iterator()");
+    XSTAR_KTEST_RUN_TEST(XSTAR_CALL_KTEST(ArrayTest, ConstReverseIterator), "ArrayTest::ConstReverseIterator()");
+    XSTAR_KTEST_RUN_TEST(XSTAR_CALL_KTEST(ArrayTest, ReverseIterator), "ArrayTest::ReverseIterator()");
 
     KdPrint(("ArrayTest FINISH!\n"));
 }

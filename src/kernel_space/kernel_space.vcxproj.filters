@@ -64,6 +64,9 @@
     <ClInclude Include="cruntime\crt.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\iterators.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cruntime\cpplibrary.cpp">

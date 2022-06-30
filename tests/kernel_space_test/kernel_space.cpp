@@ -1,5 +1,6 @@
 #include "cruntime/crt.hpp"
 #include "kernel_space.hpp"
+#include "iterators_test.hpp"
 #include "string_test.hpp"
 #include "result_test.hpp"
 #include "array_test.hpp"
@@ -22,6 +23,7 @@ NTSTATUS DriverEntry([[maybe_unused]] PDRIVER_OBJECT DriverObject,
     // Run all tests
     //
 
+    XSTAR_KTEST_RUN_SUITE(IteratorsTest);
     XSTAR_KTEST_RUN_SUITE(ResultTest);
     XSTAR_KTEST_RUN_SUITE(ArrayTest);
     XSTAR_KTEST_RUN_SUITE(StringTest);

@@ -148,12 +148,14 @@ namespace xstar
             sizeInBytes = pageSize;
 
             size_ = sizeInBytes / AllocTraits::Size;
+#pragma warning(push)
+#pragma warning(disable : 4996)
             data_ = static_cast<Pointer>(
                 ExAllocatePoolWithTag(static_cast<POOL_TYPE>(AllocTraits::PoolType),
                                       sizeInBytes,
                                       AllocTraits::PoolTag)
             );
-
+#pragma warning(pop)
             return data_;
         }
 

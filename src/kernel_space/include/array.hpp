@@ -24,12 +24,13 @@
 
 #include "result.hpp"
 #include "algorithms.hpp"
+#include "iterators.hpp"
 
-namespace xstar
+namespace xstar::ks
 {
 
     template <class T, size_t N>
-    struct Array
+    struct Array final
     {
         using ValueType = T;
         using SizeType = size_t;
@@ -37,8 +38,8 @@ namespace xstar
         using ConstReference = const ValueType&;
         using Pointer = ValueType*;
         using ConstPointer = const ValueType*;
-        using Iterator = ValueType*;
-        using ConstIterator = const ValueType*;
+        using Iterator = ContiguousIterator<T>;
+        using ConstIterator = const ContiguousIterator<T>;
 
         //
         // Operators
@@ -152,9 +153,29 @@ namespace xstar
             return __Array + N;
         }
 
-        //
-        // TODO: Add Reverse Iterator
-        //
+        [[nodiscard]]
+        constexpr ReverseIterator<Iterator> rbegin() noexcept
+        {
+            return Iterator(__Array + N - 1);
+        }
+
+        [[nodiscard]]
+        constexpr ReverseIterator<Iterator> rend() noexcept
+        {
+            return Iterator(__Array - 1);
+        }
+
+        [[nodiscard]]
+        constexpr const ReverseIterator<Iterator> crbegin() const noexcept
+        {
+            return Iterator(__Array + N - 1);
+        }
+
+        [[nodiscard]]
+        constexpr const ReverseIterator<Iterator> crend() const noexcept
+        {
+            return Iterator(__Array - 1);
+        }
 
         //
         // Capacity
@@ -196,8 +217,8 @@ namespace xstar
         using ConstReference = const ValueType&;
         using Pointer = ValueType*;
         using ConstPointer = const ValueType*;
-        using Iterator = ValueType*;
-        using ConstIterator = const ValueType*;
+        using Iterator = ContiguousIterator<T>;
+        using ConstIterator = const ContiguousIterator<T>;
 
         //
         // Operators
@@ -285,19 +306,19 @@ namespace xstar
         [[nodiscard]]
         constexpr Iterator begin() noexcept
         {
-            return nullptr;
+            return __Array;
         }
 
         [[nodiscard]]
         constexpr Iterator end() noexcept
         {
-            return nullptr;
+            return __Array + N;
         }
 
         [[nodiscard]]
         constexpr ConstIterator cbegin() const noexcept
         {
-            return nullptr;
+            return const_cast<Pointer>(__Array);
         }
 
         [[nodiscard]]
@@ -306,9 +327,29 @@ namespace xstar
             return nullptr;
         }
 
-        //
-        // TODO: Add Reverse Iterator
-        //
+        [[nodiscard]]
+        constexpr ReverseIterator<Iterator> rbegin() noexcept
+        {
+            return Iterator(__Array + N - 1);
+        }
+
+        [[nodiscard]]
+        constexpr ReverseIterator<Iterator> rend() noexcept
+        {
+            return Iterator(nullptr);
+        }
+
+        [[nodiscard]]
+        constexpr const ReverseIterator<Iterator> crbegin() const noexcept
+        {
+            return Iterator(const_cast<Pointer>(__Array + N - 1));
+        }
+
+        [[nodiscard]]
+        constexpr const ReverseIterator<Iterator> crend() const noexcept
+        {
+            return Iterator(nullptr);
+        }
 
         //
         // Capacity

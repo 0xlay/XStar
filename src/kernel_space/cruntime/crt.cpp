@@ -44,12 +44,15 @@ class ExitTable final
 public:
     void create(size_t exitTableSize)
     {
+#pragma warning(push)
+#pragma warning(disable : 4996)
         table_ = static_cast<_PVFV*>(ExAllocatePoolWithTag(
             static_cast<POOL_TYPE>(NonPagedPool | POOL_RAISE_IF_ALLOCATION_FAILURE),
             exitTableSize,
             _CRT_POOL_TAG
         ));
         RtlZeroMemory(table_, exitTableSize);
+#pragma warning(pop)
     }
 
     void registerFunction(_PVFV function)
